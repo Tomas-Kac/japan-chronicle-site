@@ -50,6 +50,10 @@ const map = L.map('map', {
   minZoom: 5,
   maxZoom: 18,
   layers: [modern],
+  // Render vector overlays (provinces, domains, routes) on a CANVAS instead of SVG.
+  // SVG re-paints every polygon path on each zoom frame and is the main cause of
+  // janky zoom when those overlays are on; canvas is dramatically smoother.
+  preferCanvas: true,
   zoomControl: true,
   maxBounds: JAPAN_BOUNDS,
   maxBoundsViscosity: 1.0,
@@ -515,6 +519,7 @@ fetch('data/provinces.geojson?v=' + Date.now())
   .then((r) => r.json())
   .then((geo) => {
     provincesLayer = L.geoJSON(geo, {
+      smoothFactor: 1.5, // simplify polylines while drawing — fewer points, smoother zoom
       style: { color: '#7a5c3e', weight: 1, opacity: 0.7, fillColor: '#c8a15a', fillOpacity: 0.07 },
       onEachFeature: (feature, layer) => {
         const p = feature.properties || {};
@@ -836,6 +841,7 @@ fetch('data/domains.geojson?v=' + Date.now())
     domainEntries = (geo.features || []).map((feature) => {
       const props = feature.properties || {};
       const layer = L.geoJSON(feature, {
+        smoothFactor: 1.5, // simplify polylines while drawing — fewer points, smoother zoom
         style: () => styleDomain(props.color),
         onEachFeature: (feat, lyr) => {
           lyr.bindTooltip(
