@@ -3,7 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Historical Japan — a historical atlas</title>
+  <title>Japan Chronicle — an interactive historical atlas of premodern Japan</title>
+  <meta name="description" content="A free interactive historical atlas of premodern Japan (552–1869): battles, events, people, castles, domains and provinces on one era-aware timeline.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Japan Chronicle">
+  <meta property="og:title" content="Japan Chronicle — an interactive historical atlas of premodern Japan">
+  <meta property="og:description" content="Battles, events, people, castles and domains of premodern Japan (552–1869) on one era-aware, interactive map and timeline.">
+  <meta property="og:url" content="https://tomas-kac.github.io/japan-chronicle-site/">
+  <meta property="og:image" content="https://tomas-kac.github.io/japan-chronicle-site/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Japan Chronicle — an interactive historical atlas of premodern Japan">
+  <meta name="twitter:description" content="Battles, events, people, castles and domains of premodern Japan (552–1869), mapped on an era-aware timeline.">
+  <meta name="twitter:image" content="https://tomas-kac.github.io/japan-chronicle-site/og-image.png">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
@@ -16,10 +29,27 @@
 <body>
   <div id="map"></div>
 
+  <!-- First-visit welcome / help card (also reopened via the "Help" nav link) -->
+  <div id="welcomeOverlay" class="hidden" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle">
+    <div id="welcomeCard">
+      <button id="welcomeClose" aria-label="Close">&times;</button>
+      <h2 id="welcomeTitle">Welcome to Japan Chronicle</h2>
+      <p class="wc-lead">An interactive atlas of premodern Japan, 552&ndash;1869 — every battle, event and figure on one timeline.</p>
+      <ul class="wc-tips">
+        <li><b>Drag the year slider</b> at the bottom to move through history, era by era.</li>
+        <li><b>Toggle layers</b> (top&#8209;right): castles, march routes, events, people, provinces and domains.</li>
+        <li><b>Click any marker</b> — a battle, a castle, a person — to read its story.</li>
+        <li><b>Search</b> (top) for a battle, clan, commander or place.</li>
+      </ul>
+      <button id="welcomeStart" class="wc-start">Start exploring &rarr;</button>
+      <p class="wc-foot">More background on the <a href="about.html">About</a> page.</p>
+    </div>
+  </div>
+
   <header id="topBar">
-    <h1>Historical Japan</h1>
-    <p>Battles, events &amp; domains &middot; 6th&ndash;19th century</p>
-    <nav id="siteNav"><a href="about.html">About</a><span>&middot;</span><a href="sources.html">Sources</a></nav>
+    <h1>Japan Chronicle</h1>
+    <p>Battles, events &amp; people &middot; 6th&ndash;19th century</p>
+    <nav id="siteNav"><a href="about.html">About</a><span>&middot;</span><a href="sources.html">Sources</a><span>&middot;</span><a href="#" id="helpLink">Help</a></nav>
   </header>
 
   <div id="searchBox">

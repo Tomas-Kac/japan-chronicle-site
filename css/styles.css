@@ -878,3 +878,43 @@ html, body {
   padding: 2px 8px;
 }
 .leaflet-control-attribution a { color: var(--gold) !important; }
+
+/* ---- First-visit welcome / help card ---- */
+#welcomeOverlay {
+  position: absolute; inset: 0; z-index: 2000;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(6,14,21,0.55);
+  -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px);
+  padding: 20px;
+}
+#welcomeOverlay.hidden { display: none; }
+#welcomeCard {
+  position: relative;
+  width: min(460px, 94vw);
+  background: rgba(18,18,22,0.92);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px;
+  padding: 26px 28px 22px;
+  color: #f0f0f0;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.6), inset 0 1px 1px rgba(255,255,255,0.08);
+  -webkit-backdrop-filter: blur(20px) saturate(160%); backdrop-filter: blur(20px) saturate(160%);
+}
+#welcomeCard h2 { margin: 0 0 8px; color: #ffd96b; font-size: 24px; font-weight: 700; }
+#welcomeCard .wc-lead { margin: 0 0 14px; color: #d6dde2; font-size: 15px; line-height: 1.5; }
+#welcomeCard .wc-tips { margin: 0 0 18px; padding-left: 20px; }
+#welcomeCard .wc-tips li { margin: 7px 0; font-size: 14px; line-height: 1.45; color: #e7ebee; }
+#welcomeCard .wc-tips b { color: #ffd96b; font-weight: 600; }
+#welcomeCard .wc-start {
+  background: #c0392b; color: #fff; border: none; border-radius: 9px;
+  padding: 11px 20px; font-size: 15px; font-weight: 600; cursor: pointer;
+  font-family: inherit; transition: background 0.15s;
+}
+#welcomeCard .wc-start:hover { background: #d6452f; }
+#welcomeCard .wc-foot { margin: 14px 0 0; font-size: 12.5px; color: #9aa6ad; }
+#welcomeCard .wc-foot a { color: #ffd96b; }
+#welcomeClose {
+  position: absolute; top: 8px; right: 12px; background: transparent; border: none;
+  color: #cfd6da; font-size: 26px; line-height: 1; cursor: pointer; padding: 2px 8px; border-radius: 6px;
+}
+#welcomeClose:hover { background: rgba(255,255,255,0.1); }
+#siteNav a#helpLink { cursor: pointer; }
