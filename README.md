@@ -1,4 +1,4 @@
-# Historical Japan — an interactive historical atlas
+# Japan Chronicle — an interactive historical atlas
 
 A free, interactive historical atlas of **premodern Japan**, from the arrival of Buddhism (552) to the Meiji Restoration (1868–69). Every battle and event is a clickable point on the map and a moment on an era-aware timeline — so the sweep of Japanese history can be *seen*, not just memorised.
 

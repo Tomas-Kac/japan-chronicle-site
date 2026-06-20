@@ -1350,3 +1350,30 @@ document.addEventListener('click', (e) => {
   const box = document.getElementById('searchBox');
   if (box && !box.contains(e.target)) hideSearchResults();
 });
+
+// --- First-visit welcome / help card -------------------------------------
+// Shows once automatically (remembered in localStorage); reopens via "Help".
+(function () {
+  const overlay = document.getElementById('welcomeOverlay');
+  if (!overlay) return;
+  const SEEN = 'jc_welcome_seen';
+  const show = () => overlay.classList.remove('hidden');
+  const hide = () => {
+    overlay.classList.add('hidden');
+    try { localStorage.setItem(SEEN, '1'); } catch (e) {}
+  };
+  let seen = false;
+  try { seen = !!localStorage.getItem(SEEN); } catch (e) {}
+  if (!seen) show();
+
+  const start = document.getElementById('welcomeStart');
+  const close = document.getElementById('welcomeClose');
+  const help = document.getElementById('helpLink');
+  if (start) start.addEventListener('click', hide);
+  if (close) close.addEventListener('click', hide);
+  if (help) help.addEventListener('click', (e) => { e.preventDefault(); show(); });
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) hide(); });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !overlay.classList.contains('hidden')) hide();
+  });
+})();
