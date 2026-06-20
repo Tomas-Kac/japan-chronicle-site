@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historical Japan — a historical atlas</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Cache-buster so edits to styles.css always show up on reload -->
+  <script>document.write('<link rel="stylesheet" href="css/styles.css?v=' + Date.now() + '">');</script>
+</head>
+<body>
+  <div id="map"></div>
+
+  <header id="topBar">
+    <h1>Historical Japan</h1>
+    <p>Battles, events &amp; domains &middot; 6th&ndash;19th century</p>
+    <nav id="siteNav"><a href="about.html">About</a><span>&middot;</span><a href="sources.html">Sources</a></nav>
+  </header>
+
+  <div id="searchBox">
+    <input id="searchInput" type="text" placeholder="Search battles, clans, commanders, places…" autocomplete="off" aria-label="Search battles">
+    <ul id="searchResults" class="hidden"></ul>
+  </div>
+
+  <aside id="infoPanel" class="hidden" aria-hidden="true">
+    <button id="closeBtn" aria-label="Close panel">&times;</button>
+    <div id="infoContent"></div>
+  </aside>
+
+  <!-- Floating opacity slider for the historical map overlays.
+       Stays hidden until one of the old Map Warper maps is switched on. -->
+  <div id="opacityPanel" class="hidden" aria-hidden="true">
+    <div id="opacityTitle">Historical map</div>
+    <div class="opacityRow">
+      <input id="opacitySlider" type="range" min="0" max="1" step="0.05" value="0.85" aria-label="Historical map opacity">
+      <span id="opacityValue">85%</span>
+    </div>
+    <div class="opacityHint">Fade the old map over the modern one</div>
+  </div>
+
+  <div id="timeBar">
+    <div id="timeControls">
+      <div id="periodFilter" class="chips" aria-label="Filter by period"></div>
+      <button id="showAllBtn" class="tcBtn" type="button">Show all years</button>
+      <select id="clanFilter" class="tcSelect" aria-label="Filter battles by clan">
+        <option value="">All clans</option>
+      </select>
+    </div>
+    <div id="yearReadout"><span id="yearValue">&mdash;</span><span id="yearEra"></span></div>
+    <div id="sliderRow">
+      <button id="prevEvent" class="stepBtn" title="Previous year with a battle" aria-label="Previous battle year">&#9664;</button>
+      <div id="sliderWrap">
+        <input id="yearSlider" type="range" step="1" aria-label="Year">
+        <div id="yearTicks" aria-hidden="true"></div>
+      </div>
+      <button id="nextEvent" class="stepBtn" title="Next year with a battle" aria-label="Next battle year">&#9654;</button>
+    </div>
+    <div id="yearEvents">&mdash;</div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+  <!-- Load local scripts with a cache-buster so your edits always appear -->
+  <script>
+    (function () {
+      var v = Date.now();
+      document.write('<script src="data/battles.js?v=' + v + '"><\/script>');
+      document.write('<script src="data/castles.js?v=' + v + '"><\/script>');
+      document.write('<script src="data/routes.js?v=' + v + '"><\/script>');
+      document.write('<script src="data/events.js?v=' + v + '"><\/script>');
+      document.write('<script src="data/people.js?v=' + v + '"><\/script>');
+      document.write('<script src="js/app.js?v=' + v + '"><\/script>');
+    })();
+  </script>
+</body>
+</html>
