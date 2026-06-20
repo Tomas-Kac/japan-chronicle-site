@@ -1,0 +1,880 @@
+/* ===== Design tokens — one unified palette (added 2026-06-15) ===== */
+:root {
+  --gold: #ffd96b;        /* primary UI accent */
+  --crimson: #c0392b;     /* battle pin / alerts */
+  --ink: #0b1d2a;         /* dark base */
+  /* harmonized categorical ramp — warm, muted "antique map" tones (one family) */
+  --cat-sage:  #7d8a55;
+  --cat-ochre: #c79a4e;
+  --cat-slate: #5d7a96;
+  --cat-teal:  #4f8a85;
+  --cat-plum:  #8a5b76;
+  --cat-terra: #b5653f;
+  --cat-storm: #6b7a82;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  background: #0b1d2a;
+  -webkit-font-smoothing: antialiased;
+}
+
+#map {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: #aad3df;
+}
+
+/* ---------- Top banner ---------- */
+#topBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  padding: 14px 24px 28px 70px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0));
+  color: #f5f5f5;
+  pointer-events: none;
+  width: 100%;
+}
+
+#topBar h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+}
+
+#topBar p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #e0e0e0;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+}
+
+/* ---------- Battle marker pin ---------- */
+.battle-pin {
+  position: absolute;
+  left: 50%;
+  top: 2px;
+  width: 26px;
+  height: 26px;
+  margin-left: -13px;
+  background: #c0392b;
+  border: 3px solid #ffffff;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.45);
+  cursor: pointer;
+  transition: transform 0.12s ease;
+}
+
+.battle-pin:hover {
+  transform: rotate(-45deg) scale(1.12);
+}
+
+.battle-pin::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 9px;
+  height: 9px;
+  margin: -4.5px 0 0 -4.5px;
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+/* ---------- Battle name label ---------- */
+.leaflet-tooltip.battle-label {
+  background: rgba(15, 15, 20, 0.72);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 3px 8px;
+  white-space: nowrap;
+}
+
+.leaflet-tooltip.battle-label::before {
+  display: none; /* hide the little pointer arrow */
+}
+
+/* ---------- Slide-in info panel ---------- */
+#infoPanel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(440px, 92vw);
+  background: rgba(18, 18, 22, 0.75);
+  color: #f0f0f0;
+  padding: 24px 28px 32px;
+  overflow-y: auto;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  box-shadow: -8px 0 32px rgba(0,0,0,0.5), inset 1px 0 0 rgba(255,255,255,0.1);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1000;
+  border-left: 1px solid rgba(255,255,255,0.05);
+}
+
+#infoPanel.hidden {
+  transform: translateX(100%);
+  pointer-events: none;
+}
+
+#closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background: transparent;
+  border: none;
+  color: #f0f0f0;
+  font-size: 28px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px 12px;
+  border-radius: 6px;
+  transition: background 0.15s;
+}
+
+#closeBtn:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+#infoContent h2 {
+  margin: 8px 0 4px;
+  font-size: 26px;
+  color: #ffd96b;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+#infoContent .meta {
+  margin: 0;
+  color: #c0c0c0;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+
+#infoContent .location {
+  margin: 4px 0 16px;
+  color: #9a9a9a;
+  font-size: 13px;
+  font-style: italic;
+}
+
+#infoContent img {
+  max-width: 100%;
+  border-radius: 6px;
+  margin: 14px 0;
+  display: block;
+}
+
+#infoContent .summary {
+  line-height: 1.65;
+  margin: 16px 0;
+  font-size: 15px;
+  color: #e8e8e8;
+}
+
+#infoContent h3 {
+  margin: 22px 0 8px;
+  font-size: 15px;
+  color: #ffd96b;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-bottom: 1px solid rgba(255,217,107,0.25);
+  padding-bottom: 6px;
+}
+
+#infoContent .combatants {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 12px 0;
+}
+
+#infoContent .side {
+  background: rgba(255,255,255,0.04);
+  padding: 12px 14px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+#infoContent .side h4 {
+  margin: 0 0 8px;
+  font-size: 13px;
+  color: #ffd96b;
+  font-weight: 600;
+}
+
+#infoContent .side p {
+  margin: 4px 0;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+#infoContent .details p {
+  line-height: 1.65;
+  margin: 0 0 12px;
+  font-size: 14px;
+  color: #d8d8d8;
+}
+
+/* ---------- Image gallery at the bottom of the panel ---------- */
+#infoContent .gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 12px;
+}
+#infoContent .gallery figure {
+  margin: 0;
+}
+#infoContent .gallery img {
+  width: 100%;
+  border-radius: 6px;
+  display: block;
+  background: rgba(255,255,255,0.05);
+}
+#infoContent .gallery figcaption {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #9a9a9a;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+#infoContent .route-note {
+  margin: 12px 0;
+  padding: 8px 12px;
+  background: rgba(255,217,107,0.12);
+  border-left: 3px solid #ffd96b;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #ffe9a8;
+  line-height: 1.5;
+}
+
+/* Small direction arrows along a march route */
+.route-arrow {
+  display: inline-block;
+  font-size: 13px;
+  line-height: 1;
+  opacity: 0.85;
+  text-shadow: 0 0 2px rgba(0,0,0,0.7);
+}
+
+/* ---------- Search box ---------- */
+#searchBox {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1002;
+  width: min(380px, 72vw);
+}
+#searchInput {
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 24px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(18, 18, 22, 0.6);
+  color: #f0f0f0;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  outline: none;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3), inset 0 1px 1px rgba(255,255,255,0.1);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  transition: all 0.3s ease;
+}
+#searchInput::placeholder { color: #9a9a9a; }
+#searchInput:focus { 
+  border-color: rgba(255,217,107,0.6); 
+  background: rgba(18, 18, 22, 0.8);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.4), 0 0 0 3px rgba(255,217,107,0.15);
+}
+
+#searchResults {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 6px;
+  background: rgba(18, 18, 22, 0.75);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  max-height: 320px;
+  overflow-y: auto;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1);
+  backdrop-filter: blur(20px) saturate(150%);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+}
+#searchResults.hidden { display: none; }
+#searchResults li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #eaeaea;
+  font-size: 14px;
+}
+#searchResults li:hover { background: rgba(255,255,255,0.09); }
+#searchResults .r-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#searchResults .r-meta { color: #ffd96b; font-size: 12px; flex: 0 0 auto; }
+
+/* Keep Leaflet's zoom/layers controls clear of the top banner text */
+.leaflet-top.leaflet-left {
+  top: 64px;
+}
+
+/* Reset-view button — matches the zoom +/- bar, with a clear home icon */
+.leaflet-bar.reset-view a {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* ---------- Year timeline slider ---------- */
+#timeBar {
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%);
+  z-index: 998;
+  width: min(760px, 94vw);
+  background: rgba(18, 18, 22, 0.65);
+  color: #f0f0f0;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 12px 20px 14px;
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4), inset 0 1px 1px rgba(255,255,255,0.1);
+  text-align: center;
+}
+
+#timeControls {
+  display: flex;
+  flex-wrap: wrap; /* on narrow screens the chips/buttons drop to a tidy 2nd row */
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.tcBtn {
+  background: rgba(255,255,255,0.08);
+  color: #f0f0f0;
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 8px;
+  padding: 5px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  white-space: nowrap; /* keep "Show all years" on one line */
+}
+.tcBtn:hover { background: rgba(255,255,255,0.16); }
+.tcBtn.active { background: #c0392b; border-color: #c0392b; }
+
+/* Clan filter dropdown (matches the .tcBtn look) */
+.tcSelect {
+  background: rgba(255,255,255,0.08);
+  color: #f0f0f0;
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 8px;
+  padding: 5px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  max-width: 170px;
+  outline: none;
+}
+.tcSelect:hover { background: rgba(255,255,255,0.16); }
+.tcSelect:focus { border-color: rgba(255,217,107,0.5); }
+.tcSelect option { color: #111; } /* native list rows render on a light background */
+
+/* Period chips (multi-select) */
+#periodFilter.chips { display: flex; gap: 6px; }
+.chip {
+  background: rgba(255,255,255,0.06);
+  color: #b8b8b8;
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 14px;
+  padding: 4px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  white-space: nowrap; /* keep era names like "Nanboku-chō" on one line */
+}
+.chip:hover { background: rgba(255,255,255,0.12); }
+.chip.active {
+  background: rgba(255,217,107,0.18);
+  border-color: #ffd96b;
+  color: #ffd96b;
+}
+
+/* ---------- Castles & march-routes overlays ---------- */
+.castle {
+  width: 13px;
+  height: 13px;
+  box-sizing: border-box;
+  display: inline-block;
+}
+.castle.cf { background: var(--cat-slate); border: 1.5px solid #fff; box-shadow: 0 1px 2px rgba(0,0,0,0.5); }                 /* flatland: square */
+.castle.ch { background: var(--cat-ochre); border: 1.5px solid #fff; transform: rotate(45deg); box-shadow: 0 1px 2px rgba(0,0,0,0.5); } /* hilltop: diamond */
+.castle.cw { background: var(--cat-teal); border: 1.5px solid #fff; border-radius: 50%; box-shadow: 0 1px 2px rgba(0,0,0,0.5); }       /* water: circle */
+.castle.cy {                                                                 /* mountain: triangle */
+  width: 0; height: 0; background: transparent;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 13px solid var(--cat-sage);
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,0.5));
+}
+
+.leaflet-tooltip.castle-label,
+.leaflet-tooltip.route-label,
+.leaflet-tooltip.province-label {
+  background: rgba(15,15,20,0.86);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+  font-size: 12px;
+  padding: 3px 8px;
+  line-height: 1.35;
+}
+.leaflet-tooltip.castle-label::before,
+.leaflet-tooltip.route-label::before,
+.leaflet-tooltip.province-label::before { display: none; }
+.leaflet-tooltip.province-label .rj { color: #b9a06a; font-size: 11px; }
+
+.castle-legend {
+  background: rgba(20,20,24,0.9);
+  color: #eaeaea;
+  padding: 8px 11px;
+  border-radius: 8px;
+  font-size: 11px;
+  line-height: 1.8;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.45);
+}
+.castle-legend .cl-title { font-weight: 600; color: #ffd96b; margin-bottom: 3px; }
+.castle-legend .castle { margin-right: 7px; vertical-align: middle; }
+
+/* ---------- Events overlay ---------- */
+.event-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.6), inset 0 1px 3px rgba(255,255,255,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  line-height: 1;
+  color: #fff;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease;
+}
+.event-icon:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.7), inset 0 2px 4px rgba(255,255,255,0.5);
+  z-index: 1000 !important;
+}
+.event-icon.ev-contact { background: var(--cat-teal); }
+.event-icon.ev-capital { background: var(--cat-ochre); }
+.event-icon.ev-culture { background: var(--cat-plum); }
+.event-icon.ev-incident { background: var(--cat-terra); }
+.event-icon.ev-politics { background: var(--cat-slate); }
+.event-icon.ev-disaster { background: var(--cat-storm); }
+.event-icon.ev-legend {
+  width: 16px; height: 16px; border-width: 1.5px; font-size: 9px;
+  margin-right: 7px; vertical-align: middle; display: inline-flex;
+}
+.leaflet-tooltip.castle-label .evt-yr { color: #ffd96b; }
+
+/* People overlay — figures pinned at a characteristic place. A gold ring marks
+   them out from events (white ring); the fill colour encodes their role. */
+.person-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 2.5px solid #ffd96b;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.65), inset 0 1px 3px rgba(255,255,255,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 1;
+  color: #fff;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease;
+}
+.person-icon:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.75), inset 0 2px 4px rgba(255,255,255,0.5);
+  z-index: 1000 !important;
+}
+.person-icon.pn-sovereign { background: var(--cat-ochre); }
+.person-icon.pn-warlord   { background: var(--cat-terra); }
+.person-icon.pn-religious { background: var(--cat-teal); }
+.person-icon.pn-culture   { background: var(--cat-plum); }
+.person-icon.pn-statesman { background: var(--cat-slate); }
+.person-icon.pn-legend {
+  width: 16px; height: 16px; border-width: 1.5px; font-size: 9px;
+  margin-right: 7px; vertical-align: middle; display: inline-flex;
+}
+/* Linked battles inside a person's info panel */
+.person-battles { list-style: none; padding: 0; margin: 0; }
+.person-battles li { padding: 4px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.person-battles a.battle-link { color: #ffd96b; text-decoration: none; cursor: pointer; }
+.person-battles a.battle-link:hover { text-decoration: underline; }
+.person-battles .pb-year { color: #8aa0b0; font-size: 0.85em; margin-left: 5px; }
+
+#yearReadout {
+  font-size: 30px;
+  font-weight: 700;
+  color: #ffd96b;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+}
+
+#sliderRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 8px 0 6px;
+}
+
+#sliderWrap {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+#yearSlider {
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(255,255,255,0.18);
+  outline: none;
+  cursor: pointer;
+}
+#yearSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #c0392b;
+  border: 3px solid #fff;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+#yearSlider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #c0392b;
+  border: 3px solid #fff;
+  cursor: pointer;
+}
+
+#yearTicks {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  top: 50%;
+  height: 0;
+  pointer-events: none;
+}
+.yearTick {
+  position: absolute;
+  top: -11px;
+  width: 2px;
+  height: 9px;
+  margin-left: -1px;
+  background: #ffd96b;
+  opacity: 0.7;
+  border-radius: 1px;
+  pointer-events: auto;
+  cursor: pointer;
+}
+.yearTick:hover { opacity: 1; height: 13px; top: -14px; }
+
+.stepBtn {
+  flex: 0 0 auto;
+  width: 34px;
+  height: 34px;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.stepBtn:hover { background: rgba(255,255,255,0.18); }
+
+#yearEvents {
+  font-size: 13px;
+  color: #d6d6d6;
+  min-height: 1.2em;
+  line-height: 1.4;
+}
+.noEvents { color: #8a8a8a; font-style: italic; }
+
+/* ---------- Historical map opacity panel (floating, dark glassy) ---------- */
+/* Sits at top-left, just below Leaflet's zoom control. Only shown while one of
+   the old Map Warper maps is switched on (toggled by app.js). */
+#opacityPanel {
+  position: absolute;
+  top: 132px;
+  left: 10px;
+  z-index: 1000;
+  width: 208px;
+  background: rgba(20, 20, 24, 0.86);
+  color: #f0f0f0;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 10px 14px 12px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.45);
+}
+#opacityPanel.hidden { display: none; }
+
+#opacityTitle {
+  font-size: 12px;
+  font-weight: 600;
+  color: #ffd96b;
+  letter-spacing: 0.02em;
+  margin-bottom: 9px;
+}
+
+.opacityRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#opacityValue {
+  font-size: 12px;
+  font-weight: 700;
+  color: #ffd96b;
+  flex: 0 0 auto;
+  width: 38px;
+  text-align: right;
+}
+
+.opacityHint {
+  margin-top: 9px;
+  font-size: 11px;
+  color: #9a9a9a;
+  line-height: 1.35;
+}
+
+#opacitySlider {
+  flex: 1;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(255,255,255,0.18);
+  outline: none;
+  cursor: pointer;
+}
+#opacitySlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #ffd96b;
+  border: 3px solid #fff;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+#opacitySlider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #ffd96b;
+  border: 3px solid #fff;
+  cursor: pointer;
+}
+
+/* Small group headers inside Leaflet's (white) layers control */
+.layers-group {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-weight: 700;
+  color: #6b4f2a;
+  margin: 6px 0 3px;
+  padding-top: 5px;
+  border-top: 1px solid rgba(0,0,0,0.12);
+}
+.leaflet-control-layers-overlays .layers-group:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+/* ---------- Daimyō domains overlay ---------- */
+.domains-legend { max-height: 260px; overflow-y: auto; }
+.domains-legend .dm-items { display: grid; grid-template-columns: 1fr 1fr; gap: 0 14px; }
+.domains-legend .dm-items > div { white-space: nowrap; }
+.domains-legend .dm-sw {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  margin-right: 7px;
+  vertical-align: middle;
+  border: 1px solid rgba(255,255,255,0.55);
+}
+.domains-legend .dm-foot {
+  margin-top: 5px;
+  color: #9a9a9a;
+  font-style: italic;
+  font-size: 10px;
+}
+.leaflet-tooltip.route-label .dm-yr { color: #ffd96b; }
+
+@media (max-width: 600px) {
+  #yearReadout { font-size: 24px; }
+  #timeBar { bottom: 10px; padding: 8px 12px 10px; }
+  #opacityPanel { width: 168px; top: 124px; padding: 8px 11px 10px; }
+
+  /* --- Phone layout: stop the title, search box and controls from colliding --- */
+  #topBar { padding: 8px 12px; }
+  #topBar h1 { font-size: 19px; }
+  #topBar p { display: none; }                 /* hide subtitle to free vertical space */
+  #siteNav { margin-top: 3px; font-size: 12px; }
+
+  /* search drops to its own full-width row under the title, clear of the layer button */
+  #searchBox { top: 58px; left: 12px; transform: none; width: calc(100% - 70px); }
+  #searchInput { padding: 9px 16px; }
+
+  /* nudge the zoom/home buttons below the search row */
+  .leaflet-top.leaflet-left { top: 104px; }
+
+  /* keep the opened layer picker inside the screen instead of covering it all */
+  .leaflet-control-layers-expanded { max-height: 62vh; overflow-y: auto; }
+  /* let the 8 era chips wrap onto multiple rows instead of overflowing the bar */
+  #periodFilter { flex-wrap: wrap; }
+  #periodFilter .chip { padding: 4px 9px; font-size: 12px; }
+}
+
+/* ---- Era-segmented slider: current-era label + era-coloured ticks ---- */
+#yearEra {
+  font-size: 13px;
+  font-weight: 500;
+  color: #b9a06a;
+  margin-left: 9px;
+  letter-spacing: 0.02em;
+  vertical-align: 4px;
+}
+.yearTick { transition: background 0.15s; }
+
+/* ---- site nav on the map (links to About / Sources) ---- */
+#siteNav { margin-top: 7px; font-size: 13px; pointer-events: auto; }
+#siteNav a { color: var(--gold); text-decoration: none; font-weight: 500; text-shadow: 0 1px 3px rgba(0,0,0,0.65); }
+#siteNav a:hover { text-decoration: underline; }
+#siteNav span { color: rgba(255,255,255,0.55); margin: 0 6px; text-shadow: 0 1px 3px rgba(0,0,0,0.65); }
+
+/* =====================================================================
+   Leaflet's default controls → the same dark "glass" UI as the slider,
+   search box and info panel (zoom, home, layer picker, attribution).
+   Before this they were default white/grey Leaflet chrome and clashed.
+   (2026-06-20)
+   ===================================================================== */
+
+/* Shared translucent surface for the zoom/home bar + the layer control */
+.leaflet-bar,
+.leaflet-control-layers {
+  background: rgba(18, 18, 22, 0.66);
+  border: 1px solid rgba(255, 255, 255, 0.10) !important;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.40), inset 0 1px 1px rgba(255,255,255,0.10);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  backdrop-filter: blur(16px) saturate(150%);
+}
+.leaflet-touch .leaflet-bar,
+.leaflet-touch .leaflet-control-layers {
+  border: 1px solid rgba(255,255,255,0.10) !important;
+}
+
+/* --- Zoom (+ / −) and home (reset-view) buttons --- */
+.leaflet-bar { overflow: hidden; }
+.leaflet-bar a,
+.leaflet-bar a:link,
+.leaflet-bar a:visited {
+  background: transparent;
+  color: #f0f0f0;
+  border: none;
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.leaflet-bar a:last-child { border-bottom: none; }
+.leaflet-bar a:hover,
+.leaflet-bar a:focus {
+  background: rgba(255,255,255,0.10);
+  color: var(--gold);
+}
+.leaflet-bar a.leaflet-disabled {
+  background: transparent;
+  color: rgba(255,255,255,0.25);
+}
+
+/* --- Layer picker: collapsed toggle (whiten the dark Leaflet stack icon) --- */
+.leaflet-control-layers-toggle {
+  width: 34px;
+  height: 34px;
+  background-size: 18px 18px;
+  filter: invert(1) brightness(1.4);
+}
+
+/* --- Layer picker: expanded panel --- */
+.leaflet-control-layers-expanded {
+  color: #eaeaea;
+  padding: 9px 13px 11px;
+}
+.leaflet-control-layers-expanded label { color: #eaeaea; }
+.leaflet-control-layers-list { line-height: 1.75; }
+.leaflet-control-layers-selector { accent-color: var(--gold); margin-right: 6px; }
+.leaflet-control-layers-separator {
+  border-top: 1px solid rgba(255,255,255,0.12);
+  margin: 7px 0;
+}
+/* group headers ("HISTORICAL MAPS", "MAP FEATURES") on the now-dark control */
+.layers-group {
+  color: var(--gold);
+  border-top: 1px solid rgba(255,255,255,0.12);
+}
+
+/* --- Attribution → a small dark pill instead of the white bar --- */
+.leaflet-control-attribution {
+  background: rgba(18,18,22,0.60) !important;
+  color: #b8b8b8 !important;
+  border-radius: 8px 0 0 0;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  padding: 2px 8px;
+}
+.leaflet-control-attribution a { color: var(--gold) !important; }

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Historical Japan</title>
+  <meta name="description" content="About Historical Japan: a free interactive historical atlas of premodern Japan (6th–19th century), for students, teachers, and anyone studying Japanese history.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <header class="siteHeader">
+    <div class="inner">
+      <a class="brand" href="index.html">Historical&nbsp;Japan <span class="sub">· a historical atlas</span></a>
+      <nav>
+        <a href="index.html">Map</a>
+        <a href="about.html" class="active">About</a>
+        <a href="sources.html">Sources</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>About this project</h1>
+    <p class="lead">An interactive historical atlas of premodern Japan — its battles, events, people, castles, domains and provinces — laid out across one continuous timeline from the dawn of recorded history to the fall of the shogunate.</p>
+
+    <div class="stats">
+      <div class="stat"><span class="n">107</span><span class="l">battles</span></div>
+      <div class="stat"><span class="n">59</span><span class="l">events</span></div>
+      <div class="stat"><span class="n">31</span><span class="l">people</span></div>
+      <div class="stat"><span class="n">47</span><span class="l">castles</span></div>
+      <div class="stat"><span class="n">41</span><span class="l">domain slices</span></div>
+      <div class="stat"><span class="n">70</span><span class="l">provinces</span></div>
+      <div class="stat"><span class="n">8</span><span class="l">eras</span></div>
+    </div>
+
+    <h2>What it is</h2>
+    <p>Most Japanese history is taught as a wall of names and dates. This atlas puts it on the map and on a timeline instead: every battle and event is a point you can click for its story, and a year slider lets you watch the country change era by era — domains rising and falling, the samurai emerging, the Tokugawa peace settling in, and the old order ending at the Meiji Restoration.</p>
+    <p>It is built to be useful at two levels at once: a <strong>study tool</strong> for students and teachers, and an <strong>accurate reference</strong> a specialist can trust — every entry has been fact-checked and cross-verified (see the <a href="sources.html">Sources &amp; methodology</a>).</p>
+
+    <h2>Scope</h2>
+    <p>The atlas covers <strong>premodern Japan, from roughly the 6th century to the Meiji Restoration of 1868–69</strong> — beginning with the arrival of Buddhism (552) and the war that secured it (Shigisan, 587), and ending with the Boshin War that toppled the shogunate. The eras run in one unbroken chain: <em>Asuka–Nara · Heian · Genpei · Kamakura · Nanboku-chō · Sengoku · Edo · Bakumatsu.</em></p>
+    <p>Two things lie deliberately outside it. <strong>Modern, imperial Japan (1868 onward)</strong> — the Meiji wars, the World Wars — is a planned separate map: its conflicts spill far beyond the islands and need a wider frame. And <strong>deep prehistory</strong> (the Jōmon and Yayoi ages) is left out, because it is archaeology rather than datable, mappable events.</p>
+
+    <h2>How it was built &amp; verified</h2>
+    <p>The history is drawn from standard scholarly works — above all <em>The Cambridge History of Japan</em> — and from primary chronicles such as the <em>Shinchō Kōki</em> and the <em>Tale of the Heike</em>. Coordinates come from Japanese Wikipedia and historical-GIS datasets.</p>
+    <p>Every battle, castle, domain and event was then <strong>cross-checked against Japanese and English Wikipedia</strong>, with particular care for the trap that catches many sources: pre-1873 Japanese dates are <em>lunar</em>, and do not equal the same Western month or day. That verification pass repeatedly caught and corrected real errors (mistranslated dates, mis-attributed commanders, wrong castle classifications) before they reached the map.</p>
+
+    <h2>Honest limitations</h2>
+    <p>A good reference is clear about what it can and cannot do:</p>
+    <ul>
+      <li><strong>Some coordinates are approximate.</strong> Where a battlefield has no precise recorded location, a best-estimate point is used; these are noted in the underlying data.</li>
+      <li><strong>Daimyō domains are a province-level approximation.</strong> Exact han boundaries do not survive as data, so each domain is built by grouping whole old provinces (旧国) — real boundaries, but a clan is shown at characteristic extent, not redrawn for every year.</li>
+      <li><strong>Dates are Western-calendar conversions</strong> of the original lunar dates, with the era date noted where it matters.</li>
+      <li>This is a study aid and a starting point — not a substitute for the scholarship it draws on.</li>
+    </ul>
+
+    <h2>Technology &amp; access</h2>
+    <p>The atlas is a lightweight, open web map built with <a href="https://leafletjs.com/">Leaflet</a>. It runs entirely in your browser: <strong>no login, no tracking, no API keys, and free to use.</strong> It is intended as a free educational resource and will stay that way.</p>
+
+    <h2>Who made it</h2>
+    <p>Created by an independent historian as a free resource for studying Japanese history. <span style="color:var(--muted)">(Feedback and corrections are welcome — the dataset is meant to keep improving.)</span></p>
+
+    <a class="backMap" href="index.html">← Back to the map</a>
+  </main>
+
+  <footer>
+    <p>Historical Japan — a free educational historical atlas. Built on open data; see <a href="sources.html">Sources &amp; credits</a> for full attribution and licensing.</p>
+  </footer>
+</body>
+</html>
