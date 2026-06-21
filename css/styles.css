@@ -918,3 +918,12 @@ html, body {
 }
 #welcomeClose:hover { background: rgba(255,255,255,0.1); }
 #siteNav a#helpLink { cursor: pointer; }
+
+/* search-result type badges (battle / person / event) */
+.r-type {
+  font-size: 9px; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;
+  padding: 1px 5px; border-radius: 5px; margin-right: 6px; vertical-align: 1px;
+}
+.r-type.r-battle { background: rgba(192,57,43,0.30); color: #f2b5ad; }
+.r-type.r-person { background: rgba(255,217,107,0.22); color: #ffd96b; }
+.r-type.r-event  { background: rgba(79,138,133,0.32); color: #9fd6cf; }

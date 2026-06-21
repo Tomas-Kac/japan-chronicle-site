@@ -909,19 +909,27 @@ function updateEventsText(vis) {
   if (showAll) {
     const eras = ALL_PERIODS.length > 1 ? ' &middot; ' + escapeHtml([...selectedPeriods].join(', ')) : '';
     const evTxt = eventsOn ? ` &amp; ${eventMarkers.length} event${eventMarkers.length === 1 ? '' : 's'}` : '';
-    yearEventsEl.innerHTML = `Showing all ${vis.length} battle${vis.length === 1 ? '' : 's'}${evTxt}${eras}`;
+    const pplTxt = peopleOn ? ` &amp; ${personMarkers.length} ${personMarkers.length === 1 ? 'figure' : 'figures'}` : '';
+    yearEventsEl.innerHTML = `Showing all ${vis.length} battle${vis.length === 1 ? '' : 's'}${evTxt}${pplTxt}${eras}`;
     return;
   }
   const evs = eventsOn
     ? eventMarkers.filter((em) => battleYears(em.event).includes(currentYear)).map((em) => em.event)
     : [];
-  if (vis.length === 0 && evs.length === 0) {
+  const ppl = peopleOn
+    ? personMarkers.filter((pm) => personActiveInYear(pm.person, currentYear)).map((pm) => pm.person)
+    : [];
+  if (vis.length === 0 && evs.length === 0 && ppl.length === 0) {
     yearEventsEl.innerHTML = '<span class="noEvents">Nothing recorded this year</span>';
     return;
   }
   const parts = [];
   if (vis.length) parts.push(`${vis.length} battle${vis.length > 1 ? 's' : ''}: ${vis.map((b) => escapeHtml(b.name)).join(' · ')}`);
   if (evs.length) parts.push(`${evs.length} event${evs.length > 1 ? 's' : ''}: ${evs.map((e) => escapeHtml(e.name)).join(' · ')}`);
+  if (ppl.length) {
+    const names = ppl.length <= 6 ? ': ' + ppl.map((p) => escapeHtml(p.name)).join(' · ') : '';
+    parts.push(`${ppl.length} ${ppl.length === 1 ? 'figure' : 'figures'} alive${names}`);
+  }
   yearEventsEl.innerHTML = parts.join(' &nbsp;&middot;&nbsp; ');
 }
 
@@ -934,6 +942,7 @@ function showYear(year, opts) {
   slider.value = year;
   yearValueEl.textContent = year;
   refreshMarkers(opts);
+  setHash('y=' + year);
 }
 
 // Smoothly move/zoom the map so all of a year's battles are in view, leaving
@@ -1134,6 +1143,7 @@ function showBattleInfo(battle) {
   panel.classList.remove('hidden');
   panel.setAttribute('aria-hidden', 'false');
   drawActiveRoute(battle);
+  setHash((isEventId(battle.id) ? 'e=' : 'b=') + battle.id);
 }
 
 function hideBattleInfo() {
@@ -1141,6 +1151,7 @@ function hideBattleInfo() {
   panel.classList.add('hidden');
   panel.setAttribute('aria-hidden', 'true');
   if (typeof activeRouteLayer !== 'undefined') activeRouteLayer.clearLayers();
+  if (currentYear != null) setHash('y=' + currentYear);
 }
 
 function renderBattleHTML(battle) {
@@ -1207,6 +1218,7 @@ function showPersonInfo(p) {
   panel.classList.remove('hidden');
   panel.setAttribute('aria-hidden', 'false');
   if (typeof activeRouteLayer !== 'undefined') activeRouteLayer.clearLayers(); // people carry no march route
+  setHash('p=' + p.id);
 }
 
 function renderPersonHTML(p) {
@@ -1286,22 +1298,34 @@ const searchInput = document.getElementById('searchInput');
 const searchResults = document.getElementById('searchResults');
 let searchMatches = [];
 
-function searchBattles(query) {
-  const q = query.trim().toLowerCase();
+// Search battles, people AND events. Returns typed results: {type, item, name, year}.
+function searchEverything(query) {
+  // Macron-insensitive: users type "kukai"/"saigo", the data has "Kūkai"/"Saigō".
+  const norm = (s) => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  const q = norm(query.trim());
   if (!q) return [];
-  return BATTLES.filter((b) => {
+  const res = [];
+  // Rank a match by how well the QUERY hits the NAME (so a person/battle whose
+  // name contains the query outranks one that only matched via a commander/place).
+  const score = (name) => { const n = norm(name); return n === q ? 4 : n.startsWith(q) ? 3 : n.includes(q) ? 2 : 1; };
+  for (const b of BATTLES) {
     const c = b.combatants || {};
-    const hay = [
-      b.name,
-      b.location && b.location.name,
+    const hay = [b.name, b.location && b.location.name,
       c.side1 && c.side1.name, c.side1 && c.side1.leader,
-      c.side2 && c.side2.name, c.side2 && c.side2.leader,
-    ]
-      .filter(Boolean)
-      .join(' ')
-      .toLowerCase();
-    return hay.includes(q);
-  }).slice(0, 8);
+      c.side2 && c.side2.name, c.side2 && c.side2.leader].filter(Boolean).join(' ').toLowerCase();
+    if (norm(hay).includes(q)) res.push({ type: 'battle', item: b, name: b.name,
+      year: (b.year != null ? b.year : `${b.yearStart}–${b.yearEnd}`), s: score(b.name) });
+  }
+  if (typeof PEOPLE !== 'undefined') for (const p of PEOPLE) {
+    const hay = [p.name, p.role, p.location && p.location.name].filter(Boolean).join(' ').toLowerCase();
+    if (norm(hay).includes(q)) res.push({ type: 'person', item: p, name: p.name, year: (p.dateLabel || ''), s: score(p.name) });
+  }
+  if (typeof EVENTS !== 'undefined') for (const ev of EVENTS) {
+    const hay = [ev.name, ev.location && ev.location.name, ev.type].filter(Boolean).join(' ').toLowerCase();
+    if (norm(hay).includes(q)) res.push({ type: 'event', item: ev, name: ev.name, year: (ev.dateLabel || ev.year || ''), s: score(ev.name) });
+  }
+  res.sort((a, b) => b.s - a.s);
+  return res.slice(0, 10);
 }
 
 function battleStartYear(b) {
@@ -1314,10 +1338,9 @@ function renderSearchResults(list) {
     return;
   }
   searchResults.innerHTML = list
-    .map((b) => {
-      const yr = b.year != null ? b.year : `${b.yearStart}–${b.yearEnd}`;
-      return `<li><span class="r-name">${escapeHtml(b.name)}</span><span class="r-meta">${escapeHtml(String(yr))}</span></li>`;
-    })
+    .map((r) =>
+      `<li><span class="r-name">${escapeHtml(r.name)}</span><span class="r-meta"><span class="r-type r-${r.type}">${r.type}</span> ${escapeHtml(String(r.year))}</span></li>`
+    )
     .join('');
   [...searchResults.children].forEach((li, i) => {
     li.addEventListener('click', () => selectSearchResult(list[i]));
@@ -1330,17 +1353,25 @@ function hideSearchResults() {
   searchResults.innerHTML = '';
 }
 
-function selectSearchResult(b) {
-  showYear(battleStartYear(b), { frame: false }); // show that year's markers
-  showBattleInfo(b); // open its panel
-  focusBattle(b); // fly to it
+function selectSearchResult(r) {
+  if (r.type === 'battle') {
+    showYear(battleStartYear(r.item), { frame: false }); // show that year's markers
+    showBattleInfo(r.item);
+    focusBattle(r.item);
+  } else if (r.type === 'event') {
+    showBattleInfo(r.item); // events render through the same info panel
+    focusBattle(r.item);
+  } else if (r.type === 'person') {
+    showPersonInfo(r.item);
+    focusBattle(r.item);
+  }
   searchInput.value = '';
   hideSearchResults();
   searchInput.blur();
 }
 
 searchInput.addEventListener('input', () => {
-  searchMatches = searchBattles(searchInput.value);
+  searchMatches = searchEverything(searchInput.value);
   renderSearchResults(searchMatches);
 });
 searchInput.addEventListener('keydown', (e) => {
@@ -1383,3 +1414,27 @@ document.addEventListener('click', (e) => {
     if (e.key === 'Escape' && !overlay.classList.contains('hidden')) hide();
   });
 })();
+
+// --- Shareable deep-links -------------------------------------------------
+// The URL hash captures the current view so a link can reopen it:
+//   #y=1560  a year   ·  #b=okehazama  a battle  ·  #p=oda-nobunaga  a person  ·  #e=evt-tanegashima  an event
+// We write with history.replaceState (no history spam, no hashchange loop), and
+// suppress writes until the initial hash has been applied (so a shared link isn't
+// clobbered by the default load). `var` avoids a temporal-dead-zone error from the
+// initial showYear() that runs earlier in the file.
+var _hashReady = false;
+function setHash(s) { if (!_hashReady) return; try { history.replaceState(null, '', '#' + s); } catch (e) {} }
+function isEventId(id) { return typeof EVENTS !== 'undefined' && EVENTS.some((e) => e.id === id); }
+function applyHash() {
+  const m = (location.hash || '').replace(/^#/, '').match(/^([ybpe])=(.+)$/);
+  if (m) {
+    const k = m[1], v = decodeURIComponent(m[2]);
+    if (k === 'y') { const y = parseInt(v, 10); if (!isNaN(y)) showYear(y, { frame: false }); }
+    else if (k === 'b') { const b = BATTLES.find((x) => x.id === v); if (b) { showYear(battleStartYear(b), { frame: false }); showBattleInfo(b); focusBattle(b); } }
+    else if (k === 'e') { const ev = (typeof EVENTS !== 'undefined' ? EVENTS : []).find((x) => x.id === v); if (ev) { showBattleInfo(ev); focusBattle(ev); } }
+    else if (k === 'p') { const p = (typeof PEOPLE !== 'undefined' ? PEOPLE : []).find((x) => x.id === v); if (p) { showPersonInfo(p); focusBattle(p); } }
+  }
+  _hashReady = true; // from now on, user actions update the URL
+}
+applyHash();
+window.addEventListener('hashchange', () => { _hashReady = false; applyHash(); });
