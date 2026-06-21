@@ -380,10 +380,19 @@ overlays['People'] = peopleLayer;
 const layerControl = L.control.layers(
   { Modern: modern, Light: light, Satellite: satellite, Terrain: terrain },
   overlays,
-  // Keep the panel OPEN on desktop — it used to collapse the instant the mouse left,
-  // before you could pick a base map. On phones it stays a tappable button.
-  { position: 'topright', collapsed: window.innerWidth < 700 }
-).addTo(map);
+  { position: 'topright' } // hover to open (Leaflet default) — with a delayed close, patched below
+);
+// Keep the hover behaviour, but wait ~0.8s before collapsing instead of closing the
+// instant the cursor moves away — so there's time to reach the panel and pick a map.
+// Patched BEFORE addTo, because Leaflet binds the mouseleave→collapse handler during addTo.
+if (typeof layerControl.collapse === 'function') {
+  let _lcTimer = null;
+  const _origCollapse = layerControl.collapse;
+  const _origExpand = layerControl.expand;
+  layerControl.collapse = function () { clearTimeout(_lcTimer); _lcTimer = setTimeout(() => _origCollapse.call(this), 800); return this; };
+  layerControl.expand = function () { clearTimeout(_lcTimer); return _origExpand.call(this); };
+}
+layerControl.addTo(map);
 
 // Group headers inside the layer control so the three old maps read as one set
 // ("pick one") distinct from the feature checkboxes below them. Leaflet rebuilds
