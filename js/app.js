@@ -380,7 +380,9 @@ overlays['People'] = peopleLayer;
 const layerControl = L.control.layers(
   { Modern: modern, Light: light, Satellite: satellite, Terrain: terrain },
   overlays,
-  { position: 'topright' }
+  // Keep the panel OPEN on desktop — it used to collapse the instant the mouse left,
+  // before you could pick a base map. On phones it stays a tappable button.
+  { position: 'topright', collapsed: window.innerWidth < 700 }
 ).addTo(map);
 
 // Group headers inside the layer control so the three old maps read as one set
