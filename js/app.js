@@ -1452,11 +1452,20 @@ document.addEventListener('click', (e) => {
 (function () {
   const overlay = document.getElementById('welcomeOverlay');
   if (!overlay) return;
+  const card = document.getElementById('welcomeCard');
   const SEEN = 'jc_welcome_seen';
-  const show = () => overlay.classList.remove('hidden');
+  let lastFocus = null;
+  const focusables = () => (card ? [...card.querySelectorAll('button, a[href]')].filter((el) => !el.disabled) : []);
+  const show = () => {
+    lastFocus = document.activeElement; // so we can restore focus on close
+    overlay.classList.remove('hidden');
+    const start = document.getElementById('welcomeStart');
+    if (start) start.focus(); // move keyboard focus into the dialog
+  };
   const hide = () => {
     overlay.classList.add('hidden');
     try { localStorage.setItem(SEEN, '1'); } catch (e) {}
+    if (lastFocus && typeof lastFocus.focus === 'function') lastFocus.focus();
   };
   let seen = false;
   try { seen = !!localStorage.getItem(SEEN); } catch (e) {}
@@ -1470,7 +1479,16 @@ document.addEventListener('click', (e) => {
   if (help) help.addEventListener('click', (e) => { e.preventDefault(); show(); });
   overlay.addEventListener('click', (e) => { if (e.target === overlay) hide(); });
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && !overlay.classList.contains('hidden')) hide();
+    if (overlay.classList.contains('hidden')) return;
+    if (e.key === 'Escape') { hide(); return; }
+    if (e.key === 'Tab') {
+      // Focus trap: keep Tab / Shift+Tab cycling inside the dialog.
+      const f = focusables();
+      if (!f.length) return;
+      const first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
   });
 })();
 
