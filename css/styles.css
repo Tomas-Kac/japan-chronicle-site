@@ -946,3 +946,21 @@ html, body {
 .marker-cluster-medium div { background: #a83226; }
 .marker-cluster-large  { background: rgba(130,30,23,0.38); }
 .marker-cluster-large div  { background: #8f2a20; }
+
+/* ---- Accessibility: visible keyboard focus + reduced-motion ---- */
+#yearSlider:focus-visible,
+#opacitySlider:focus-visible,
+.tcBtn:focus-visible,
+.stepBtn:focus-visible,
+#searchInput:focus-visible,
+.chip:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
