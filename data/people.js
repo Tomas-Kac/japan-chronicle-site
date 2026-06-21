@@ -657,6 +657,83 @@ Defeated at Toba-Fushimi in 1868, he withdrew rather than plunge Japan into tota
         caption: "Tokugawa Yoshinobu — Wikimedia Commons."
       }
     ]
+  },
+
+  // ---------------- Added for fuller coverage (women across the eras) ----------------
+  {
+    id: "empress-suiko",
+    name: "Empress Suiko",
+    role: "sovereign",
+    born: 554, died: 628,
+    dateLabel: "554–628",
+    period: "Asuka · empress",
+    location: { name: "Asuka (Toyura/Oharida Palace), Yamato", lat: 34.4793, lon: 135.8200 },
+    summary: "Japan's first reigning empress, on the throne through the formative Asuka reforms.",
+    bio: `Suiko became Japan's first empress regnant in 593 and reigned for 35 years, with her nephew Prince Shōtoku serving as regent. Her reign saw Buddhism promoted as a state faith, the first Chinese-style court ranks and reforms, and official embassies to Sui China.
+
+She is the first of several powerful women rulers of the Asuka–Nara age, when female sovereigns were not unusual — a foundational period for the imperial state.`,
+    battles: [],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Empress_Suiko_by_Tosa_Mitsuyoshi_1726_Eifukuji_Osaka.png/960px-Empress_Suiko_by_Tosa_Mitsuyoshi_1726_Eifukuji_Osaka.png",
+        caption: "Empress Suiko — Wikimedia Commons."
+      }
+    ]
+  },
+  {
+    id: "hojo-masako",
+    name: "Hōjō Masako",
+    role: "statesman",
+    born: 1156, died: 1225,
+    dateLabel: "1156–1225",
+    period: "Kamakura · power behind the shogunate",
+    location: { name: "Kamakura, Sagami", lat: 35.3197, lon: 139.5503 },
+    summary: "The 'nun shogun' — Yoritomo's widow, who held real power over the early Kamakura shogunate.",
+    bio: `Wife of Minamoto no Yoritomo and a daughter of the Hōjō, Masako took Buddhist vows on his death in 1199 yet kept decisive political power — earning the name "nun shogun" (ama-shōgun). With her father Tokimasa she helped establish the Hōjō regency that would dominate the Kamakura shogunate.
+
+In the Jōkyū War of 1221 her rallying address is traditionally credited with steeling the eastern warriors against Retired Emperor Go-Toba, securing the warriors' victory over the court.`,
+    battles: ["jokyu-war"],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Hojo_Masako.jpg/960px-Hojo_Masako.jpg",
+        caption: "Hōjō Masako — Wikimedia Commons."
+      }
+    ]
+  },
+  {
+    id: "hino-tomiko",
+    name: "Hino Tomiko",
+    role: "statesman",
+    born: 1440, died: 1496,
+    dateLabel: "1440–1496",
+    period: "Muromachi · shogunal consort",
+    location: { name: "Heian-kyō (the shogunal court), Yamashiro", lat: 35.0116, lon: 135.7681 },
+    summary: "Shogunal wife and shrewd financier whose succession struggle helped ignite the Ōnin War.",
+    bio: `Wife of the eighth Ashikaga shogun, Yoshimasa, Tomiko was a formidable political and financial operator who amassed great wealth through moneylending and toll gates. Her determination to secure the succession for her infant son Yoshihisa, against Yoshimasa's brother Yoshimi, deepened the rivalry of the Hosokawa and Yamana houses.
+
+That dispute erupted in 1467 into the Ōnin War, the decade-long conflict that gutted Kyoto and opened the Sengoku age.`,
+    battles: ["onin"],
+    images: []
+  },
+  {
+    id: "tachibana-ginchiyo",
+    name: "Tachibana Ginchiyo",
+    role: "warlord",
+    born: 1569, died: 1602,
+    dateLabel: "1569–1602",
+    period: "Sengoku · woman warrior",
+    location: { name: "Yanagawa, Chikugo", lat: 33.1632, lon: 130.4017 },
+    summary: "An onna-musha who inherited her clan's leadership and castle in her own right.",
+    bio: `Daughter of the Ōtomo general Tachibana Dōsetsu, Ginchiyo inherited the headship of the Tachibana house and its castle in her own name — an extraordinary status for a woman of the age. Renowned as an onna-musha (woman warrior), she is said to have armed her ladies-in-waiting to help defend Tachibanayama Castle.
+
+She married Tachibana Muneshige and is remembered for her readiness to take up arms in the defence of Yanagawa during the Sekigahara campaign of 1600.`,
+    battles: [],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/b/bc/%E7%AB%8B%E8%8A%B1%E8%AA%BE%E5%8D%83%E4%BB%A3.jpg",
+        caption: "Tachibana Ginchiyo — Wikimedia Commons."
+      }
+    ]
   }
 ];
 
