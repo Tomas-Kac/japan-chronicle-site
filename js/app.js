@@ -514,32 +514,40 @@ map.attributionControl.setPosition('bottomleft');
 // ---- Provinces (旧国) overlay — local GeoJSON merged from CODH (CC BY-NC 4.0) ----
 const PROVINCE_ATTR =
   '旧国境界 &copy; <a href="https://codh.rois.ac.jp/">CODH</a> 旧国・旧郡境界データセット (CC BY-NC 4.0)';
-let provincesLayer = null;
-fetch('data/provinces.geojson?v=' + Date.now())
-  .then((r) => r.json())
-  .then((geo) => {
-    provincesLayer = L.geoJSON(geo, {
-      smoothFactor: 1.5, // simplify polylines while drawing — fewer points, smoother zoom
-      style: { color: '#7a5c3e', weight: 1, opacity: 0.7, fillColor: '#c8a15a', fillOpacity: 0.07 },
-      onEachFeature: (feature, layer) => {
-        const p = feature.properties || {};
-        layer.bindTooltip(
-          `<strong>${escapeHtml(p.name || '')}</strong>${
-            p.yomi ? ' <span class="rj">' + escapeHtml(p.yomi) + '</span>' : ''
-          }${p.pref ? '<br>' + escapeHtml(p.pref) : ''}`,
-          { sticky: true, className: 'province-label' }
-        );
-        layer.on('mouseover', () => layer.setStyle({ fillOpacity: 0.28, weight: 2 }));
-        layer.on('mouseout', () => layer.setStyle({ fillOpacity: 0.07, weight: 1 }));
-      },
-    });
-    layerControl.addOverlay(provincesLayer, 'Provinces (旧国)');
-  })
-  .catch((err) => console.error('Could not load provinces.geojson', err));
-
-// Show the CODH attribution only while the provinces overlay is on.
+// The overlay appears in the layer control immediately (empty); the ~200 KB of
+// province polygons are fetched LAZILY — only the first time the layer is switched on.
+const provincesLayer = L.layerGroup();
+let provincesLoaded = false;
+layerControl.addOverlay(provincesLayer, 'Provinces (旧国)');
+function loadProvinces() {
+  if (provincesLoaded) return;
+  provincesLoaded = true;
+  fetch('data/provinces.geojson?v=' + Date.now())
+    .then((r) => r.json())
+    .then((geo) => {
+      L.geoJSON(geo, {
+        smoothFactor: 1.5, // simplify polylines while drawing — fewer points, smoother zoom
+        style: { color: '#7a5c3e', weight: 1, opacity: 0.7, fillColor: '#c8a15a', fillOpacity: 0.07 },
+        onEachFeature: (feature, layer) => {
+          const p = feature.properties || {};
+          layer.bindTooltip(
+            `<strong>${escapeHtml(p.name || '')}</strong>${
+              p.yomi ? ' <span class="rj">' + escapeHtml(p.yomi) + '</span>' : ''
+            }${p.pref ? '<br>' + escapeHtml(p.pref) : ''}`,
+            { sticky: true, className: 'province-label' }
+          );
+          layer.on('mouseover', () => layer.setStyle({ fillOpacity: 0.28, weight: 2 }));
+          layer.on('mouseout', () => layer.setStyle({ fillOpacity: 0.07, weight: 1 }));
+        },
+      }).addTo(provincesLayer);
+    })
+    .catch((err) => console.error('Could not load provinces.geojson', err));
+}
+// Lazy-load + show the CODH attribution only while the provinces overlay is on.
 map.on('overlayadd', (e) => {
-  if (e.layer === provincesLayer) map.attributionControl.addAttribution(PROVINCE_ATTR);
+  if (e.layer !== provincesLayer) return;
+  loadProvinces();
+  map.attributionControl.addAttribution(PROVINCE_ATTR);
 });
 map.on('overlayremove', (e) => {
   if (e.layer === provincesLayer) map.attributionControl.removeAttribution(PROVINCE_ATTR);
@@ -834,36 +842,42 @@ domainsLegend.onAdd = function () {
   return domainsLegendDiv;
 };
 
-// Load the clan polygons, build one layer each, then add the overlay to the control.
-fetch('data/domains.geojson?v=' + Date.now())
-  .then((r) => r.json())
-  .then((geo) => {
-    domainEntries = (geo.features || []).map((feature) => {
-      const props = feature.properties || {};
-      const layer = L.geoJSON(feature, {
-        smoothFactor: 1.5, // simplify polylines while drawing — fewer points, smoother zoom
-        style: () => styleDomain(props.color),
-        onEachFeature: (feat, lyr) => {
-          lyr.bindTooltip(
-            `<strong>${escapeHtml(props.name || props.clan || '')}</strong>${
-              props.daimyo ? '<br>' + escapeHtml(props.daimyo) : ''
-            }<br><span class="dm-yr">${escapeHtml(domainRangeLabel(props))}</span>`,
-            { sticky: true, className: 'route-label' }
-          );
-          lyr.on('click', () => showDomainInfo(props));
-        },
+// The overlay appears in the control immediately; the ~270 KB of clan polygons are
+// fetched LAZILY the first time the Domains layer is switched on.
+let domainsLoaded = false;
+layerControl.addOverlay(domainsLayer, 'Domains (大名)');
+function loadDomains() {
+  if (domainsLoaded) return Promise.resolve();
+  domainsLoaded = true;
+  return fetch('data/domains.geojson?v=' + Date.now())
+    .then((r) => r.json())
+    .then((geo) => {
+      domainEntries = (geo.features || []).map((feature) => {
+        const props = feature.properties || {};
+        const layer = L.geoJSON(feature, {
+          smoothFactor: 1.5, // simplify polylines while drawing — fewer points, smoother zoom
+          style: () => styleDomain(props.color),
+          onEachFeature: (feat, lyr) => {
+            lyr.bindTooltip(
+              `<strong>${escapeHtml(props.name || props.clan || '')}</strong>${
+                props.daimyo ? '<br>' + escapeHtml(props.daimyo) : ''
+              }<br><span class="dm-yr">${escapeHtml(domainRangeLabel(props))}</span>`,
+              { sticky: true, className: 'route-label' }
+            );
+            lyr.on('click', () => showDomainInfo(props));
+          },
+        });
+        return { layer, props };
       });
-      return { layer, props };
-    });
-    layerControl.addOverlay(domainsLayer, 'Domains (大名)');
-  })
-  .catch((err) => console.error('Could not load domains.geojson', err));
+    })
+    .catch((err) => console.error('Could not load domains.geojson', err));
+}
 
 map.on('overlayadd', (e) => {
   if (e.layer !== domainsLayer) return;
   domainsOn = true;
-  updateDomains();
   domainsLegend.addTo(map);
+  loadDomains().then(() => { if (domainsOn) updateDomains(); });
 });
 map.on('overlayremove', (e) => {
   if (e.layer !== domainsLayer) return;
