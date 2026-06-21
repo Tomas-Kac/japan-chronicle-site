@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tomas-kac.github.io/japan-chronicle-site/sitemap.xml

@@ -534,7 +534,7 @@ function loadProvinces() {
   if (provincesLoaded) return;
   provincesLoaded = true;
   fetch('data/provinces.geojson?v=' + Date.now())
-    .then((r) => r.json())
+    .then((r) => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
     .then((geo) => {
       L.geoJSON(geo, {
         smoothFactor: 1.5, // simplify polylines while drawing — fewer points, smoother zoom
@@ -702,6 +702,9 @@ function recomputeYears() {
   if (peopleOn) {
     for (const pm of personMarkers) for (const y of personTickYears(pm.person)) set.add(y);
   }
+  // Safety: if nothing is selected (e.g. every era filtered off), fall back to all
+  // battle years so the slider never ends up with an undefined range.
+  if (!set.size) { for (const b of BATTLES) for (const y of battleYears(b)) set.add(y); }
   eventYears = [...set].sort((a, b) => a - b);
   MIN_YEAR = eventYears[0];
   MAX_YEAR = eventYears[eventYears.length - 1];
@@ -861,7 +864,7 @@ function loadDomains() {
   if (domainsLoaded) return Promise.resolve();
   domainsLoaded = true;
   return fetch('data/domains.geojson?v=' + Date.now())
-    .then((r) => r.json())
+    .then((r) => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
     .then((geo) => {
       domainEntries = (geo.features || []).map((feature) => {
         const props = feature.properties || {};
@@ -1207,7 +1210,7 @@ function renderBattleHTML(battle) {
     ? `<h3>Images</h3><div class="gallery">${imgs
         .map(
           (im) =>
-            `<figure><img src="${escapeHtml(im.src)}" alt="" loading="lazy">${
+            `<figure><img src="${escapeHtml(im.src)}" alt="${escapeHtml(im.caption || '')}" loading="lazy" onerror="this.closest('figure').style.display='none'">${
               im.caption ? `<figcaption>${escapeHtml(im.caption)}</figcaption>` : ''
             }</figure>`
         )
@@ -1273,7 +1276,7 @@ function renderPersonHTML(p) {
     ? `<h3>Images</h3><div class="gallery">${imgs
         .map(
           (im) =>
-            `<figure><img src="${escapeHtml(im.src)}" alt="" loading="lazy">${
+            `<figure><img src="${escapeHtml(im.src)}" alt="${escapeHtml(im.caption || '')}" loading="lazy" onerror="this.closest('figure').style.display='none'">${
               im.caption ? `<figcaption>${escapeHtml(im.caption)}</figcaption>` : ''
             }</figure>`
         )
@@ -1395,13 +1398,18 @@ function selectSearchResult(r) {
   searchInput.blur();
 }
 
+let _searchTimer = null;
 searchInput.addEventListener('input', () => {
-  searchMatches = searchEverything(searchInput.value);
-  renderSearchResults(searchMatches);
+  clearTimeout(_searchTimer);
+  _searchTimer = setTimeout(() => {
+    searchMatches = searchEverything(searchInput.value);
+    renderSearchResults(searchMatches);
+  }, 250);
 });
 searchInput.addEventListener('keydown', (e) => {
-  if (e.key === 'Enter' && searchMatches.length) {
-    selectSearchResult(searchMatches[0]);
+  if (e.key === 'Enter') {
+    searchMatches = searchEverything(searchInput.value);
+    if (searchMatches.length) selectSearchResult(searchMatches[0]);
   } else if (e.key === 'Escape') {
     searchInput.value = '';
     hideSearchResults();
@@ -1453,8 +1461,9 @@ function isEventId(id) { return typeof EVENTS !== 'undefined' && EVENTS.some((e)
 function applyHash() {
   const m = (location.hash || '').replace(/^#/, '').match(/^([ybpe])=(.+)$/);
   if (m) {
-    const k = m[1], v = decodeURIComponent(m[2]);
-    if (k === 'y') { const y = parseInt(v, 10); if (!isNaN(y)) showYear(y, { frame: false }); }
+    const k = m[1];
+    let v; try { v = decodeURIComponent(m[2]); } catch (e) { v = m[2]; }
+    if (k === 'y') { const y = parseInt(v, 10); if (!isNaN(y)) showYear(Math.max(MIN_YEAR, Math.min(MAX_YEAR, y)), { frame: false }); }
     else if (k === 'b') { const b = BATTLES.find((x) => x.id === v); if (b) { showYear(battleStartYear(b), { frame: false }); showBattleInfo(b); focusBattle(b); } }
     else if (k === 'e') { const ev = (typeof EVENTS !== 'undefined' ? EVENTS : []).find((x) => x.id === v); if (ev) { showBattleInfo(ev); focusBattle(ev); } }
     else if (k === 'p') { const p = (typeof PEOPLE !== 'undefined' ? PEOPLE : []).find((x) => x.id === v); if (p) { showPersonInfo(p); focusBattle(p); } }
