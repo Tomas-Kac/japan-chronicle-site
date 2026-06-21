@@ -73,6 +73,7 @@ const BATTLES = [
     },
     outcome: "Decisive Eastern Army victory. Tokugawa Ieyasu's path to the shogunate was secured.",
     summary: "Often called the battle that decided the realm (天下分け目の戦い), Sekigahara was the climactic engagement of the Sengoku period and set the stage for over 250 years of Tokugawa rule.",
+    leadsTo: "osaka-siege",
     details: `Following the death of Toyotomi Hideyoshi in 1598, a power struggle emerged between Tokugawa Ieyasu, the most powerful member of the Council of Five Elders, and Ishida Mitsunari, who sought to preserve the succession of Hideyoshi's young heir Toyotomi Hideyori.
 
 The two armies met in a narrow valley in Mino Province on the morning of October 21, 1600. Heavy fog initially obscured the field. The battle's turning point came when Kobayakawa Hideaki, positioned on Mount Matsuo and nominally allied with the Western Army, defected to Ieyasu's side after hours of hesitation. His attack on the Western flank triggered a cascade of further defections.
@@ -2138,6 +2139,7 @@ The combination of the sudden deluge and the Uesugi offensive resulted in critic
     },
     outcome: "Nobunaga was forced to take his own life; the would-be unifier was dead.",
     summary: "The coup that killed Oda Nobunaga: his trusted general Akechi Mitsuhide turned his army on the lightly guarded temple where Nobunaga lodged, ending the career of the man who had nearly unified Japan.",
+    leadsTo: "yamazaki",
     details: `In June 1582, ordered west to reinforce Hideyoshi, Akechi Mitsuhide instead wheeled his army toward Kyoto — declaring, by tradition, that "the enemy is at Honnō-ji." He surrounded the temple where Nobunaga rested with only a small guard. Nobunaga fought with bow and spear, then set the temple ablaze and took his own life; his son Nobutada died nearby.
 
 Mitsuhide's triumph lasted only eleven days: Hideyoshi raced back from the west and destroyed him at Yamazaki, then seized Nobunaga's mantle.
@@ -2176,6 +2178,7 @@ The Shinchō Kōki tells how Mitsuhide's men "in no time at all surrounded the H
     },
     outcome: "Hideyoshi's victory; Akechi Mitsuhide was defeated and killed in flight.",
     summary: "Eleven days after killing Nobunaga, Akechi Mitsuhide was crushed by Hideyoshi at Yamazaki — the battle that made Hideyoshi heir to Nobunaga's power.",
+    leadsTo: "shizugatake",
     details: `The Battle of Yamazaki occurred on July 2, 1582, following the assassination of Oda Nobunaga at the Honnō-ji Incident. Toyotomi Hideyoshi rapidly concluded a truce with the Mōri clan and executed a forced march from Bitchū Province to confront the assassin, Akechi Mitsuhide.
 
 The armies engaged near the village of Yamazaki, south of Kyoto. The tactical objective was control of Mount Tennōzan, a strategic elevation bordering the Yodo River. Hideyoshi's vanguard, commanded by Nakagawa Kiyohide and Takayama Ukon, successfully secured the heights.
@@ -2214,6 +2217,7 @@ Utilizing the elevation, Hideyoshi's forces directed sustained matchlock fire ag
     },
     outcome: "Decisive Hideyoshi victory; Shibata Katsuie killed himself at Kitanoshō.",
     summary: "Hideyoshi defeated Nobunaga's senior general Shibata Katsuie in the struggle for the Oda succession — famous for the 'Seven Spears of Shizugatake' and another of Hideyoshi's lightning marches.",
+    leadsTo: "komaki-nagakute",
     details: `The Battle of Shizugatake was fought in May 1583 in Ōmi Province. It was a succession conflict between Toyotomi Hideyoshi and Shibata Katsuie for control of the Oda clan following Oda Nobunaga's death.
 
 Shibata forces under Sakuma Morimasa launched an offensive against Hideyoshi's fortifications at Mount Shizugatake. Hideyoshi responded with an accelerated forced march from Mino Province, arriving at the battlefield within 24 hours. Hideyoshi's counterattack was spearheaded by a cadre of elite bodyguards known as the "Seven Spears of Shizugatake" (including Katō Kiyomasa and Fukushima Masanori).
@@ -2538,6 +2542,7 @@ The shattering of the Taira field army let Yoshinaka march on the capital; the T
     },
     outcome: "Minamoto victory; the Taira fortress fell and they fled to their ships.",
     summary: "Yoshitsune's most famous stroke. While the main Minamoto army assaulted the Taira fortress at Ichi-no-Tani from the front, Yoshitsune led a handful of riders down the precipitous Hiyodorigoe slope to fall on the defenders' rear, throwing the Taira into rout. It is the setting of the death of the young flute-player Taira no Atsumori at the hands of Kumagai Naozane.",
+    leadsTo: "yashima",
     details: `Re-established at Ichi-no-Tani between the mountains and the sea near Suma, the Taira were attacked on several fronts in early 1184. The decisive moment came when Minamoto no Yoshitsune, with a small mounted party, descended the cliff at Hiyodorigoe — thought impassable — and struck the fortress from behind. The Taira line collapsed and the survivors fled to their fleet, carrying the war out to sea.`
   },
   {
@@ -2567,6 +2572,7 @@ The shattering of the Taira field army let Yoshinaka march on the capital; the T
     },
     outcome: "Minamoto victory; the Taira abandoned Yashima and fled west by sea.",
     summary: "Crossing a stormy strait to land where he was not expected, Yoshitsune stormed the Taira island base at Yashima, and the Taira again took to their ships. The battle is remembered for the archer Nasu no Yoichi, who at the Taira's taunting challenge shot down a fan held aloft on a pole on one of their boats.",
+    leadsTo: "dan-no-ura",
     details: `The Battle of Yashima occurred in 1185 at Yashima, Sanuki Province (modern Takamatsu, Kagawa). The engagement involved forces of the Minamoto clan, commanded by Minamoto no Yoshitsune, engaging the Taira clan, commanded by Taira no Munemori. Crossing a stormy strait to land where he was not expected, Yoshitsune stormed the Taira island base at Yashima, and the Taira again took to their ships. The battle is remembered for the archer Nasu no Yoichi, who at the Taira's taunting challenge shot down a fan held aloft on a pole on one of their boats. The conflict resulted in a Minamoto victory; the Taira abandoned Yashima and fled west by sea. This event remains a historically significant military engagement within the context of the Genpei period, contributing to the broader geopolitical realignment of the era.`
   },
   {
@@ -2740,6 +2746,7 @@ In August 1281 a typhoon struck the crowded fleet and destroyed it; great number
     },
     outcome: "Kamakura fell; Hōjō Takatoki and his kin took their own lives — ending the Kamakura shogunate.",
     summary: "Nitta Yoshisada's assault on the shogunal capital. By tradition he turned the city's coastal defenses by leading his army across the beach at Inamuragasaki at an unusually low tide; Kamakura fell amid heavy fighting, and the last Hōjō regent Takatoki and hundreds of his kin took their own lives — ending nearly 150 years of Kamakura rule and opening the way to the Kenmu Restoration.",
+    leadsTo: "minatogawa",
     details: `As risings against the Hōjō spread in 1333, Nitta Yoshisada raised the loyalist banner in the east and drove on Kamakura. Blocked at the fortified passes, he is said to have prayed at Inamuragasaki, where the tide drew back and let his army sweep around the defenses along the shore.
 
 The city was stormed and burned; Hōjō Takatoki and the leading members of the regency took their own lives at the temple of Tōshō-ji. With the Hōjō gone, Emperor Go-Daigo's Kenmu Restoration began — though within three years it collapsed into the Nanboku-chō wars already on your map.`
@@ -2825,6 +2832,7 @@ The rebellion hardened the shogunate's resolve: Christianity was suppressed ever
     },
     outcome: "Decisive Imperial victory; the opening battle of the Boshin War.",
     summary: "Though outnumbered three to one, the modernized, Imperial-bannered Satsuma–Chōshū army routed the shogunate forces south of Kyoto, opening the Boshin War and turning the conflict into a legitimist crusade against the Tokugawa.",
+    leadsTo: "ueno",
     details: `When Tokugawa Yoshinobu marched on Kyoto to reverse the new Meiji government's seizure of power, his army met the Satsuma–Chōshū forces at Toba and Fushimi on the southern approaches to the city.
 
 Despite being heavily outnumbered, the Imperial side was better armed and disciplined. The decisive moment came when the court granted the Satsuma–Chōshū army the brocade banner (nishiki no mihata), branding the Tokugawa "enemies of the court"; several wavering domains defected. Yoshinobu abandoned his army and fled by ship to Edo.
@@ -2852,6 +2860,7 @@ The victory transformed a domain quarrel into a national war and sent the Imperi
     },
     outcome: "Imperial victory in a single day; the Shōgitai were destroyed.",
     summary: "After Edo surrendered peacefully, the die-hard Shōgitai held out at Kan'ei-ji temple in Ueno. Ōmura Masujirō's Imperial troops, using Armstrong guns, crushed them in one day, cementing Imperial control of the new capital.",
+    leadsTo: "aizu",
     details: `Following the bloodless surrender of Edo Castle, a body of pro-Tokugawa loyalists known as the Shōgitai entrenched themselves around Kan'ei-ji, the great temple in Ueno that housed the Tokugawa mortuary shrines.
 
 On 4 July 1868 the Imperial commander Ōmura Masujirō attacked, deploying modern Armstrong breech-loading cannon. The temple complex was bombarded and stormed in a single day; the Shōgitai were scattered and Kan'ei-ji burned.
@@ -2878,6 +2887,7 @@ The victory secured Tokyo for the new government and broke organized resistance 
     },
     outcome: "Imperial victory after a month-long siege; the Aizu domain was crushed.",
     summary: "The bloodiest campaign of the Boshin War. The Tokugawa-loyalist Aizu domain made a desperate stand at Tsuruga Castle; the tragedy of the teenage Byakkotai, who took their own lives believing the castle had fallen, became a national legend.",
+    leadsTo: "hakodate",
     details: `Aizu, staunchest of the Tokugawa loyalist domains under Matsudaira Katamori, became the focus of the Imperial army's northern campaign against the Ōuetsu Reppan Dōmei (Northern Alliance).
 
 Imperial forces stormed into the Aizu basin in October 1868 and besieged the formidable Tsuruga (Aizuwakamatsu) Castle. During the chaos the Byakkotai — a reserve unit of teenage samurai — withdrew to Iimoriyama; seeing smoke over the castle town and believing it lost, most took their own lives. The castle held out about a month before Katamori surrendered in early November.
@@ -3117,6 +3127,7 @@ The court, however, ruled the conflict a private quarrel and granted Yoshiie not
     },
     outcome: "Go-Shirakawa's side wins; Sutoku is exiled — and the samurai become the arbiters of the court.",
     summary: "A palace succession quarrel is settled not by courtiers but by warriors — the moment the samurai step to the centre of national politics.",
+    leadsTo: "heiji",
     details: `A dispute over the imperial succession split the court between the reigning Emperor Go-Shirakawa and his exiled-minded brother, the retired Emperor Sutoku. Crucially, it also split the great warrior houses: fathers and sons, the Taira and the Minamoto, took opposite sides.
 
 In a single night's fighting in Kyoto in 1156, the warriors of Go-Shirakawa's party — led by Taira no Kiyomori and Minamoto no Yoshitomo — overwhelmed Sutoku's. Sutoku was banished; defeated leaders, including Yoshitomo's own father, were executed. For the first time a question of who ruled Japan had been decided by samurai swords, and Kiyomori and Yoshitomo emerged as the indispensable men of the realm — soon to turn on each other.`
@@ -3137,6 +3148,7 @@ In a single night's fighting in Kyoto in 1156, the warriors of Go-Shirakawa's pa
     },
     outcome: "Decisive Taira victory; Yoshitomo is killed and his young son Yoritomo exiled — setting up the Genpei War.",
     summary: "Kiyomori destroys his Minamoto rival and seizes supremacy over the court — the first samurai to dominate Japan, and the spark, twenty years on, of the Genpei War.",
+    leadsTo: "uji-1180",
     details: `The alliance of Hōgen did not last. While Taira no Kiyomori was away on pilgrimage, Minamoto no Yoshitomo and the courtier Fujiwara no Nobuyori seized the capital in a coup, attacking and burning the Sanjō Palace and taking the retired emperor captive.
 
 Kiyomori raced back, outmanoeuvred the rebels, and crushed them. Yoshitomo was killed fleeing east; his thirteen-year-old son, Minamoto no Yoritomo, was spared and exiled to Izu. Kiyomori now stood unrivalled — the first warrior to rule the court from within, climbing to the office of chancellor. But the boy he had let live would, in 1180, raise the east against the Taira and bring the whole order crashing down in the Genpei War.`
