@@ -64,6 +64,9 @@ const map = L.map('map', {
   wheelPxPerZoomLevel: 60,
   wheelDebounceTime: 20,
 });
+// Drop the "Leaflet" badge from the map — it's credited on the Sources page instead.
+// (The required © OpenStreetMap / © CARTO tile attributions stay.)
+map.attributionControl.setPrefix(false);
 
 // --- "Reset view" button (sits under the +/- zoom control, top-left) ---
 // Flies the camera back up to the whole-Japan overview and closes any open panel.
