@@ -538,6 +538,11 @@ html, body {
 .person-battles a.battle-link { color: #ffd96b; text-decoration: none; cursor: pointer; }
 .person-battles a.battle-link:hover { text-decoration: underline; }
 .person-battles .pb-year { color: #8aa0b0; font-size: 0.85em; margin-left: 5px; }
+/* Further-reading / sources list in the info panel */
+.src-list { list-style: none; padding-left: 0; margin: 4px 0 0; }
+.src-list li { margin: 5px 0; font-size: 14px; }
+.src-list a { color: #ffd96b; text-decoration: none; }
+.src-list a:hover { text-decoration: underline; }
 
 #yearReadout {
   font-size: 30px;

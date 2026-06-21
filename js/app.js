@@ -1182,6 +1182,17 @@ function hideBattleInfo() {
   if (currentYear != null) setHash('y=' + currentYear);
 }
 
+// "Further reading" for the info panel: any precise citations from an optional
+// `sources: [{label, url}]` field on the entry, plus a Wikipedia look-up that works
+// for every entry. Add `sources` to a battle/event/person to show real references.
+function sourcesBlock(name, sources) {
+  const list = (Array.isArray(sources) ? sources : [])
+    .map((s) => `<li><a href="${escapeHtml(s.url)}" target="_blank" rel="noopener">${escapeHtml(s.label || s.url)}</a></li>`)
+    .join('');
+  const lookup = 'https://en.wikipedia.org/w/index.php?search=' + encodeURIComponent(name || '');
+  return `<h3>Further reading</h3><ul class="src-list">${list}<li><a href="${escapeHtml(lookup)}" target="_blank" rel="noopener">Look up "${escapeHtml(name || '')}" on Wikipedia &rarr;</a></li></ul>`;
+}
+
 function renderBattleHTML(battle) {
   const c = battle.combatants || {};
   const sideHTML = (s) => `
@@ -1222,6 +1233,15 @@ function renderBattleHTML(battle) {
     ? `<p class="route-note">⚑ ${routes.length === 1 ? 'March route' : routes.length + ' march routes'} shown on the map (army movements before the battle).</p>`
     : '';
 
+  // "What happened next": optional leadsTo (a battle id or array of ids) → clickable links.
+  const _leads = battle.leadsTo ? (Array.isArray(battle.leadsTo) ? battle.leadsTo : [battle.leadsTo]) : [];
+  const _leadsLinked = _leads.map((id) => BATTLES.find((b) => b.id === id)).filter(Boolean);
+  const nextHTML = _leadsLinked.length
+    ? `<h3>What happened next</h3><ul class="person-battles">${_leadsLinked
+        .map((b) => `<li><a href="#" class="battle-link" data-battle="${escapeHtml(b.id)}">${escapeHtml(b.name)}</a> <span class="pb-year">${escapeHtml(String(b.dateLabel || b.year || ''))}</span></li>`)
+        .join('')}</ul>`
+    : '';
+
   return `
     <h2>${escapeHtml(battle.name)}</h2>
     <p class="meta">${escapeHtml(battle.dateLabel || battle.date || '')}${
@@ -1233,7 +1253,9 @@ function renderBattleHTML(battle) {
     ${sides.length ? `<h3>Combatants</h3><div class="combatants">${sides.join('')}</div>` : ''}
     ${battle.outcome ? `<h3>Outcome</h3><p>${escapeHtml(battle.outcome)}</p>` : ''}
     ${detailsHTML}
+    ${nextHTML}
     ${galleryHTML}
+    ${sourcesBlock(battle.name, battle.sources)}
   `;
 }
 
@@ -1291,6 +1313,7 @@ function renderPersonHTML(p) {
     ${bioHTML}
     ${battlesHTML}
     ${galleryHTML}
+    ${sourcesBlock(p.name, p.sources)}
   `;
 }
 
