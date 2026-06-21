@@ -93,3 +93,23 @@ footer a { color: var(--crimson); text-decoration: none; }
   main { padding: 28px 18px 20px; }
   main h1 { font-size: 25px; }
 }
+
+/* ---- Eras page ---- */
+.era-jump { display: flex; flex-wrap: wrap; gap: 7px; margin: 4px 0 30px; }
+.era-jump a {
+  font-size: 13px; font-weight: 600; color: var(--ink);
+  background: var(--paper); border: 1px solid var(--rule);
+  border-radius: 20px; padding: 5px 13px; text-decoration: none;
+}
+.era-jump a:hover { background: var(--gold); border-color: var(--gold); }
+.era { scroll-margin-top: 72px; }
+.era-years { font-size: 12.5px; font-weight: 600; color: var(--gold-deep); letter-spacing: 0.06em; text-transform: uppercase; margin: -6px 0 12px; }
+.era-figs { font-size: 14.5px; }
+.era-figs .sep { color: var(--muted); margin: 0 3px; }
+
+/* ---- Glossary page ---- */
+.glossary { margin: 0 0 8px; }
+.gl-item { padding: 12px 0; border-bottom: 1px solid var(--rule); }
+.gl-term { font-size: 16.5px; font-weight: 700; color: var(--ink); }
+.gl-kanji { font-weight: 500; color: var(--gold-deep); margin-left: 9px; font-size: 15.5px; }
+.gl-def { margin: 3px 0 0; }
