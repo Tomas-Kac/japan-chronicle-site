@@ -3214,6 +3214,12 @@ Emperor Kanmu responded by appointing Sakanoue no Tamuramaro, who waged a relent
     },
     outcome: "Soga victory; the Mononobe destroyed — securing Buddhism's place in the Japanese state.",
     summary: "The Soga clan crushes the Mononobe — settling, by the sword, whether Japan would embrace Buddhism.",
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/9/9c/Shotoku_killing_Moriya_no_Omuraji.jpg",
+        caption: "Battle of Shigisan. Wikimedia Commons."
+      }
+    ],
     details: `The arrival of Buddhism (552) had split the Yamato court: the Soga clan championed the foreign faith while the Mononobe and Nakatomi defended the native kami. In 587 the quarrel turned to open war.
 
 Soga no Umako led a coalition — including the young Prince Shōtoku — against Mononobe no Moriya, defeating and killing him near Mount Shigi. The Soga victory secured Buddhism at the heart of the Japanese state and cleared the way for the temple-building and reform of the Asuka age.`
@@ -3231,6 +3237,12 @@ Soga no Umako led a coalition — including the young Prince Shōtoku — agains
     },
     outcome: "Akasaka fell, but Kusunoki escaped by faking his death — keeping Go-Daigo's revolt alive.",
     summary: "Kusunoki Masashige's tiny garrison defies the Kamakura shogunate at Akasaka — the opening of the Genkō War and the birth of a legend of loyalty.",
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Shimo-akasaka-jyo02.jpg/960px-Shimo-akasaka-jyo02.jpg",
+        caption: "Siege of Akasaka. Wikimedia Commons."
+      }
+    ],
     details: `When Emperor Go-Daigo rose against the Kamakura shogunate in 1331, the warrior Kusunoki Masashige raised the imperial banner in the hills of Kawachi and held the small fort of Akasaka against a vast shogunal army.
 
 Wildly outnumbered, he held out with ingenious improvised defences — logs, boiling water, and dummy troops — before the fort finally fell, slipping away by faking his own death in the flames. His resistance kept Go-Daigo's cause alive and made Kusunoki the very model of the loyal samurai, revered for centuries.`
@@ -3248,6 +3260,12 @@ Wildly outnumbered, he held out with ingenious improvised defences — logs, boi
     },
     outcome: "Nitta victory; the road to Kamakura lay open — and the shogunate fell days later.",
     summary: "Nitta Yoshisada smashes the Hōjō field army on the Musashi plain, opening the road to Kamakura and the shogunate's fall.",
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/8/81/Bubaigawara-kosenjou.jpg",
+        caption: "Battle of Bubaigawara. Wikimedia Commons."
+      }
+    ],
     details: `In the summer of 1333, as Go-Daigo's revolt gathered force, Nitta Yoshisada raised the eastern warriors and marched on Kamakura itself. At Bubaigawara, on the Musashi plain, his army broke the Hōjō shogunate's defending force after fierce fighting along the Tama River.
 
 The victory threw open the road to the shogunal capital. Within days Nitta stormed Kamakura, the Hōjō regents took their own lives at Tōshō-ji, and the Kamakura shogunate — after 150 years — was destroyed.`
