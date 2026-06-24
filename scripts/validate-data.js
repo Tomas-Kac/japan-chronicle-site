@@ -18,7 +18,7 @@ const DATA = path.join(__dirname, '..', 'data');
 // Load the data files (they declare const BATTLES / CASTLES / ... ). We eval them
 // together so the consts share one scope, with a window shim for people.js.
 global.window = {};
-const files = ['battles.js', 'castles.js', 'routes.js', 'events.js', 'people.js'];
+const files = ['battles.js', 'castles.js', 'routes.js', 'events.js', 'people.js', 'temples.js'];
 const src = files.map((f) => fs.readFileSync(path.join(DATA, f), 'utf8')).join('\n');
 
 const errors = [];
@@ -73,6 +73,12 @@ const checks = `
     if (_castleNames.has(c.name)) E('castle: duplicate name "'+c.name+'"'); else _castleNames.add(c.name);
     checkLoc('castle', c.name, { lat: c.lat, lon: c.lon });
   }
+  const _templeNames = new Set();
+  for (const t of (typeof TEMPLES !== 'undefined' ? TEMPLES : [])) {
+    if (!t.name) { E('temple: an entry has no name'); continue; }
+    if (_templeNames.has(t.name)) E('temple: duplicate name "'+t.name+'"'); else _templeNames.add(t.name);
+    checkLoc('temple', t.name, { lat: t.lat, lon: t.lon });
+  }
   dupIds('events', EVENTS);
   for (const e of EVENTS) {
     if (!e.name) E('event "'+e.id+'": missing name');
@@ -90,7 +96,7 @@ const checks = `
     checkImages('person', p.id, p.images);
     for (const bid of (p.battles || [])) if (!battleIds.has(bid)) E('person "'+p.id+'": battle link "'+bid+'" does not exist');
   }
-  ({ b: BATTLES.length, c: CASTLES.length, e: EVENTS.length, p: PEOPLE.length, r: (typeof MARCH_ROUTES!=='undefined'?MARCH_ROUTES.length:0) });
+  ({ b: BATTLES.length, c: CASTLES.length, e: EVENTS.length, p: PEOPLE.length, r: (typeof MARCH_ROUTES!=='undefined'?MARCH_ROUTES.length:0), t: (typeof TEMPLES!=='undefined'?TEMPLES.length:0) });
 `;
 
 let counts;
@@ -107,4 +113,4 @@ if (errors.length) {
   errors.forEach((e) => console.error('  • ' + e));
   process.exit(1);
 }
-console.log('✓ data OK — ' + counts.b + ' battles, ' + counts.c + ' castles, ' + counts.e + ' events, ' + counts.p + ' people, ' + counts.r + ' routes; no errors.');
+console.log('✓ data OK — ' + counts.b + ' battles, ' + counts.c + ' castles, ' + counts.t + ' temples, ' + counts.e + ' events, ' + counts.p + ' people, ' + counts.r + ' routes; no errors.');
