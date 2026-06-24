@@ -164,6 +164,37 @@ function renderTempleHTML(t) {
   `;
 }
 
+// ---- Historic roads overlay (街道) — the great highways, drawn as polylines ----
+const ROAD_COLORS = ['#b5653f','#5d7a96','#7d8a55','#8a5b76','#c79a4e','#4f8a85','#a0522d','#6b7a82','#9a6a9a','#3f7a8a'];
+const roadsLayer = L.layerGroup(
+  (typeof HISTORIC_ROADS !== 'undefined' ? HISTORIC_ROADS : []).map((road, i) => {
+    const color = ROAD_COLORS[i % ROAD_COLORS.length];
+    const line = L.polyline(road.waypoints.map((w) => [w.lat, w.lon]), { color, weight: 3.5, opacity: 0.85, lineJoin: 'round' });
+    line.bindTooltip(escapeHtml(road.name) + (road.romaji && road.romaji !== road.name ? ' (' + escapeHtml(road.romaji) + ')' : ''), { sticky: true, className: 'route-label' });
+    line.on('click', () => showRoadInfo(road));
+    return line;
+  })
+);
+function showRoadInfo(road) {
+  const panel = document.getElementById('infoPanel');
+  document.getElementById('infoContent').innerHTML = renderRoadHTML(road);
+  panel.scrollTop = 0;
+  panel.classList.remove('hidden');
+  panel.setAttribute('aria-hidden', 'false');
+  if (typeof activeRouteLayer !== 'undefined') activeRouteLayer.clearLayers();
+}
+function renderRoadHTML(road) {
+  const meta = [road.era, 'historic highway (街道)'].filter(Boolean).join(' · ');
+  return `
+    <h2>${escapeHtml(road.name)}</h2>
+    <p class="meta">${escapeHtml(meta)}</p>
+    ${road.purpose ? `<p class="summary">${escapeHtml(road.purpose)}</p>` : ''}
+    <h3>Post-stations</h3>
+    <p>${road.waypoints.map((w) => escapeHtml(w.name)).join(' › ')}</p>
+    ${sourcesBlock(road.name, road.sources)}
+  `;
+}
+
 // ---- March-routes overlay ----
 const ROUTE_COLORS = ['#e67e22', '#a569bd', '#17a2a2'];
 
@@ -417,6 +448,7 @@ const overlays = {};
 HISTORICAL_MAPS.forEach((h) => { overlays[h.name] = h.layer; });
 overlays['Castles (城)'] = castleLayer;
 overlays['Temples (寺社)'] = templeLayer;
+overlays['Historic roads (街道)'] = roadsLayer;
 overlays['March routes'] = routesLayer;
 overlays['Events'] = eventsLayer;
 overlays['People'] = peopleLayer;
@@ -536,6 +568,19 @@ templeLegend.onAdd = function () {
 };
 map.on('overlayadd', (e) => { if (e.layer === templeLayer) templeLegend.addTo(map); });
 map.on('overlayremove', (e) => { if (e.layer === templeLayer) map.removeControl(templeLegend); });
+
+// Historic-roads legend — shown only while the roads overlay is on.
+const roadsLegend = L.control({ position: 'bottomleft' });
+roadsLegend.onAdd = function () {
+  const div = L.DomUtil.create('div', 'castle-legend domains-legend');
+  div.innerHTML = '<div class="cl-title">Historic roads</div><div class="dm-items">' +
+    (typeof HISTORIC_ROADS !== 'undefined' ? HISTORIC_ROADS : []).map((r, i) =>
+      '<div><span class="dm-sw" style="background:' + ROAD_COLORS[i % ROAD_COLORS.length] + '"></span>' + escapeHtml(r.romaji || r.name) + '</div>').join('') +
+    '</div>';
+  return div;
+};
+map.on('overlayadd', (e) => { if (e.layer === roadsLayer) roadsLegend.addTo(map); });
+map.on('overlayremove', (e) => { if (e.layer === roadsLayer) map.removeControl(roadsLegend); });
 
 // Events legend — shown only while the Events overlay is on.
 const eventsLegend = L.control({ position: 'bottomleft' });

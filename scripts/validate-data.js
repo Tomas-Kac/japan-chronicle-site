@@ -18,7 +18,7 @@ const DATA = path.join(__dirname, '..', 'data');
 // Load the data files (they declare const BATTLES / CASTLES / ... ). We eval them
 // together so the consts share one scope, with a window shim for people.js.
 global.window = {};
-const files = ['battles.js', 'castles.js', 'routes.js', 'events.js', 'people.js', 'temples.js'];
+const files = ['battles.js', 'castles.js', 'routes.js', 'events.js', 'people.js', 'temples.js', 'roads.js'];
 const src = files.map((f) => fs.readFileSync(path.join(DATA, f), 'utf8')).join('\n');
 
 const errors = [];
@@ -96,7 +96,12 @@ const checks = `
     checkImages('person', p.id, p.images);
     for (const bid of (p.battles || [])) if (!battleIds.has(bid)) E('person "'+p.id+'": battle link "'+bid+'" does not exist');
   }
-  ({ b: BATTLES.length, c: CASTLES.length, e: EVENTS.length, p: PEOPLE.length, r: (typeof MARCH_ROUTES!=='undefined'?MARCH_ROUTES.length:0), t: (typeof TEMPLES!=='undefined'?TEMPLES.length:0) });
+  for (const r of (typeof HISTORIC_ROADS !== 'undefined' ? HISTORIC_ROADS : [])) {
+    if (!r.name) E('road: an entry has no name');
+    if (!Array.isArray(r.waypoints) || r.waypoints.length < 2) E('road "'+(r.name||'?')+'": needs at least 2 waypoints');
+    else r.waypoints.forEach((w, i) => { if (typeof w.lat !== 'number' || typeof w.lon !== 'number') E('road "'+r.name+'" waypoint '+i+': bad coordinates'); });
+  }
+  ({ b: BATTLES.length, c: CASTLES.length, e: EVENTS.length, p: PEOPLE.length, r: (typeof MARCH_ROUTES!=='undefined'?MARCH_ROUTES.length:0), t: (typeof TEMPLES!=='undefined'?TEMPLES.length:0), rd: (typeof HISTORIC_ROADS!=='undefined'?HISTORIC_ROADS.length:0) });
 `;
 
 let counts;
@@ -113,4 +118,4 @@ if (errors.length) {
   errors.forEach((e) => console.error('  • ' + e));
   process.exit(1);
 }
-console.log('✓ data OK — ' + counts.b + ' battles, ' + counts.c + ' castles, ' + counts.t + ' temples, ' + counts.e + ' events, ' + counts.p + ' people, ' + counts.r + ' routes; no errors.');
+console.log('✓ data OK — ' + counts.b + ' battles, ' + counts.c + ' castles, ' + counts.t + ' temples, ' + counts.e + ' events, ' + counts.p + ' people, ' + counts.r + ' march-routes, ' + counts.rd + ' roads; no errors.');
