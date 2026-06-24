@@ -124,6 +124,46 @@ const castleLayer = L.layerGroup(
   })
 );
 
+// ---- Temples & shrines overlay (toggle in the top-right control) ----
+const TEMPLE_GLYPH = { temple: '☸', monastery: '☸', shrine: '⛩︎' };
+function templeIcon(kind) {
+  const cls = kind === 'shrine' ? 'tm-shrine' : 'tm-temple';
+  return L.divIcon({
+    className: '',
+    html: `<div class="temple-icon ${cls}">${TEMPLE_GLYPH[kind] || '☸'}</div>`,
+    iconSize: [22, 22], iconAnchor: [11, 11], tooltipAnchor: [0, -12],
+  });
+}
+const templeLayer = L.layerGroup(
+  (typeof TEMPLES !== 'undefined' ? TEMPLES : []).map((t) => {
+    const m = L.marker([t.lat, t.lon], { icon: templeIcon(t.kind), title: t.name });
+    m.bindTooltip(
+      `<strong>${escapeHtml(t.name)}</strong>${t.sect ? ' <span class="rj">' + escapeHtml(t.sect) + '</span>' : ''}`,
+      { direction: 'top', className: 'castle-label' }
+    );
+    m.on('click', () => { showTempleInfo(t); focusBattle({ location: { lat: t.lat, lon: t.lon } }); });
+    return m;
+  })
+);
+function showTempleInfo(t) {
+  const panel = document.getElementById('infoPanel');
+  document.getElementById('infoContent').innerHTML = renderTempleHTML(t);
+  panel.scrollTop = 0;
+  panel.classList.remove('hidden');
+  panel.setAttribute('aria-hidden', 'false');
+  if (typeof activeRouteLayer !== 'undefined') activeRouteLayer.clearLayers();
+}
+function renderTempleHTML(t) {
+  const kindLabel = t.kind === 'shrine' ? 'Shinto shrine' : (t.kind === 'monastery' ? 'Buddhist monastery' : 'Buddhist temple');
+  const meta = [kindLabel, t.sect, t.founded ? 'founded ' + t.founded : ''].filter(Boolean).join(' · ');
+  return `
+    <h2>${escapeHtml(t.name)}</h2>
+    <p class="meta">${escapeHtml(meta)}</p>
+    ${t.note ? `<p class="summary">${escapeHtml(t.note)}</p>` : ''}
+    ${sourcesBlock(t.name, t.sources)}
+  `;
+}
+
 // ---- March-routes overlay ----
 const ROUTE_COLORS = ['#e67e22', '#a569bd', '#17a2a2'];
 
@@ -376,6 +416,7 @@ const historicalLayers = HISTORICAL_MAPS.map((h) => h.layer);
 const overlays = {};
 HISTORICAL_MAPS.forEach((h) => { overlays[h.name] = h.layer; });
 overlays['Castles (城)'] = castleLayer;
+overlays['Temples (寺社)'] = templeLayer;
 overlays['March routes'] = routesLayer;
 overlays['Events'] = eventsLayer;
 overlays['People'] = peopleLayer;
@@ -482,6 +523,19 @@ map.on('overlayadd', (e) => {
 map.on('overlayremove', (e) => {
   if (e.layer === castleLayer) map.removeControl(castleLegend);
 });
+
+// Temple/shrine legend — shown only while the Temples overlay is on.
+const templeLegend = L.control({ position: 'bottomleft' });
+templeLegend.onAdd = function () {
+  const div = L.DomUtil.create('div', 'castle-legend');
+  div.innerHTML =
+    '<div class="cl-title">Temples &amp; shrines</div>' +
+    '<div><span class="temple-icon tm-temple tm-legend">☸</span> Buddhist temple</div>' +
+    '<div><span class="temple-icon tm-shrine tm-legend">⛩︎</span> Shinto shrine</div>';
+  return div;
+};
+map.on('overlayadd', (e) => { if (e.layer === templeLayer) templeLegend.addTo(map); });
+map.on('overlayremove', (e) => { if (e.layer === templeLayer) map.removeControl(templeLegend); });
 
 // Events legend — shown only while the Events overlay is on.
 const eventsLegend = L.control({ position: 'bottomleft' });
