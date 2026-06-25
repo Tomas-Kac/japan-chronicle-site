@@ -3281,5 +3281,70 @@ Wildly outnumbered, he held out with ingenious improvised defences — logs, boi
     details: `In the summer of 1333, as Go-Daigo's revolt gathered force, Nitta Yoshisada raised the eastern warriors and marched on Kamakura itself. At Bubaigawara, on the Musashi plain, his army broke the Hōjō shogunate's defending force after fierce fighting along the Tama River.
 
 The victory threw open the road to the shogunal capital. Within days Nitta stormed Kamakura, the Hōjō regents took their own lives at Tōshō-ji, and the Kamakura shogunate — after 150 years — was destroyed.`
+  },
+  {
+    id: "oshu-1189",
+    name: "Battle of Ōshū",
+    year: 1189,
+    dateLabel: "1189 (Bunji 5)",
+    period: "Kamakura",
+    location: {
+      name: "Hiraizumi, Mutsu (the Northern Fujiwara capital)",
+      lat: 38.987,
+      lon: 141.1126
+    },
+    combatants: {
+      side1: { name: "Kamakura government", leader: "Minamoto no Yoritomo" },
+      side2: { name: "Northern Fujiwara", leader: "Fujiwara no Yasuhira" }
+    },
+    outcome: "Kamakura victory; the Northern Fujiwara were destroyed and Mutsu and Dewa annexed, completing Yoritomo's domination of Japan.",
+    summary: "Minamoto no Yoritomo led a vast army north to crush the Northern Fujiwara of Hiraizumi after they killed the fugitive Minamoto no Yoshitsune. The fall of Hiraizumi ended the independent power of the Tōhoku and left Yoritomo master of all Japan, on the eve of his shogunate.",
+    details: `Mobilising warriors from across the country in the seventh month of Bunji 5 (1189), Minamoto no Yoritomo invaded the realm of the Northern Fujiwara, who had sheltered and then killed his brother Minamoto no Yoshitsune. After a series of engagements in Mutsu his armies took the Fujiwara capital of Hiraizumi, and Fujiwara no Yasuhira was killed.
+
+The destruction of the Northern Fujiwara annexed the great provinces of Mutsu and Dewa and removed the last power in Japan independent of Yoritomo — clearing his path to the office of shōgun three years later.`,
+    sources: [
+      { label: "Battle of Ōshū — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_%C5%8Csh%C5%AB" }
+    ]
+  },
+  {
+    id: "wada-rebellion-1213",
+    name: "Wada Rebellion",
+    year: 1213,
+    dateLabel: "May 1213 (Kenryaku 3)",
+    period: "Kamakura",
+    location: { name: "Kamakura, Sagami", lat: 35.3197, lon: 139.5503 },
+    combatants: {
+      side1: { name: "Wada clan", leader: "Wada Yoshimori" },
+      side2: { name: "Hōjō regency", leader: "Hōjō Yoshitoki (shikken)" }
+    },
+    outcome: "Hōjō victory; Wada Yoshimori and his family were destroyed, tightening the Hōjō grip on the shogunate.",
+    summary: "A revolt by Wada Yoshimori — head of the shogunate's Board of Retainers (samurai-dokoro) — against the dominance of the Hōjō regent Yoshitoki, after Wada kinsmen were arrested for conspiracy. In fierce street fighting across Kamakura the Wada were defeated and annihilated.",
+    details: `Tensions between the powerful Wada Yoshimori and the Hōjō regent Hōjō Yoshitoki erupted in 1213 when Wada kinsmen were accused of conspiracy and arrested. Yoshimori rose in arms, and the two sides fought through the streets of Kamakura.
+
+The Wada were defeated and Yoshimori killed together with his sons; control of the samurai-dokoro passed to the Hōjō, further concentrating power in the regency that would dominate the Kamakura shogunate.`,
+    sources: [
+      { label: "Wada Yoshimori (Wada Rebellion) — Wikipedia", url: "https://en.wikipedia.org/wiki/Wada_Yoshimori" }
+    ]
+  },
+  {
+    id: "kasagi-1331",
+    name: "Siege of Kasagi",
+    year: 1331,
+    dateLabel: "September 1331 (Genkō 1)",
+    period: "Kamakura",
+    location: { name: "Kasagiyama (Kasagi-dera), Yamashiro — near Kyoto", lat: 34.7544, lon: 135.9422 },
+    combatants: {
+      side1: { name: "Emperor Go-Daigo's loyalists", leader: "Emperor Go-Daigo" },
+      side2: { name: "Kamakura shogunate (Hōjō)", leader: "shogunate army (incl. Suyama Yoshitaka)" }
+    },
+    outcome: "Shogunate victory; Kasagi fell and Go-Daigo was captured and exiled to Oki — but the rising had begun the Genkō War that toppled the shogunate in 1333.",
+    summary: "Emperor Go-Daigo raised the standard of revolt against the Kamakura shogunate from the fortified mountaintop temple of Kasagi. A shogunate army stormed it by a daring night climb and set it ablaze; Go-Daigo was captured and exiled, yet his rising had opened the Genkō War.",
+    details: `In 1331 Emperor Go-Daigo, plotting to overthrow the Kamakura shogunate, fled the capital with the imperial regalia and fortified himself at the mountain temple of Kasagi. A large shogunate army surrounded the heights; a picked band scaled the cliffs by night and set the temple aflame.
+
+Kasagi fell and Go-Daigo was captured and exiled to the Oki Islands. But the rising he had begun — the Genkō War — spread to Kusunoki Masashige's forts and, within two years, brought down the Kamakura shogunate.`,
+    leadsTo: "akasaka",
+    sources: [
+      { label: "Siege of Kasagi — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Kasagi" }
+    ]
   }
 ];
