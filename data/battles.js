@@ -3803,5 +3803,61 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
     summary: "Shibata Katsuie's Oda army besieged the Uesugi fortress of Uozu in Etchū through the spring of 1582. The garrison held out and was wiped out almost to a man — the castle falling on the 3rd day of the 6th lunar month (≈22 June 1582), the day after Oda Nobunaga was killed at Honnō-ji, news the defenders never lived to hear.",
     details: `As Nobunaga's generals closed in on the Uesugi from every side, Shibata Katsuie drove into Etchū and pinned the defenders of Uozu in a long siege. The garrison fought to the end and the castle fell on the 3rd day of the 6th lunar month, Tenshō 10 — about 22 June 1582 by the Western calendar. By a cruel irony it fell the day after Nobunaga himself died at Honnō-ji in Kyoto; when word of his death reached the front, Shibata had to abandon his hard-won gains and turn south into the succession struggle that would consume the Oda.`,
     sources: [ { label: "Siege of Uozu — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Uozu" } ]
+  },
+  {
+    id: "kiyosu-1552", name: "Battle of Kiyosu Castle", yearStart: 1552, yearEnd: 1554, dateLabel: "1552–1554 (Tenbun 21–23)", period: "Sengoku",
+    location: { name: "Kiyosu Castle, Owari (modern Kiyosu, Aichi)", lat: 35.1997, lon: 136.8528 },
+    combatants: { side1: { name: "Oda (Nagoya line)", leader: "Oda Nobunaga" }, side2: { name: "Oda (Kiyosu line)", leader: "Oda Nobutomo" } },
+    outcome: "Nobunaga victory; the rival Kiyosu branch was destroyed and Kiyosu became his base.",
+    summary: "A struggle within the Oda house itself. The young Nobunaga overcame the rival Kiyosu branch of his own clan, took their castle, and made it his headquarters — a decisive step toward unifying his home province of Owari.",
+    details: `The Oda were split among branches, and Nobunaga's path to power ran first through his own kinsmen. Over 1552–1554 he outmanoeuvred and destroyed the Kiyosu line under Oda Nobutomo, seizing the strong castle of Kiyosu. It became the seat from which he would unify Owari and, within a few years, defeat the Imagawa at Okehazama.`,
+    sources: [ { label: "Battle of Kiyosu Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Kiyosu_Castle" } ]
+  },
+  {
+    id: "fukuda-bay-1565", name: "Battle of Fukuda Bay", year: 1565, dateLabel: "1565 (Eiroku 8)", period: "Sengoku",
+    location: { name: "Fukuda Bay, off Nagasaki, Hizen (Kyūshū)", lat: 32.7450, lon: 129.8250 },
+    combatants: { side1: { name: "Matsura clan", leader: "Matsura Takanobu" }, side2: { name: "Portuguese Empire", leader: "João Pereira" } },
+    outcome: "Portuguese victory; the Japanese assault on the carracks was repelled.",
+    summary: "The first recorded armed clash between Japanese forces and a European power. The Matsura attacked Portuguese trading carracks anchored at Fukuda Bay near Nagasaki, but the Europeans' shipboard cannon drove the attackers off.",
+    details: `When the Portuguese shifted their lucrative trade from Hirado to Fukuda Bay, the Matsura clan moved to seize the ships by force. The Japanese fighting craft swarmed the anchored carracks, but the high-sided European vessels and their heavy guns beat back the assault — the first time Japanese and Western arms met in battle. The episode pushed the Portuguese to seek a safer, dedicated harbour, leading a few years later to the opening of Nagasaki itself.`,
+    sources: [ { label: "Battle of Fukuda Bay — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Fukuda_Bay" } ]
+  },
+  {
+    id: "inabayama-1567", name: "Siege of Inabayama Castle", year: 1567, dateLabel: "1567 (Eiroku 10)", period: "Sengoku",
+    location: { name: "Mt. Inaba, Mino (modern Gifu)", lat: 35.4339, lon: 136.7822 },
+    combatants: { side1: { name: "Oda", leader: "Oda Nobunaga (with Kinoshita Tōkichirō, later Hideyoshi)" }, side2: { name: "Saitō", leader: "Saitō Tatsuoki" } },
+    outcome: "Oda victory; Nobunaga took Mino, renamed the castle Gifu, and adopted the seal 'Tenka Fubu'.",
+    summary: "Nobunaga's capture of the great mountain fortress of Inabayama broke the Saitō and gave him the province of Mino. He renamed the castle Gifu and took up the seal 'Tenka Fubu' — 'the realm under one sword' — announcing his ambition to unify Japan.",
+    details: `For years the Saitō of Mino had blocked Nobunaga's path. In 1567 he finally took their seemingly impregnable mountain castle of Inabayama, helped by the defection of local lords engineered by his rising retainer Kinoshita Tōkichirō — the future Toyotomi Hideyoshi. Nobunaga renamed the place Gifu and adopted the famous seal *Tenka Fubu*. From this base he marched on Kyoto the very next year, beginning his drive to dominate the country.`,
+    sources: [ { label: "Siege of Inabayama Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Inabayama_Castle" } ]
+  },
+  {
+    id: "takatenjin-1574", name: "Siege of Takatenjin (1574)", year: 1574, dateLabel: "1574 (Tenshō 2)", period: "Sengoku",
+    location: { name: "Takatenjin fortress, Tōtōmi (modern Kakegawa, Shizuoka)", lat: 34.6983, lon: 138.0347 },
+    combatants: { side1: { name: "Takeda", leader: "Takeda Katsuyori" }, side2: { name: "Tokugawa", leader: "Ogasawara Nagatada (castellan)" } },
+    outcome: "Takeda victory; Katsuyori took the fortress his father Shingen had never managed to.",
+    summary: "Takeda Katsuyori captured the formidable Tōtōmi fortress of Takatenjin — a prize his celebrated father, Shingen, had failed to take. It was the high-water mark of Katsuyori's fortunes; overconfidence after it would carry him to disaster at Nagashino the following year.",
+    details: `Takatenjin perched on steep hills and had defied even Takeda Shingen. When Katsuyori stormed it in 1574, the feat seemed to prove he had surpassed his father. But the triumph bred over-reach: in 1575 he pressed deep into Tokugawa and Oda territory and was annihilated at Nagashino, a defeat from which the Takeda never recovered.`,
+    leadsTo: "nagashino",
+    sources: [ { label: "Siege of Takatenjin (1574) — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Takatenjin_(1574)" } ]
+  },
+  {
+    id: "takatenjin-1581", name: "Siege of Takatenjin (1581)", yearStart: 1580, yearEnd: 1581, dateLabel: "1580–1581 (Tenshō 8–9)", period: "Sengoku",
+    location: { name: "Takatenjin fortress, Tōtōmi (modern Kakegawa, Shizuoka)", lat: 34.6983, lon: 138.0353 },
+    combatants: { side1: { name: "Oda–Tokugawa", leader: "Tokugawa Ieyasu" }, side2: { name: "Takeda", leader: "Okabe Motonobu (garrison)" } },
+    outcome: "Oda–Tokugawa victory; the starving garrison was destroyed and Takeda prestige collapsed.",
+    summary: "Tokugawa Ieyasu retook Takatenjin after a long, grinding blockade. Katsuyori dared not march to relieve it, and the abandoned garrison was wiped out — a humiliation that shattered the Takeda's standing and foreshadowed the clan's destruction the next year.",
+    details: `Ieyasu ringed Takatenjin with siege forts and slowly starved it out. Katsuyori, fearing another Nagashino, never came to its rescue; when the garrison under Okabe Motonobu finally broke out in early 1581 it was cut to pieces. The lords of Tōtōmi drew the obvious lesson — that the Takeda could no longer protect their own — and began deserting. Within a year Oda and Tokugawa armies overran the Takeda lands and Katsuyori took his own life at Tenmokuzan.`,
+    leadsTo: "tenmokuzan-1582",
+    sources: [ { label: "Siege of Takatenjin (1581) — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Takatenjin_(1581)" } ]
+  },
+  {
+    id: "kyushu-campaign-1586", name: "Kyūshū Campaign (Hideyoshi's invasion)", yearStart: 1586, yearEnd: 1587, dateLabel: "1586–1587 (Tenshō 14–15)", period: "Sengoku",
+    location: { name: "Kyūshū", lat: 33.0000, lon: 131.0000 },
+    combatants: { side1: { name: "Toyotomi", leader: "Toyotomi Hideyoshi / Toyotomi Hidenaga" }, side2: { name: "Shimazu", leader: "Shimazu Yoshihisa / Shimazu Yoshihiro" } },
+    outcome: "Toyotomi victory; the Shimazu submitted and Kyūshū came under Hideyoshi's control.",
+    summary: "With the Shimazu of Satsuma on the verge of conquering all Kyūshū, Hideyoshi answered the Ōtomo's plea for help and poured a vast army onto the island. Overwhelmed by numbers, the Shimazu submitted, and the whole of Kyūshū passed under Toyotomi authority.",
+    details: `By the mid-1580s the Shimazu had beaten down the Ōtomo and nearly unified Kyūshū. Hideyoshi, now master of central Japan, invoked his authority to order a halt; when the Shimazu pressed on, he sent his brother Hidenaga and then himself with armies numbering in the hundreds of thousands. The Shimazu were driven back into Satsuma and Yoshihisa surrendered in 1587, shaving his head and submitting. Hideyoshi left the Shimazu their home provinces but bound them into his new national order — one more piece of his reunification of Japan.`,
+    sources: [ { label: "Kyūshū campaign — Wikipedia", url: "https://en.wikipedia.org/wiki/Ky%C5%ABsh%C5%AB_campaign" } ]
   }
 ];
