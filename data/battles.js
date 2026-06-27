@@ -3611,5 +3611,69 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
     summary: "A revolt by Kunohe Masazane in the far north against Hideyoshi's new order — the final battle of the Sengoku unification. A vast Toyotomi army overwhelmed Kunohe Castle, and with its fall Hideyoshi's authority reached every corner of Japan.",
     details: `In 1591 Kunohe Masazane rose against the Nanbu lord backed by Hideyoshi. Hideyoshi sent an enormous coalition army north under his nephew Hidetsugu; Kunohe Castle fell and its defenders were executed. The campaign completed the unification of Japan begun by Nobunaga.`,
     sources: [ { label: "Kunohe rebellion — Wikipedia", url: "https://en.wikipedia.org/wiki/Kunohe_rebellion" } ]
+  },
+  {
+    id: "gassantoda-1543", name: "Sieges of Gassantoda Castle", year: 1543, dateLabel: "1542–1543 (Tenbun 11–12)", period: "Sengoku",
+    location: { name: "Gassantoda Castle, Izumo (modern Shimane)", lat: 35.3636, lon: 133.1828 },
+    combatants: { side1: { name: "Ōuchi & Mōri", leader: "Ōuchi Yoshitaka & Mōri Motonari" }, side2: { name: "Amago", leader: "Amago Haruhisa" } },
+    outcome: "Amago victory; the Ōuchi–Mōri assault on the mountain fortress failed and was driven back.",
+    summary: "Ōuchi Yoshitaka, with the young Mōri Motonari, marched deep into Izumo to storm the Amago stronghold of Gassantoda — and failed badly. The repulse shattered Ōuchi prestige and helped set Motonari on his own path to power.",
+    details: `In 1542–43 Ōuchi Yoshitaka invaded Izumo to destroy the Amago at their great mountain castle of Gassantoda. The siege collapsed, the retreat turned disastrous, and Ōuchi power never fully recovered. (The Amago were finally broken at Gassantoda by Mōri Motonari two decades later.)`,
+    sources: [ { label: "Sieges of Gassantoda Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Sieges_of_Gassantoda_Castle" } ]
+  },
+  {
+    id: "ino-1556", name: "Battle of Inō", year: 1556, dateLabel: "1556 (Kōji 2)", period: "Sengoku",
+    location: { name: "Inō, Owari (modern Aichi)", lat: 35.2061, lon: 136.8905 },
+    combatants: { side1: { name: "Oda Nobunaga's forces", leader: "Oda Nobunaga" }, side2: { name: "Oda Nobuyuki's forces", leader: "Oda Nobuyuki" } },
+    outcome: "Nobunaga's victory; he defeated his younger brother's revolt and consolidated the Oda house.",
+    summary: "An Oda family civil war in which Nobunaga crushed the revolt of his younger brother Nobuyuki and the elders backing him. The victory secured Nobunaga's leadership of the clan at the outset of his rise.",
+    details: `In 1556 retainers led by Shibata Katsuie and Hayashi Hidesada backed Nobunaga's brother Nobuyuki against him. Nobunaga won the field at Inō; he pardoned Nobuyuki once, then had him killed when he plotted again, ending the threat from within his own house.`,
+    sources: [ { label: "Battle of Inō — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_In%C5%8D" } ]
+  },
+  {
+    id: "odawara-1561", name: "Siege of Odawara (1561)", year: 1561, dateLabel: "1561 (Eiroku 4)", period: "Sengoku",
+    location: { name: "Odawara Castle, Sagami (modern Kanagawa)", lat: 35.2508, lon: 139.1536 },
+    combatants: { side1: { name: "Uesugi coalition", leader: "Uesugi Kenshin" }, side2: { name: "Later Hōjō", leader: "Hōjō Ujiyasu" } },
+    outcome: "Hōjō held; Kenshin's great coalition could not take Odawara and withdrew.",
+    summary: "Uesugi Kenshin led a vast Kantō coalition against the Hōjō capital of Odawara, but the fortress held and supply forced him to retreat. It showed both Kenshin's reach and the strength of Odawara's defences — which would defy Shingen too, and only fall to Hideyoshi in 1590.",
+    details: `In 1561 Uesugi Kenshin marched a huge allied army to the walls of Odawara, but the Hōjō refused battle behind their ramparts and Kenshin, unable to sustain the siege, withdrew. Odawara's reputation for impregnability grew.`,
+    sources: [ { label: "Siege of Odawara (1561) — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Odawara_(1561)" } ]
+  },
+  {
+    id: "minowa-1566", name: "Siege of Minowa", year: 1566, dateLabel: "1566 (Eiroku 9)", period: "Sengoku",
+    location: { name: "Minowa Castle, Kōzuke (modern Gunma)", lat: 36.4044, lon: 138.9514 },
+    combatants: { side1: { name: "Nagano (Uesugi-allied)", leader: "Kamiizumi Hidetsuna" }, side2: { name: "Takeda", leader: "Takeda Shingen" } },
+    outcome: "Takeda victory; Minowa fell, extending Takeda power into Kōzuke.",
+    summary: "Takeda Shingen took the Nagano clan's castle of Minowa after a long contest for western Kōzuke. Among its defenders was the famed swordsman Kamiizumi Hidetsuna, founder of the Shinkage-ryū.",
+    details: `By 1566 Takeda Shingen had ground down the Nagano of Kōzuke; with their leader dead, Minowa fell. Its capture pushed Takeda influence into the Kantō and against the Uesugi.`,
+    sources: [ { label: "Siege of Minowa — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Minowa" } ]
+  },
+  {
+    id: "nanao-1577", name: "Siege of Nanao", year: 1577, dateLabel: "1576–1577 (Tenshō 4–5)", period: "Sengoku",
+    location: { name: "Nanao Castle, Noto (modern Ishikawa)", lat: 37.0092, lon: 136.9842 },
+    combatants: { side1: { name: "Uesugi", leader: "Uesugi Kenshin" }, side2: { name: "Hatakeyama", leader: "Chō Tsugutsura" } },
+    outcome: "Uesugi victory; Nanao fell to Kenshin, who then defeated an Oda relief army at Tedorigawa.",
+    summary: "Uesugi Kenshin captured the great Noto fortress of Nanao after a long siege and an inside betrayal. With Nanao taken, he turned to meet Oda Nobunaga's relief army and crushed it at Tedorigawa.",
+    details: `Kenshin besieged Nanao through 1576–77; the castle fell amid plague and treachery within. Days later he routed the approaching Oda army at the Tedori River, proving even Nobunaga's forces could be beaten in the field.`,
+    leadsTo: "tedorigawa",
+    sources: [ { label: "Siege of Nanao — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Nanao" } ]
+  },
+  {
+    id: "itami-1579", name: "Siege of Itami (1579)", year: 1579, dateLabel: "1578–1579 (Tenshō 6–7)", period: "Sengoku",
+    location: { name: "Arioka (Itami) Castle, Settsu (modern Hyōgo)", lat: 34.7801, lon: 135.4214 },
+    combatants: { side1: { name: "Oda", leader: "Oda Nobutada (for Nobunaga)" }, side2: { name: "Araki Murashige's forces", leader: "Araki Murashige" } },
+    outcome: "Oda victory; the revolt was crushed, Araki fled, and his family and retainers were executed.",
+    summary: "Nobunaga's general Araki Murashige rebelled and held out at Arioka (Itami) Castle for over a year. When it fell, Araki escaped but Nobunaga had his abandoned family and hundreds of followers put to death in a notorious reprisal.",
+    details: `Araki Murashige's defection in 1578 threatened Nobunaga's flank near the capital. The long siege of Arioka ended in 1579; Araki slipped away, but Nobunaga's savage execution of his household became one of the war's most infamous episodes.`,
+    sources: [ { label: "Siege of Itami (1579) — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Itami_(1579)" } ]
+  },
+  {
+    id: "miki-1580", name: "Siege of Miki", year: 1580, dateLabel: "1578–1580 (Tenshō 6–8)", period: "Sengoku",
+    location: { name: "Miki Castle, Harima (modern Hyōgo)", lat: 34.7999, lon: 134.9878 },
+    combatants: { side1: { name: "Oda", leader: "Hashiba (Toyotomi) Hideyoshi" }, side2: { name: "Bessho", leader: "Bessho Nagaharu" } },
+    outcome: "Hideyoshi victory; the garrison was starved out and Bessho Nagaharu took his own life to save his men.",
+    summary: "Hideyoshi's two-year blockade of Miki Castle — the 'starvation of Miki' — broke the Bessho clan's revolt in Harima. Like Tottori after it, it showed Hideyoshi's preference for siege and supply over costly assault.",
+    details: `From 1578 Hideyoshi ringed Miki with forts and cut its supply lines. After nearly two years of famine, Bessho Nagaharu surrendered and committed suicide in exchange for his soldiers' lives, opening Harima to the Oda advance west.`,
+    sources: [ { label: "Siege of Miki — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Miki" } ]
   }
 ];
