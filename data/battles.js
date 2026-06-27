@@ -3439,5 +3439,77 @@ The defeat helped push the Taira back on their base at Yashima in Shikoku, the n
 
 The Toi invasion was one of the few foreign attacks on Japan in the Heian period and a reminder of the dangers of the Korea Strait long before the Mongol invasions.`,
     sources: [ { label: "Toi invasion — Wikipedia", url: "https://en.wikipedia.org/wiki/Toi_invasion" } ]
+  },
+  {
+    id: "baekgang-663",
+    name: "Battle of Baekgang",
+    year: 663,
+    dateLabel: "663 (Tenji 2) — 8th lunar month",
+    period: "Asuka–Nara",
+    location: { name: "Baengma/Geum River, Korea (Yamato expeditionary fleet)", lat: 36.0, lon: 126.667 },
+    combatants: {
+      side1: { name: "Yamato Japan & Baekje", leader: "Abe no Hirafu; Prince Buyeo Pung (Baekje)" },
+      side2: { name: "Tang China & Silla", leader: "Su Dingfang (Tang)" }
+    },
+    outcome: "Decisive Tang–Silla victory; the Yamato–Baekje fleet was annihilated, ending Japanese intervention in Korea and Baekje as a state.",
+    summary: "Yamato Japan sent a great fleet to Korea to restore its ally Baekje, and was crushed by the Tang–Silla navy at the mouth of the Geum River. The catastrophe ended Japan's involvement on the peninsula for centuries and spurred a wave of defensive fortifications and reforms at home.",
+    details: `In 663 Yamato Japan dispatched a large expeditionary fleet to the Korean peninsula to help restore the kingdom of Baekje against the Tang–Silla alliance. At the Baekgang (the lower Geum River) the Japanese and Baekje ships were trapped and burned by the Tang–Silla navy over two days of fighting.
+
+The defeat was total: Baekje was extinguished, Japan withdrew from the continent, and the shock drove the Yamato court to build coastal forts in Kyūshū and accelerate the centralising reforms that shaped the early imperial state.`,
+    sources: [ { label: "Battle of Baekgang — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Baekgang" } ]
+  },
+  {
+    id: "hayato-720",
+    name: "Hayato Rebellion",
+    year: 720,
+    dateLabel: "720–721 (Yōrō 4–5)",
+    period: "Asuka–Nara",
+    location: { name: "Ōsumi Province, southern Kyūshū — coordinates approximate", lat: 31.74, lon: 130.76 },
+    combatants: {
+      side1: { name: "Yamato court", leader: "Ōtomo no Tabito" },
+      side2: { name: "Hayato", leader: "—" }
+    },
+    outcome: "Imperial victory; the Hayato of southern Kyūshū were subjugated after a long campaign.",
+    summary: "A revolt of the Hayato, the indigenous people of southern Kyūshū, against the expanding Nara state. The court sent a large army under Ōtomo no Tabito which, after more than a year of mountain warfare, broke Hayato resistance and brought Ōsumi and Satsuma firmly under imperial control.",
+    details: `In 720 the Hayato of Ōsumi and Satsuma rose against the Nara court's tightening administration of southern Kyūshū. The court appointed Ōtomo no Tabito to lead a punitive expedition of tens of thousands.
+
+After more than a year of sieges in the mountainous south, the rebellion was crushed. The campaign completed the incorporation of the Hayato lands into the ritsuryō state.`,
+    sources: [ { label: "Hayato rebellion — Wikipedia", url: "https://en.wikipedia.org/wiki/Hayato_rebellion" } ]
+  },
+  {
+    id: "nakamaro-764",
+    name: "Fujiwara no Nakamaro Rebellion",
+    year: 764,
+    dateLabel: "764 (Tenpyō-hōji 8)",
+    period: "Asuka–Nara",
+    location: { name: "Ōmi Province, by Lake Biwa — coordinates approximate", lat: 35.3, lon: 136.05 },
+    combatants: {
+      side1: { name: "Fujiwara no Nakamaro's faction", leader: "Fujiwara no Nakamaro (with Prince Shioyaki)" },
+      side2: { name: "Retired Empress Kōken's forces", leader: "Fujiwara no Kurajimaro" }
+    },
+    outcome: "Kōken's victory; Nakamaro was defeated by Lake Biwa and killed, and Kōken returned to the throne as Empress Shōtoku.",
+    summary: "Also called the Emi Rebellion, this was a failed coup by the once-dominant minister Fujiwara no Nakamaro against the retired Empress Kōken and her favourite, the monk Dōkyō. Nakamaro's forces were cut off and destroyed at Lake Biwa, ending Fujiwara dominance for a generation.",
+    details: `By 764 Fujiwara no Nakamaro (Emi no Oshikatsu), long the leading minister, was losing power to the retired Empress Kōken and the monk Dōkyō. He rose in revolt, but the court seized the imperial seals and bell before he could act decisively.
+
+Nakamaro fled toward Ōmi and was caught and killed on the shores of Lake Biwa. Kōken reascended the throne as Empress Shōtoku, and Dōkyō rose to extraordinary power.`,
+    sources: [ { label: "Fujiwara no Nakamaro Rebellion — Wikipedia", url: "https://en.wikipedia.org/wiki/Fujiwara_no_Nakamaro_Rebellion" } ]
+  },
+  {
+    id: "koshamain-1457",
+    name: "Koshamain's War",
+    year: 1457,
+    dateLabel: "1457–1458 (Chōroku)",
+    period: "Nanboku-chō",
+    location: { name: "Oshima Peninsula, southern Ezo (Hokkaido) — coordinates approximate", lat: 41.78, lon: 140.12 },
+    combatants: {
+      side1: { name: "Ainu", leader: "Koshamain" },
+      side2: { name: "Wajin (Kakizaki clan)", leader: "Takeda Nobuhiro" }
+    },
+    outcome: "Wajin (Japanese) victory; Koshamain was killed and the Ainu rising suppressed, entrenching Japanese settlement in southern Ezo.",
+    summary: "The first major war between the Ainu and the Wajin (Japanese) settlers of southern Ezo, sparked by a trade dispute and the killing of an Ainu man. Led by the chief Koshamain, the Ainu stormed most of the Wajin forts before Takeda Nobuhiro killed Koshamain and broke the rising — the foundation of the later Matsumae domain.",
+    details: `In 1457 long-standing friction between Ainu and Wajin settlers on the Oshima Peninsula erupted after a Wajin smith killed an Ainu customer. The Ainu chief Koshamain led a rising that overran all but two of the Wajin stockades of southern Ezo.
+
+Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, ending the war. The Kakizaki — later the Matsumae — emerged as the dominant Wajin power in Ezo, beginning centuries of Ainu–Wajin conflict over trade and land.`,
+    sources: [ { label: "Koshamain's War — Wikipedia", url: "https://en.wikipedia.org/wiki/Koshamain%27s_War" } ]
   }
 ];
