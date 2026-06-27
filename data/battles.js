@@ -3511,5 +3511,105 @@ Nakamaro fled toward Ōmi and was caught and killed on the shores of Lake Biwa. 
 
 Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, ending the war. The Kakizaki — later the Matsumae — emerged as the dominant Wajin power in Ezo, beginning centuries of Ainu–Wajin conflict over trade and land.`,
     sources: [ { label: "Koshamain's War — Wikipedia", url: "https://en.wikipedia.org/wiki/Koshamain%27s_War" } ]
+  },
+  {
+    id: "kawagoe-1546", name: "Night Battle of Kawagoe", year: 1546, dateLabel: "1546 (Tenbun 15)", period: "Sengoku",
+    location: { name: "Kawagoe Castle, Musashi (modern Saitama)", lat: 35.9244, lon: 139.4914 },
+    combatants: { side1: { name: "Later Hōjō", leader: "Hōjō Ujiyasu" }, side2: { name: "Uesugi coalition & Ashikaga", leader: "Uesugi Tomosada & Uesugi Norimasa" } },
+    outcome: "Hōjō victory; a night attack routed a far larger besieging army and secured Hōjō dominance of the Kantō.",
+    summary: "One of the most famous night attacks of the Sengoku: Hōjō Ujiyasu, badly outnumbered, relieved the besieged Kawagoe Castle with a surprise assault that shattered the great Uesugi coalition. The victory made the Later Hōjō the masters of the Kantō plain.",
+    details: `In 1546 a huge coalition of the two Uesugi houses and the Kantō Kubō besieged the Hōjō garrison in Kawagoe Castle. Hōjō Ujiyasu marched to its relief and, rather than fight a pitched battle against the odds, struck at night in a co-ordinated attack with the garrison.`,
+    sources: [ { label: "Siege of Kawagoe Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Kawagoe_Castle" } ]
+  },
+  {
+    id: "miyajima-1555", name: "Battle of Miyajima", year: 1555, dateLabel: "October 1555 (Kōji 1)", period: "Sengoku",
+    location: { name: "Itsukushima (Miyajima), Aki (modern Hiroshima)", lat: 34.3016, lon: 132.3223 },
+    combatants: { side1: { name: "Ōuchi", leader: "Sue Harukata" }, side2: { name: "Mōri", leader: "Mōri Motonari" } },
+    outcome: "Decisive Mōri victory; Sue Harukata was destroyed, launching Mōri Motonari's rise to dominance over western Honshū.",
+    summary: "Mōri Motonari lured Sue Harukata's much larger army onto the sacred island of Itsukushima, then crushed it in a surprise amphibious dawn attack in a storm. The victory broke Ōuchi power and made the Mōri the great power of the Chūgoku region — one of Japan's three classic surprise attacks.",
+    details: `In 1555 Mōri Motonari enticed Sue Harukata's army to land on the narrow island of Itsukushima by feigning weakness. Crossing by sea in a night storm, the Mōri fell on the trapped Ōuchi host at dawn and annihilated it; Sue Harukata took his own life.`,
+    sources: [ { label: "Battle of Miyajima — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Miyajima" } ]
+  },
+  {
+    id: "nagaragawa-1556", name: "Battle of Nagara-gawa", year: 1556, dateLabel: "1556 (Kōji 2)", period: "Sengoku",
+    location: { name: "Nagara River, Mino (modern Gifu)", lat: 35.4451, lon: 136.7635 },
+    combatants: { side1: { name: "Saitō Yoshitatsu's forces", leader: "Saitō Yoshitatsu" }, side2: { name: "Saitō Dōsan's forces", leader: "Saitō Dōsan" } },
+    outcome: "Yoshitatsu's victory; Saitō Dōsan was defeated and killed by his own son.",
+    summary: "The 'Viper of Mino', Saitō Dōsan, was overthrown and killed by his son Yoshitatsu at the Nagara River. Dōsan's death — he was Nobunaga's father-in-law and ally — opened the way for Oda Nobunaga's later conquest of Mino.",
+    details: `By 1556 Saitō Dōsan had fallen out with his son and heir Yoshitatsu. The two met in battle on the Nagara River near Inabayama; Dōsan, deserted by many retainers, was defeated and killed.`,
+    sources: [ { label: "Battle of Nagara-gawa — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Nagara-gawa" } ]
+  },
+  {
+    id: "azukizaka-1564", name: "Battle of Azukizaka (1564)", year: 1564, dateLabel: "1564 (Eiroku 7)", period: "Sengoku",
+    location: { name: "Okazaki, Mikawa (modern Aichi)", lat: 34.9303, lon: 137.1783 },
+    combatants: { side1: { name: "Mikawa Ikkō-ikki", leader: "Ikkō-ikki leaders" }, side2: { name: "Matsudaira clan", leader: "Matsudaira Motoyasu (Tokugawa Ieyasu)" } },
+    outcome: "Matsudaira victory; the young Ieyasu crushed the Ikkō-ikki revolt and consolidated his hold on Mikawa.",
+    summary: "The future Tokugawa Ieyasu put down the great Ikkō-ikki uprising in his home province of Mikawa, in which many of his own retainers had joined the rebels. His victory ended the threat of the warrior-monk leagues to his power and unified Mikawa behind him.",
+    details: `In 1564 the Jōdo-Shinshū Ikkō-ikki of Mikawa rose against Matsudaira Motoyasu (Tokugawa Ieyasu), splitting his vassals on lines of faith. Ieyasu defeated the leagues and then suppressed their temples, securing his base for the campaigns to come.`,
+    sources: [ { label: "Battle of Azukizaka (1564) — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Azukizaka_(1564)" } ]
+  },
+  {
+    id: "nagashima-1571", name: "Sieges of Nagashima (first)", year: 1571, dateLabel: "1571 (Genki 2)", period: "Sengoku",
+    location: { name: "Nagashima fortress, Owari (modern Mie)", lat: 35.0886, lon: 136.6981 },
+    combatants: { side1: { name: "Ikkō-ikki", leader: "Ikkō-ikki of Nagashima" }, side2: { name: "Oda", leader: "Oda Nobunaga (Shibata Katsuie)" } },
+    outcome: "Ikkō-ikki victory; Nobunaga's first assault on the river fortress was repelled with heavy loss.",
+    summary: "The first of Oda Nobunaga's three campaigns against the Ikkō-ikki stronghold of Nagashima, set amid the rivers of the Kiso delta. This assault failed bloodily — but Nobunaga returned, and in 1574 annihilated the fortress and its defenders.",
+    details: `In 1571 Nobunaga launched his first attack on the Ikkō-ikki river-fortress of Nagashima. The marshy terrain and fierce defence threw back the Oda army, wounding the general Shibata Katsuie. Nobunaga would besiege Nagashima twice more, destroying it utterly in 1574.`,
+    sources: [ { label: "Sieges of Nagashima — Wikipedia", url: "https://en.wikipedia.org/wiki/Sieges_of_Nagashima" } ]
+  },
+  {
+    id: "ichijodani-1573", name: "Siege of Ichijōdani Castle", year: 1573, dateLabel: "1573 (Tenshō 1)", period: "Sengoku",
+    location: { name: "Ichijōdani, Echizen (modern Fukui)", lat: 35.9995, lon: 136.2956 },
+    combatants: { side1: { name: "Oda", leader: "Oda Nobunaga" }, side2: { name: "Asakura", leader: "Asakura Yoshikage" } },
+    outcome: "Oda victory; the Asakura clan was destroyed and their castle-town burned.",
+    summary: "Oda Nobunaga overran the Asakura capital of Ichijōdani, ending the clan that had long defied him. The fall of the Asakura — and of the Azai days later — removed two of the chief members of the anti-Nobunaga coalition.",
+    details: `In 1573 Nobunaga drove into Echizen and stormed the Asakura's fortified valley-capital of Ichijōdani. Asakura Yoshikage fled and was forced to take his own life, and the once-splendid castle town was put to the torch.`,
+    sources: [ { label: "Siege of Ichijōdani Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Ichij%C5%8Ddani_Castle" } ]
+  },
+  {
+    id: "otate-1578", name: "Siege of Otate (Otate no Ran)", year: 1578, dateLabel: "1578–1579 (Tenshō 6–7)", period: "Sengoku",
+    location: { name: "Otate, Kasugayama, Echigo (modern Niigata)", lat: 37.1673, lon: 138.2356 },
+    combatants: { side1: { name: "Uesugi Kagetora's faction", leader: "Uesugi Kagetora" }, side2: { name: "Uesugi Kagekatsu's faction", leader: "Uesugi Kagekatsu" } },
+    outcome: "Kagekatsu's victory; he won the succession after defeating his rival, who took his own life.",
+    summary: "The civil war over the succession to Uesugi Kenshin, who died in 1578 leaving two adopted heirs. Uesugi Kagekatsu defeated his rival Kagetora and secured the Uesugi domain — though the struggle left the clan weakened.",
+    details: `Uesugi Kenshin's sudden death in 1578 left his adopted sons Kagekatsu and Kagetora contesting the inheritance. The war centred on the Otate residence at Kasugayama; Kagekatsu prevailed and Kagetora killed himself, but the bloodletting sapped Uesugi strength.`,
+    sources: [ { label: "Siege of Otate — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Otate" } ]
+  },
+  {
+    id: "tottori-1581", name: "Siege of Tottori", year: 1581, dateLabel: "1581 (Tenshō 9)", period: "Sengoku",
+    location: { name: "Tottori Castle, Inaba (modern Tottori)", lat: 35.5074, lon: 134.24 },
+    combatants: { side1: { name: "Oda", leader: "Hashiba (Toyotomi) Hideyoshi" }, side2: { name: "Mōri", leader: "Kikkawa Tsuneie" } },
+    outcome: "Hideyoshi victory; the garrison was starved into surrender.",
+    summary: "Hideyoshi took Tottori Castle not by storm but by starvation — buying up the region's rice beforehand and blockading the fortress until famine forced its surrender. The commander Kikkawa Tsuneie gave his life to save the garrison.",
+    details: `In 1581 Hashiba Hideyoshi blockaded Tottori after quietly cornering the local rice supply. The defenders, swollen with refugees, starved within months; Kikkawa Tsuneie surrendered and committed suicide to spare his men in one of the cruellest sieges of the age.`,
+    sources: [ { label: "Siege of Tottori — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Tottori" } ]
+  },
+  {
+    id: "takamatsu-1582", name: "Siege of Takamatsu", year: 1582, dateLabel: "April–June 1582 (Tenshō 10)", period: "Sengoku",
+    location: { name: "Takamatsu Castle, Bitchū (modern Okayama)", lat: 34.693, lon: 133.822 },
+    combatants: { side1: { name: "Oda", leader: "Hashiba (Toyotomi) Hideyoshi" }, side2: { name: "Mōri", leader: "Shimizu Muneharu" } },
+    outcome: "Peace negotiated; Hideyoshi withdrew on news of the Honnō-ji Incident, beginning his lightning march back to avenge Nobunaga.",
+    summary: "Hideyoshi besieged Takamatsu by damming a river and flooding the castle into an island. Mid-siege came word that Nobunaga had been killed at the Honnō-ji; Hideyoshi swiftly made peace (the commander Shimizu Muneharu taking his own life) and raced east — the 'Great Return' that led to Yamazaki.",
+    details: `In 1582 Hideyoshi flooded Takamatsu Castle with a great earthwork dam. When news arrived of Nobunaga's death at the Honnō-ji, Hideyoshi concealed it, made a hasty peace under which Shimizu Muneharu committed suicide, and marched his army back to the capital with astonishing speed.`,
+    leadsTo: "yamazaki",
+    sources: [ { label: "Siege of Takamatsu — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Takamatsu" } ]
+  },
+  {
+    id: "tenmokuzan-1582", name: "Battle of Tenmokuzan", year: 1582, dateLabel: "March 1582 (Tenshō 10)", period: "Sengoku",
+    location: { name: "Mt Tenmoku, Kai (modern Yamanashi)", lat: 35.6507, lon: 138.8124 },
+    combatants: { side1: { name: "Oda–Tokugawa", leader: "Oda Nobutada" }, side2: { name: "Takeda", leader: "Takeda Katsuyori" } },
+    outcome: "Oda victory; Takeda Katsuyori was hunted down and the Takeda clan eradicated.",
+    summary: "The last stand of the Takeda. As Oda and Tokugawa armies overran Kai, Takeda Katsuyori — abandoned by his vassals — made a final stand and took his own life at Mt Tenmoku, ending the great clan of Shingen.",
+    details: `By 1582 the Oda–Tokugawa invasion of Kai had collapsed Takeda support. Deserted by all but a handful of retainers, Takeda Katsuyori was cornered at Mt Tenmoku and killed himself with his family, extinguishing the house that Takeda Shingen had raised to greatness.`,
+    sources: [ { label: "Battle of Tenmokuzan — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Tenmokuzan" } ]
+  },
+  {
+    id: "kunohe-1591", name: "Kunohe Rebellion", year: 1591, dateLabel: "1591 (Tenshō 19)", period: "Sengoku",
+    location: { name: "Kunohe Castle, Mutsu (modern Ninohe, Iwate)", lat: 40.2667, lon: 141.3036 },
+    combatants: { side1: { name: "Toyotomi", leader: "Toyotomi Hidetsugu & Gamō Ujisato" }, side2: { name: "Kunohe", leader: "Kunohe Masazane" } },
+    outcome: "Toyotomi victory; the last armed resistance to Hideyoshi was crushed, completing the unification of Japan.",
+    summary: "A revolt by Kunohe Masazane in the far north against Hideyoshi's new order — the final battle of the Sengoku unification. A vast Toyotomi army overwhelmed Kunohe Castle, and with its fall Hideyoshi's authority reached every corner of Japan.",
+    details: `In 1591 Kunohe Masazane rose against the Nanbu lord backed by Hideyoshi. Hideyoshi sent an enormous coalition army north under his nephew Hidetsugu; Kunohe Castle fell and its defenders were executed. The campaign completed the unification of Japan begun by Nobunaga.`,
+    sources: [ { label: "Kunohe rebellion — Wikipedia", url: "https://en.wikipedia.org/wiki/Kunohe_rebellion" } ]
   }
 ];
