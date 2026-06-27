@@ -3346,5 +3346,98 @@ Kasagi fell and Go-Daigo was captured and exiled to the Oki Islands. But the ris
     sources: [
       { label: "Siege of Kasagi — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Kasagi" }
     ]
+  },
+  {
+    id: "sunomatagawa-1181",
+    name: "Battle of Sunomata-gawa",
+    year: 1181,
+    dateLabel: "1181 (Yōwa 1)",
+    period: "Genpei",
+    location: { name: "Sunomata River, Owari–Mino border (modern Gifu)", lat: 35.353, lon: 136.684 },
+    combatants: {
+      side1: { name: "Minamoto", leader: "Minamoto no Yukiie" },
+      side2: { name: "Taira", leader: "Taira no Koremori & Taira no Shigehira" }
+    },
+    outcome: "Taira victory; Minamoto no Yukiie's night attack across the river failed.",
+    summary: "An early Genpei-War clash in which Minamoto no Yukiie attempted a night crossing of the Sunomata River against the Taira and was repulsed. The defeat checked the Minamoto advance toward the capital from the east for a time.",
+    details: `In 1181 Minamoto no Yukiie tried to force the Sunomata River on the Owari–Mino border with a night attack on the Taira army under Taira no Koremori and Shigehira. The assault was detected and thrown back with heavy loss.
+
+The reverse blunted the eastern Minamoto thrust toward Kyoto early in the Genpei War, before the initiative passed to Kiso Yoshinaka and then to Yoritomo's brothers.`,
+    sources: [ { label: "Battle of Sunomata-gawa — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Sunomata-gawa" } ]
+  },
+  {
+    id: "hojujidono-1183",
+    name: "Siege of Hōjūjidono",
+    year: 1183,
+    dateLabel: "late 1183 (Juei 2)",
+    period: "Genpei",
+    location: { name: "Hōjūji Palace, Heian-kyō (eastern Kyoto)", lat: 34.988, lon: 135.772 },
+    combatants: {
+      side1: { name: "Kiso Yoshinaka's forces", leader: "Minamoto (Kiso) no Yoshinaka" },
+      side2: { name: "Court & temple forces (for Go-Shirakawa)", leader: "Taira no Tomoyasu" }
+    },
+    outcome: "Yoshinaka victory; he stormed the palace and seized control of the capital and the retired emperor.",
+    summary: "Kiso Yoshinaka, his position in Kyoto crumbling, attacked the Hōjūji palace of the retired Emperor Go-Shirakawa and the courtiers and warrior-monks defending it. His victory made him briefly master of the capital — and prompted Yoritomo to send an army that destroyed him weeks later.",
+    details: `By late 1183 Kiso (Minamoto) Yoshinaka, who had driven the Taira from Kyoto, had fallen out with the retired Emperor Go-Shirakawa. He assaulted the Hōjūji palace, defended by court nobles and warrior-monks from Enryaku-ji and Mii-dera, and seized the retired emperor.
+
+His seizure of power was short-lived: Yoritomo dispatched his brothers Yoshitsune and Noriyori, who crossed into the capital and broke Yoshinaka's forces at Uji in early 1184.`,
+    leadsTo: "uji-1184",
+    sources: [ { label: "Siege of Hōjūjidono — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_H%C5%8Dj%C5%ABjidono" } ]
+  },
+  {
+    id: "uji-1184",
+    name: "Battle of Uji (1184)",
+    year: 1184,
+    dateLabel: "February 1184 (Genryaku 1)",
+    period: "Genpei",
+    location: { name: "Uji, just outside Kyoto (Yamashiro)", lat: 34.890, lon: 135.809 },
+    combatants: {
+      side1: { name: "Minamoto (Yoritomo's forces)", leader: "Minamoto no Yoshitsune" },
+      side2: { name: "Kiso Yoshinaka's forces", leader: "Minamoto (Kiso) no Yoshinaka" }
+    },
+    outcome: "Yoshitsune's victory; Yoshinaka's forces broke and he was killed days later at Awazu.",
+    summary: "Yoritomo's brothers Yoshitsune and Noriyori forced the Uji river crossing against Kiso Yoshinaka, who had seized the capital. Yoshinaka's army collapsed and he fled, to be hunted down and killed at Awazu — clearing the way for the Minamoto to turn on the Taira.",
+    details: `In early 1184 Minamoto no Yoshitsune and Noriyori, sent by Yoritomo, attacked Kiso Yoshinaka's forces holding the approaches to Kyoto. At the Uji river — the same crossing fought over in 1180 — Yoshitsune's men forced their way across and shattered Yoshinaka's army.
+
+Yoshinaka fled and was killed at Awazu a few days later. With the Minamoto reunified under Yoritomo's command, the war turned decisively against the Taira.`,
+    leadsTo: "awazu",
+    sources: [ { label: "Battle of Uji (1184) — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Uji_(1184)" } ]
+  },
+  {
+    id: "kojima-1184",
+    name: "Battle of Kojima",
+    year: 1184,
+    dateLabel: "1184 (Genryaku 1)",
+    period: "Genpei",
+    location: { name: "Kojima, Bizen (Seto Inland Sea coast, modern Okayama)", lat: 34.556, lon: 133.800 },
+    combatants: {
+      side1: { name: "Minamoto", leader: "Minamoto no Noriyori" },
+      side2: { name: "Taira", leader: "Taira no Yukimori" }
+    },
+    outcome: "Minamoto victory; the Taira were pushed further back toward Yashima.",
+    summary: "A Minamoto victory on the Inland Sea coast as Noriyori's forces pressed the retreating Taira. It was one of the engagements that drove the Taira toward their stronghold at Yashima.",
+    details: `In 1184 Minamoto no Noriyori's forces engaged the Taira at Kojima on the Bizen coast of the Inland Sea. The Minamoto prevailed, continuing to squeeze the Taira westward.
+
+The defeat helped push the Taira back on their base at Yashima in Shikoku, the next great target of Yoshitsune's campaign.`,
+    leadsTo: "yashima",
+    sources: [ { label: "Battle of Kojima — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Kojima" } ]
+  },
+  {
+    id: "toi-invasion-1019",
+    name: "Toi invasion",
+    year: 1019,
+    dateLabel: "May 1019 (Kannin 3)",
+    period: "Heian",
+    location: { name: "Hakata Bay & northern Kyūshū (Chikuzen)", lat: 33.600, lon: 130.380 },
+    combatants: {
+      side1: { name: "Toi raiders (Jurchen pirates)" },
+      side2: { name: "Dazaifu defenders", leader: "Fujiwara no Takaie" }
+    },
+    outcome: "Raiders repelled; they pillaged the coast and seized captives but were driven off by the Dazaifu defence.",
+    summary: "A seaborne raid by Jurchen ('Toi') pirates that struck Iki, Tsushima and northern Kyūshū, killing and carrying off many. The Dazaifu government under Fujiwara no Takaie organised the defence and drove the raiders back out to sea — a rare foreign assault on Heian Japan.",
+    details: `In the fifth month of 1019 a fleet of Jurchen ("Toi") raiders fell on Tsushima, Iki and the coast around Hakata Bay, killing villagers and carrying off captives and livestock. The provincial and Dazaifu forces, led by Fujiwara no Takaie, rallied and beat the raiders off.
+
+The Toi invasion was one of the few foreign attacks on Japan in the Heian period and a reminder of the dangers of the Korea Strait long before the Mongol invasions.`,
+    sources: [ { label: "Toi invasion — Wikipedia", url: "https://en.wikipedia.org/wiki/Toi_invasion" } ]
   }
 ];
