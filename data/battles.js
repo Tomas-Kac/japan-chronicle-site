@@ -3675,5 +3675,69 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
     summary: "Hideyoshi's two-year blockade of Miki Castle — the 'starvation of Miki' — broke the Bessho clan's revolt in Harima. Like Tottori after it, it showed Hideyoshi's preference for siege and supply over costly assault.",
     details: `From 1578 Hideyoshi ringed Miki with forts and cut its supply lines. After nearly two years of famine, Bessho Nagaharu surrendered and committed suicide in exchange for his soldiers' lives, opening Harima to the Oda advance west.`,
     sources: [ { label: "Siege of Miki — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Miki" } ]
+  },
+  {
+    id: "arai-1516", name: "Siege of Arai", year: 1516, dateLabel: "1516 (Eishō 13)", period: "Sengoku",
+    location: { name: "Arai Castle, Miura Peninsula, Sagami (modern Kanagawa)", lat: 35.1597, lon: 139.6128 },
+    combatants: { side1: { name: "Miura & Ōgigayatsu Uesugi", leader: "Miura Yoshiatsu" }, side2: { name: "Later Hōjō", leader: "Hōjō Sōun" } },
+    outcome: "Hōjō victory; the Miura were destroyed and Hōjō Sōun completed his conquest of Sagami.",
+    summary: "Hōjō Sōun's final blow against the Miura clan, ending a long war for Sagami. The fall of Arai made Sōun — often called the first Sengoku daimyō — master of the province and founded the power of the Later Hōjō.",
+    details: `After years of war, Hōjō Sōun cornered the Miura at their last stronghold of Arai on the Miura Peninsula. The defenders fell in 1516, completing Sōun's takeover of Sagami and laying the foundation of a Hōjō realm that would dominate the Kantō for five generations.`,
+    sources: [ { label: "Siege of Arai — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Arai" } ]
+  },
+  {
+    id: "odawara-1569", name: "Siege of Odawara (1569)", year: 1569, dateLabel: "1569 (Eiroku 12)", period: "Sengoku",
+    location: { name: "Odawara Castle, Sagami (modern Kanagawa)", lat: 35.251, lon: 139.1535 },
+    combatants: { side1: { name: "Takeda", leader: "Takeda Shingen" }, side2: { name: "Later Hōjō", leader: "Hōjō Ujiyasu" } },
+    outcome: "Hōjō held; Takeda Shingen burned the town but could not take the castle and withdrew.",
+    summary: "Takeda Shingen drove into the Kantō and reached the walls of Odawara, but — like Uesugi Kenshin before him — could not crack the Hōjō fortress. He burned the castle town and pulled back, fighting the Hōjō again at Mimasetōge on the retreat.",
+    details: `In 1569 Shingen invaded Hōjō territory and approached Odawara, but the great castle held. He withdrew after a few days, and on the way home beat off a Hōjō pursuit at Mimasetōge.`,
+    sources: [ { label: "Siege of Odawara (1569) — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Odawara_(1569)" } ]
+  },
+  {
+    id: "noda-1573", name: "Siege of Noda Castle", year: 1573, dateLabel: "1573 (Genki 4)", period: "Sengoku",
+    location: { name: "Noda Castle, Mikawa (modern Aichi)", lat: 34.882, lon: 137.4684 },
+    combatants: { side1: { name: "Takeda", leader: "Takeda Shingen" }, side2: { name: "Tokugawa garrison", leader: "Suganuma Sadamichi" } },
+    outcome: "Takeda took the castle — but Shingen was wounded during the siege and died soon after, ending his westward advance.",
+    summary: "Takeda Shingen's last siege. He captured the small Tokugawa fort of Noda, but fell ill or was wounded there and died on the march home — a death that saved the embattled Tokugawa and Oda from his advance on Kyoto.",
+    details: `In 1573 Shingen, marching west after crushing Ieyasu at Mikatagahara, besieged and took Noda Castle. There he was stricken (tradition says shot by a marksman); he died during the withdrawal to Kai, and the great Takeda offensive collapsed with him.`,
+    sources: [ { label: "Siege of Noda Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Noda_Castle" } ]
+  },
+  {
+    id: "takato-1582", name: "Siege of Takatō (1582)", year: 1582, dateLabel: "March 1582 (Tenshō 10)", period: "Sengoku",
+    location: { name: "Takatō Castle, Shinano (modern Nagano)", lat: 35.8332, lon: 138.0625 },
+    combatants: { side1: { name: "Oda", leader: "Oda Nobutada" }, side2: { name: "Takeda", leader: "Nishina Morinobu" } },
+    outcome: "Oda victory; the lone Takeda castle to resist was stormed, days before the clan's final destruction at Tenmokuzan.",
+    summary: "As the Oda–Tokugawa invasion swept through Takeda lands in 1582, every castle surrendered except Takatō, held by Katsuyori's brother Nishina Morinobu. His defiant last stand and death came just before the Takeda were extinguished at Tenmokuzan.",
+    details: `In the 1582 conquest of the Takeda, only Takatō resisted. Nishina Morinobu rejected Nobutada's demand to surrender and fought to the death when the castle was stormed — a celebrated act of loyalty in the clan's final days.`,
+    leadsTo: "tenmokuzan-1582",
+    sources: [ { label: "Siege of Takatō (1582) — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Takat%C5%8D_(1582)" } ]
+  },
+  {
+    id: "oshi-1590", name: "Siege of Oshi", year: 1590, dateLabel: "1590 (Tenshō 18)", period: "Sengoku",
+    location: { name: "Oshi Castle, Musashi (modern Saitama)", lat: 36.1372, lon: 139.4529 },
+    combatants: { side1: { name: "Later Hōjō garrison", leader: "Narita; Kaihime" }, side2: { name: "Toyotomi", leader: "Ishida Mitsunari" } },
+    outcome: "The 'floating castle' held against a water attack and surrendered only after Odawara itself fell.",
+    summary: "During Hideyoshi's Odawara campaign, Ishida Mitsunari tried to take Oshi by damming a river and flooding it — but the 'floating castle' withstood the water attack. It gave up only after the main Hōjō capital surrendered, one of the campaign's few defensive successes.",
+    details: `In 1590, while Hideyoshi besieged Odawara, Ishida Mitsunari attempted to drown Oshi Castle behind an earthwork dam. The waters failed to break the defence — remembered for the warrior-woman Kaihime — and Oshi held until news came that Odawara had fallen.`,
+    sources: [ { label: "Siege of Oshi — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Oshi" } ]
+  },
+  {
+    id: "iwaya-1585", name: "Siege of Iwaya Castle", year: 1585, dateLabel: "1585 (Tenshō 13)", period: "Sengoku",
+    location: { name: "Iwaya Castle, Chikuzen (modern Fukuoka)", lat: 33.5258, lon: 130.5203 },
+    combatants: { side1: { name: "Shimazu", leader: "Shimazu Yoshihisa" }, side2: { name: "Ōtomo (Takahashi)", leader: "Takahashi Jōun (Shigetane)" } },
+    outcome: "Shimazu victory; the garrison was annihilated after a celebrated last-ditch defence.",
+    summary: "As the Shimazu drove north to conquer Kyūshū, the Ōtomo general Takahashi Jōun made a famous last stand at Iwaya with a tiny garrison against an overwhelming Shimazu army, dying with all his men. The heroic defence bought time before Hideyoshi's intervention saved the Ōtomo.",
+    details: `In 1585 the Shimazu besieged Iwaya, held by Takahashi Jōun with only a few hundred men. They fought to the last and were wiped out — but their stand delayed the Shimazu advance, and the next year Hideyoshi's invasion of Kyūshū turned the tide.`,
+    sources: [ { label: "Siege of Iwaya Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Iwaya_Castle" } ]
+  },
+  {
+    id: "hiketa-1583", name: "Siege of Hiketa", year: 1583, dateLabel: "1583 (Tenshō 11)", period: "Sengoku",
+    location: { name: "Hiketa, Sanuki (modern Kagawa, Shikoku)", lat: 34.2337, lon: 134.4084 },
+    combatants: { side1: { name: "Chōsokabe", leader: "Chōsokabe Motochika" }, side2: { name: "Toyotomi (Sengoku)", leader: "Sengoku Hidehisa" } },
+    outcome: "Chōsokabe victory; the repulse of Sengoku Hidehisa helped Motochika complete his conquest of Shikoku.",
+    summary: "Chōsokabe Motochika defeated a Toyotomi-allied force under Sengoku Hidehisa at Hiketa in eastern Sanuki, a step in his bid to unify all of Shikoku — a dream Hideyoshi's great invasion would end two years later.",
+    details: `In 1583 Chōsokabe Motochika beat back Sengoku Hidehisa at Hiketa, tightening his grip on Sanuki and bringing him close to ruling all four provinces of Shikoku. Hideyoshi's invasion of 1585 would force his submission.`,
+    sources: [ { label: "Siege of Hiketa — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Hiketa" } ]
   }
 ];
