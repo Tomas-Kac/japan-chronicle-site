@@ -3739,5 +3739,69 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
     summary: "Chōsokabe Motochika defeated a Toyotomi-allied force under Sengoku Hidehisa at Hiketa in eastern Sanuki, a step in his bid to unify all of Shikoku — a dream Hideyoshi's great invasion would end two years later.",
     details: `In 1583 Chōsokabe Motochika beat back Sengoku Hidehisa at Hiketa, tightening his grip on Sanuki and bringing him close to ruling all four provinces of Shikoku. Hideyoshi's invasion of 1585 would force his submission.`,
     sources: [ { label: "Siege of Hiketa — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Hiketa" } ]
+  },
+  {
+    id: "muraki-1554", name: "Battle of Muraki Castle", year: 1554, dateLabel: "1554 (Tenbun 23)", period: "Sengoku",
+    location: { name: "Muraki Castle, Owari (modern Aichi)", lat: 34.9967, lon: 136.9689 },
+    combatants: { side1: { name: "Oda", leader: "Oda Nobunaga (with the Mizuno)" }, side2: { name: "Imagawa", leader: "Imagawa garrison (Yoshimoto / Sessai Chōrō)" } },
+    outcome: "Oda victory; the Imagawa-held castle was stormed and taken.",
+    summary: "One of the young Oda Nobunaga's earliest notable victories: he stormed the Imagawa-held fort of Muraki to relieve his Mizuno allies, reportedly using arquebuses fired in relays — an early sign of the gunnery that would later define his career.",
+    details: `In early 1554 the twenty-year-old Nobunaga crossed into the contested Owari–Mikawa borderland to break Imagawa pressure on his Mizuno allies. He assaulted Muraki Castle directly, and chronicles credit him with keeping a steady fire going by rotating teams of gunners — a tactic he would refine over the next two decades. The castle fell, an early hint of the commander he would become.`,
+    sources: [ { label: "Battle of Muraki Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Muraki_Castle" } ]
+  },
+  {
+    id: "katsurayama-1557", name: "Siege of Katsurayama", year: 1557, dateLabel: "1557 (Kōji 3)", period: "Sengoku",
+    location: { name: "Katsurayama Castle, Shinano (modern Nagano)", lat: 36.6709, lon: 138.1662 },
+    combatants: { side1: { name: "Takeda", leader: "Baba Nobuharu" }, side2: { name: "Uesugi", leader: "Ochiai Haruyoshi" } },
+    outcome: "Takeda victory; the garrison was annihilated and the castle destroyed.",
+    summary: "During the third Kawanakajima campaign, Takeda troops under Baba Nobuharu overran the Uesugi-aligned fort of Katsurayama north of Zenkō-ji, wiping out its garrison — one episode in the long Takeda–Uesugi struggle for northern Shinano.",
+    details: `In the spring of 1557, as Takeda Shingen and Uesugi Kenshin fought their drawn-out contest over Shinano, Baba Nobuharu stormed Katsurayama, a hill fort guarding the approaches to Zenkō-ji. The defenders were overwhelmed and the castle razed. The campaign would culminate four years later in the fourth and bloodiest battle of Kawanakajima.`,
+    sources: [ { label: "Siege of Katsurayama — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Katsurayama" } ]
+  },
+  {
+    id: "toishi-1550", name: "Sieges of Toishi", yearStart: 1550, yearEnd: 1551, dateLabel: "1550–1551 (Tenbun 19–20)", period: "Sengoku",
+    location: { name: "Toishi Castle, Shinano (modern Ueda, Nagano)", lat: 36.4245, lon: 138.2915 },
+    combatants: { side1: { name: "Takeda", leader: "Takeda Shingen / Sanada Yukitaka" }, side2: { name: "Murakami", leader: "Murakami Yoshikiyo" } },
+    outcome: "Takeda victory (1551), after a costly repulse in 1550.",
+    summary: "Two linked actions over a Murakami stronghold in Shinano. Takeda Shingen's 1550 assault ended in a bloody repulse remembered as the 'Toishi collapse' — one of his worst defeats — before the castle fell in 1551 to the stratagem of Sanada Yukitaka, beginning the Sanada family's rise.",
+    details: `Toishi guarded Murakami Yoshikiyo's lands in northern Shinano. Shingen's direct attack in 1550 was thrown back with heavy loss — the *Toishi-kuzure*, a rare and humiliating Takeda defeat. The following year the castle was taken not by storm but by the cunning of Sanada Yukitaka, who turned the garrison and opened the way in. It marked both the breaking of Murakami power and the beginning of the Sanada's celebrated service to the Takeda.`,
+    sources: [ { label: "Sieges of Toishi — Wikipedia", url: "https://en.wikipedia.org/wiki/Sieges_of_Toishi" } ]
+  },
+  {
+    id: "yoshida-1575", name: "Siege of Yoshida Castle", year: 1575, dateLabel: "1575 (Tenshō 3)", period: "Sengoku",
+    location: { name: "Yoshida Castle, Mikawa (modern Toyohashi, Aichi)", lat: 34.7701, lon: 137.3934 },
+    combatants: { side1: { name: "Tokugawa", leader: "Sakai Tadatsugu" }, side2: { name: "Takeda", leader: "Takeda Katsuyori" } },
+    outcome: "Takeda withdrawal; the Tokugawa held the castle.",
+    summary: "Invading Mikawa in 1575, Takeda Katsuyori probed Yoshida Castle, stoutly held for the Tokugawa by Sakai Tadatsugu. Unable to take it, he turned aside to besiege Nagashino instead — the move that led straight to his catastrophe there.",
+    details: `Katsuyori's spring 1575 thrust into Tokugawa territory ran up against Yoshida Castle and its determined castellan, Sakai Tadatsugu. Rather than batter himself against it, Katsuyori shifted his army to the smaller fort of Nagashino. That decision drew Oda Nobunaga and Tokugawa Ieyasu to relieve the siege, and the Takeda were shattered in the famous battle that followed.`,
+    leadsTo: "nagashino",
+    sources: [ { label: "Siege of Yoshida Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Yoshida_Castle" } ]
+  },
+  {
+    id: "takabaru-1576", name: "Siege of Takabaru", year: 1576, dateLabel: "1576 (Tenshō 4)", period: "Sengoku",
+    location: { name: "Takabaru Castle, Hyūga (modern Miyazaki, Kyūshū)", lat: 31.9356, lon: 131.0103 },
+    combatants: { side1: { name: "Shimazu", leader: "Shimazu Yoshihisa / Yoshihiro / Toshihisa" }, side2: { name: "Itō", leader: "Itō Yoshisuke" } },
+    outcome: "Shimazu victory; a key step in dismantling Itō power in Hyūga.",
+    summary: "The Shimazu brothers took Takabaru Castle from the Itō, cracking open Itō Yoshisuke's domain in Hyūga and advancing the Shimazu drive to dominate Kyūshū — which soon drove Yoshisuke into the arms of the Ōtomo and on to the great clash at Mimigawa.",
+    details: `By the mid-1570s the Shimazu of Satsuma were pushing north and east across Kyūshū. The capture of Takabaru in 1576 broke the southern flank of Itō Yoshisuke's holdings in Hyūga; within two years the Itō domain collapsed and Yoshisuke fled to the Ōtomo. The Ōtomo intervention on his behalf ended in their ruinous defeat at Mimigawa in 1578, leaving the Shimazu the strongest power on the island.`,
+    sources: [ { label: "Siege of Takabaru — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Takabaru" } ]
+  },
+  {
+    id: "omosu-1580", name: "Battle of Omosu", year: 1580, dateLabel: "1580 (Tenshō 8)", period: "Sengoku",
+    location: { name: "Suruga Bay, off Omosu (modern Numazu, Shizuoka)", lat: 35.0200, lon: 138.8880 },
+    combatants: { side1: { name: "Hōjō", leader: "Hōjō Ujimasa (Fūma Kotarō)" }, side2: { name: "Takeda", leader: "Takeda Katsuyori (Ohama Kagetaka)" } },
+    outcome: "Inconclusive, claimed as a Hōjō success; a rare Sengoku naval engagement.",
+    summary: "A fleet action in Suruga Bay after the Takeda–Hōjō alliance collapsed: the Hōjō navy met the Takeda fleet under Ohama Kagetaka in one of the era's uncommon naval battles. The fighting was indecisive, though the Hōjō claimed the advantage.",
+    details: `When the old Takeda–Hōjō alliance broke down at the end of the 1570s, the two houses contested the Suruga coast by sea as well as land. At Omosu their fleets clashed in the bay — galleys and oared warships exchanging arrow and gunfire at close range. Neither side won a decisive result, a reminder that naval power, though secondary, still mattered in the wars of the warring states.`,
+    sources: [ { label: "Battle of Omosu — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Omosu" } ]
+  },
+  {
+    id: "uozu-1582", name: "Siege of Uozu", yearStart: 1582, yearEnd: 1582, dateLabel: "May–June 1582 (Tenshō 10)", period: "Sengoku",
+    location: { name: "Uozu Castle, Etchū (modern Toyama)", lat: 36.8133, lon: 137.3975 },
+    combatants: { side1: { name: "Oda", leader: "Shibata Katsuie / Sassa Narimasa" }, side2: { name: "Uesugi", leader: "Uesugi Kagekatsu (garrison)" } },
+    outcome: "Oda victory; the garrison was annihilated — the day after Nobunaga's death at Honnō-ji.",
+    summary: "Shibata Katsuie's Oda army besieged the Uesugi fortress of Uozu in Etchū through the spring of 1582. The garrison held out and was wiped out almost to a man — the castle falling on the 3rd day of the 6th lunar month (≈22 June 1582), the day after Oda Nobunaga was killed at Honnō-ji, news the defenders never lived to hear.",
+    details: `As Nobunaga's generals closed in on the Uesugi from every side, Shibata Katsuie drove into Etchū and pinned the defenders of Uozu in a long siege. The garrison fought to the end and the castle fell on the 3rd day of the 6th lunar month, Tenshō 10 — about 22 June 1582 by the Western calendar. By a cruel irony it fell the day after Nobunaga himself died at Honnō-ji in Kyoto; when word of his death reached the front, Shibata had to abandon his hard-won gains and turn south into the succession struggle that would consume the Oda.`,
+    sources: [ { label: "Siege of Uozu — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Uozu" } ]
   }
 ];
