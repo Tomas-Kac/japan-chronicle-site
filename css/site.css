@@ -115,10 +115,13 @@ footer a { color: var(--accent-deep); text-decoration: none; }
 .backMap:hover { text-decoration: underline; }
 
 @media (max-width: 640px) {
-  .siteHeader .inner { padding: 0 14px; gap: 10px; }
+  /* let the header wrap instead of overflowing sideways on phones */
+  .siteHeader .inner { padding: 8px 14px; gap: 6px 8px; height: auto; flex-wrap: wrap; }
+  .siteHeader .brand { font-size: 17px; }
   .siteHeader .brand .sub { display: none; }
+  .siteHeader nav { margin-left: auto; flex-wrap: wrap; justify-content: flex-end; }
   .siteHeader nav a { padding: 6px 8px; font-size: 13px; }
-  main { padding: 40px 18px 56px; }
+  main { padding: 36px 18px 56px; }
   main h1 { font-size: 33px; }
   main h2 { font-size: 23px; }
   .lead { font-size: 17px; }
