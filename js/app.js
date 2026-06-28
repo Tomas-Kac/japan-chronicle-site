@@ -157,6 +157,7 @@ function renderTempleHTML(t) {
   const kindLabel = t.kind === 'shrine' ? 'Shinto shrine' : (t.kind === 'monastery' ? 'Buddhist monastery' : 'Buddhist temple');
   const meta = [kindLabel, t.sect, t.founded ? 'founded ' + t.founded : ''].filter(Boolean).join(' · ');
   return `
+    <div class="kicker">${t.kind === 'shrine' ? 'SHRINE' : 'TEMPLE'}</div>
     <h2>${escapeHtml(t.name)}</h2>
     <p class="meta">${escapeHtml(meta)}</p>
     ${t.note ? `<p class="summary">${escapeHtml(t.note)}</p>` : ''}
@@ -186,6 +187,7 @@ function showRoadInfo(road) {
 function renderRoadHTML(road) {
   const meta = [road.era, 'historic highway (街道)'].filter(Boolean).join(' · ');
   return `
+    <div class="kicker">ROAD</div>
     <h2>${escapeHtml(road.name)}</h2>
     <p class="meta">${escapeHtml(meta)}</p>
     ${road.purpose ? `<p class="summary">${escapeHtml(road.purpose)}</p>` : ''}
@@ -196,7 +198,7 @@ function renderRoadHTML(road) {
 }
 
 // ---- March-routes overlay ----
-const ROUTE_COLORS = ['#e67e22', '#a569bd', '#17a2a2'];
+const ROUTE_COLORS = ['#3a6ea5', '#c79a3a', '#4f8a85']; // Eastern indigo, Western ochre, teal
 
 // Small direction arrows along a route (one at each segment's midpoint). The
 // screen angle is zoom-invariant, so we compute it once at a fixed zoom.
@@ -458,36 +460,40 @@ const layerControl = L.control.layers(
   overlays,
   { position: 'topright' } // hover to open (Leaflet default) — with a delayed close, patched below
 );
-// Keep the hover behaviour, but wait ~0.8s before collapsing instead of closing the
-// instant the cursor moves away — so there's time to reach the panel and pick a map.
-// Patched BEFORE addTo, because Leaflet binds the mouseleave→collapse handler during addTo.
+// The popover is opened/closed by the ▦ button in the top bar (Leaflet's own
+// hover-toggle is hidden in CSS). We keep the hover-collapse but delay it ~0.8s so
+// moving the cursor briefly off the panel doesn't snap it shut. _collapseNow lets
+// the button close it instantly. Patched BEFORE addTo (Leaflet binds handlers there).
 if (typeof layerControl.collapse === 'function') {
   let _lcTimer = null;
   const _origCollapse = layerControl.collapse;
   const _origExpand = layerControl.expand;
   layerControl.collapse = function () { clearTimeout(_lcTimer); _lcTimer = setTimeout(() => _origCollapse.call(this), 800); return this; };
   layerControl.expand = function () { clearTimeout(_lcTimer); return _origExpand.call(this); };
+  layerControl._collapseNow = function () { clearTimeout(_lcTimer); _origCollapse.call(this); return this; };
 }
 layerControl.addTo(map);
 
-// Group headers inside the layer control so the three old maps read as one set
-// ("pick one") distinct from the feature checkboxes below them. Leaflet rebuilds
-// this whole list whenever an overlay is toggled or added (e.g. when provinces
-// finish loading), so we re-insert the headers after every rebuild.
+// Section headers + the relocated Browse controls, re-inserted after every rebuild
+// (Leaflet rebuilds the whole list when an overlay is toggled or finishes loading).
+let _browseControls = null;
 function labelLayerGroups() {
   const box = layerControl.getContainer();
-  const ov = box && box.querySelector('.leaflet-control-layers-overlays');
-  if (!ov) return;
-  const labels = ov.querySelectorAll('label');
-  const header = (txt) => {
-    const d = L.DomUtil.create('div', 'layers-group');
-    d.textContent = txt;
-    return d;
-  };
-  if (labels[0]) ov.insertBefore(header('Historical maps (pick one)'), labels[0]);
-  if (labels[HISTORICAL_MAPS.length]) {
-    ov.insertBefore(header('Map features'), labels[HISTORICAL_MAPS.length]);
+  if (!box) return;
+  const header = (txt) => { const d = L.DomUtil.create('div', 'layers-group'); d.textContent = txt; return d; };
+  const base = box.querySelector('.leaflet-control-layers-base');
+  if (base && !base.querySelector('.layers-group')) {
+    const bl = base.querySelectorAll('label');
+    if (bl[0]) base.insertBefore(header('Map style'), bl[0]);
   }
+  const ov = box.querySelector('.leaflet-control-layers-overlays');
+  if (ov) {
+    const labels = ov.querySelectorAll('label');
+    if (labels[0]) ov.insertBefore(header('Historical overlays'), labels[0]);
+    if (labels[HISTORICAL_MAPS.length]) ov.insertBefore(header('Map features'), labels[HISTORICAL_MAPS.length]);
+  }
+  // Append the Browse section (clan filter + show-all) once it's been built.
+  if (_browseControls) (ov || box).appendChild(_browseControls);
 }
 const _origLayerUpdate = layerControl._update.bind(layerControl);
 layerControl._update = function () {
@@ -495,6 +501,18 @@ layerControl._update = function () {
   labelLayerGroups();
 };
 labelLayerGroups();
+
+// ▦ top-bar button opens/closes the layers & options popover.
+(function () {
+  const btn = document.getElementById('layersToggle');
+  if (!btn) return;
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const c = layerControl.getContainer();
+    if (c && c.classList.contains('leaflet-control-layers-expanded')) layerControl._collapseNow();
+    else layerControl.expand();
+  });
+})();
 
 // ---- Floating opacity slider — appears only while an old map is shown ----
 const opacityPanel = document.getElementById('opacityPanel');
@@ -718,15 +736,30 @@ const ALL_PERIODS = [...new Set(BATTLES.map((b) => b.period).filter(Boolean))].s
 });
 let selectedPeriods = new Set(ALL_PERIODS); // every era shown by default
 
-// --- Era-segmented slider: each era's year range + a colour from the unified palette,
-// so the slider's ticks read as era bands and the readout names the current era. ---
-const ERA_COLORS = ['#7d8a55', '#c79a4e', '#5d7a96', '#4f8a85', '#8a5b76', '#b5653f', '#6b7a82', '#ffd96b'];
+// --- Era timeline: each era's year range + its band colour & light tint
+// (paper/ink redesign palette), so the scrubber reads as era bands, the segments
+// highlight the active era, and the readout names the current era. ---
+const ERA_STYLE = {
+  'Asuka–Nara':  { color: '#8a9a5b', tint: '#eef0e3' },
+  'Heian':       { color: '#5b7a8a', tint: '#e7edf0' },
+  'Genpei':      { color: '#9e5b5b', tint: '#f1e6e6' },
+  'Kamakura':    { color: '#7a6a9e', tint: '#ece8f1' },
+  'Nanboku-chō': { color: '#b07d2b', tint: '#f4ebd8' },
+  'Sengoku':     { color: '#c23b22', tint: '#f6e3df' },
+  'Edo':         { color: '#4a6b57', tint: '#e4ece7' },
+  'Bakumatsu':   { color: '#6a5b8a', tint: '#e8e4f1' },
+};
+const ERA_FALLBACK = ['#8a9a5b', '#5b7a8a', '#9e5b5b', '#7a6a9e', '#b07d2b', '#c23b22', '#4a6b57', '#6a5b8a'];
 const ERA_RANGES = {};
 for (const p of ALL_PERIODS) {
   const ys = BATTLES.filter((b) => b.period === p).flatMap((b) => battleYears(b));
   if (ys.length) ERA_RANGES[p] = [Math.min(...ys), Math.max(...ys)];
 }
-function eraColor(p) { const i = ALL_PERIODS.indexOf(p); return ERA_COLORS[(i < 0 ? 0 : i) % ERA_COLORS.length]; }
+function eraColor(p) {
+  if (ERA_STYLE[p]) return ERA_STYLE[p].color;
+  const i = ALL_PERIODS.indexOf(p); return ERA_FALLBACK[(i < 0 ? 0 : i) % ERA_FALLBACK.length];
+}
+function eraTint(p) { return (ERA_STYLE[p] && ERA_STYLE[p].tint) || 'rgba(32,38,46,.06)'; }
 function eraForYear(y) {
   if (y == null) return null;
   for (const p of ALL_PERIODS) {
@@ -782,6 +815,11 @@ const yearValueEl = document.getElementById('yearValue');
 const yearEventsEl = document.getElementById('yearEvents');
 const yearTicksEl = document.getElementById('yearTicks');
 const yearEraEl = document.getElementById('yearEra');
+const eraSelectorEl = document.getElementById('eraSelector');
+const eraBandsEl = document.getElementById('eraBands');
+const scrubTrackEl = document.getElementById('scrubTrack');
+const scrubKnob = document.getElementById('scrubKnob');
+const scrubKnobLine = document.getElementById('scrubKnobLine');
 
 // The slider range + ticks are derived from the SELECTED periods, so toggling
 // eras on/off expands or contracts the timeline (a union of the chosen eras).
@@ -813,21 +851,122 @@ function recomputeYears() {
   slider.min = MIN_YEAR;
   slider.max = MAX_YEAR;
   renderTicks();
+  renderEraBands();
 }
+
+const yearToPct = (y) => ((y - MIN_YEAR) / Math.max(1, MAX_YEAR - MIN_YEAR)) * 100;
 
 function renderTicks() {
   yearTicksEl.innerHTML = '';
   for (const y of eventYears) {
-    const pct = ((y - MIN_YEAR) / Math.max(1, MAX_YEAR - MIN_YEAR)) * 100;
     const tick = document.createElement('div');
     tick.className = 'yearTick';
-    tick.style.left = pct + '%';
+    tick.style.left = yearToPct(y) + '%';
     const tEra = eraForYear(y);
     if (tEra) tick.style.background = eraColor(tEra);
     tick.title = String(y);
-    tick.addEventListener('click', () => showYear(y));
+    tick.addEventListener('click', (e) => { e.stopPropagation(); showYear(y); });
     yearTicksEl.appendChild(tick);
   }
+}
+
+// Time-proportional era bands behind the density ticks (paper-redesign scrubber).
+function renderEraBands() {
+  if (!eraBandsEl) return;
+  eraBandsEl.innerHTML = '';
+  for (const p of ALL_PERIODS) {
+    const r = ERA_RANGES[p];
+    if (!r) continue;
+    const a = Math.max(MIN_YEAR, r[0]);
+    const b = Math.min(MAX_YEAR, r[1]);
+    if (b < a) continue;
+    const left = yearToPct(a);
+    const width = Math.max(0.6, yearToPct(b) - left);
+    const band = document.createElement('div');
+    band.className = 'era-band';
+    band.style.left = left + '%';
+    band.style.width = width + '%';
+    band.style.background = eraColor(p);
+    eraBandsEl.appendChild(band);
+  }
+}
+
+// The 8-era segmented selector. Clicking a segment jumps to that era's midpoint.
+function renderEraSelector() {
+  if (!eraSelectorEl) return;
+  eraSelectorEl.innerHTML = '';
+  for (const p of ALL_PERIODS) {
+    const r = ERA_RANGES[p] || [null, null];
+    const seg = document.createElement('button');
+    seg.type = 'button';
+    seg.className = 'era-seg';
+    seg.dataset.era = p;
+    const sub = r[0] != null ? `${r[0]}–${r[1]}` : '';
+    seg.innerHTML =
+      `<span class="seg-fill" aria-hidden="true"></span>` +
+      `<span class="lbl">${escapeHtml(p)}</span>` +
+      `<span class="sub">${escapeHtml(sub)}</span>`;
+    seg.addEventListener('click', () => {
+      if (!r[0]) return;
+      const mid = Math.round((r[0] + r[1]) / 2);
+      showYear(nearestEventYear(mid));
+    });
+    eraSelectorEl.appendChild(seg);
+  }
+}
+
+// Highlight the segment whose era contains the current year.
+function updateEraSelectorActive() {
+  if (!eraSelectorEl) return;
+  const active = (currentYear != null && !showAll && !selectedClan) ? eraForYear(currentYear) : null;
+  for (const seg of eraSelectorEl.children) {
+    const p = seg.dataset.era;
+    const on = p === active;
+    seg.classList.toggle('active', on);
+    const fill = seg.querySelector('.seg-fill');
+    if (fill) {
+      fill.style.setProperty('--seg-tint', on ? eraTint(p) : 'transparent');
+      fill.style.setProperty('--seg-color', on ? eraColor(p) : 'transparent');
+    }
+  }
+}
+
+// Position the scrubber knob at the current year.
+function updateScrub() {
+  if (!scrubKnob) return;
+  if (currentYear == null || showAll || selectedClan) {
+    scrubKnob.style.display = 'none';
+    if (scrubKnobLine) scrubKnobLine.style.display = 'none';
+    return;
+  }
+  const pct = Math.max(0, Math.min(100, yearToPct(currentYear)));
+  scrubKnob.style.display = '';
+  scrubKnob.style.left = pct + '%';
+  if (scrubKnobLine) { scrubKnobLine.style.display = ''; scrubKnobLine.style.left = pct + '%'; }
+}
+
+// Click / drag anywhere on the track → set the year from the x-position.
+function yearFromTrackX(clientX) {
+  const rect = scrubTrackEl.getBoundingClientRect();
+  const frac = Math.max(0, Math.min(1, (clientX - rect.left) / Math.max(1, rect.width)));
+  return Math.round(MIN_YEAR + frac * (MAX_YEAR - MIN_YEAR));
+}
+if (scrubTrackEl) {
+  let dragging = false;
+  const setFromX = (x, frame) => showYear(nearestEventYear(yearFromTrackX(x)), { frame: frame });
+  scrubTrackEl.addEventListener('pointerdown', (e) => {
+    if (e.target.classList.contains('yearTick')) return; // ticks handle their own click
+    dragging = true;
+    scrubTrackEl.setPointerCapture(e.pointerId);
+    setFromX(e.clientX, false);
+  });
+  scrubTrackEl.addEventListener('pointermove', (e) => { if (dragging) setFromX(e.clientX, false); });
+  scrubTrackEl.addEventListener('pointerup', (e) => {
+    if (!dragging) return;
+    dragging = false;
+    try { scrubTrackEl.releasePointerCapture(e.pointerId); } catch (_) {}
+    frameBattles(currentPresent);
+  });
 }
 
 function nearestEventYear(y) {
@@ -836,6 +975,7 @@ function nearestEventYear(y) {
 }
 
 recomputeYears();
+renderEraSelector();
 
 // Cluster nearby markers — keeps the map readable, especially in the
 // "Show all years" overview. Individual pins reappear when zoomed in.
@@ -912,6 +1052,7 @@ function renderDomainHTML(p) {
     ? `<h3>Provinces (旧国)</h3><p>${escapeHtml(p.provinces.join('、'))}</p>`
     : '';
   return `
+    <div class="kicker">DOMAIN</div>
     <h2>${escapeHtml(p.name || p.clan || '')}</h2>
     <p class="meta">${escapeHtml(p.clan ? p.clan + ' clan' : '')}${
       p.daimyo ? ' &middot; ' + escapeHtml(p.daimyo) : ''
@@ -1028,6 +1169,8 @@ function refreshMarkers(opts) {
   refreshEvents(); // sync the Events overlay to the year (no-op unless it's on)
   refreshPeople(); // sync the People overlay to the year (no-op unless it's on)
   if (yearEraEl) yearEraEl.textContent = (showAll || currentYear == null) ? '' : (eraForYear(currentYear) || '');
+  updateScrub();
+  updateEraSelectorActive();
   if (opts.frame !== false) frameBattles(vis);
 }
 
@@ -1110,12 +1253,51 @@ function stepEventYear(direction) {
 // frame the map once the slider is released.
 slider.addEventListener('input', () => showYear(parseInt(slider.value, 10), { frame: false }));
 slider.addEventListener('change', () => frameBattles(currentPresent));
-document.getElementById('prevEvent').addEventListener('click', () => stepEventYear(-1));
-document.getElementById('nextEvent').addEventListener('click', () => stepEventYear(1));
+document.getElementById('prevEvent').addEventListener('click', () => { stopPlay(); stepEventYear(-1); });
+document.getElementById('nextEvent').addEventListener('click', () => { stopPlay(); stepEventYear(1); });
 
-// --- "Show all years" toggle + period filter -----------------------------
-const showAllBtn = document.getElementById('showAllBtn');
-const periodFilter = document.getElementById('periodFilter');
+// Play / pause — auto-advance through the years that have events (~1.1s cadence).
+let _playTimer = null;
+const playBtn = document.getElementById('playBtn');
+const PLAY_ICON = '▶';            // ▶
+const PAUSE_ICON = '❚❚';     // ❚❚
+function stopPlay() { if (_playTimer) { clearInterval(_playTimer); _playTimer = null; } if (playBtn) playBtn.innerHTML = PLAY_ICON; }
+function startPlay() {
+  if (!eventYears.length) return;
+  if (showAll || selectedClan) showYear(eventYears.includes(1600) ? 1600 : eventYears[0]);
+  if (playBtn) playBtn.innerHTML = PAUSE_ICON;
+  _playTimer = setInterval(() => {
+    const next = eventYears.filter((y) => y > currentYear).shift();
+    if (next == null) { stopPlay(); return; }   // reached the end — stop
+    showYear(next);
+  }, 1100);
+}
+if (playBtn) playBtn.addEventListener('click', () => { _playTimer ? stopPlay() : startPlay(); });
+// Manually scrubbing the hidden range input also stops playback.
+slider.addEventListener('input', () => { if (_playTimer) stopPlay(); });
+
+// --- Browse controls (relocated into the layers / options ▦ popover) -------
+// The "Show all years" overview and the clan filter live in the popover so the
+// timeline bar stays clean; they keep their original behaviour. (The old
+// multi-select era chips are gone — the era ribbon spans the whole timeline now.)
+const browseControls = document.createElement('div');
+browseControls.id = 'browseControls';
+const _bhdr = document.createElement('div');
+_bhdr.className = 'jc-bhdr';
+_bhdr.textContent = 'Browse';
+const clanFilter = document.createElement('select');
+clanFilter.id = 'clanFilter';
+clanFilter.className = 'tcSelect';
+clanFilter.setAttribute('aria-label', 'Filter battles by clan');
+const showAllBtn = document.createElement('button');
+showAllBtn.id = 'showAllBtn';
+showAllBtn.type = 'button';
+showAllBtn.className = 'tcBtn';
+browseControls.appendChild(_bhdr);
+browseControls.appendChild(clanFilter);
+browseControls.appendChild(showAllBtn);
+_browseControls = browseControls; // picked up by labelLayerGroups() on the next _update
+if (typeof layerControl !== 'undefined' && layerControl._update) layerControl._update();
 
 function setShowAllButton() {
   showAllBtn.textContent = showAll ? '↩ Back to timeline' : 'Show all years';
@@ -1134,40 +1316,6 @@ showAllBtn.addEventListener('click', () => {
   }
 });
 
-// Period chips — multi-select. The slider range is the union of selected eras.
-function renderPeriodChips() {
-  periodFilter.innerHTML = '';
-  for (const p of ALL_PERIODS) {
-    const chip = document.createElement('button');
-    chip.type = 'button';
-    chip.className = 'chip' + (selectedPeriods.has(p) ? ' active' : '');
-    chip.textContent = p;
-    chip.addEventListener('click', () => togglePeriod(p));
-    periodFilter.appendChild(chip);
-  }
-}
-
-function togglePeriod(p) {
-  if (selectedPeriods.has(p)) {
-    if (selectedPeriods.size === 1) return; // keep at least one era selected
-    selectedPeriods.delete(p);
-  } else {
-    selectedPeriods.add(p);
-  }
-  renderPeriodChips();
-  recomputeYears();
-  if (showAll) {
-    refreshMarkers();
-  } else {
-    currentYear = nearestEventYear(currentYear);
-    showYear(currentYear);
-  }
-}
-
-renderPeriodChips();
-
-// --- Clan filter dropdown: focus on one clan's battles across the whole timeline ---
-const clanFilter = document.getElementById('clanFilter');
 function populateClanFilter() {
   clanFilter.innerHTML =
     '<option value="">All clans</option>' +
@@ -1232,7 +1380,7 @@ function focusBattle(battle) {
 function routesForBattle(b) {
   return (typeof MARCH_ROUTES !== 'undefined' ? MARCH_ROUTES : []).filter((r) => r.battleId === b.id);
 }
-const ACTIVE_ROUTE_PALETTE = ['#ffd96b', '#4fb3ff']; // gold, then blue for a second army
+const ACTIVE_ROUTE_PALETTE = ['#c23b22', '#3a6ea5']; // accent (Eastern), then indigo for a second army
 function drawActiveRoute(battle) {
   activeRouteLayer.clearLayers();
   const placed = []; // dedupe coincident waypoint markers across this battle's routes
@@ -1297,15 +1445,15 @@ function sourcesBlock(name, sources) {
 
 function renderBattleHTML(battle) {
   const c = battle.combatants || {};
-  const sideHTML = (s) => `
-    <div class="side">
+  const sideHTML = (s, cls) => `
+    <div class="side ${cls}">
       <h4>${escapeHtml(s.name || '')}</h4>
       ${s.leader ? `<p><strong>Leader:</strong> ${escapeHtml(s.leader)}</p>` : ''}
       ${s.forces ? `<p><strong>Forces:</strong> ${escapeHtml(s.forces)}</p>` : ''}
     </div>`;
   const sides = [];
-  if (c.side1) sides.push(sideHTML(c.side1));
-  if (c.side2) sides.push(sideHTML(c.side2));
+  if (c.side1) sides.push(sideHTML(c.side1, 'side-a'));
+  if (c.side2) sides.push(sideHTML(c.side2, 'side-b'));
 
   const detailsHTML = battle.details
     ? `<h3>Details</h3><div class="details">${battle.details
@@ -1344,10 +1492,12 @@ function renderBattleHTML(battle) {
         .join('')}</ul>`
     : '';
 
+  const kicker = isEventId(battle.id) ? 'EVENT' : 'BATTLE';
   return `
+    <div class="kicker">${kicker}</div>
     <h2>${escapeHtml(battle.name)}</h2>
     <p class="meta">${escapeHtml(battle.dateLabel || battle.date || '')}${
-    battle.period ? ' &middot; ' + escapeHtml(battle.period) : ''
+    battle.period ? ' &middot; <span class="era">' + escapeHtml(battle.period) + '</span>' : ''
   }</p>
     <p class="location">${escapeHtml(battle.location.name || '')}</p>
     ${battle.summary ? `<p class="summary">${escapeHtml(battle.summary)}</p>` : ''}
@@ -1408,6 +1558,7 @@ function renderPersonHTML(p) {
     : '';
 
   return `
+    <div class="kicker">FIGURE</div>
     <h2>${escapeHtml(p.name)}</h2>
     <p class="meta">${escapeHtml(p.dateLabel || '')}${roleLabel ? ' &middot; ' + escapeHtml(roleLabel) : ''}</p>
     <p class="location">${escapeHtml(p.location.name || '')}</p>
