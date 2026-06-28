@@ -3913,5 +3913,79 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
     summary: "In 1585 (Tenshō 13) Toyotomi Hideyoshi marched on Toyama Castle in Etchū and overwhelmed the defending Sassa Narimasa, shattering his resistance and securing Toyotomi mastery of the province.",
     details: `In 1585, as he extended his power across central Japan, Hideyoshi turned on Etchū, where his former ally Sassa Narimasa held Toyama Castle. Leading the campaign in person — with Maeda Toshinaga prominent in the attack and commanders including Horio Yoshiharu, Hachiya Yoritaka and Kanamori Nagachika — he brought a reported 100,000 men against Narimasa's roughly 20,000. The disparity told: Narimasa's defence collapsed and he submitted, and the fall of Toyama gave the Toyotomi control of Etchū. The action is dated to 1585 (Tenshō 13), with no exact day preserved.`,
     sources: [ { label: "Siege of Toyama — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Toyama" } ]
+  },
+  {
+    id: "ueda-1600", name: "Siege of Ueda (1600)", year: 1600, dateLabel: "1600 (Keichō 5)", period: "Sengoku",
+    location: { name: "Ueda Castle, Shinano Province (modern Ueda, Nagano)", lat: 36.4042, lon: 138.2439 },
+    combatants: { side1: { name: "Tokugawa", leader: "Tokugawa Hidetada" }, side2: { name: "Sanada", leader: "Sanada Masayuki (with Sanada Yukimura)" } },
+    outcome: "Sanada victory; ~2,000 defenders held off Hidetada's ~38,000, and the delay made him miss Sekigahara.",
+    summary: "In 1600 a Sanada garrison of roughly 2,000 under Sanada Masayuki held Ueda Castle in Shinano against Tokugawa Hidetada's army of some 38,000 — and the delay this imposed kept Hidetada from reaching the decisive Battle of Sekigahara in time.",
+    details: `As the Tokugawa moved to consolidate power in the autumn of Keichō 5 (1600), Tokugawa Hidetada led a force of about 38,000, supported by commanders such as Sakakibara Yasumasa and Honda Masanobu, against the Sanada stronghold of Ueda Castle in Shinano (present-day Nagano). Defending it were only some 2,000 troops under Sanada Masayuki, alongside his son Sanada Yukimura (Nobushige). Despite the vast disparity, the castle did not fall, and Hidetada eventually abandoned the siege. The cost of the delay was severe: he failed to reach the field in time for the Battle of Sekigahara, the engagement that would settle the fate of Japan. The siege is remembered as a celebrated example of a small, determined defence thwarting an overwhelming force.`,
+    leadsTo: "sekigahara",
+    sources: [ { label: "Siege of Ueda — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Ueda" } ]
+  },
+  {
+    id: "hasedo-1600", name: "Siege of Hasedō", year: 1600, dateLabel: "1600 (Keichō 5)", period: "Sengoku",
+    location: { name: "Hasedō Castle, near Yamagata (modern Yamagata Pref.)", lat: 38.2127, lon: 140.2724 },
+    combatants: { side1: { name: "Eastern Army (Mogami–Date)", leader: "Mogami Yoshiaki (with Date relief force)" }, side2: { name: "Western Army (Uesugi)", leader: "Uesugi Kagekatsu (field command: Naoe Kanetsugu)" } },
+    outcome: "Eastern Army victory; the outnumbered defenders held until the Uesugi withdrew on news of Sekigahara.",
+    summary: "On the northern front of the Sekigahara campaign, the Tokugawa-aligned Mogami Yoshiaki — reinforced by the Date — withstood a far larger Uesugi assault on Hasedō Castle near Yamagata, repelling Naoe Kanetsugu and securing the Tōhoku theatre.",
+    details: `The siege unfolded on the northern theatre of the Sekigahara campaign, the contest that would decide who held power across Japan. Mogami Yoshiaki defended Hasedō Castle with some 7,000 men, joined by a 3,000-strong Date relief force, against a Uesugi army of roughly 20,000 commanded in the field by Naoe Kanetsugu under the daimyō Uesugi Kagekatsu. For about a fortnight the outnumbered defenders held, and when word arrived of Tokugawa Ieyasu's victory at Sekigahara, Naoe broke off the assault and withdrew to Yonezawa. The Eastern Army emerged victorious, having lost 623 killed against 1,580 on the Uesugi side. Only the year 1600 is securely recorded for the fighting itself.`,
+    sources: [ { label: "Siege of Hasedō — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Hased%C5%8D" } ]
+  },
+  {
+    id: "tanabe-1600", name: "Siege of Tanabe", year: 1600, dateLabel: "1600 (Keichō 5)", period: "Sengoku",
+    location: { name: "Tanabe Castle, Tango Province (modern Maizuru, Kyoto)", lat: 35.4458, lon: 135.3310 },
+    combatants: { side1: { name: "Eastern Army (Hosokawa garrison)", leader: "Hosokawa Yūsai (Fujitaka)" }, side2: { name: "Western Army", leader: "Onoki Shigekatsu (forces of Ikoma Chikamasa)" } },
+    outcome: "Inconclusive; ~500 defenders pinned down ~15,000 Western troops away from Sekigahara.",
+    summary: "Some 500 defenders under the poet-general Hosokawa Yūsai held Tanabe Castle in Tango against roughly 15,000 Western Army besiegers; the siege ended inconclusively but tied down a large force that never reached the decisive battle at Sekigahara.",
+    details: `The Siege of Tanabe was one of the parallel actions of the Sekigahara campaign. Tanabe Castle in Tango (modern Maizuru, Kyoto) was nominally held by the Eastern-aligned Hosokawa Tadaoki — but he had ridden with Tokugawa Ieyasu to Sekigahara, leaving the castle to his elderly father, the poet-general Hosokawa Yūsai (Fujitaka), and a garrison of only about 500. Against them came some 15,000 Western Army troops. The defence held, and the siege is recorded as inconclusive; its real value to the Tokugawa cause was that it tied down a large enemy force far from the decisive battlefield. By a famous tradition, the siege ended when Emperor Go-Yōzei intervened to spare Yūsai — the last living master of the *Kokin denju*, the secret transmission of Kokinshū poetics — though this celebrated detail comes from later accounts rather than the bare record.`,
+    sources: [ { label: "Siege of Tanabe — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Tanabe" } ]
+  },
+  {
+    id: "uto-1600", name: "Siege of Uto", year: 1600, dateLabel: "1600 (Keichō 5)", period: "Sengoku",
+    location: { name: "Uto Castle, Higo Province, Kyūshū (modern Kumamoto)", lat: 32.6794, lon: 130.6464 },
+    combatants: { side1: { name: "Eastern Army (Katō)", leader: "Katō Kiyomasa (with Nabeshima Naoshige)" }, side2: { name: "Western Army (Konishi)", leader: "Konishi Yukikage" } },
+    outcome: "Eastern victory; on news of Sekigahara the defender surrendered and committed seppuku.",
+    summary: "During the Sekigahara campaign, the Eastern general Katō Kiyomasa besieged Uto Castle in Higo, held for the Western Army by Konishi Yukikage; when word came of the Western defeat, Yukikage surrendered and took his own life, and Kiyomasa absorbed the Konishi lands of Higo.",
+    details: `In 1600 the Eastern Army general Katō Kiyomasa besieged Uto Castle in Higo, on Kyūshū, held for the Western Army by Konishi Yukikage, who kept the castle for his brother Konishi Yukinaga. When news arrived of the Western defeat at Sekigahara, Yukikage surrendered and committed *seppuku*. Kiyomasa spared the castle's defenders and took the surviving Konishi vassals into his own service, extending his grip over Higo — the province he would soon rule from his great new fortress at Kumamoto. As with the other 1600 sieges, the record fixes only the year, Keichō 5, with no reliable Western month.`,
+    sources: [ { label: "Siege of Uto — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Uto" } ]
+  },
+  {
+    id: "yanagawa-1600", name: "Siege of Yanagawa", year: 1600, dateLabel: "1600 (Keichō 5)", period: "Sengoku",
+    location: { name: "Yanagawa Castle, Chikugo Province, Kyūshū (modern Fukuoka)", lat: 33.1608, lon: 130.4011 },
+    combatants: { side1: { name: "Eastern Army", leader: "Katō Kiyomasa, Kuroda Yoshitaka & Nabeshima Naoshige" }, side2: { name: "Western Army (Tachibana)", leader: "Tachibana Muneshige" } },
+    outcome: "Eastern victory; Tachibana Muneshige surrendered and the clan lost its fief.",
+    summary: "In the aftermath of Sekigahara, a Tokugawa-aligned army besieged Yanagawa Castle in Chikugo on Kyūshū and forced the surrender of its renowned defender Tachibana Muneshige — a sign that Ieyasu's victory was being enforced even on the far edges of the realm.",
+    details: `The Siege of Yanagawa belonged to the closing phase of the Sengoku wars and the wider Sekigahara campaign of 1600. With the decisive battle already settled in the Tokugawa favour, forces loyal to Ieyasu — led by Katō Kiyomasa, Kuroda Yoshitaka and Nabeshima Naoshige — converged on Yanagawa Castle, held by the Tachibana under Tachibana Muneshige and his wife Tachibana Ginchiyo. Muneshige surrendered, ending the siege in a Tokugawa victory; he had hoped to then change sides and march with the victors against the Shimazu of Satsuma, but Ieyasu forbade it. The episode shows how the reckoning of Sekigahara reached even the western rim of Japan, bringing one of the era's most celebrated warrior houses to terms.`,
+    sources: [ { label: "Siege of Yanagawa — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Yanagawa" } ]
+  },
+  {
+    id: "tennoji-1615", name: "Battle of Tennōji", year: 1615, dateLabel: "1615 (Keichō 20)", period: "Sengoku",
+    location: { name: "South of Osaka Castle, Settsu Province (modern Osaka)", lat: 34.6544, lon: 135.5112 },
+    combatants: { side1: { name: "Tokugawa shogunate", leader: "Tokugawa Ieyasu & Tokugawa Hidetada" }, side2: { name: "Toyotomi", leader: "Toyotomi Hideyori (Sanada Yukimura)" } },
+    outcome: "Decisive Tokugawa victory; Sanada Yukimura was killed, Osaka fell, and the Toyotomi were destroyed.",
+    summary: "South of Osaka Castle in 1615, the Tokugawa shogunate crushed the Toyotomi in the final clash of the Summer Campaign — Sanada Yukimura fell, Osaka Castle was taken, and the Toyotomi line was extinguished. It is often called the last great battle between two samurai armies.",
+    details: `The Battle of Tennōji was fought in Keichō 20 (1615) on the ground south of Osaka Castle, the final clash of the Summer Campaign that closed the Siege of Osaka. Against the Toyotomi of Toyotomi Hideyori — whose cause was carried by Yodo-dono and the celebrated Sanada Yukimura — stood the overwhelming strength of the Tokugawa shogunate under Tokugawa Ieyasu, Hidetada and Matsudaira Tadanao. The fighting was ruinous, the Tokugawa losing some 8,000 men and the Toyotomi more than 15,000; Sanada Yukimura fell here, in what is often described as his last battle. With the castle taken, Hideyori and Yodo-dono committed *seppuku* and Hideyori's young son was put to death, extinguishing the Toyotomi. The engagement closed the wars that had divided the realm and is frequently called the last great battle between two samurai armies, sealing Tokugawa supremacy.`,
+    sources: [ { label: "Battle of Tennōji — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Tenn%C5%8Dji" } ]
+  },
+  {
+    id: "domyoji-1615", name: "Battle of Dōmyōji", year: 1615, dateLabel: "1615 (Keichō 20)", period: "Sengoku",
+    location: { name: "Dōmyōji, near Osaka (modern Fujiidera, Osaka)", lat: 34.5676, lon: 135.6201 },
+    combatants: { side1: { name: "Tokugawa shogunate", leader: "Mizuno Katsushige, Date Masamune & others" }, side2: { name: "Toyotomi", leader: "Gotō Mototsugu & Sanada Yukimura" } },
+    outcome: "Tokugawa victory; the Toyotomi commander Gotō Mototsugu was shot and took his own life.",
+    summary: "At Dōmyōji in 1615, a Tokugawa army defeated the Toyotomi in one of the major clashes of the Osaka Summer Campaign; the celebrated Toyotomi commander Gotō Mototsugu was shot down and committed suicide, one of the battles that led to the fall of Osaka.",
+    details: `The Battle of Dōmyōji was fought in 1615 near Tamateyama, in what is now Osaka Prefecture, as part of the Summer Campaign of the Siege of Osaka. A Tokugawa army of some 34,000, with commanders including Mizuno Katsushige, Honda Tadamasa, Matsudaira Tadaaki and Date Masamune, met a Toyotomi force of roughly 18,000 under Gotō Mototsugu, Sanada Yukimura and Susukida Kanesuke. In the fighting Gotō Mototsugu was shot and committed ritual suicide, and Susukida Kanesuke also fell; the day ended in a Tokugawa victory. The year is securely Keichō 20 (1615) — the era changed to Genna only later that year, after the siege — though, the original date being lunar, the exact Western day is best treated with caution.`,
+    sources: [ { label: "Battle of Dōmyōji — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_D%C5%8Dmy%C5%8Dji" } ]
+  },
+  {
+    id: "utsunomiya-1868", name: "Battle of Utsunomiya Castle", year: 1868, dateLabel: "1868 (Keiō 4)", period: "Bakumatsu",
+    location: { name: "Utsunomiya Castle, Shimotsuke Province (modern Utsunomiya, Tochigi)", lat: 36.5547, lon: 139.8851 },
+    combatants: { side1: { name: "Imperial (Meiji government)", leader: "Imperial army (Ōyama Iwao, Nozu Michitsura)" }, side2: { name: "Tokugawa shogunate remnants", leader: "Ōtori Keisuke & Hijikata Toshizō" } },
+    outcome: "Imperial victory; the imperial army recaptured the castle, opening its advance into the northeast.",
+    summary: "In spring 1868 the new Meiji government's imperial army recaptured Utsunomiya Castle from Tokugawa shogunate remnants under Ōtori Keisuke and Hijikata Toshizō, securing an early foothold for the imperial advance north during the Boshin War.",
+    details: `During the Boshin War — the civil conflict that ended Tokugawa rule — a force of shogunate loyalists led by Ōtori Keisuke and the former Shinsengumi commander Hijikata Toshizō seized Utsunomiya Castle in Shimotsuke (present-day Utsunomiya, Tochigi) on 10 May 1868. The imperial army, with field commanders including Ōyama Iwao and Nozu Michitsura, counterattacked and retook the castle on 14 May, turning back the shogunate thrust. The fighting fell in the fourth lunar month of Keiō 4; the Meiji era proper would not begin until later that year, so the battle belongs to the closing months of the old reign-name rather than to "Meiji 1." Defeated here, the shogunate forces withdrew north by way of Nikkō toward Aizu, opening the imperial path into the northeast, where the war would continue.`,
+    leadsTo: "aizu",
+    sources: [ { label: "Battle of Utsunomiya Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Utsunomiya_Castle" } ]
   }
 ];
