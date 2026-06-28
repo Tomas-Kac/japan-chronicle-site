@@ -23,9 +23,9 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
   <!-- Cache-buster so edits to styles.css always show up on reload -->
-  <script>document.write('<link rel="stylesheet" href="css/styles.css?v=' + '202606280911' + '">');</script>
+  <script>document.write('<link rel="stylesheet" href="css/styles.css?v=' + '202606282054' + '">');</script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -48,8 +48,8 @@
       <h2 id="welcomeTitle">Welcome to Japan Chronicle</h2>
       <p class="wc-lead">An interactive atlas of premodern Japan, 552&ndash;1869 — every battle, event and figure on one timeline.</p>
       <ul class="wc-tips">
-        <li><b>Drag the year slider</b> at the bottom to move through history, era by era.</li>
-        <li><b>Toggle layers</b> (top&#8209;right): castles, march routes, events, people, provinces and domains.</li>
+        <li><b>Pick an era</b> on the ribbon, or <b>drag the timeline</b> below it to move through history.</li>
+        <li><b>Layers &amp; options</b> — the <b>▦</b> button (top&#8209;right): map styles, castles, routes, events, people, provinces, domains, and the clan filter.</li>
         <li><b>Click any marker</b> — a battle, a castle, a person — to read its story.</li>
         <li><b>Search</b> (top) for a battle, clan, commander or place.</li>
       </ul>
@@ -59,15 +59,32 @@
   </div>
 
   <header id="topBar">
-    <h1>Japan Chronicle</h1>
-    <p>Battles, events &amp; people &middot; 6th&ndash;19th century</p>
-    <nav id="siteNav"><a href="about.html">About</a><span>&middot;</span><a href="eras.html">Eras</a><span>&middot;</span><a href="glossary.html">Glossary</a><span>&middot;</span><a href="sources.html">Sources</a><span>&middot;</span><a href="#" id="helpLink">Help</a></nav>
-  </header>
+    <a class="jc-brand" href="index.html" aria-label="Japan Chronicle — home">
+      <span class="jc-seal" aria-hidden="true">史</span>
+      <span class="jc-brandtext">
+        <span class="jc-word">Japan&nbsp;Chronicle</span>
+        <span class="jc-sub">歴史地図 &middot; a historical atlas &middot; 6th&ndash;19th c.</span>
+      </span>
+    </a>
 
-  <div id="searchBox">
-    <input id="searchInput" type="text" placeholder="Search battles, people, events, places…" autocomplete="off" aria-label="Search battles, people, events, or places">
-    <ul id="searchResults" class="hidden"></ul>
-  </div>
+    <div id="searchBox">
+      <div class="jc-searchwrap">
+        <input id="searchInput" type="text" placeholder="Search battles, people, events, places…" autocomplete="off" aria-label="Search battles, people, events, or places">
+      </div>
+      <ul id="searchResults" class="hidden"></ul>
+    </div>
+
+    <nav id="siteNav">
+      <a href="index.html" class="active" aria-current="page">Map</a>
+      <a href="about.html">About</a>
+      <a href="eras.html">Eras</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="sources.html">Sources</a>
+      <a href="#" id="helpLink">Help</a>
+    </nav>
+
+    <button id="layersToggle" type="button" aria-label="Map layers &amp; options" title="Map layers &amp; options">▦</button>
+  </header>
 
   <aside id="infoPanel" class="hidden" aria-hidden="true">
     <button id="closeBtn" aria-label="Close panel">&times;</button>
@@ -86,23 +103,28 @@
   </div>
 
   <div id="timeBar">
-    <div id="timeControls">
-      <div id="periodFilter" class="chips" aria-label="Filter by period"></div>
-      <button id="showAllBtn" class="tcBtn" type="button">Show all years</button>
-      <select id="clanFilter" class="tcSelect" aria-label="Filter battles by clan">
-        <option value="">All clans</option>
-      </select>
-    </div>
-    <div id="yearReadout"><span id="yearValue">&mdash;</span><span id="yearEra"></span></div>
-    <div id="sliderRow">
-      <button id="prevEvent" class="stepBtn" title="Previous year with a battle" aria-label="Previous battle year">&#9664;</button>
-      <div id="sliderWrap">
-        <input id="yearSlider" type="range" step="1" aria-label="Year">
-        <div id="yearTicks" aria-hidden="true"></div>
+    <div class="tb-inner">
+      <div id="eraSelector" role="group" aria-label="Jump to an era"></div>
+      <div id="tbControls">
+        <div class="tb-transport">
+          <button id="prevEvent" class="transBtn" type="button" title="Previous year with a battle" aria-label="Previous battle year">&#9664;</button>
+          <button id="playBtn" class="transBtn play" type="button" title="Play through the years" aria-label="Play through the years">&#9654;</button>
+          <button id="nextEvent" class="transBtn" type="button" title="Next year with a battle" aria-label="Next battle year">&#9654;</button>
+        </div>
+        <div id="yearReadout"><span id="yearValue">&mdash;</span><span id="yearEra"></span></div>
+        <div class="tb-scrub">
+          <div id="scrubTrack" role="presentation">
+            <div class="scrub-base"></div>
+            <div id="eraBands" aria-hidden="true"></div>
+            <div id="yearTicks" aria-hidden="true"></div>
+            <div id="scrubKnobLine" aria-hidden="true"></div>
+            <div id="scrubKnob" aria-hidden="true"></div>
+          </div>
+          <input id="yearSlider" class="sr-only" type="range" step="1" aria-label="Year">
+          <div id="yearEvents">&mdash;</div>
+        </div>
       </div>
-      <button id="nextEvent" class="stepBtn" title="Next year with a battle" aria-label="Next battle year">&#9654;</button>
     </div>
-    <div id="yearEvents">&mdash;</div>
   </div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -110,7 +132,7 @@
   <!-- Load local scripts with a cache-buster so your edits always appear -->
   <script>
     (function () {
-      var v = '202606280911';
+      var v = '202606282054';
       document.write('<script src="data/battles.js?v=' + v + '"><\/script>');
       document.write('<script src="data/castles.js?v=' + v + '"><\/script>');
       document.write('<script src="data/temples.js?v=' + v + '"><\/script>');
