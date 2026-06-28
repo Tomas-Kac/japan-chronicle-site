@@ -3987,5 +3987,24 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
     details: `During the Boshin War — the civil conflict that ended Tokugawa rule — a force of shogunate loyalists led by Ōtori Keisuke and the former Shinsengumi commander Hijikata Toshizō seized Utsunomiya Castle in Shimotsuke (present-day Utsunomiya, Tochigi) on 10 May 1868. The imperial army, with field commanders including Ōyama Iwao and Nozu Michitsura, counterattacked and retook the castle on 14 May, turning back the shogunate thrust. The fighting fell in the fourth lunar month of Keiō 4; the Meiji era proper would not begin until later that year, so the battle belongs to the closing months of the old reign-name rather than to "Meiji 1." Defeated here, the shogunate forces withdrew north by way of Nikkō toward Aizu, opening the imperial path into the northeast, where the war would continue.`,
     leadsTo: "aizu",
     sources: [ { label: "Battle of Utsunomiya Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Utsunomiya_Castle" } ]
+  },
+  {
+    id: "hoji-war-1247", name: "Hōji War (Miura Rebellion)", year: 1247, dateLabel: "1247 (Hōji 1)", period: "Kamakura",
+    location: { name: "Kamakura (Hokke-dō / Nishi Mikado), Sagami Province (modern Kanagawa)", lat: 35.3254, lon: 139.5565 },
+    combatants: { side1: { name: "Hōjō (with the Adachi)", leader: "Hōjō Tokiyori (attack led by Adachi Yasumori)" }, side2: { name: "Miura", leader: "Miura Yasumura" } },
+    outcome: "Decisive Hōjō victory; the Miura clan was destroyed, cementing Hōjō regental (tokusō) supremacy.",
+    summary: "In 1247 the Hōjō, allied with the Adachi, destroyed the rival Miura clan at Kamakura, driving Miura Yasumura and some five hundred of his kin to mass suicide and cementing Hōjō supremacy over the Kamakura shogunate.",
+    details: `By the mid-thirteenth century the Miura were among the most powerful warrior houses serving the Kamakura shogunate, and their rivalry with the regent's faction had become untenable. In 1247, the first year of the Hōji era, the conflict known as the Hōji War (宝治合戦), or Miura Rebellion (三浦の乱), came to a head when Adachi Yasumori's troops attacked Miura Yasumura's mansion in the Nishi Mikado quarter of Kamakura. Cornered, Yasumura and roughly five hundred members of the Miura clan barricaded themselves inside the Hokke-dō and committed *seppuku* together. With the Miura annihilated, the Hōjō under the regent Hōjō Tokiyori consolidated their authority over the shogunate, securing the *tokusō* line's dominance. The exact lunar date within the sixth month of Hōji 1 is recorded differently across sources, so it is given here only as the year 1247.`,
+    sources: [ { label: "Hōji War (宝治合戦) — Japanese Wikipedia", url: "https://ja.wikipedia.org/wiki/宝治合戦" }, { label: "Hōji era — Wikipedia", url: "https://en.wikipedia.org/wiki/H%C5%8Dji_(era)" } ]
+  },
+  {
+    id: "nakasendai-1335", name: "Nakasendai Rebellion", year: 1335, dateLabel: "1335 (Kenmu 2)", period: "Nanboku-chō",
+    location: { name: "Kamakura, Sagami Province (campaign from Shinano via Musashi; modern Kanagawa)", lat: 35.3160, lon: 139.5500 },
+    combatants: { side1: { name: "Hōjō remnants", leader: "Hōjō Tokiyuki (backed by Suwa Yorishige)" }, side2: { name: "Ashikaga", leader: "Ashikaga Takauji" } },
+    outcome: "Ashikaga victory; Takauji crushed the revolt, then broke with the Kenmu court — the spark of the Nanboku-chō wars.",
+    summary: "In 1335 Hōjō Tokiyuki, son of the last Hōjō regent, briefly seized Kamakura and drove out Ashikaga Tadayoshi, but Ashikaga Takauji put down the revolt and took the city for himself; Takauji's move to reward his followers without imperial sanction broke his ties with Emperor Go-Daigo and set Japan on the road to the Ashikaga shogunate.",
+    details: `In 1335 (Kenmu 2), Hōjō Tokiyuki, son of Takatoki — the last Hōjō regent of the fallen Kamakura shogunate — launched the Nakasendai Rebellion in an attempt to re-establish the shogunate at Kamakura. Backed by Suwa Yorishige and other clans loyal to the Hōjō, the rebels briefly occupied Kamakura and forced Ashikaga Tadayoshi to flee. Ashikaga Takauji then put down the revolt and took Kamakura for himself; Suwa Yorishige committed suicide at Shōchōju-in alongside his son and dozens of others. Having recovered the city, Takauji claimed the title of Sei-i Taishōgun and granted land to his followers without the court's permission — an act of defiance that ruptured his relationship with Emperor Go-Daigo, who sent Nitta Yoshisada against him. A rebellion meant to revive the old Hōjō order thus became the catalyst for the rise of the Ashikaga.`,
+    leadsTo: "minatogawa",
+    sources: [ { label: "Nakasendai Rebellion (中先代の乱) — Japanese Wikipedia", url: "https://ja.wikipedia.org/wiki/中先代の乱" }, { label: "Ashikaga Takauji — Wikipedia", url: "https://en.wikipedia.org/wiki/Ashikaga_Takauji" } ]
   }
 ];
