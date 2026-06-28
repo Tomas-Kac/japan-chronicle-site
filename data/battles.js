@@ -3859,5 +3859,59 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
     summary: "With the Shimazu of Satsuma on the verge of conquering all Kyūshū, Hideyoshi answered the Ōtomo's plea for help and poured a vast army onto the island. Overwhelmed by numbers, the Shimazu submitted, and the whole of Kyūshū passed under Toyotomi authority.",
     details: `By the mid-1580s the Shimazu had beaten down the Ōtomo and nearly unified Kyūshū. Hideyoshi, now master of central Japan, invoked his authority to order a halt; when the Shimazu pressed on, he sent his brother Hidenaga and then himself with armies numbering in the hundreds of thousands. The Shimazu were driven back into Satsuma and Yoshihisa surrendered in 1587, shaving his head and submitting. Hideyoshi left the Shimazu their home provinces but bound them into his new national order — one more piece of his reunification of Japan.`,
     sources: [ { label: "Kyūshū campaign — Wikipedia", url: "https://en.wikipedia.org/wiki/Ky%C5%ABsh%C5%AB_campaign" } ]
+  },
+  {
+    id: "takato-1545", name: "Siege of Takatō (1545)", year: 1545, dateLabel: "1545 (Tenbun 14)", period: "Sengoku",
+    location: { name: "Takatō Castle, Ina valley, Shinano (modern Ina, Nagano)", lat: 35.8331, lon: 138.0628 },
+    combatants: { side1: { name: "Takeda", leader: "Takeda Shingen (with Itagaki Nobukata)" }, side2: { name: "Takatō", leader: "Takatō Yoritsugu" } },
+    outcome: "Takeda victory; the castle fell after Yoritsugu's allies failed to relieve him.",
+    summary: "In 1545 Takeda Shingen besieged and captured Takatō Castle in the Ina valley of Shinano, defeating Takatō Yoritsugu and pressing forward the Takeda conquest of the province.",
+    details: `In 1545 Takeda Shingen carried his methodical conquest of Shinano into the Ina valley, laying siege to Takatō Castle held by Takatō Yoritsugu. The two sides were evenly matched in numbers — roughly five thousand each — but Yoritsugu's would-be allies, Ogasawara Nagatoki and Tozawa Yorichika, failed to come to his aid, and Shingen's veteran general Itagaki Nobukata helped carry the assault. The castle fell to the Takeda, one more step in Shingen's absorption of the province. This was the first of two sieges of Takatō; the fortress would fall again in 1582, in the final destruction of the Takeda by Oda Nobunaga's armies.`,
+    sources: [ { label: "Siege of Takatō (1545) — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Takat%C5%8D_(1545)" } ]
+  },
+  {
+    id: "kajiki-1549", name: "Siege of Kajiki", year: 1549, dateLabel: "1549 (Tenbun 18)", period: "Sengoku",
+    location: { name: "Kajiki, Ōsumi Province (modern Kagoshima)", lat: 31.7497, lon: 130.6692 },
+    combatants: { side1: { name: "Shimazu", leader: "Shimazu Takahisa (with Ijūin Tadaaki & Tanegashima Tokitaka)" }, side2: { name: "Kajiki garrison", leader: "(commander unrecorded)" } },
+    outcome: "Shimazu victory; cited as the first battlefield use of firearms in Japan.",
+    summary: "In 1549 (Tenbun 18) Shimazu Takahisa stormed and captured Kajiki castle in Ōsumi — a Shimazu victory remembered as the first battlefield use of Portuguese-derived arquebuses in Japan, the moment European firearms entered the country's wars.",
+    details: `In 1549, the year known as Tenbun 18, Shimazu Takahisa laid siege to Kajiki castle in Ōsumi, part of his clan's long campaign to consolidate southern Kyūshū. He was joined by his retainers Ijūin Tadaaki and Tanegashima Tokitaka — the latter from the island where Portuguese guns had first reached Japan in 1543, and who supplied the firearms that give the siege its lasting fame: tradition holds that Ijūin Tadaaki discharged a *teppō* of Portuguese design, making this the first recorded use of European arquebuses in a Japanese battle. The assault overwhelmed the garrison; the fighting was severe, with the entire defending force of some 320 killed against roughly 210 Shimazu dead. The fall of Kajiki strengthened the Shimazu hold on Ōsumi and stands as an early marker of the firearms revolution that would reshape Sengoku warfare.`,
+    sources: [ { label: "Siege of Kajiki — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Kajiki" } ]
+  },
+  {
+    id: "terabe-1558", name: "Siege of Terabe", year: 1558, dateLabel: "1558 (Eiroku 1)", period: "Sengoku",
+    location: { name: "Terabe Castle, Mikawa (modern Toyota, Aichi)", lat: 35.0958, lon: 137.1711 },
+    combatants: { side1: { name: "Matsudaira (for the Imagawa)", leader: "Matsudaira Motoyasu (later Tokugawa Ieyasu)" }, side2: { name: "Oda-aligned garrison", leader: "Suzuki Shigeteru" } },
+    outcome: "Oda victory; Matsudaira Motoyasu — the future Ieyasu — was repelled in his first battle.",
+    summary: "In 1558 (Eiroku 1) the young Matsudaira Motoyasu — the future Tokugawa Ieyasu — led an Imagawa army against Terabe Castle in Mikawa, whose lord had defected to Oda Nobunaga. The assault was driven off by Oda reinforcements, and the action is remembered as Motoyasu's first battle.",
+    details: `Terabe Castle stood in the Mikawa borderland that the Imagawa and Oda contested. Its lord, Suzuki Shigeteru, had abandoned the Imagawa to side with Oda Nobunaga, and the Imagawa answered by sending the young Matsudaira Motoyasu — later known to history as Tokugawa Ieyasu — to bring the castle to heel. The clash carried the weight of being Motoyasu's debut in the field, the opening action of a career that would end in the founding of the Tokugawa shogunate. By the surviving account his forces were repelled by reinforcements Nobunaga sent to relieve the garrison, and it is recorded as an Oda victory. No precise lunar date survives, so no confident Western month can be assigned beyond the year 1558.`,
+    sources: [ { label: "Siege of Terabe — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Terabe" } ]
+  },
+  {
+    id: "musashi-matsuyama-1563", name: "Siege of Musashi-Matsuyama (1563)", year: 1563, dateLabel: "1563 (Eiroku 6)", period: "Sengoku",
+    location: { name: "Matsuyama Castle, Musashi (modern Yoshimi, Saitama)", lat: 36.0369, lon: 139.4211 },
+    combatants: { side1: { name: "Hōjō–Takeda alliance", leader: "Hōjō Ujiyasu & Takeda Shingen" }, side2: { name: "Uesugi–Ōta garrison", leader: "Uesugi Norikatsu & Ōta Sukemasa" } },
+    outcome: "Hōjō–Takeda victory; the garrison surrendered after miners undermined the walls.",
+    summary: "In 1563 (Eiroku 6) the allied forces of Hōjō Ujiyasu and Takeda Shingen besieged Matsuyama Castle in Musashi; their 24,000 troops — aided by miners tunnelling beneath the walls — forced the surrender of the 10,000-strong Uesugi and Ōta garrison, tightening the allies' grip on the contested Kantō plain.",
+    details: `Matsuyama Castle in Musashi (modern Yoshimi, Saitama) stood at the centre of the long struggle for the Kantō between the Hōjō and their Uesugi rivals. In 1563 a combined Hōjō–Takeda army of some 24,000 under Hōjō Ujiyasu and Takeda Shingen laid siege to the castle, held by an Uesugi and Ōta garrison of roughly 10,000 under Uesugi Norikatsu and Ōta Sukemasa. Rather than rely on assault alone, the besiegers set a team of miners to dig beneath the defences, undermining the castle's ability to hold out. The garrison surrendered, a Hōjō–Takeda victory. As with most pre-1873 dates, only the year is securely recorded; the lunar calendar means no specific Western month is asserted here.`,
+    sources: [ { label: "Siege of Musashi-Matsuyama (1563) — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Musashi-Matsuyama_(1563)" } ]
+  },
+  {
+    id: "chokoji-1570", name: "Siege of Chōkō-ji", year: 1570, dateLabel: "1570 (Genki 1)", period: "Sengoku",
+    location: { name: "Chōkō-ji Castle, Ōmi Province (modern Shiga)", lat: 35.1056, lon: 136.1319 },
+    combatants: { side1: { name: "Rokkaku", leader: "Rokkaku Yoshisuke" }, side2: { name: "Oda", leader: "Shibata Katsuie (with Sakuma Nobumori)" } },
+    outcome: "Oda victory; Shibata Katsuie's defenders sallied out and routed the besieging Rokkaku, lifting the siege.",
+    summary: "In 1570 the Rokkaku besieged Chōkō-ji Castle in Ōmi — which Oda Nobunaga had taken from them two years earlier — and cut off its water. The Oda garrison under Shibata Katsuie sallied out and routed the attackers, lifting the siege.",
+    details: `Chōkō-ji, a fortified temple in Ōmi, had been seized from the Rokkaku by Nobunaga in 1568. In 1570 Rokkaku Yoshisuke moved to retake it and cut off the castle's water supply. By a celebrated tradition, Shibata Katsuie — entrusted with the defence alongside Sakuma Nobumori — smashed the garrison's last water jars so his men would have no choice but to win, then led them out in a sally that broke the besiegers; the feat helped earn him the nickname *Oni Shibata*, "Devil Shibata." English sources fix the action only to the year 1570 (Genki 1); Japanese sources place it in the sixth lunar month, which falls in July 1570 by the Western calendar, so a "June 1570" date is a lunar-conversion error.`,
+    sources: [ { label: "Siege of Chōkō-ji — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Ch%C5%8Dk%C5%8D-ji" } ]
+  },
+  {
+    id: "toyama-1585", name: "Siege of Toyama", year: 1585, dateLabel: "1585 (Tenshō 13)", period: "Sengoku",
+    location: { name: "Toyama Castle, Etchū Province (modern Toyama)", lat: 36.6933, lon: 137.2111 },
+    combatants: { side1: { name: "Toyotomi", leader: "Toyotomi Hideyoshi (with Maeda Toshinaga)" }, side2: { name: "Sassa", leader: "Sassa Narimasa" } },
+    outcome: "Toyotomi victory; Sassa Narimasa submitted and Etchū passed to Hideyoshi.",
+    summary: "In 1585 (Tenshō 13) Toyotomi Hideyoshi marched on Toyama Castle in Etchū and overwhelmed the defending Sassa Narimasa, shattering his resistance and securing Toyotomi mastery of the province.",
+    details: `In 1585, as he extended his power across central Japan, Hideyoshi turned on Etchū, where his former ally Sassa Narimasa held Toyama Castle. Leading the campaign in person — with Maeda Toshinaga prominent in the attack and commanders including Horio Yoshiharu, Hachiya Yoritaka and Kanamori Nagachika — he brought a reported 100,000 men against Narimasa's roughly 20,000. The disparity told: Narimasa's defence collapsed and he submitted, and the fall of Toyama gave the Toyotomi control of Etchū. The action is dated to 1585 (Tenshō 13), with no exact day preserved.`,
+    sources: [ { label: "Siege of Toyama — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Toyama" } ]
   }
 ];
