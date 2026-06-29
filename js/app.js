@@ -846,7 +846,22 @@ function recomputeYears() {
   renderEraBands();
 }
 
-const yearToPct = (y) => ((y - MIN_YEAR) / Math.max(1, MAX_YEAR - MIN_YEAR)) * 100;
+// The scrubber uses EQUAL era slots (one eighth each) that line up exactly with the
+// era ribbon above it: within a slot, position is linear in the year. So a year maps
+// to (eraIndex + fraction-through-era) / 8. This keeps every era equally clickable
+// and the knob always sits under its highlighted ribbon segment.
+const N_ERAS = ERAS.length;
+function eraIndexForYear(y) {
+  for (let i = 0; i < ERAS.length; i++) if (y >= ERAS[i].start && y < ERAS[i].end) return i;
+  return y < ERAS[0].start ? 0 : ERAS.length - 1;
+}
+function yearToPct(y) {
+  if (y == null) return 0;
+  const i = eraIndexForYear(y);
+  const e = ERAS[i];
+  const f = Math.max(0, Math.min(1, (y - e.start) / (e.end - e.start)));
+  return ((i + f) / N_ERAS) * 100;
+}
 
 function renderTicks() {
   yearTicksEl.innerHTML = '';
@@ -862,23 +877,16 @@ function renderTicks() {
   }
 }
 
-// Contiguous, time-proportional era bands behind the density ticks. Each era spans
-// its full canonical range (clamped to the visible track), so the bands tile the
-// timeline with no gaps.
+// Equal-width era bands, one per slot, aligned under the ribbon segments above.
 function renderEraBands() {
   if (!eraBandsEl) return;
   eraBandsEl.innerHTML = '';
-  for (const e of ERAS) {
-    const a = Math.max(MIN_YEAR, e.start);
-    const b = Math.min(MAX_YEAR, e.end);
-    if (b <= a) continue;
-    const left = yearToPct(a);
-    const width = Math.max(0.4, yearToPct(b) - left);
+  for (let i = 0; i < ERAS.length; i++) {
     const band = document.createElement('div');
     band.className = 'era-band';
-    band.style.left = left + '%';
-    band.style.width = width + '%';
-    band.style.background = e.color;
+    band.style.left = (i / N_ERAS) * 100 + '%';
+    band.style.width = 100 / N_ERAS + '%';
+    band.style.background = ERAS[i].color;
     eraBandsEl.appendChild(band);
   }
 }
@@ -934,11 +942,16 @@ function updateScrub() {
   if (scrubKnobLine) { scrubKnobLine.style.display = ''; scrubKnobLine.style.left = pct + '%'; }
 }
 
-// Click / drag anywhere on the track → set the year from the x-position.
+// Click / drag anywhere on the track → set the year from the x-position
+// (inverse of yearToPct: figure out which era slot x fell in, then the year within).
 function yearFromTrackX(clientX) {
   const rect = scrubTrackEl.getBoundingClientRect();
-  const frac = Math.max(0, Math.min(1, (clientX - rect.left) / Math.max(1, rect.width)));
-  return Math.round(MIN_YEAR + frac * (MAX_YEAR - MIN_YEAR));
+  const frac = Math.max(0, Math.min(0.999999, (clientX - rect.left) / Math.max(1, rect.width)));
+  let slot = Math.floor(frac * N_ERAS);
+  slot = Math.max(0, Math.min(N_ERAS - 1, slot));
+  const within = frac * N_ERAS - slot;
+  const e = ERAS[slot];
+  return Math.round(e.start + within * (e.end - e.start));
 }
 if (scrubTrackEl) {
   let dragging = false;

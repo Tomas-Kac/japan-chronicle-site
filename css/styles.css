@@ -368,8 +368,27 @@ body { position: fixed; inset: 0; }
   border-top: 3px solid var(--seg-color, transparent);
 }
 
-/* controls + scrubber */
-#tbControls { display: flex; align-items: center; gap: 16px; }
+/* full-width scrub track, directly under the ribbon so era slots line up */
+#scrubTrack { position: relative; height: 24px; margin: 3px 0 9px; cursor: pointer; }
+.scrub-base { position: absolute; left: 0; right: 0; top: 11px; height: 2px; background: rgba(32,38,46,.12); border-radius: 1px; }
+#eraBands { position: absolute; left: 0; right: 0; top: 0; bottom: 0; pointer-events: none; border-radius: 4px; overflow: hidden; }
+.era-band { position: absolute; top: 9px; height: 6px; opacity: .62; }
+#yearTicks { position: absolute; left: 0; right: 0; top: 0; bottom: 0; pointer-events: none; }
+.yearTick {
+  position: absolute; top: 6px; width: 2px; height: 12px; margin-left: -1px;
+  background: var(--accent); opacity: .75; pointer-events: auto; cursor: pointer;
+  transition: opacity .15s, height .15s, top .15s;
+}
+.yearTick:hover { opacity: 1; height: 16px; top: 4px; }
+#scrubKnobLine { position: absolute; top: 1px; height: 22px; width: 2px; margin-left: -1px; background: var(--accent); border-radius: 1px; pointer-events: none; }
+#scrubKnob {
+  position: absolute; top: 5px; width: 14px; height: 14px; margin-left: -7px; border-radius: 50%;
+  background: var(--accent); border: 2.5px solid #fff; box-shadow: 0 1px 4px rgba(40,30,20,.4);
+  pointer-events: none;
+}
+
+/* controls row (below the track): transport · year readout · caption */
+#tbControls { display: flex; align-items: center; gap: 14px; }
 .tb-transport { display: flex; align-items: center; gap: 6px; flex: none; }
 .transBtn {
   width: 34px; height: 34px; border-radius: 8px; border: 1px solid var(--line-2);
@@ -383,33 +402,12 @@ body { position: fixed; inset: 0; }
 }
 .transBtn.play:hover { background: var(--accent-deep); }
 
-#yearReadout {
-  flex: none; width: 132px; text-align: right; padding-right: 14px;
-  border-right: 1px solid var(--line);
-}
-#yearValue { font-family: var(--font-disp); font-weight: 800; font-size: 30px; line-height: 1; color: var(--accent); display: block; }
-#yearEra { font-size: 11.5px; color: var(--ink-faint); margin-top: 3px; letter-spacing: .02em; display: block; }
+#yearReadout { flex: none; display: flex; align-items: baseline; gap: 8px; }
+#yearValue { font-family: var(--font-disp); font-weight: 800; font-size: 26px; line-height: 1; color: var(--accent); }
+#yearEra { font-size: 12px; color: var(--ink-faint); letter-spacing: .02em; }
 
-.tb-scrub { flex: 1; min-width: 0; }
-#scrubTrack { position: relative; height: 30px; cursor: pointer; }
-.scrub-base { position: absolute; left: 0; right: 0; top: 14px; height: 2px; background: rgba(32,38,46,.14); border-radius: 1px; }
-#eraBands { position: absolute; left: 0; right: 0; top: 0; bottom: 0; pointer-events: none; }
-.era-band { position: absolute; top: 11px; height: 8px; opacity: .55; border-radius: 2px; }
-#yearTicks { position: absolute; left: 0; right: 0; top: 0; bottom: 0; pointer-events: none; }
-.yearTick {
-  position: absolute; top: 8px; width: 2px; height: 14px; margin-left: -1px;
-  background: var(--accent); opacity: .7; border-radius: 1px; pointer-events: auto; cursor: pointer;
-  transition: opacity .15s, height .15s;
-}
-.yearTick:hover { opacity: 1; height: 18px; top: 6px; }
-#scrubKnobLine { position: absolute; top: 4px; height: 22px; width: 2px; margin-left: -1px; background: var(--accent); border-radius: 1px; pointer-events: none; }
-#scrubKnob {
-  position: absolute; top: 9px; width: 14px; height: 14px; margin-left: -7px; border-radius: 50%;
-  background: var(--accent); border: 2.5px solid #fff; box-shadow: 0 1px 4px rgba(40,30,20,.4);
-  pointer-events: none;
-}
 #yearEvents {
-  font-size: 12px; color: var(--ink-mut); margin-top: 6px; line-height: 1.4;
+  flex: 1; min-width: 0; font-size: 12px; color: var(--ink-mut); line-height: 1.4;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 .noEvents { color: var(--ink-faint2); font-style: italic; }
@@ -554,10 +552,10 @@ body { position: fixed; inset: 0; }
   #searchResults { position: absolute; }
   .leaflet-top.leaflet-left, .leaflet-top.leaflet-right { top: 112px; }
   #opacityPanel { top: 112px; left: 50px; width: 178px; }
-  #yearValue { font-size: 24px; }
-  #yearReadout { width: 92px; padding-right: 8px; }
-  #tbControls { gap: 9px; }
+  #yearValue { font-size: 22px; }
+  #tbControls { gap: 10px; }
   .era-seg .sub { display: none; }
+  .era-seg .lbl { font-size: 10.5px; }
   #timeBar { padding: 8px 10px 10px; }
 }
 

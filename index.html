@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
   <!-- Cache-buster so edits to styles.css always show up on reload -->
-  <script>document.write('<link rel="stylesheet" href="css/styles.css?v=' + '202606290717' + '">');</script>
+  <script>document.write('<link rel="stylesheet" href="css/styles.css?v=' + '202606290916' + '">');</script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -105,6 +105,13 @@
   <div id="timeBar">
     <div class="tb-inner">
       <div id="eraSelector" role="group" aria-label="Jump to an era"></div>
+      <div id="scrubTrack" role="presentation">
+        <div class="scrub-base"></div>
+        <div id="eraBands" aria-hidden="true"></div>
+        <div id="yearTicks" aria-hidden="true"></div>
+        <div id="scrubKnobLine" aria-hidden="true"></div>
+        <div id="scrubKnob" aria-hidden="true"></div>
+      </div>
       <div id="tbControls">
         <div class="tb-transport">
           <button id="prevEvent" class="transBtn" type="button" title="Previous year with a battle" aria-label="Previous battle year">&#9664;</button>
@@ -112,17 +119,8 @@
           <button id="nextEvent" class="transBtn" type="button" title="Next year with a battle" aria-label="Next battle year">&#9654;</button>
         </div>
         <div id="yearReadout"><span id="yearValue">&mdash;</span><span id="yearEra"></span></div>
-        <div class="tb-scrub">
-          <div id="scrubTrack" role="presentation">
-            <div class="scrub-base"></div>
-            <div id="eraBands" aria-hidden="true"></div>
-            <div id="yearTicks" aria-hidden="true"></div>
-            <div id="scrubKnobLine" aria-hidden="true"></div>
-            <div id="scrubKnob" aria-hidden="true"></div>
-          </div>
-          <input id="yearSlider" class="sr-only" type="range" step="1" aria-label="Year">
-          <div id="yearEvents">&mdash;</div>
-        </div>
+        <input id="yearSlider" class="sr-only" type="range" step="1" aria-label="Year">
+        <div id="yearEvents">&mdash;</div>
       </div>
     </div>
   </div>
@@ -132,7 +130,7 @@
   <!-- Load local scripts with a cache-buster so your edits always appear -->
   <script>
     (function () {
-      var v = '202606290717';
+      var v = '202606290916';
       document.write('<script src="data/battles.js?v=' + v + '"><\/script>');
       document.write('<script src="data/castles.js?v=' + v + '"><\/script>');
       document.write('<script src="data/temples.js?v=' + v + '"><\/script>');
