@@ -736,36 +736,28 @@ const ALL_PERIODS = [...new Set(BATTLES.map((b) => b.period).filter(Boolean))].s
 });
 let selectedPeriods = new Set(ALL_PERIODS); // every era shown by default
 
-// --- Era timeline: each era's year range + its band colour & light tint
-// (paper/ink redesign palette), so the scrubber reads as era bands, the segments
-// highlight the active era, and the readout names the current era. ---
-const ERA_STYLE = {
-  'Asuka–Nara':  { color: '#8a9a5b', tint: '#eef0e3' },
-  'Heian':       { color: '#5b7a8a', tint: '#e7edf0' },
-  'Genpei':      { color: '#9e5b5b', tint: '#f1e6e6' },
-  'Kamakura':    { color: '#7a6a9e', tint: '#ece8f1' },
-  'Nanboku-chō': { color: '#b07d2b', tint: '#f4ebd8' },
-  'Sengoku':     { color: '#c23b22', tint: '#f6e3df' },
-  'Edo':         { color: '#4a6b57', tint: '#e4ece7' },
-  'Bakumatsu':   { color: '#6a5b8a', tint: '#e8e4f1' },
-};
-const ERA_FALLBACK = ['#8a9a5b', '#5b7a8a', '#9e5b5b', '#7a6a9e', '#b07d2b', '#c23b22', '#4a6b57', '#6a5b8a'];
-const ERA_RANGES = {};
-for (const p of ALL_PERIODS) {
-  const ys = BATTLES.filter((b) => b.period === p).flatMap((b) => battleYears(b));
-  if (ys.length) ERA_RANGES[p] = [Math.min(...ys), Math.max(...ys)];
-}
-function eraColor(p) {
-  if (ERA_STYLE[p]) return ERA_STYLE[p].color;
-  const i = ALL_PERIODS.indexOf(p); return ERA_FALLBACK[(i < 0 ? 0 : i) % ERA_FALLBACK.length];
-}
-function eraTint(p) { return (ERA_STYLE[p] && ERA_STYLE[p].tint) || 'rgba(32,38,46,.06)'; }
+// --- Era timeline: canonical, CONTIGUOUS era spans so the scrubber bands tile the
+// whole timeline edge-to-edge (no gaps). Each era's internal [start, end) boundary
+// sits in the empty gap between battles, so every famous boundary battle still falls
+// in the right era (Dan-no-ura 1185 = Genpei, fall of Kamakura 1333 = Kamakura,
+// Siege of Osaka 1615 = Azuchi–Momoyama). `label` is the conventional range we show.
+const ERAS = [
+  { name: 'Asuka–Nara',      start: 552,  end: 794,  label: '552–794',   color: '#8a9a5b', tint: '#eef0e3' },
+  { name: 'Heian',           start: 794,  end: 1180, label: '794–1185',  color: '#5b7a8a', tint: '#e7edf0' },
+  { name: 'Genpei',          start: 1180, end: 1186, label: '1180–1185', color: '#9e5b5b', tint: '#f1e6e6' },
+  { name: 'Kamakura',        start: 1186, end: 1334, label: '1185–1333', color: '#7a6a9e', tint: '#ece8f1' },
+  { name: 'Muromachi',       start: 1334, end: 1573, label: '1336–1573', color: '#b07d2b', tint: '#f4ebd8' },
+  { name: 'Azuchi–Momoyama', start: 1573, end: 1616, label: '1573–1615', color: '#c23b22', tint: '#f6e3df' },
+  { name: 'Edo',             start: 1616, end: 1853, label: '1603–1868', color: '#4a6b57', tint: '#e4ece7' },
+  { name: 'Bakumatsu',       start: 1853, end: 1870, label: '1853–1868', color: '#6a5b8a', tint: '#e8e4f1' },
+];
+const ERA_BY_NAME = {}; for (const e of ERAS) ERA_BY_NAME[e.name] = e;
+const ERA_RANGES = {}; for (const e of ERAS) ERA_RANGES[e.name] = [e.start, e.end];
+function eraColor(p) { return (ERA_BY_NAME[p] && ERA_BY_NAME[p].color) || '#8a9a5b'; }
+function eraTint(p)  { return (ERA_BY_NAME[p] && ERA_BY_NAME[p].tint)  || 'rgba(32,38,46,.06)'; }
 function eraForYear(y) {
   if (y == null) return null;
-  for (const p of ALL_PERIODS) {
-    const r = ERA_RANGES[p];
-    if (r && y >= r[0] && y <= r[1]) return p;
-  }
+  for (const e of ERAS) if (y >= e.start && y < e.end) return e.name;
   return null;
 }
 
@@ -870,23 +862,23 @@ function renderTicks() {
   }
 }
 
-// Time-proportional era bands behind the density ticks (paper-redesign scrubber).
+// Contiguous, time-proportional era bands behind the density ticks. Each era spans
+// its full canonical range (clamped to the visible track), so the bands tile the
+// timeline with no gaps.
 function renderEraBands() {
   if (!eraBandsEl) return;
   eraBandsEl.innerHTML = '';
-  for (const p of ALL_PERIODS) {
-    const r = ERA_RANGES[p];
-    if (!r) continue;
-    const a = Math.max(MIN_YEAR, r[0]);
-    const b = Math.min(MAX_YEAR, r[1]);
-    if (b < a) continue;
+  for (const e of ERAS) {
+    const a = Math.max(MIN_YEAR, e.start);
+    const b = Math.min(MAX_YEAR, e.end);
+    if (b <= a) continue;
     const left = yearToPct(a);
-    const width = Math.max(0.6, yearToPct(b) - left);
+    const width = Math.max(0.4, yearToPct(b) - left);
     const band = document.createElement('div');
     band.className = 'era-band';
     band.style.left = left + '%';
     band.style.width = width + '%';
-    band.style.background = eraColor(p);
+    band.style.background = e.color;
     eraBandsEl.appendChild(band);
   }
 }
@@ -895,20 +887,17 @@ function renderEraBands() {
 function renderEraSelector() {
   if (!eraSelectorEl) return;
   eraSelectorEl.innerHTML = '';
-  for (const p of ALL_PERIODS) {
-    const r = ERA_RANGES[p] || [null, null];
+  for (const e of ERAS) {
     const seg = document.createElement('button');
     seg.type = 'button';
     seg.className = 'era-seg';
-    seg.dataset.era = p;
-    const sub = r[0] != null ? `${r[0]}–${r[1]}` : '';
+    seg.dataset.era = e.name;
     seg.innerHTML =
       `<span class="seg-fill" aria-hidden="true"></span>` +
-      `<span class="lbl">${escapeHtml(p)}</span>` +
-      `<span class="sub">${escapeHtml(sub)}</span>`;
+      `<span class="lbl">${escapeHtml(e.name)}</span>` +
+      `<span class="sub">${escapeHtml(e.label)}</span>`;
     seg.addEventListener('click', () => {
-      if (!r[0]) return;
-      const mid = Math.round((r[0] + r[1]) / 2);
+      const mid = Math.round((e.start + e.end) / 2);
       showYear(nearestEventYear(mid));
     });
     eraSelectorEl.appendChild(seg);
