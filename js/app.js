@@ -8,9 +8,11 @@
 const CARTO_ATTR = '&copy; OpenStreetMap contributors &copy; CARTO';
 
 // Shared options that make zooming/panning feel smoother:
-//   keepBuffer        - keep extra tiles around the edges so less blank shows
+//   keepBuffer        - keep a wide ring of off-screen tiles ready, so panning
+//                       reveals already-loaded tiles instead of blank squares
 //   updateWhenZooming - wait until a zoom finishes before swapping in new tiles
-const SMOOTH = { keepBuffer: 4, updateWhenZooming: false };
+//   updateWhenIdle    - false: load tiles DURING a pan gesture, not only after it
+const SMOOTH = { keepBuffer: 8, updateWhenZooming: false, updateWhenIdle: false };
 
 // Modern, clean street map. Shows only major cities when zoomed out and
 // reveals smaller places as you zoom in. This is the default.
@@ -91,6 +93,40 @@ const ResetViewControl = L.Control.extend({
   },
 });
 map.addControl(new ResetViewControl());
+
+// --- Warm the tile cache for the whole-Japan overview (zoom 5–7) ----------------
+// We can't preload every tile (deeper zooms run to millions), but we can quietly
+// fetch the low-zoom Japan region into the browser cache once the page is idle, so
+// zooming out/in a step and panning at the overview scale is instant. It uses the
+// SAME url + subdomain Leaflet would request (subdomain = (x+y) % 4), so these hits
+// land in the same cache entries. Bounded + throttled to stay polite to the servers.
+(function prefetchOverview() {
+  const SUBS = ['a', 'b', 'c', 'd'];
+  const lon2x = (lon, z) => Math.floor(((lon + 180) / 360) * Math.pow(2, z));
+  const lat2y = (lat, z) => {
+    const r = (lat * Math.PI) / 180;
+    return Math.floor(((1 - Math.log(Math.tan(r) + 1 / Math.cos(r)) / Math.PI) / 2) * Math.pow(2, z));
+  };
+  const W = 122, E = 147, N = 46.3, S = 24; // Japan-ish bounding box
+  const urls = [];
+  for (let z = 5; z <= 7; z++) {
+    const x0 = lon2x(W, z), x1 = lon2x(E, z), y0 = lat2y(N, z), y1 = lat2y(S, z);
+    for (let x = x0; x <= x1; x++) {
+      for (let y = y0; y <= y1; y++) {
+        urls.push(`https://${SUBS[Math.abs(x + y) % 4]}.basemaps.cartocdn.com/rastertiles/voyager/${z}/${x}/${y}.png`);
+      }
+    }
+  }
+  if (urls.length > 500) urls.length = 500; // safety cap
+  let i = 0;
+  const idle = window.requestIdleCallback || ((fn) => setTimeout(fn, 300));
+  const pump = () => {
+    for (const u of urls.slice(i, i + 12)) { const im = new Image(); im.src = u; }
+    i += 12;
+    if (i < urls.length) idle(pump);
+  };
+  idle(pump);
+})();
 
 // ---- Castles overlay (toggle in the top-right control) ----
 const CASTLE_TYPE_LABEL = {
