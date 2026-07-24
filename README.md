@@ -1,12 +1,12 @@
 # Japan Chronicle — an interactive historical atlas
 
-A free, interactive historical atlas of **premodern Japan**, from the arrival of Buddhism (552) to the Meiji Restoration (1868–69). Every battle and event is a clickable point on the map and a moment on an era-aware timeline — so the sweep of Japanese history can be *seen*, not just memorised.
+A free, interactive historical atlas of **premodern Japan**, from the arrival of Buddhism (552) to the Meiji Restoration (1868–69). Every battle and event is a clickable point on the map and a moment on an era-aware timeline; the sweep of Japanese history can be *seen*, not just memorised.
 
-Built by a historian as a free study tool for students, teachers, and anyone curious about Japanese history.
+Built by a Japanology student at Charles University in Prague as a free study tool for students, teachers, and anyone curious about Japanese history.
 
 > **Live map:** https://tomas-kac.github.io/japan-chronicle-site/
 
-## ✨ What's on it
+## What's on it?
 
 - **107 battles** across 8 eras (Asuka–Nara · Heian · Genpei · Kamakura · Nanboku-chō · Sengoku · Edo · Bakumatsu)
 - **59 non-battle events** — religion, culture, politics, foreign contact, disasters (552–1923)
@@ -15,9 +15,9 @@ Built by a historian as a free study tool for students, teachers, and anyone cur
 - **70 historical provinces** (旧国), **9 march routes**, and three draped historical maps (1690 / 1779 / 1860)
 - A **year slider** segmented by era, an **events overlay** tied to the timeline, **clan** and **search** filters
 
-## 🗺️ Run it locally
+## Run it locally
 
-It's a static site — no build step, no server-side code, no API keys. Just serve the folder:
+It's a static site, no build step, no server-side code, no API keys. Just serve the folder:
 
 ```bash
 python3 -m http.server 8010
@@ -32,7 +32,7 @@ python3 -m http.server 8010
 - **Province boundaries** come from CODH (旧国・旧郡境界データセット), licensed **CC BY-NC 4.0**.
 - **Images** are from Wikimedia Commons (public domain / freely licensed), credited per item.
 
-> ⚠️ **Non-commercial.** Because the province data is CC BY-NC, this project — and any reuse of it — must stay **non-commercial**. Free to use and share for education and study, with attribution.
+> ⚠️ **Non-commercial.** Because the province data is CC BY-NC, this project, and any reuse of it, must stay **non-commercial**. Free to use and share for education and study, with attribution.
 
 
 ## 🧭 Structure
@@ -47,4 +47,6 @@ python3 -m http.server 8010
 | `scripts/` | data generators (`build_domains.py`, `build_ancient_north.py`, `make_audit.js`) — re-run after edits |
 | `NOTES.md` | the development log |
 
-To add a battle, copy an entry in `data/battles.js` and edit its fields — the map updates itself. Instructions are at the top of that file.
+To add a battle, copy an entry in `data/battles.js` and edit its fields, the map updates itself. Instructions are at the top of that file. 
+
+If you find any issue or have any questions, please reach me at: tkacbunda@gmail.com
