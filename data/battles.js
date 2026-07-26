@@ -2299,6 +2299,7 @@ Following the unauthorized withdrawal of Maeda Toshiie from the Shibata coalitio
   },
   {
     id: "komaki-nagakute",
+    sources: [ { label: "Battle of Komaki and Nagakute — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Komaki_and_Nagakute" } ],
     name: "Battle of Komaki and Nagakute",
     year: 1584,
     dateLabel: "March–November 1584",
@@ -2334,6 +2335,7 @@ Unable to break Ieyasu in the field, Hideyoshi turned to diplomacy; the war ende
   },
   {
     id: "okita-nawate",
+    sources: [ { label: "Battle of Okitanawate — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Okitanawate" } ],
     name: "Battle of Okita-Nawate",
     year: 1584,
     date: "1584-05-04",
@@ -2347,13 +2349,13 @@ Unable to break Ieyasu in the field, Hideyoshi turned to diplomacy; the war ende
     combatants: {
       side1: {
         name: "Shimazu–Arima coalition",
-        leader: "Shimazu Iehisa",
-        forces: "approximately 3,000–5,000"
+        leader: "Arima Harunobu & Shimazu Iehisa",
+        forces: "approximately 6,000–9,000"
       },
       side2: {
         name: "Ryūzōji clan",
         leader: "Ryūzōji Takanobu",
-        forces: "approximately 30,000"
+        forces: "approximately 25,000 (estimates range 25,000–60,000)"
       }
     },
     outcome: "Decisive Shimazu–Arima victory; Ryūzōji Takanobu was killed in action.",
@@ -2364,6 +2366,7 @@ Trapped and unable to deploy their huge numbers, the Ryūzōji army broke when a
   },
   {
     id: "odawara-1590",
+    sources: [ { label: "Siege of Odawara (1590) — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Odawara_(1590)" } ],
     name: "Siege of Odawara (1590)",
     year: 1590,
     dateLabel: "May – August 4, 1590",
@@ -2401,11 +2404,12 @@ Concurrently, Toyotomi subordinate commanders captured Hōjō satellite castles 
   },
   {
     id: "osaka-siege",
+    sources: [ { label: "Siege of Osaka — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Osaka" } ],
     name: "Siege of Osaka",
     yearStart: 1614,
     yearEnd: 1615,
     dateLabel: "Winter 1614 – Summer 1615",
-    period: "Azuchi–Momoyama",
+    period: "Edo",
     location: {
       name: "Osaka Castle, Settsu Province (modern Osaka)",
       lat: 34.6873,
@@ -2415,7 +2419,7 @@ Concurrently, Toyotomi subordinate commanders captured Hōjō satellite castles 
       side1: {
         name: "Tokugawa shogunate",
         leader: "Tokugawa Ieyasu & Hidetada",
-        forces: "approximately 150,000–200,000"
+        forces: "approximately 150,000–164,000"
       },
       side2: {
         name: "Toyotomi clan",
@@ -2437,6 +2441,7 @@ In the Summer Campaign of 1615 the now-defenceless castle was stormed; Sanada Yu
   },
   {
     id: "uji-1180",
+    sources: [ { label: "Battle of Uji (1180) — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Uji_(1180)" } ],
     name: "First Battle of Uji",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Phoenix_Hall%2C_Byodo-in%2C_November_2016_-01.jpg/960px-Phoenix_Hall%2C_Byodo-in%2C_November_2016_-01.jpg", caption: "Byōdō-in at Uji, where Minamoto no Yorimasa made his last stand in 1180. Wikimedia Commons." }
@@ -2466,6 +2471,7 @@ In the Summer Campaign of 1615 the now-defenceless castle was stormed; Sanada Yu
   },
   {
     id: "ishibashiyama",
+    sources: [ { label: "Battle of Ishibashiyama — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Ishibashiyama" } ],
     name: "Battle of Ishibashiyama",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Tsuruya_Kiemon_-_Yobu_hakkei_-_Walters_95109.jpg/960px-Tsuruya_Kiemon_-_Yobu_hakkei_-_Walters_95109.jpg", caption: "Woodblock print depicting the Battle of Ishibashiyama (1180). Wikimedia Commons." }
@@ -2495,6 +2501,7 @@ In the Summer Campaign of 1615 the now-defenceless castle was stormed; Sanada Yu
   },
   {
     id: "fujigawa",
+    sources: [ { label: "Battle of Fujigawa — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Fujigawa" } ],
     name: "Battle of Fujigawa",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Yoshifuji-utagawa-rr213.png/960px-Yoshifuji-utagawa-rr213.png", caption: "Utagawa woodblock print of the Battle of Fujigawa (1180). Wikimedia Commons." }
@@ -2524,6 +2531,7 @@ In the Summer Campaign of 1615 the now-defenceless castle was stormed; Sanada Yu
   },
   {
     id: "kurikara",
+    sources: [ { label: "Battle of Kurikara Pass — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Kurikara_Pass" } ],
     name: "Battle of Kurikara",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Battle_of_Kurikaradani_Kassen_Zu.jpg/960px-Battle_of_Kurikaradani_Kassen_Zu.jpg", caption: "‘Battle of Kurikara’ (Kurikara-dani Kassen-zu). Wikimedia Commons." }
@@ -2555,6 +2563,7 @@ The shattering of the Taira field army let Yoshinaka march on the capital; the T
   },
   {
     id: "awazu",
+    sources: [ { label: "粟津の戦い — Japanese Wikipedia", url: "https://ja.wikipedia.org/wiki/%E7%B2%9F%E6%B4%A5%E3%81%AE%E6%88%A6%E3%81%84" } ],
     name: "Battle of Awazu",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Y%C5%8Dsh%C5%AB_Chikanobu_Tomoe_Gozen.jpg/960px-Y%C5%8Dsh%C5%AB_Chikanobu_Tomoe_Gozen.jpg", caption: "Tomoe Gozen, who fought at Awazu, by Yōshū Chikanobu. Wikimedia Commons." }
@@ -2584,6 +2593,7 @@ The shattering of the Taira field army let Yoshinaka march on the capital; the T
   },
   {
     id: "ichi-no-tani",
+    sources: [ { label: "Battle of Ichi-no-Tani — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Ichi-no-Tani" } ],
     name: "Battle of Ichi-no-Tani",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Battle_of_Ichi-no-Tani_Folding_Screen_by_Kano_School.jpg/960px-Battle_of_Ichi-no-Tani_Folding_Screen_by_Kano_School.jpg", caption: "Folding screen of the Battle of Ichi-no-Tani (Kanō school). Wikimedia Commons." }
@@ -2608,12 +2618,13 @@ The shattering of the Taira field army let Yoshinaka march on the capital; the T
       }
     },
     outcome: "Minamoto victory; the Taira fortress fell and they fled to their ships.",
-    summary: "Yoshitsune's most famous stroke. While the main Minamoto army assaulted the Taira fortress at Ichi-no-Tani from the front, Yoshitsune led a handful of riders down the precipitous Hiyodorigoe slope to fall on the defenders' rear, throwing the Taira into rout. It is the setting of the death of the young flute-player Taira no Atsumori at the hands of Kumagai Naozane.",
+    summary: "Yoshitsune's most famous stroke. While Noriyori's main army struck the Taira line at Ikuta Shrine to the east, Yoshitsune took a detachment of about a hundred riders over the mountains behind the fortress and fell on the defenders' rear, throwing the Taira into rout. It is the setting of the death of the young flute-player Taira no Atsumori at the hands of Kumagai Naozane.",
     leadsTo: "yashima",
     details: `Re-established at Ichi-no-Tani between the mountains and the sea near Suma, the Taira were attacked on several fronts in early 1184. The decisive moment came when Minamoto no Yoshitsune, with a small mounted party, descended the cliff at Hiyodorigoe — thought impassable — and struck the fortress from behind. The Taira line collapsed and the survivors fled to their fleet, carrying the war out to sea.`
   },
   {
     id: "yashima",
+    sources: [ { label: "Battle of Yashima — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Yashima" } ],
     name: "Battle of Yashima",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Battle_of_Yashima_Folding_Screens_Kano_School.jpg/960px-Battle_of_Yashima_Folding_Screens_Kano_School.jpg", caption: "Folding screens of the Battle of Yashima (Kanō school). Wikimedia Commons." }
@@ -2644,6 +2655,7 @@ The shattering of the Taira field army let Yoshinaka march on the capital; the T
   },
   {
     id: "dan-no-ura",
+    sources: [ { label: "Battle of Dan-no-ura — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Dan-no-ura" } ],
     name: "Battle of Dan-no-ura",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/AntokuTennou_Engi.7%268_Dannoura_Kassen.jpg/960px-AntokuTennou_Engi.7%268_Dannoura_Kassen.jpg", caption: "The Battle of Dan-no-ura, from the Antoku Tennō Engi scrolls. Wikimedia Commons." }
@@ -2668,13 +2680,14 @@ The shattering of the Taira field army let Yoshinaka march on the capital; the T
       }
     },
     outcome: "Decisive Minamoto victory; the Taira clan was destroyed and the child-emperor Antoku drowned.",
-    summary: "The naval battle that ended the Genpei War. In the swift tidal narrows of the Shimonoseki Strait the two fleets met; as the tide turned and Taira allies defected, their cause collapsed. The grandmother of the seven-year-old Emperor Antoku leapt into the sea with him rather than be captured, and with the Taira annihilated the way lay open to the Kamakura shogunate.",
+    summary: "The naval battle that ended the Genpei War. In the swift tidal narrows of the Shimonoseki Strait the two fleets met; as the tide turned and Taira allies defected, their cause collapsed. The grandmother of the six-year-old Emperor Antoku leapt into the sea with him rather than be captured, and with the Taira annihilated the way lay open to the Kamakura shogunate.",
     details: `On 25 April 1185 the Minamoto and Taira fleets joined battle in the Kanmon Strait off Dan-no-ura. Early advantage lay with the Taira, who knew the tides, but as the current reversed through the day and the Taira general Taguchi Shigeyoshi changed sides, the Minamoto closed in. Realizing all was lost, the Taira nobles and women threw themselves into the sea; Nii-no-Ama plunged beneath the waves clutching her grandson, the boy-emperor Antoku.
 
 The destruction of the Taira ended the five-year war and left Minamoto no Yoritomo supreme — the foundation of the Kamakura shogunate, the first lasting warrior government of Japan.`
   },
   {
     id: "jokyu-war",
+    sources: [ { label: "Jōkyū War — Wikipedia", url: "https://en.wikipedia.org/wiki/J%C5%8Dky%C5%AB_War" } ],
     name: "Jōkyū War",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Emperor_Go-Toba.jpg/960px-Emperor_Go-Toba.jpg", caption: "Retired Emperor Go-Toba, who launched the Jōkyū War in 1221. Wikimedia Commons." }
@@ -2703,6 +2716,7 @@ The destruction of the Taira ended the five-year war and left Minamoto no Yorito
   },
   {
     id: "bunei-mongol-1274",
+    sources: [ { label: "Battle of Bun'ei — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Bun%27ei" } ],
     name: "Mongol Invasion of 1274 (Bun'ei)",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/M%C5%8Dko_Sh%C5%ABrai_Ekotoba.jpg/960px-M%C5%8Dko_Sh%C5%ABrai_Ekotoba.jpg", caption: "The Mongol invasion, from the Mōko Shūrai Ekotoba scroll. Wikimedia Commons." }
@@ -2731,6 +2745,7 @@ The destruction of the Taira ended the five-year war and left Minamoto no Yorito
   },
   {
     id: "koan-mongol-1281",
+    sources: [ { label: "Battle of Kōan — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_K%C5%8Dan" } ],
     name: "Mongol Invasion of 1281 (Kōan)",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Kikuchi_Yoosai_-_Mongol_Invasion_%28m%C5%8Dko_sh%C5%ABrai%29_-_Tokyo_National_Museum.jpg/960px-Kikuchi_Yoosai_-_Mongol_Invasion_%28m%C5%8Dko_sh%C5%ABrai%29_-_Tokyo_National_Museum.jpg", caption: "The Mongol invasion, by Kikuchi Yōsai (Tokyo National Museum). Wikimedia Commons." }
@@ -2750,17 +2765,18 @@ The destruction of the Taira ended the five-year war and left Minamoto no Yorito
       },
       side2: {
         name: "Yuan (Mongol), Goryeo & Southern Song force",
-        leader: "Eastern Route & Jiangnan armies"
+        leader: "Eastern Route army (Hong Dagu & Kim Bang-gyeong); Jiangnan/Southern Route army (Fan Wenhu)"
       }
     },
     outcome: "Japanese victory; the vast invasion fleet was destroyed by a typhoon — the 'kamikaze'.",
-    summary: "The second and far larger Mongol invasion. Two huge fleets converged on Kyūshū but were held off the new stone wall along Hakata Bay for weeks; then a great typhoon — remembered as the kamikaze, the 'divine wind' — annihilated the anchored armada, ending Kublai Khan's attempts to conquer Japan.",
+    summary: "The second and far larger Mongol invasion. Two huge fleets converged on Kyūshū but were held off the new stone wall along Hakata Bay for weeks; after withdrawing west to Imari Bay, off Takashima, the anchored armada was annihilated by a great typhoon — remembered as the kamikaze, the 'divine wind', ending Kublai Khan's attempts to conquer Japan.",
     details: `Kublai Khan launched one of the largest seaborne invasions of the pre-modern world: an Eastern Route fleet from Korea and a vast Jiangnan fleet from southern China, together carrying well over 100,000 men. The defensive wall (Genkō Bōrui) built after 1274 kept them from securing a beachhead at Hakata, and Japanese warriors raided the anchored ships in small boats by night.
 
 In August 1281 a typhoon struck the crowded fleet and destroyed it; great numbers drowned. The deliverance entered legend as the kamikaze — though the staggering defensive costs would, in time, help undermine the very Hōjō regency that had organised the victory.`
   },
   {
     id: "chihaya-1333",
+    sources: [ { label: "Siege of Chihaya — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Chihaya" } ],
     name: "Siege of Chihaya",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Chihaya_Castle16.jpg/960px-Chihaya_Castle16.jpg", caption: "The site of Chihaya Castle, held by Kusunoki Masashige. Wikimedia Commons." }
@@ -2789,6 +2805,7 @@ In August 1281 a typhoon struck the crowded fleet and destroyed it; great number
   },
   {
     id: "fall-of-kamakura-1333",
+    sources: [ { label: "Siege of Kamakura (1333) — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Kamakura_(1333)" } ],
     name: "Fall of Kamakura",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Yoshitoshi_-_100_Aspects_of_the_Moon_-_39.jpg", caption: "Tsukioka Yoshitoshi, ‘One Hundred Aspects of the Moon’ — evoking the fall of the Hōjō. Wikimedia Commons." }
@@ -2808,7 +2825,7 @@ In August 1281 a typhoon struck the crowded fleet and destroyed it; great number
       },
       side2: {
         name: "Kamakura shogunate",
-        leader: "Hōjō regency (regent Hōjō Takatoki)"
+        leader: "Hōjō regency (tokusō Hōjō Takatoki; last shikken Hōjō Moritoki)"
       }
     },
     outcome: "Kamakura fell; Hōjō Takatoki and his kin took their own lives — ending the Kamakura shogunate.",
@@ -2820,6 +2837,7 @@ The city was stormed and burned; Hōjō Takatoki and the leading members of the 
   },
   {
     id: "kizugawaguchi",
+    sources: [ { label: "Battles of Kizugawaguchi — Wikipedia", url: "https://en.wikipedia.org/wiki/Battles_of_Kizugawaguchi" } ],
     name: "Battles of Kizugawaguchi",
     year: 1576,
     yearStart: 1576,
@@ -2835,16 +2853,16 @@ The city was stormed and burned; Hōjō Takatoki and the leading members of the 
       side1: {
         name: "Oda clan fleet",
         leader: "Kuki Yoshitaka",
-        forces: "Ironclad warships (1578)"
+        forces: "Six great atakebune, reportedly iron-reinforced (1578)"
       },
       side2: {
         name: "Mōri & Murakami fleets",
-        leader: "Murakami Takeyoshi",
+        leader: "Murakami Motoyoshi (1576); Murakami Takeyoshi (1578)",
         forces: "Hundreds of wooden warships"
       }
     },
-    outcome: "Initial Mōri victory (1576); Decisive Oda victory (1578).",
-    summary: "Two massive naval engagements. The Mōri initially broke the Oda blockade of Ishiyama Hongan-ji, prompting Nobunaga to build revolutionary ironclad warships to crush the Mōri fleet two years later.",
+    outcome: "Mōri victory (1576); Oda tactical victory (1578), but the blockade of Ishiyama Hongan-ji still failed.",
+    summary: "Two massive naval engagements. The Mōri initially broke the Oda blockade of Ishiyama Hongan-ji, prompting Nobunaga to build six great iron-reinforced atakebune, which beat back the Mōri fleet in 1578 but still could not seal off the fortress.",
     details: `The Battles of Kizugawaguchi comprised two naval engagements (1576 and 1578) at the mouth of the Kizu River in Osaka Bay, fought between the Oda clan and the Mōri clan.
 
 In the First Battle (1576), the Mōri navy successfully broke the Oda blockade of Ishiyama Hongan-ji utilizing incendiary projectiles to destroy the Oda fleet. 
@@ -2853,6 +2871,7 @@ In response, Oda Nobunaga commissioned the construction of six heavily armed, ir
   },
   {
     id: "shimabara",
+    sources: [ { label: "Shimabara Rebellion — Wikipedia", url: "https://en.wikipedia.org/wiki/Shimabara_Rebellion" } ],
     name: "Shimabara Rebellion",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Shimabara-Battle-Map-c17th-century.png/960px-Shimabara-Battle-Map-c17th-century.png", caption: "A 17th-century map of the siege of Hara Castle in the Shimabara Rebellion. Wikimedia Commons." }
@@ -2880,6 +2899,7 @@ The rebellion hardened the shogunate's resolve: Christianity was suppressed ever
   },
   {
     id: "toba-fushimi",
+    sources: [ { label: "Battle of Toba–Fushimi — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Toba%E2%80%93Fushimi" } ],
     name: "Battle of Toba–Fushimi",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Monument_of_Meijiishin_Fushimi_no_senseki.jpg/960px-Monument_of_Meijiishin_Fushimi_no_senseki.jpg", caption: "Monument at the Toba–Fushimi battlefield, where the Boshin War began. Wikimedia Commons." }
@@ -2908,6 +2928,7 @@ The victory transformed a domain quarrel into a national war and sent the Imperi
   },
   {
     id: "ueno",
+    sources: [ { label: "Battle of Ueno — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Ueno" } ],
     name: "Battle of Ueno",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/UenoSenso.jpg/960px-UenoSenso.jpg", caption: "The Battle of Ueno (Ueno Sensō), 1868. Wikimedia Commons." }
@@ -2936,6 +2957,7 @@ The victory secured Tokyo for the new government and broke organized resistance 
   },
   {
     id: "aizu",
+    sources: [ { label: "Battle of Aizu — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Aizu" } ],
     name: "Battle of Aizu (Siege of Aizuwakamatsu)",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Battle_of_Aizu_at_Wakamatsu_castle_by_Tsukioka_Yoshitoshi.png/960px-Battle_of_Aizu_at_Wakamatsu_castle_by_Tsukioka_Yoshitoshi.png", caption: "The Battle of Aizu at Wakamatsu Castle, by Tsukioka Yoshitoshi. Wikimedia Commons." }
@@ -2949,7 +2971,7 @@ The victory secured Tokyo for the new government and broke organized resistance 
       lon: 139.9298
     },
     combatants: {
-      side1: { name: "Imperial (Satsuma–Chōshū–Tosa) forces", leader: "Itagaki Taisuke & Yamagata Aritomo", forces: "approximately 30,000" },
+      side1: { name: "Imperial (Satsuma–Chōshū–Tosa) forces", leader: "Itagaki Taisuke & Yamagata Aritomo", forces: "approximately 15,000 combatants (up to ~75,000 with reinforcements)" },
       side2: { name: "Aizu domain", leader: "Matsudaira Katamori", forces: "approximately 5,000" }
     },
     outcome: "Imperial victory after a month-long siege; the Aizu domain was crushed.",
@@ -2963,6 +2985,7 @@ The fall of Aizu broke the back of the Northern Alliance and remains a byword fo
   },
   {
     id: "hakodate",
+    sources: [ { label: "Battle of Hakodate — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Hakodate" } ],
     name: "Battle of Hakodate (Goryōkaku)",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/c/c7/BakufuTroopsToEzo.jpg", caption: "Shogunate troops embarking for Ezo (Hokkaidō) in the Hakodate campaign. Wikimedia Commons." }
@@ -2981,7 +3004,7 @@ The fall of Aizu broke the back of the Northern Alliance and remains a byword fo
       side2: { name: "Ezo Republic (Tokugawa loyalists)", leader: "Enomoto Takeaki & Hijikata Toshizō", forces: "approximately 3,000" }
     },
     outcome: "Imperial victory; the surrender at Goryōkaku ended the Boshin War.",
-    summary: "The last stand of the Tokugawa cause. Naval officer Enomoto Takeaki and former Shinsengumi commander Hijikata Toshizō held the star-shaped Goryōkaku fortress in Hokkaido as the short-lived 'Ezo Republic,' until Imperial forces overwhelmed them in mid-1869.",
+    summary: "The last stand of the Tokugawa cause. Naval officer Enomoto Takeaki and former Shinsengumi vice-commander Hijikata Toshizō held the star-shaped Goryōkaku fortress in Hokkaido as the short-lived 'Ezo Republic,' until Imperial forces overwhelmed them in mid-1869.",
     details: `Refusing to surrender, Enomoto Takeaki led part of the shogunate navy north to Ezo (Hokkaido), where the loyalists proclaimed the Ezo Republic and fortified the Western-style star fort of Goryōkaku at Hakodate.
 
 Imperial forces landed in spring 1869 and ground down the defenders by land and sea, an action that included the ironclad warship Kōtetsu. Hijikata Toshizō, the famed Shinsengumi commander, was killed in the fighting. Enomoto surrendered Goryōkaku in June 1869.
@@ -2990,6 +3013,7 @@ The capitulation ended the Boshin War and completed the Meiji government's conso
   },
   {
     id: "onin",
+    sources: [ { label: "Ōnin War — Wikipedia", url: "https://en.wikipedia.org/wiki/%C5%8Cnin_War" } ],
     name: "Ōnin War",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Onin-War-1467-1477-The-Battle-of-Onin-by-Utagawa-Yoshitora.png/960px-Onin-War-1467-1477-The-Battle-of-Onin-by-Utagawa-Yoshitora.png", caption: "‘The Battle of Ōnin’ by Utagawa Yoshitora. Wikimedia Commons." }
@@ -3005,9 +3029,9 @@ The capitulation ended the Boshin War and completed the Meiji government's conso
     },
     combatants: {
       side1: { name: "Eastern Army", leader: "Hosokawa Katsumoto", forces: "approximately 160,000" },
-      side2: { name: "Western Army", leader: "Yamana Sōzen (Mochitoyo)", forces: "approximately 110,000" }
+      side2: { name: "Western Army", leader: "Yamana Sōzen (Mochitoyo)", forces: "approximately 116,000" }
     },
-    outcome: "Inconclusive stalemate; Kyoto was devastated and shogunal authority collapsed, opening the Sengoku period.",
+    outcome: "Militarily inconclusive — both sides exhausted — but the Hosokawa emerged in control of the shogunate; Kyoto was devastated and shogunal authority collapsed, opening the Sengoku period.",
     summary: "A decade-long conflict that began as a shogunal succession dispute and engulfed Kyoto, splitting the great houses into Eastern (Hosokawa) and Western (Yamana) armies. The capital was reduced to ashes and the Muromachi shogunate's authority shattered — the conventional opening of the Sengoku 'Warring States' age.",
     details: `The war grew out of a tangle of succession disputes — over the Ashikaga shogunate itself (Yoshimasa's brother Yoshimi versus his infant son Yoshihisa) and within the powerful Hatakeyama and Shiba houses — which polarized the warrior aristocracy into two camps.
 
@@ -3017,6 +3041,7 @@ The war settled nothing at the centre but destroyed it: with the shogunate power
   },
   {
     id: "anglo-satsuma-war",
+    sources: [ { label: "Bombardment of Kagoshima — Wikipedia", url: "https://en.wikipedia.org/wiki/Bombardment_of_Kagoshima" } ],
     name: "Bombardment of Kagoshima (Anglo-Satsuma War)",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Bombardment_of_Kagoshima_1863_by_E._Roevens.jpg/960px-Bombardment_of_Kagoshima_1863_by_E._Roevens.jpg", caption: "The bombardment of Kagoshima, 1863 (painting by E. Roevens). Wikimedia Commons." }
@@ -3027,8 +3052,8 @@ The war settled nothing at the centre but destroyed it: with the shogunate power
     period: "Bakumatsu",
     location: { name: "Kagoshima Bay, Satsuma Province (modern Kagoshima)", lat: 31.5969, lon: 130.5571 },
     combatants: {
-      side1: { name: "Satsuma Domain", leader: "Shimazu Hisamitsu", forces: "shore batteries; ~80 guns" },
-      side2: { name: "British Royal Navy", leader: "Vice-Admiral Augustus Kuper", forces: "7 warships" }
+      side1: { name: "Satsuma Domain", leader: "Shimazu Hisamitsu", forces: "shore batteries (11 emplacements, ~89 guns)" },
+      side2: { name: "British Royal Navy", leader: "Rear-Admiral Augustus Kuper", forces: "7 warships" }
     },
     outcome: "Inconclusive bombardment — but it pushed Satsuma toward Britain and rapid modernization.",
     summary: "Retaliation for the killing of an English merchant at Namamugi (1862), a British squadron bombarded Kagoshima. Both sides claimed victory, but Satsuma drew the real lesson — that 'expel the barbarians' was futile — and turned to Western arms.",
@@ -3038,6 +3063,7 @@ The deeper result was a reversal of policy. Having felt Western firepower first-
   },
   {
     id: "shimonoseki",
+    sources: [ { label: "Shimonoseki campaign — Wikipedia", url: "https://en.wikipedia.org/wiki/Shimonoseki_campaign" } ],
     name: "Bombardment of Shimonoseki",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Choshu-Battery-Capture-Shimonoseki-1864.jpg/960px-Choshu-Battery-Capture-Shimonoseki-1864.jpg", caption: "A captured Chōshū battery at Shimonoseki, 1864 (photograph by Felice Beato). Wikimedia Commons." }
@@ -3059,6 +3085,7 @@ The defeat was total — and, like Satsuma at Kagoshima, transformative. Chōsh�
   },
   {
     id: "kinmon",
+    sources: [ { label: "Kinmon incident — Wikipedia", url: "https://en.wikipedia.org/wiki/Kinmon_incident" } ],
     name: "Kinmon Incident (Hamaguri Gate)",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Hamaguri_rebellion.jpg/960px-Hamaguri_rebellion.jpg", caption: "The Kinmon (Hamaguri Gate) Incident, 1864. Wikimedia Commons." }
@@ -3069,17 +3096,18 @@ The defeat was total — and, like Satsuma at Kagoshima, transformative. Chōsh�
     period: "Bakumatsu",
     location: { name: "Hamaguri Gate, Kyoto Imperial Palace", lat: 35.0254, lon: 135.7610 },
     combatants: {
-      side1: { name: "Shogunate forces (Aizu & Satsuma)", leader: "Matsudaira Katamori & Saigō Takamori", forces: "Aizu, Satsuma and allied domains" },
-      side2: { name: "Chōshū Domain", leader: "Kusaka Genzui & Kijima Matabei", forces: "~2,000" }
+      side1: { name: "Shogunate forces (Aizu & Satsuma)", leader: "Tokugawa (Hitotsubashi) Yoshinobu; Matsudaira Katamori & Saigō Takamori", forces: "Aizu, Satsuma and allied domains" },
+      side2: { name: "Chōshū Domain", leader: "Fukuhara Mototake (Echigo); Kusaka Genzui & Kijima Matabei (both killed in action)", forces: "~3,000 (1,400 Chōshū regulars + 1,600 rōnin)" }
     },
     outcome: "Shogunate victory; Chōshū was driven from Kyoto and branded an 'enemy of the court.'",
-    summary: "Seeking to reverse its loss of influence, Chōshū marched on the Kyoto palace to 'rescue' the Emperor. Aizu and Satsuma troops beat the assault back at the Hamaguri Gate; the fighting set off a fire that burned much of Kyoto.",
+    summary: "Seeking to reverse its loss of influence, Chōshū marched on the Kyoto palace to 'rescue' the Emperor. Aizu and Satsuma troops beat the assault back at the Hamaguri Gate; the defeated Chōshū force set Kyoto ablaze, beginning with the Takatsukasa mansion; the resulting fire destroyed some 28,000 houses.",
     details: `Expelled from court politics after a 1863 coup, Chōshū sent armed forces to Kyoto in 1864 ostensibly to petition the throne. On 20 August they attacked the Imperial Palace, with the heaviest fighting at the Hamaguri ('Clam') Gate. Defending forces led by Matsudaira Katamori of Aizu and Saigō Takamori of Satsuma threw them back; Chōshū leaders Kusaka Genzui and Kijima Matabei died, and the resulting conflagration — the "Dondon-yaki" — destroyed tens of thousands of houses.
 
 Declared an enemy of the court, Chōshū now faced the First Chōshū Expedition. Yet the humiliation radicalized the domain and, within two years, drove it into the Satsuma–Chōshū alliance that would end the shogunate.`
   },
   {
     id: "choshu-expedition-1866",
+    sources: [ { label: "Second Chōshū expedition — Wikipedia", url: "https://en.wikipedia.org/wiki/Second_Ch%C5%8Dsh%C5%AB_expedition" } ],
     name: "Second Chōshū Expedition",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Operations_map_of_the_Second_Choshu_Expedition_by_Sakamoto_Ryoma.jpg/960px-Operations_map_of_the_Second_Choshu_Expedition_by_Sakamoto_Ryoma.jpg", caption: "Operations map of the Second Chōshū Expedition, drawn by Sakamoto Ryōma. Wikimedia Commons." }
@@ -3100,6 +3128,7 @@ When Shōgun Tokugawa Iemochi died in Osaka that summer, the campaign was quietl
   },
   {
     id: "masakado",
+    sources: [ { label: "Taira no Masakado — Wikipedia", url: "https://en.wikipedia.org/wiki/Taira_no_Masakado" } ],
     name: "Taira no Masakado's Rebellion",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/8/87/Taira_no_Masakado_01.jpg", caption: "Taira no Masakado, who proclaimed himself 'New Emperor' in 939. Wikimedia Commons." }
@@ -3120,6 +3149,7 @@ The court kept no army of its own, so it set warriors against the warrior. In ea
   },
   {
     id: "sumitomo",
+    sources: [ { label: "Fujiwara no Sumitomo — Wikipedia", url: "https://en.wikipedia.org/wiki/Fujiwara_no_Sumitomo" } ],
     name: "Fujiwara no Sumitomo's Rebellion",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/a/ac/Fujiwara_no_Sumitomo.jpg", caption: "Fujiwara no Sumitomo, the pirate-rebel of the Inland Sea. Wikimedia Commons." }
@@ -3140,26 +3170,28 @@ His rebellion erupted in the same years as Masakado's in the east, and the simul
   },
   {
     id: "zenkunen",
+    sources: [ { label: "Former Nine Years' War — Wikipedia", url: "https://en.wikipedia.org/wiki/Former_Nine_Years%27_War" } ],
     name: "Former Nine Years' War",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/A-38_C0080776.jpg/960px-A-38_C0080776.jpg", caption: "A scroll depicting the Former Nine Years' War. Wikimedia Commons." }
     ],
-    yearStart: 1051, yearEnd: 1063,
-    dateLabel: "1051–1063 (Zenkunen no Eki)",
+    yearStart: 1051, yearEnd: 1062,
+    dateLabel: "1051–1062 (Zenkunen no Eki)",
     period: "Heian",
     location: { name: "Mutsu Province — the Kitakami valley (modern Iwate)", lat: 39.7036, lon: 141.1525 },
     combatants: {
       side1: { name: "Minamoto (court-appointed)", leader: "Minamoto no Yoriyoshi & Yoshiie", forces: "Minamoto warriors + Kiyowara allies" },
       side2: { name: "Abe clan", leader: "Abe no Yoritoki & Abe no Sadato" }
     },
-    outcome: "Minamoto victory (1063); the Abe destroyed and the Minamoto rooted in the east.",
+    outcome: "Minamoto victory (1062); the Abe destroyed and the Minamoto rooted in the east.",
     summary: "A twelve-year war in the far north that made the Minamoto the pre-eminent warrior house of eastern Japan.",
     details: `The Abe clan, hereditary strongmen of the northern frontier in Mutsu, defied the provincial governor and the court. To break them, Kyoto sent Minamoto no Yoriyoshi and his son Yoshiie, who fought a grinding campaign up the Kitakami valley against the Abe's river stockades.
 
-Only with the help of the powerful Kiyowara clan of Dewa did the Minamoto finally storm the Abe's last fortress at Kuriyagawa in 1063, killing Abe no Sadato. The long war forged deep bonds of loyalty between the Minamoto and the eastern warriors who fought beside them — bonds the family would one day call upon to win the Genpei War and found the Kamakura shogunate.`
+Only with the help of the powerful Kiyowara clan of Dewa did the Minamoto finally storm the Abe's last fortress at Kuriyagawa in 1062, killing Abe no Sadato. The long war forged deep bonds of loyalty between the Minamoto and the eastern warriors who fought beside them — bonds the family would one day call upon to win the Genpei War and found the Kamakura shogunate.`
   },
   {
     id: "gosannen",
+    sources: [ { label: "Gosannen War — Wikipedia", url: "https://en.wikipedia.org/wiki/Gosannen_War" } ],
     name: "Later Three Years' War",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Gosannen_kassen_ekotoba_-_Scroll_1_part_13.jpg/960px-Gosannen_kassen_ekotoba_-_Scroll_1_part_13.jpg", caption: "The Later Three Years' War, from the Gosannen Kassen Ekotoba scroll. Wikimedia Commons." }
@@ -3180,6 +3212,7 @@ The court, however, ruled the conflict a private quarrel and granted Yoshiie not
   },
   {
     id: "hogen",
+    sources: [ { label: "Hōgen rebellion — Wikipedia", url: "https://en.wikipedia.org/wiki/H%C5%8Dgen_rebellion" } ],
     name: "Hōgen Rebellion",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/H%C5%8Dgen_no_ran.jpg/960px-H%C5%8Dgen_no_ran.jpg", caption: "The Hōgen Rebellion of 1156. Wikimedia Commons." }
@@ -3201,6 +3234,7 @@ In a single night's fighting in Kyoto in 1156, the warriors of Go-Shirakawa's pa
   },
   {
     id: "heiji",
+    sources: [ { label: "Heiji rebellion — Wikipedia", url: "https://en.wikipedia.org/wiki/Heiji_rebellion" } ],
     name: "Heiji Rebellion",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Heiji_rokuhara_gyoukou.jpg/960px-Heiji_rokuhara_gyoukou.jpg", caption: "The Heiji Rebellion — a scene from the Heiji Monogatari scrolls. Wikimedia Commons." }
@@ -3222,6 +3256,7 @@ Kiyomori raced back, outmanoeuvred the rebels, and crushed them. Yoshitomo was k
   },
   {
     id: "jinshin",
+    sources: [ { label: "Jinshin War — Wikipedia", url: "https://en.wikipedia.org/wiki/Jinshin_War" } ],
     name: "Jinshin War",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Omi_Otsu-no-miya%2C_dairi-seiden-ato.jpg/960px-Omi_Otsu-no-miya%2C_dairi-seiden-ato.jpg", caption: "The site of the Ōmi-Ōtsu palace, seat of the court defeated in the Jinshin War. Wikimedia Commons." }
@@ -3242,6 +3277,7 @@ Kiyomori raced back, outmanoeuvred the rebels, and crushed them. Yoshitomo was k
   },
   {
     id: "hirotsugu",
+    sources: [ { label: "Fujiwara no Hirotsugu rebellion — Wikipedia", url: "https://en.wikipedia.org/wiki/Fujiwara_no_Hirotsugu_rebellion" } ],
     name: "Fujiwara no Hirotsugu's Rebellion",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Fujiwara_no_Hirotsugu.jpg/960px-Fujiwara_no_Hirotsugu.jpg", caption: "Fujiwara no Hirotsugu. Wikimedia Commons." }
@@ -3249,19 +3285,20 @@ Kiyomori raced back, outmanoeuvred the rebels, and crushed them. Yoshitomo was k
     year: 740,
     dateLabel: "740 (Tenpyō 12)",
     period: "Asuka–Nara",
-    location: { name: "The Itabitsu River, near Dazaifu (modern Kitakyūshū)", lat: 33.8835, lon: 130.8752 },
+    location: { name: "The Itabitsu River, on the Buzen–Chikuzen border (modern Kitakyūshū); Hirotsugu had raised his army at Dazaifu", lat: 33.8835, lon: 130.8752 },
     combatants: {
       side1: { name: "Imperial court forces", leader: "Ōno no Azumahito", forces: "~17,000" },
       side2: { name: "Rebels", leader: "Fujiwara no Hirotsugu", forces: "Kyushu levies" }
     },
     outcome: "Rebellion crushed; Hirotsugu executed — but it shook Emperor Shōmu deeply.",
-    summary: "A Nara-period courtier, exiled to Kyushu, raises a revolt against the government — and so unnerves the emperor that he flees the capital and turns to the Great Buddha for protection.",
+    summary: "A Nara-period courtier, demoted to a post in Kyushu, raises a revolt against the government — and so unnerves the emperor that he flees the capital and turns to the buddhas for protection — ordering great Kannon images cast and sutras read in every province.",
     details: `Sidelined by rivals and posted to the frontier headquarters at Dazaifu, Fujiwara no Hirotsugu rose in revolt in 740, demanding the removal of the emperor's advisers. He mustered the levies of Kyushu, but the court's army under Ōno no Azumahito met and broke him at the Itabitsu River; Hirotsugu was captured and beheaded.
 
 Though quickly suppressed, the revolt rattled Emperor Shōmu so badly that he abandoned the capital at Nara and wandered between temporary palaces for years. His search for spiritual protection helped drive the colossal project that defines the age — the casting of the Great Buddha of Tōdai-ji.`
   },
   {
     id: "emishi-war",
+    sources: [ { label: "Emishi — Wikipedia", url: "https://en.wikipedia.org/wiki/Emishi" } ],
     name: "Conquest of the Emishi (Aterui's Resistance)",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/0/01/Monument_of_Aterui_in_Hirakata.jpeg", caption: "Monument to Aterui, the Emishi leader who defied the imperial army. Wikimedia Commons." }
@@ -3282,6 +3319,7 @@ Emperor Kanmu responded by appointing Sakanoue no Tamuramaro, who waged a relent
   },
   {
     id: "shigisan",
+    sources: [ { label: "Soga–Mononobe conflict — Wikipedia", url: "https://en.wikipedia.org/wiki/Soga%E2%80%93Mononobe_conflict" } ],
     name: "Battle of Shigisan",
     year: 587,
     dateLabel: "587",
@@ -3305,6 +3343,7 @@ Soga no Umako led a coalition — including the young Prince Shōtoku — agains
   },
   {
     id: "akasaka",
+    sources: [ { label: "Siege of Akasaka — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Akasaka" } ],
     name: "Siege of Akasaka",
     year: 1331,
     dateLabel: "1331 (Genkō 1)",
@@ -3315,7 +3354,7 @@ Soga no Umako led a coalition — including the young Prince Shōtoku — agains
       side2: { name: "Kamakura shogunate", leader: "Hōjō forces" }
     },
     outcome: "Akasaka fell, but Kusunoki escaped by faking his death — keeping Go-Daigo's revolt alive.",
-    summary: "Kusunoki Masashige's tiny garrison defies the Kamakura shogunate at Akasaka — the opening of the Genkō War and the birth of a legend of loyalty.",
+    summary: "Kusunoki Masashige's tiny garrison defies the Kamakura shogunate at Akasaka — one of the opening battles of the Genkō War and the birth of a legend of loyalty.",
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Shimo-akasaka-jyo02.jpg/960px-Shimo-akasaka-jyo02.jpg",
@@ -3328,6 +3367,7 @@ Wildly outnumbered, he held out with ingenious improvised defences — logs, boi
   },
   {
     id: "bubaigawara",
+    sources: [ { label: "Battle of Bubaigawara — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Bubaigawara" } ],
     name: "Battle of Bubaigawara",
     year: 1333,
     dateLabel: "1333 (Genkō 3)",
