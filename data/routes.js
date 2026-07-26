@@ -10,6 +10,7 @@ const MARCH_ROUTES = [
     "campaign": "Takeda Shingen's advance into Tōtōmi → Battle of Mikatagahara",
     "year": 1572,
     "battleId": "mikatagahara",
+    "sources": [ { "label": "Battle of Mikatagahara — Wikipedia", "url": "https://en.wikipedia.org/wiki/Battle_of_Mikatagahara" } ],
     "army": "Takeda army under Takeda Shingen (the 'Saijō sakusen' western campaign); ~25,000–30,000 men advancing against Tokugawa Ieyasu",
     "result": "Decisive Takeda victory. On 25 Jan 1573 (Genki 3/12/22) Shingen lured Ieyasu's smaller Tokugawa–Oda force out of Hamamatsu Castle and crushed it on the Mikatagahara plateau; Ieyasu barely escaped back to Hamamatsu.",
     "waypoints": [
@@ -55,6 +56,7 @@ const MARCH_ROUTES = [
     "campaign": "Nagashino campaign — Takeda siege of Nagashino & the Oda–Tokugawa relief march to Shitaragahara",
     "year": 1575,
     "battleId": "nagashino",
+    "sources": [ { "label": "Battle of Nagashino — Wikipedia", "url": "https://en.wikipedia.org/wiki/Battle_of_Nagashino" } ],
     "army": "Takeda army under Takeda Katsuyori (~15,000) besieging Nagashino Castle; Oda–Tokugawa allied relief army under Oda Nobunaga and Tokugawa Ieyasu (~38,000) marching to break the siege",
     "result": "Decisive Oda–Tokugawa victory. On 28 Jun 1575 (Tenshō 3/5/21) the allied army, fighting from behind palisades along the Rengogawa on the Shitaragahara field while Sakai Tadatsugu's detachment stormed the Tobinosu-yama forts, shattered the Takeda cavalry; Katsuyori's army was destroyed.",
     "waypoints": [
@@ -100,6 +102,7 @@ const MARCH_ROUTES = [
     "campaign": "Sekigahara approach — Ishida Mitsunari's Western-army concentration from Sawayama/Ōgaki to Sekigahara",
     "year": 1600,
     "battleId": "sekigahara",
+    "sources": [ { "label": "Battle of Sekigahara — Wikipedia", "url": "https://en.wikipedia.org/wiki/Battle_of_Sekigahara" } ],
     "army": "Western army field forces under Ishida Mitsunari (with Shimazu, Konishi, Ukita contingents) redeploying by night from Ōgaki to the Sekigahara defile",
     "result": "Decisive Eastern (Tokugawa) victory. After the night march of 14–15 Sep, the Western army gave battle at Sekigahara on 21 Oct 1600 (Keichō 5/9/15); the defection of Kobayakawa Hideaki collapsed Mitsunari's line and the army was routed by midday.",
     "waypoints": [
@@ -145,6 +148,7 @@ const MARCH_ROUTES = [
     "campaign": "Oda Nobunaga's sortie from Kiyosu → Battle of Okehazama",
     "year": 1560,
     "battleId": "okehazama",
+    "sources": [ { "label": "Battle of Okehazama — Wikipedia", "url": "https://en.wikipedia.org/wiki/Battle_of_Okehazama" } ],
     "army": "Oda Nobunaga's lightning sortie (~2,000–3,000) against the resting Imagawa headquarters",
     "result": "Stunning Oda victory: screened by a thunderstorm, Nobunaga fell on Imagawa Yoshimoto's command post at Dengaku-hazama and killed him.",
     "waypoints": [
@@ -159,6 +163,7 @@ const MARCH_ROUTES = [
     "campaign": "Hashiba Hideyoshi's 'Great Return from Chūgoku' → Battle of Yamazaki",
     "year": 1582,
     "battleId": "yamazaki",
+    "sources": [ { "label": "Battle of Yamazaki — Wikipedia", "url": "https://en.wikipedia.org/wiki/Battle_of_Yamazaki" } ],
     "army": "Hashiba (Toyotomi) Hideyoshi's army (~20,000+) force-marching ~200 km from the Mōri front to avenge Nobunaga",
     "result": "Hideyoshi reached Yamazaki in about a week and crushed Akechi Mitsuhide, making himself Nobunaga's heir.",
     "waypoints": [
@@ -172,6 +177,7 @@ const MARCH_ROUTES = [
     "campaign": "Komaki–Nagakute — Toyotomi raiding column toward Mikawa → Battle of Nagakute",
     "year": 1584,
     "battleId": "komaki-nagakute",
+    "sources": [ { "label": "Battle of Komaki and Nagakute — Wikipedia", "url": "https://en.wikipedia.org/wiki/Battle_of_Komaki_and_Nagakute" } ],
     "army": "Ikeda Tsuneoki's Toyotomi detachment striking for Ieyasu's Mikawa heartland — intercepted by Tokugawa Ieyasu",
     "result": "Tokugawa victory at Nagakute: Ieyasu caught and destroyed the column, killing Ikeda Tsuneoki and Mori Nagayoshi.",
     "waypoints": [
@@ -184,6 +190,7 @@ const MARCH_ROUTES = [
     "campaign": "Shizugatake approach — Hashiba Hideyoshi's 'Mino Great Return' (美濃大返し) from Ōgaki to the Shizugatake front",
     "year": 1583,
     "battleId": "shizugatake",
+    "sources": [ { "label": "Battle of Shizugatake — Wikipedia", "url": "https://en.wikipedia.org/wiki/Battle_of_Shizugatake" } ],
     "army": "Hashiba (Toyotomi) Hideyoshi's field army (~15,000) force-marching the ~52 km (13 ri) from Ōgaki to Kinomoto in about 5 hours along the Hokkoku Wakiōkan, to relieve the Shizugatake line against Sakuma Morimasa and Shibata Katsuie",
     "result": "Decisive Hashiba victory. Learning on 20 Apr 1583 (Tenshō 11/4/20) that Sakuma Morimasa had stormed the Ōiwayama fort and killed Nakagawa Kiyohide, Hideyoshi raced his army back from Ōgaki to Kinomoto and fell on the over-extended Sakuma force at Shizugatake near Lake Yogo; Sakuma was routed, Shibata Katsuie fled to Kitanoshō and took his own life, leaving Hideyoshi master of the Oda legacy.",
     "waypoints": [
@@ -235,6 +242,7 @@ const MARCH_ROUTES = [
     "campaign": "Sekigahara approach — the Tokugawa Eastern army's advance from the east (Ieyasu's main body from Edo up the Tōkaidō, with the Eastern vanguard via Kiyosu → Gifu → Akasaka to the Sekigahara field)",
     "year": 1600,
     "battleId": "sekigahara",
+    "sources": [ { "label": "Battle of Sekigahara — Wikipedia", "url": "https://en.wikipedia.org/wiki/Battle_of_Sekigahara" } ],
     "army": "Eastern (Tokugawa) army — Tokugawa Ieyasu's main body marching west from Edo, preceded by the Eastern vanguard under Fukushima Masanori, Ikeda Terumasa and others (~35,000) that crossed the Kiso River, stormed Gifu Castle, and concentrated at Akasaka",
     "result": "Decisive Eastern victory. The vanguard forced the Kiso River and took Gifu Castle (29 Sep 1600) from Oda Hidenobu, opening the road west; Ieyasu's main body, having advanced up the Tōkaidō from Edo, reached Akasaka on 14 Sep (old cal.) and moved forward to Sekigahara at about 10 a.m. on 21 Oct 1600 (Keichō 5/9/15), where the Western army was destroyed.",
     "waypoints": [
@@ -280,6 +288,7 @@ const MARCH_ROUTES = [
     "campaign": "Kawanakajima approach — Takeda Shingen's march from Kōfu via Kaizu Castle to the Hachimanbara plain (Fourth Battle of Kawanakajima)",
     "year": 1561,
     "battleId": "kawanakajima",
+    "sources": [ { "label": "Battles of Kawanakajima — Wikipedia", "url": "https://en.wikipedia.org/wiki/Battles_of_Kawanakajima" } ],
     "army": "Takeda army under Takeda Shingen (~20,000) advancing from Kai into northern Shinano, basing on Kaizu Castle before deploying onto the Hachimanbara plain against Uesugi Kenshin",
     "result": "Tactically inconclusive but extremely bloody. Shingen left Kōfu on 16 Aug, concentrated at Kaizu Castle, and on the night of 9–10 Sep 1561 (Eiroku 4/9/9–10) split his army for the 'woodpecker' (kitsutsuki) plan; Kenshin pre-empted it by descending Saijoyama and crossing the Amemiya ford, and the two main bodies collided in fog at Hachimanbara. Both sides suffered heavy losses (including Takeda Nobushige and Yamamoto Kansuke) and neither secured the plain.",
     "waypoints": [
