@@ -19,6 +19,7 @@
 const EVENTS = [
   {
     id: "evt-tanegashima",
+    sources: [ { label: "Tanegashima — Wikipedia", url: "https://en.wikipedia.org/wiki/Tanegashima" } ],
     name: "Arrival of the Portuguese at Tanegashima",
     type: "contact",
     year: 1543,
@@ -44,6 +45,7 @@ The introduction of firearms precipitated a paradigm shift in Japanese military 
   },
   {
     id: "evt-xavier-kagoshima",
+    sources: [ { label: "Francis Xavier — Wikipedia", url: "https://en.wikipedia.org/wiki/Francis_Xavier" } ],
     name: "Francis Xavier lands at Kagoshima",
     type: "contact",
     year: 1549,
@@ -67,6 +69,7 @@ The Tokugawa later banned and brutally suppressed Christianity, driving it under
   },
   {
     id: "evt-dejima",
+    sources: [ { label: "Dejima — Wikipedia", url: "https://en.wikipedia.org/wiki/Dejima" } ],
     name: "Dejima — Japan's window on the West",
     type: "contact",
     year: 1641,
@@ -92,13 +95,14 @@ The island facilitated the importation of "Rangaku" (Dutch Learning), enabling J
   },
   {
     id: "evt-perry-uraga",
+    sources: [ { label: "Perry Expedition — Wikipedia", url: "https://en.wikipedia.org/wiki/Perry_Expedition" } ],
     name: "Perry's Black Ships at Uraga",
     type: "contact",
     year: 1853,
     dateLabel: "July 1853",
     period: "Bakumatsu",
     location: {
-      name: "Uraga, Sagami Bay (modern Yokosuka, Kanagawa)",
+      name: "Uraga, at the mouth of Edo Bay / Tokyo Bay (modern Yokosuka, Kanagawa)",
       lat: 35.2497,
       lon: 139.7206
     },
@@ -115,6 +119,7 @@ The shock exposed the shogunate's weakness, forced the end of seclusion, and ign
   },
   {
     id: "evt-heijo-nara",
+    sources: [ { label: "Heijō-kyō — Wikipedia", url: "https://en.wikipedia.org/wiki/Heij%C5%8D-ky%C5%8D" } ],
     name: "Heijō-kyō — the capital at Nara",
     type: "capital",
     year: 710,
@@ -125,7 +130,7 @@ The shock exposed the shogunate's weakness, forced the end of seclusion, and ign
       lat: 34.6911,
       lon: 135.7958
     },
-    summary: "Japan's first grand, permanent capital, laid out on the grid of Tang China's Chang'an.",
+    summary: "The great capital of the Nara period from 710, laid out on the grid of Tang China's Chang'an (following the shorter-lived Fujiwara-kyō, Japan's first Chinese-plan capital).",
     details: `In 710 the court founded Heijō-kyō at Nara, modelled on the Chinese capital Chang'an. The Nara period saw Buddhism flourish under state patronage, the casting of the Great Buddha at Tōdai-ji, and the writing of Japan's first chronicles, the Kojiki and Nihon Shoki.`,
     images: [
       {
@@ -136,6 +141,7 @@ The shock exposed the shogunate's weakness, forced the end of seclusion, and ign
   },
   {
     id: "evt-heian-kyoto",
+    sources: [ { label: "Heian-kyō — Wikipedia", url: "https://en.wikipedia.org/wiki/Heian-kyō" } ],
     name: "Heian-kyō — the capital moves to Kyoto",
     type: "capital",
     year: 794,
@@ -159,6 +165,7 @@ Kyoto would stay the seat of the emperor until 1868, even as real power passed t
   },
   {
     id: "evt-kamakura",
+    sources: [ { label: "Kamakura shogunate — Wikipedia", url: "https://en.wikipedia.org/wiki/Kamakura_shogunate" } ],
     name: "Kamakura — seat of the first shogunate",
     type: "capital",
     year: 1192,
@@ -180,6 +187,7 @@ Kyoto would stay the seat of the emperor until 1868, even as real power passed t
   },
   {
     id: "evt-azuchi",
+    sources: [ { label: "Azuchi Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Azuchi_Castle" } ],
     name: "Azuchi — Nobunaga's castle capital",
     type: "capital",
     year: 1576,
@@ -203,6 +211,7 @@ The castle burned within days of Nobunaga's death at Honnō-ji in 1582 and was n
   },
   {
     id: "evt-edo",
+    sources: [ { label: "Edo — Wikipedia", url: "https://en.wikipedia.org/wiki/Edo" } ],
     name: "Edo — the Tokugawa capital",
     type: "capital",
     year: 1603,
@@ -226,6 +235,7 @@ In 1868 it was renamed Tokyo — "eastern capital" — and became the seat of th
   },
   {
     id: "evt-todaiji",
+    sources: [ { label: "Tōdai-ji — Wikipedia", url: "https://en.wikipedia.org/wiki/Tōdai-ji" } ],
     name: "Tōdai-ji and the Great Buddha",
     type: "culture",
     year: 752,
@@ -247,6 +257,7 @@ In 1868 it was renamed Tokyo — "eastern capital" — and became the seat of th
   },
   {
     id: "evt-enryakuji",
+    sources: [ { label: "Enryaku-ji — Wikipedia", url: "https://en.wikipedia.org/wiki/Enryaku-ji" } ],
     name: "Enryaku-ji founded on Mt Hiei",
     type: "culture",
     year: 788,
@@ -270,6 +281,7 @@ Oda Nobunaga, determined to break that power, burned the entire mountain complex
   },
   {
     id: "evt-koyasan",
+    sources: [ { label: "Mount Kōya — Wikipedia", url: "https://en.wikipedia.org/wiki/Mount_K%C5%8Dya" } ],
     name: "Kōyasan founded by Kūkai",
     type: "culture",
     year: 816,
@@ -291,6 +303,7 @@ Oda Nobunaga, determined to break that power, burned the entire mountain complex
   },
   {
     id: "evt-iwami-ginzan",
+    sources: [ { label: "Iwami Ginzan Silver Mine — Wikipedia", url: "https://en.wikipedia.org/wiki/Iwami_Ginzan_Silver_Mine" } ],
     name: "Iwami Ginzan silver mine",
     type: "culture",
     year: 1526,
@@ -314,6 +327,7 @@ That silver paid for armies, guns and gunpowder and drew Portuguese and Chinese 
   },
   {
     id: "evt-sakai",
+    sources: [ { label: "Sakai — Wikipedia", url: "https://en.wikipedia.org/wiki/Sakai" } ],
     name: "Sakai, the free merchant city",
     type: "culture",
     year: 1550,
@@ -337,6 +351,7 @@ Its independence ended when Oda Nobunaga forced the city to submit and pay a hea
   },
   {
     id: "evt-shimabara",
+    sources: [ { label: "Shimabara Rebellion — Wikipedia", url: "https://en.wikipedia.org/wiki/Shimabara_Rebellion" } ],
     name: "Shimabara Rebellion",
     type: "incident",
     year: 1637,
@@ -360,6 +375,7 @@ The rising hardened the Tokugawa resolve to ban Christianity and close the count
   },
   {
     id: "evt-ako-47ronin",
+    sources: [ { label: "Forty-seven rōnin — Wikipedia", url: "https://en.wikipedia.org/wiki/Forty-seven_r%C5%8Dnin" } ],
     name: "The Forty-seven Rōnin (Akō incident)",
     type: "incident",
     year: 1703,
@@ -383,6 +399,7 @@ Their graves at Sengaku-ji are still visited today, and their story became the b
   },
   {
     id: "evt-sakuradamon",
+    sources: [ { label: "Sakuradamon incident (1860) — Wikipedia", url: "https://en.wikipedia.org/wiki/Sakuradamon_incident_(1860)" } ],
     name: "Sakuradamon Incident",
     type: "incident",
     year: 1860,
@@ -406,6 +423,7 @@ The murder of so high an official in the heart of Edo shattered the shogunate's 
   },
   {
     id: "evt-fuji-hoei",
+    sources: [ { label: "Hōei eruption — Wikipedia", url: "https://en.wikipedia.org/wiki/H%C5%8Dei_eruption" } ],
     name: "Hōei eruption of Mount Fuji",
     type: "incident",
     year: 1707,
@@ -427,6 +445,7 @@ The murder of so high an official in the heart of Edo shattered the shogunate's 
   },
   {
     id: "evt-kanto-1923",
+    sources: [ { label: "1923 Great Kantō earthquake — Wikipedia", url: "https://en.wikipedia.org/wiki/1923_Great_Kant%C5%8D_earthquake" } ],
     name: "Great Kantō Earthquake",
     type: "incident",
     year: 1923,
@@ -450,6 +469,7 @@ The disaster reshaped the modern capital — and, in the ensuing chaos and rumou
   },
   {
     id: "evt-onin-war",
+    sources: [ { label: "Ōnin War — Wikipedia", url: "https://en.wikipedia.org/wiki/%C5%8Cnin_War" } ],
     name: "Ōnin War begins",
     type: "politics",
     year: 1467,
@@ -473,6 +493,7 @@ While the war ended in exhaustion with no clear victor, it utterly shattered the
   },
   {
     id: "evt-ashikaga-fall",
+    sources: [ { label: "Ashikaga shogunate — Wikipedia", url: "https://en.wikipedia.org/wiki/Ashikaga_shogunate" } ],
     name: "Fall of the Ashikaga Shogunate",
     type: "politics",
     year: 1573,
@@ -496,6 +517,7 @@ Nobunaga forced Yoshiaki into exile, effectively ending the Ashikaga shogunate t
   },
   {
     id: "evt-sword-hunt",
+    sources: [ { label: "Sword hunt — Wikipedia", url: "https://en.wikipedia.org/wiki/Sword_hunt" } ],
     name: "Hideyoshi's Sword Hunt (Katanagari)",
     type: "politics",
     year: 1588,
@@ -519,6 +541,7 @@ This revolutionary act, combined with his nationwide land surveys, formalized th
   },
   {
     id: "evt-korean-invasions",
+    sources: [ { label: "Japanese invasions of Korea (1592–1598) — Wikipedia", url: "https://en.wikipedia.org/wiki/Japanese_invasions_of_Korea_(1592–1598)" } ],
     name: "Invasions of Korea (Bunroku–Keichō Wars)",
     type: "politics",
     year: 1592,
@@ -542,6 +565,7 @@ The campaigns involved hundreds of thousands of troops and devastated Korea, but
   },
   {
     id: "evt-tensho-embassy",
+    sources: [ { label: "Tenshō embassy — Wikipedia", url: "https://en.wikipedia.org/wiki/Tenshō_embassy" } ],
     name: "Tenshō Embassy to Europe",
     type: "contact",
     year: 1582,
@@ -565,6 +589,7 @@ They traveled via Macau, India, and Portugal, eventually meeting King Philip II 
   },
   {
     id: "evt-enryakuji-burning",
+    sources: [ { label: "Siege of Mount Hiei — Wikipedia", url: "https://en.wikipedia.org/wiki/Siege_of_Mount_Hiei" } ],
     name: "Burning of Enryaku-ji",
     type: "culture",
     year: 1571,
@@ -588,6 +613,7 @@ Determined to eliminate this threat, Nobunaga ordered his forces to encircle the
   },
   {
     id: "evt-rikyu-seppuku",
+    sources: [ { label: "Sen no Rikyū — Wikipedia", url: "https://en.wikipedia.org/wiki/Sen_no_Rikyū" } ],
     name: "Sen no Rikyū's Forced Seppuku",
     type: "culture",
     year: 1591,
@@ -611,6 +637,7 @@ For reasons that remain debated by historians—possibly due to his independent 
   },
   {
     id: "evt-rakuichi",
+    sources: [ { label: "楽市・楽座 — Japanese Wikipedia", url: "https://ja.wikipedia.org/wiki/楽市・楽座" } ],
     name: "Rakuichi-Rakuza Decrees",
     type: "culture",
     year: 1577,
@@ -634,6 +661,7 @@ These decrees abolished the monopolistic control of traditional guilds (za) and 
   },
   {
     id: "evt-meio-earthquake",
+    sources: [ { label: "1498 Meiō earthquake — Wikipedia", url: "https://en.wikipedia.org/wiki/1498_Meiō_earthquake" } ],
     name: "Meiō Earthquake and Tsunami",
     type: "disaster",
     year: 1498,
@@ -657,6 +685,7 @@ In Kamakura, the tsunami washed away the great wooden hall housing the monumenta
   },
   {
     id: "evt-tensho-earthquake",
+    sources: [ { label: "1586 Tenshō earthquake — Wikipedia", url: "https://en.wikipedia.org/wiki/1586_Tenshō_earthquake" } ],
     name: "Tenshō Earthquake",
     type: "disaster",
     year: 1586,
@@ -680,6 +709,7 @@ Fires broke out across the region, and rivers changed course. The disaster force
   },
   {
     id: "evt-shingen-death",
+    sources: [ { label: "Takeda Shingen — Wikipedia", url: "https://en.wikipedia.org/wiki/Takeda_Shingen" } ],
     name: "Death of Takeda Shingen",
     type: "politics",
     year: 1573,
@@ -703,6 +733,7 @@ He died at Komaba in Shinano while his army was retreating to Kai. Shingen order
   },
   {
     id: "evt-kenshin-death",
+    sources: [ { label: "Uesugi Kenshin — Wikipedia", url: "https://en.wikipedia.org/wiki/Uesugi_Kenshin" } ],
     name: "Death of Uesugi Kenshin",
     type: "politics",
     year: 1578,
@@ -726,6 +757,7 @@ Having never married or named a clear heir, his death triggered the Otate no Ran
   },
   {
     id: "hokoji-bell",
+    sources: [ { label: "Hōkō-ji (Kyoto) — Wikipedia", url: "https://en.wikipedia.org/wiki/Hōkō-ji_(Kyoto)" } ],
     name: "The Hōkōji Bell Incident",
     type: "politics",
     year: 1614,
@@ -743,6 +775,7 @@ The shogunate rejected all diplomatic overtures and apologies from the Toyotomi 
   },
   {
     id: "honnoji-incident",
+    sources: [ { label: "Honnō-ji Incident — Wikipedia", url: "https://en.wikipedia.org/wiki/Honnō-ji_Incident" } ],
     name: "The Honnō-ji Incident",
     type: "politics",
     year: 1582,
@@ -766,6 +799,7 @@ The incident abruptly halted Nobunaga's unification campaign and created a power
   },
   {
     id: "edo-shogunate",
+    sources: [ { label: "Tokugawa shogunate — Wikipedia", url: "https://en.wikipedia.org/wiki/Tokugawa_shogunate" } ],
     name: "Establishment of the Tokugawa Shogunate",
     type: "politics",
     year: 1603,
@@ -783,6 +817,7 @@ In 1605, Ieyasu abdicated the shogunal title to his son Hidetada. This action in
   },
   {
     id: "christian-expulsion",
+    sources: [ { label: "Kirishitan — Wikipedia", url: "https://en.wikipedia.org/wiki/Kirishitan" } ],
     name: "Edict of Expulsion of Missionaries",
     type: "politics",
     year: 1614,
@@ -800,6 +835,7 @@ The decree initiated state-sponsored persecution, forcing domestic Christian com
   },
   {
     id: "yoshiteru-assassination",
+    sources: [ { label: "Ashikaga Yoshiteru — Wikipedia", url: "https://en.wikipedia.org/wiki/Ashikaga_Yoshiteru" } ],
     name: "Assassination of the Sword Master Shōgun",
     type: "politics",
     year: 1565,
@@ -817,6 +853,7 @@ Upon being overwhelmed, Yoshiteru committed seppuku. The regicide destabilized r
   },
   {
     id: "evt-sankin-kotai",
+    sources: [ { label: "Sankin-kōtai — Wikipedia", url: "https://en.wikipedia.org/wiki/Sankin-kōtai" } ],
     name: "Sankin-kōtai — the alternate attendance system",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/b/b8/Tokugawa_Seiseiroku_001.jpg", caption: "A daimyō procession — the great journeys imposed by sankin-kōtai. Wikimedia Commons." }
@@ -835,6 +872,7 @@ Upon being overwhelmed, Yoshiteru committed seppuku. The regicide destabilized r
   },
   {
     id: "evt-sakoku",
+    sources: [ { label: "Sakoku — Wikipedia", url: "https://en.wikipedia.org/wiki/Sakoku" } ],
     name: "Sakoku — the closing of the country",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/1/19/Buddhist_statue_with_hidden_cross_on_back.jpg", caption: "A concealed Christian image — sakoku was driven in part by the suppression of Christianity. Wikimedia Commons." }
@@ -853,6 +891,7 @@ Upon being overwhelmed, Yoshiteru committed seppuku. The regicide destabilized r
   },
   {
     id: "evt-meireki-fire",
+    sources: [ { label: "Great Fire of Meireki — Wikipedia", url: "https://en.wikipedia.org/wiki/Great_Fire_of_Meireki" } ],
     name: "The Great Meireki Fire",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Meireki_fire.JPG/960px-Meireki_fire.JPG", caption: "The Great Meireki Fire of 1657. Wikimedia Commons." }
@@ -871,6 +910,7 @@ Upon being overwhelmed, Yoshiteru committed seppuku. The regicide destabilized r
   },
   {
     id: "evt-genroku-culture",
+    sources: [ { label: "Genroku — Wikipedia", url: "https://en.wikipedia.org/wiki/Genroku" } ],
     name: "The Genroku cultural flowering",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/1696_Genroku_9_%28early_Edo%29_Japanese_Map_of_Kyoto%2C_Japan_-_Geographicus_-_Kyoto-genroku9-1696.jpg/960px-1696_Genroku_9_%28early_Edo%29_Japanese_Map_of_Kyoto%2C_Japan_-_Geographicus_-_Kyoto-genroku9-1696.jpg", caption: "A Genroku-era (1696) map of Kyoto, heart of Kamigata culture. Wikimedia Commons." }
@@ -889,6 +929,7 @@ Upon being overwhelmed, Yoshiteru committed seppuku. The regicide destabilized r
   },
   {
     id: "evt-dojima-rice",
+    sources: [ { label: "Dōjima Rice Exchange — Wikipedia", url: "https://en.wikipedia.org/wiki/D%C5%8Djima_Rice_Exchange" } ],
     name: "The Dōjima Rice Exchange",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Dojima_komeichiba.jpg/960px-Dojima_komeichiba.jpg", caption: "The Dōjima rice market in Osaka. Wikimedia Commons." }
@@ -907,6 +948,7 @@ Upon being overwhelmed, Yoshiteru committed seppuku. The regicide destabilized r
   },
   {
     id: "evt-tenmei-famine",
+    sources: [ { label: "Great Tenmei famine — Wikipedia", url: "https://en.wikipedia.org/wiki/Great_Tenmei_famine" } ],
     name: "The Tenmei Famine & eruption of Mt Asama",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/6/62/Great_Tenmei_Famine_Map_Artwork.png", caption: "Artwork depicting the Great Tenmei Famine of the 1780s. Wikimedia Commons." }
@@ -925,6 +967,7 @@ Upon being overwhelmed, Yoshiteru committed seppuku. The regicide destabilized r
   },
   {
     id: "evt-kanagawa-treaty",
+    sources: [ { label: "Convention of Kanagawa — Wikipedia", url: "https://en.wikipedia.org/wiki/Convention_of_Kanagawa" } ],
     name: "The Convention of Kanagawa",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Ratification_of_the_Japan_USA_Treaty_of_Peace_and_Amity_21_February_1855.jpg/960px-Ratification_of_the_Japan_USA_Treaty_of_Peace_and_Amity_21_February_1855.jpg", caption: "Ratification of the Japan–US Treaty of Peace and Amity, 1855. Wikimedia Commons." }
@@ -943,6 +986,7 @@ Upon being overwhelmed, Yoshiteru committed seppuku. The regicide destabilized r
   },
   {
     id: "evt-meiji-restoration",
+    sources: [ { label: "Meiji Restoration — Wikipedia", url: "https://en.wikipedia.org/wiki/Meiji_Restoration" } ],
     name: "The Meiji Restoration",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Emperor_Meiji_by_Takahashi_Yuichi.jpg/960px-Emperor_Meiji_by_Takahashi_Yuichi.jpg", caption: "Emperor Meiji, by Takahashi Yuichi. Wikimedia Commons." }
@@ -961,6 +1005,7 @@ Upon being overwhelmed, Yoshiteru committed seppuku. The regicide destabilized r
   },
   {
     id: "evt-buddhism",
+    sources: [ { label: "Buddhism in Japan — Wikipedia", url: "https://en.wikipedia.org/wiki/Buddhism_in_Japan" } ],
     name: "The Introduction of Buddhism",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Asuka-dera%2C_sanmon.jpg/960px-Asuka-dera%2C_sanmon.jpg", caption: "The gate of Asuka-dera, Japan's first Buddhist temple. Wikimedia Commons." }
@@ -977,6 +1022,7 @@ The religion split the court: the Soga clan embraced it while the Mononobe and N
   },
   {
     id: "evt-taika",
+    sources: [ { label: "Taika Reform — Wikipedia", url: "https://en.wikipedia.org/wiki/Taika_Reform" } ],
     name: "The Taika Reform",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Irukaansatsuzu.jpg/960px-Irukaansatsuzu.jpg", caption: "The assassination of Soga no Iruka (the Isshi Incident), which opened the Taika Reform. Wikimedia Commons." }
@@ -993,6 +1039,7 @@ The coup ushered in the Taika ('Great Reform') edicts: land and people were decl
   },
   {
     id: "evt-taiho",
+    sources: [ { label: "Taihō Code — Wikipedia", url: "https://en.wikipedia.org/wiki/Taih%C5%8D_Code" } ],
     name: "The Taihō Code",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/7/77/Japan_prov_map701.png", caption: "A map of Japan's provinces in 701 — the administrative order the Taihō Code created. Wikimedia Commons." }
@@ -1009,6 +1056,7 @@ Drafted under Prince Osakabe and Fujiwara no Fuhito, the Taihō Code capped the 
   },
   {
     id: "evt-chronicles",
+    sources: [ { label: "Kojiki — Wikipedia", url: "https://en.wikipedia.org/wiki/Kojiki" } ],
     name: "The Kojiki & Nihon Shoki",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Nihonshoki_tanaka_version.jpg/960px-Nihonshoki_tanaka_version.jpg", caption: "A manuscript page of the Nihon Shoki. Wikimedia Commons." }
@@ -1025,6 +1073,7 @@ Far more than histories, they were charters of legitimacy — fixing the origin 
   },
   {
     id: "evt-genji",
+    sources: [ { label: "The Tale of Genji — Wikipedia", url: "https://en.wikipedia.org/wiki/The_Tale_of_Genji" } ],
     name: "The Tale of Genji",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Genji_emaki_01003_002.jpg/960px-Genji_emaki_01003_002.jpg", caption: "An illustration from the Genji Monogatari Emaki, the illustrated Tale of Genji scroll. Wikimedia Commons." }
@@ -1041,6 +1090,7 @@ Written in the vernacular kana script favoured by court women, it crowns the ref
   },
   {
     id: "evt-fujiwara-regency",
+    sources: [ { label: "Fujiwara no Yoshifusa — Wikipedia", url: "https://en.wikipedia.org/wiki/Fujiwara_no_Yoshifusa" } ],
     name: "The Fujiwara Regency",
     type: "politics",
     year: 858,
@@ -1054,6 +1104,7 @@ Their power reached its dazzling height under Fujiwara no Michinaga (c. 1016), w
   },
   {
     id: "evt-jogan-quake",
+    sources: [ { label: "869 Jōgan earthquake — Wikipedia", url: "https://en.wikipedia.org/wiki/869_Sanriku_earthquake" } ],
     name: "The Jōgan Sanriku Earthquake",
     type: "disaster",
     year: 869,
@@ -1067,6 +1118,7 @@ Centuries later, geologists traced the Jōgan tsunami's sand deposits and realis
   },
   {
     id: "evt-tang-embassies-end",
+    sources: [ { label: "Japanese missions to Tang China — Wikipedia", url: "https://en.wikipedia.org/wiki/Japanese_missions_to_Tang_China" } ],
     name: "The End of the Tang Embassies",
     type: "contact",
     year: 894,
@@ -1080,6 +1132,7 @@ Cut loose from the Chinese model, the Heian court turned inward — and the next
   },
   {
     id: "evt-kamakura-buddhism",
+    sources: [ { label: "Buddhism in Japan — Wikipedia", url: "https://en.wikipedia.org/wiki/Buddhism_in_Japan" } ],
     name: "The New Kamakura Buddhism",
     type: "culture",
     year: 1200,
@@ -1093,6 +1146,7 @@ At the same time Eisai and Dōgen brought Zen — Rinzai and Sōtō — from Chi
   },
   {
     id: "evt-goseibai",
+    sources: [ { label: "Goseibai Shikimoku — Wikipedia", url: "https://en.wikipedia.org/wiki/Goseibai_Shikimoku" } ],
     name: "The Goseibai Shikimoku",
     type: "politics",
     year: 1232,
@@ -1106,6 +1160,7 @@ Rooted in practical samurai custom rather than the Chinese-derived law of the im
   },
   {
     id: "evt-kamakura-daibutsu",
+    sources: [ { label: "Kōtoku-in — Wikipedia", url: "https://en.wikipedia.org/wiki/K%C5%8Dtoku-in" } ],
     name: "The Great Buddha of Kamakura",
     type: "culture",
     year: 1252,
@@ -1119,6 +1174,7 @@ The great hall that once enclosed it was destroyed by storms and finally washed 
   },
   {
     id: "evt-kenmu",
+    sources: [ { label: "Kenmu Restoration — Wikipedia", url: "https://en.wikipedia.org/wiki/Kenmu_Restoration" } ],
     name: "The Kenmu Restoration",
     type: "politics",
     year: 1333,
@@ -1132,6 +1188,7 @@ But his court-centred rule alienated the very samurai who had won his throne; re
   },
   {
     id: "evt-muromachi-founded",
+    sources: [ { label: "Ashikaga shogunate — Wikipedia", url: "https://en.wikipedia.org/wiki/Ashikaga_shogunate" } ],
     name: "The Muromachi Shogunate",
     type: "politics",
     year: 1338,
@@ -1145,6 +1202,7 @@ Its grip on the provincial military governors (shugo) was always precarious, and
   },
   {
     id: "evt-courts-reunify",
+    sources: [ { label: "Nanboku-chō period — Wikipedia", url: "https://en.wikipedia.org/wiki/Nanboku-ch%C5%8D_period" } ],
     name: "Reunification of the Courts",
     type: "politics",
     year: 1392,
@@ -1158,6 +1216,7 @@ The promise was soon broken, but the reunification marked the height of Ashikaga
   },
   {
     id: "evt-kinkakuji",
+    sources: [ { label: "Kinkaku-ji — Wikipedia", url: "https://en.wikipedia.org/wiki/Kinkaku-ji" } ],
     name: "Kinkaku-ji and the Kitayama Culture",
     type: "culture",
     year: 1397,
