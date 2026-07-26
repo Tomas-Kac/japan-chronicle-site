@@ -1,8 +1,8 @@
 /* =====================================================================
    Japan Chronicle — Map view styles.
    "Paper & ink" identity (redesign 2026-06-28): warm paper panels, one
-   ink charcoal, a single vermilion accent, Shippori Mincho headings +
-   Zen Kaku Gothic UI. One shared panel material everywhere.
+   ink charcoal, a single vermilion accent, Noto Serif JP headings +
+   Noto Sans JP UI. One shared panel material everywhere.
    ===================================================================== */
 :root {
   /* paper */
@@ -39,8 +39,8 @@
   --sh-pop:    0 12px 40px rgba(40,30,20,.22);
   --sh-drawer: -8px 0 36px rgba(40,30,20,.18);
   --sh-bottom: 0 -3px 22px rgba(40,30,20,.12);
-  --font-disp: 'Shippori Mincho B1', 'Hiragino Mincho ProN', 'Yu Mincho', serif;
-  --font-ui:   'Zen Kaku Gothic New', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --font-disp: 'Noto Serif', 'Noto Serif JP', 'Hiragino Mincho ProN', serif;
+  --font-ui:   'Noto Sans', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -503,7 +503,11 @@ body { position: fixed; inset: 0; }
 }
 .castle-legend .cl-title { font-family: var(--font-disp); font-weight: 700; color: var(--ink); margin-bottom: 3px; }
 .castle-legend .castle { margin-right: 7px; vertical-align: middle; }
-.domains-legend { max-height: 260px; overflow-y: auto; }
+.domains-legend { max-height: min(260px, calc(100vh - 320px)); overflow-y: auto; }
+/* Legends sit bottom-left, where the timeline bar would otherwise cover them.
+   Lift the whole bottom-left control stack above it. */
+.leaflet-bottom.leaflet-left { bottom: 152px; z-index: 1060; }
+@media (max-width: 600px) { .leaflet-bottom.leaflet-left { bottom: 128px; } }
 .domains-legend .dm-items { display: grid; grid-template-columns: 1fr 1fr; gap: 0 14px; }
 .domains-legend .dm-items > div { white-space: nowrap; }
 .domains-legend .dm-sw { display: inline-block; width: 12px; height: 12px; border-radius: 2px; margin-right: 7px; vertical-align: middle; border: 1px solid rgba(32,38,46,.35); }
