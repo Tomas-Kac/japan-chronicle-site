@@ -78,6 +78,7 @@ const checks = `
     if (!t.name) { E('temple: an entry has no name'); continue; }
     if (_templeNames.has(t.name)) E('temple: duplicate name "'+t.name+'"'); else _templeNames.add(t.name);
     checkLoc('temple', t.name, { lat: t.lat, lon: t.lon });
+    checkImages('temple', t.name, t.images);
   }
   dupIds('events', EVENTS);
   for (const e of EVENTS) {

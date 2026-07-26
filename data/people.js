@@ -1,5 +1,5 @@
 // =====================================================================
-// PEOPLE  —  the actors of Japanese history (a map of people, not just fights)
+// PEOPLE, the actors of Japanese history (a map of people, not just fights)
 // =====================================================================
 // Toggle the "People" overlay (top-right layer control) to show these.
 // Each person is pinned at a characteristic place (a seat of power, a temple,
@@ -26,7 +26,7 @@ const PEOPLE = [
   // ---------------- Asuka – Nara ----------------
   {
     id: "prince-shotoku",
-    sources: [ { label: "Prince Shōtoku — Wikipedia", url: "https://en.wikipedia.org/wiki/Prince_Sh%C5%8Dtoku" } ],
+    sources: [ { label: "Wikipedia: Prince Shōtoku", url: "https://en.wikipedia.org/wiki/Prince_Sh%C5%8Dtoku" } ],
     name: "Prince Shōtoku",
     role: "sovereign",
     born: 574, died: 622,
@@ -41,13 +41,13 @@ A devout patron of Buddhism, he founded Hōryū-ji and Shitennō-ji and helped s
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Sh%C5%8Dtoku_Taishi_Sh%C5%8Dmanky%C5%8D_K%C5%8Dsan.jpg/960px-Sh%C5%8Dtoku_Taishi_Sh%C5%8Dmanky%C5%8D_K%C5%8Dsan.jpg",
-        caption: "Prince Shōtoku — Wikimedia Commons."
+        caption: "Prince Shōtoku, Wikimedia Commons."
       }
     ]
   },
   {
     id: "emperor-tenmu",
-    sources: [ { label: "Emperor Tenmu — Wikipedia", url: "https://en.wikipedia.org/wiki/Emperor_Tenmu" } ],
+    sources: [ { label: "Wikipedia: Emperor Tenmu", url: "https://en.wikipedia.org/wiki/Emperor_Tenmu" } ],
     name: "Emperor Tenmu",
     role: "sovereign",
     born: 631, died: 686,
@@ -55,14 +55,14 @@ A devout patron of Buddhism, he founded Hōryū-ji and Shitennō-ji and helped s
     period: "Asuka · emperor",
     location: { name: "Asuka (Kiyomihara Palace), Yamato", lat: 34.4793, lon: 135.8200 },
     summary: "Seized the throne in Japan's largest ancient civil war and forged a centralised imperial state.",
-    bio: `Prince Ōama took the throne as Emperor Tenmu after winning the Jinshin War of 672 — the bloodiest succession struggle of ancient Japan — against his nephew Prince Ōtomo. The victory let him rebuild the monarchy on his own terms.
+    bio: `Prince Ōama took the throne as Emperor Tenmu after winning the Jinshin War of 672, the bloodiest succession struggle of ancient Japan, against his nephew Prince Ōtomo. The victory let him rebuild the monarchy on his own terms.
 
 Tenmu concentrated power in the imperial house, reorganised court ranks and the provinces, promoted Buddhism as a state religion, and ordered the compilation of the histories that became the Kojiki and Nihon Shoki. It was under him that the title tennō ("heavenly sovereign") and arguably the name "Nihon" took hold.`,
     battles: ["jinshin"],
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Emperor_Tenmu.jpg/960px-Emperor_Tenmu.jpg",
-        caption: "Emperor Tenmu — Wikimedia Commons."
+        caption: "Emperor Tenmu, Wikimedia Commons."
       }
     ]
   },
@@ -70,7 +70,7 @@ Tenmu concentrated power in the imperial house, reorganised court ranks and the 
   // ---------------- Heian ----------------
   {
     id: "saicho",
-    sources: [ { label: "Saichō — Wikipedia", url: "https://en.wikipedia.org/wiki/Saich%C5%8D" } ],
+    sources: [ { label: "Wikipedia: Saichō", url: "https://en.wikipedia.org/wiki/Saich%C5%8D" } ],
     name: "Saichō (Dengyō Daishi)",
     role: "religious",
     born: 767, died: 822,
@@ -85,13 +85,13 @@ Mt Hiei became the seedbed of medieval Japanese Buddhism: Hōnen, Shinran, Dōge
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/%E6%9C%80%E6%BE%84%E5%83%8F_%E4%B8%80%E4%B9%97%E5%AF%BA%E8%94%B5_%E5%B9%B3%E5%AE%89%E6%99%82%E4%BB%A3.jpg/960px-%E6%9C%80%E6%BE%84%E5%83%8F_%E4%B8%80%E4%B9%97%E5%AF%BA%E8%94%B5_%E5%B9%B3%E5%AE%89%E6%99%82%E4%BB%A3.jpg",
-        caption: "Saichō (Dengyō Daishi) — Wikimedia Commons."
+        caption: "Saichō (Dengyō Daishi), Wikimedia Commons."
       }
     ]
   },
   {
     id: "kukai",
-    sources: [ { label: "Kūkai — Wikipedia", url: "https://en.wikipedia.org/wiki/K%C5%ABkai" } ],
+    sources: [ { label: "Wikipedia: Kūkai", url: "https://en.wikipedia.org/wiki/K%C5%ABkai" } ],
     name: "Kūkai (Kōbō Daishi)",
     role: "religious",
     born: 774, died: 835,
@@ -106,13 +106,13 @@ Popular tradition holds that he did not die but entered eternal meditation on K�
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Eight_Patriarchs_of_the_Shingon_Sect_of_Buddhism_Kukai_Cropped.jpg/960px-Eight_Patriarchs_of_the_Shingon_Sect_of_Buddhism_Kukai_Cropped.jpg",
-        caption: "Kūkai (Kōbō Daishi) — Wikimedia Commons."
+        caption: "Kūkai (Kōbō Daishi), Wikimedia Commons."
       }
     ]
   },
   {
     id: "sei-shonagon",
-    sources: [ { label: "Sei Shōnagon — Wikipedia", url: "https://en.wikipedia.org/wiki/Sei_Sh%C5%8Dnagon" } ],
+    sources: [ { label: "Wikipedia: Sei Shōnagon", url: "https://en.wikipedia.org/wiki/Sei_Sh%C5%8Dnagon" } ],
     name: "Sei Shōnagon",
     role: "culture",
     born: 966, died: 1025,
@@ -122,18 +122,18 @@ Popular tradition holds that he did not die but entered eternal meditation on K�
     summary: "Court lady whose Pillow Book is one of the sharpest portraits of Heian aristocratic life.",
     bio: `A lady-in-waiting to Empress Teishi, Sei Shōnagon wrote The Pillow Book (Makura no Sōshi), a brilliant, witty collection of lists, anecdotes and observations on life in the Heian court. It stands beside The Tale of Genji as a masterpiece of the era's golden age of women's literature.
 
-Her acid wit and aesthetic snobbery — and her famous rivalry with Murasaki Shikibu, who served the competing empress — make her one of the most vivid personalities to survive from classical Japan.`,
+Her acid wit and aesthetic snobbery, and her famous rivalry with Murasaki Shikibu, who served the competing empress, make her one of the most vivid personalities to survive from classical Japan.`,
     battles: [],
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/d/d7/Hyakuninisshu_062.jpg",
-        caption: "Sei Shōnagon — Wikimedia Commons."
+        caption: "Sei Shōnagon, Wikimedia Commons."
       }
     ]
   },
   {
     id: "murasaki-shikibu",
-    sources: [ { label: "Murasaki Shikibu — Wikipedia", url: "https://en.wikipedia.org/wiki/Murasaki_Shikibu" } ],
+    sources: [ { label: "Wikipedia: Murasaki Shikibu", url: "https://en.wikipedia.org/wiki/Murasaki_Shikibu" } ],
     name: "Murasaki Shikibu",
     role: "culture",
     born: 973, died: 1014,
@@ -141,20 +141,20 @@ Her acid wit and aesthetic snobbery — and her famous rivalry with Murasaki Shi
     period: "Heian · court author",
     location: { name: "Heian-kyō (the imperial court), Yamashiro", lat: 35.0116, lon: 135.7681 },
     summary: "Author of The Tale of Genji, often called the world's first novel.",
-    bio: `A lady-in-waiting to Empress Shōshi, Murasaki Shikibu wrote The Tale of Genji (Genji Monogatari) around 1008 — a sweeping, psychologically subtle story of the courtier Hikaru Genji that is widely regarded as the world's first full-length novel and the supreme classic of Japanese literature.
+    bio: `A lady-in-waiting to Empress Shōshi, Murasaki Shikibu wrote The Tale of Genji (Genji Monogatari) around 1008, a sweeping, psychologically subtle story of the courtier Hikaru Genji that is widely regarded as the world's first full-length novel and the supreme classic of Japanese literature.
 
 Her diary also survives, giving a rare first-hand view of the glittering, hierarchical world of the Heian court at the height of Fujiwara power.`,
     battles: [],
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Murasaki-Shikibu-composing-Genji-Monogatari.png/960px-Murasaki-Shikibu-composing-Genji-Monogatari.png",
-        caption: "Murasaki Shikibu — Wikimedia Commons."
+        caption: "Murasaki Shikibu, Wikimedia Commons."
       }
     ]
   },
   {
     id: "fujiwara-michinaga",
-    sources: [ { label: "Fujiwara no Michinaga — Wikipedia", url: "https://en.wikipedia.org/wiki/Fujiwara_no_Michinaga" } ],
+    sources: [ { label: "Wikipedia: Fujiwara no Michinaga", url: "https://en.wikipedia.org/wiki/Fujiwara_no_Michinaga" } ],
     name: "Fujiwara no Michinaga",
     role: "statesman",
     born: 966, died: 1028,
@@ -162,20 +162,20 @@ Her diary also survives, giving a rare first-hand view of the glittering, hierar
     period: "Heian · regent",
     location: { name: "Heian-kyō (the court), Yamashiro", lat: 35.0116, lon: 135.7681 },
     summary: "The regent at the zenith of Fujiwara power, who ruled through his daughters' marriages to emperors.",
-    bio: `Michinaga brought the Fujiwara regency to its peak. By marrying four of his daughters to emperors, he made himself grandfather and father-in-law to a line of sovereigns and governed as the power behind the throne — without ever holding the office of regent for long himself.
+    bio: `Michinaga brought the Fujiwara regency to its peak. By marrying four of his daughters to emperors, he made himself grandfather and father-in-law to a line of sovereigns and governed as the power behind the throne, without ever holding the office of regent for long himself.
 
-His famous "full moon" poem — that the world was his, "like the full moon, lacking nothing" — captures the confidence of the age. His court patronised Murasaki Shikibu and Sei Shōnagon, making his rule the cultural high-water mark of the Heian period.`,
+His famous "full moon" poem, that the world was his, "like the full moon, lacking nothing", captures the confidence of the age. His court patronised Murasaki Shikibu and Sei Shōnagon, making his rule the cultural high-water mark of the Heian period.`,
     battles: [],
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/7/72/Fujiwara_no_Michinaga_2.jpg",
-        caption: "Fujiwara no Michinaga — Wikimedia Commons."
+        caption: "Fujiwara no Michinaga, Wikimedia Commons."
       }
     ]
   },
   {
     id: "taira-no-masakado",
-    sources: [ { label: "Taira no Masakado — Wikipedia", url: "https://en.wikipedia.org/wiki/Taira_no_Masakado" } ],
+    sources: [ { label: "Wikipedia: Taira no Masakado", url: "https://en.wikipedia.org/wiki/Taira_no_Masakado" } ],
     name: "Taira no Masakado",
     role: "warlord",
     born: 903, died: 940,
@@ -183,14 +183,14 @@ His famous "full moon" poem — that the world was his, "like the full moon, lac
     period: "Heian · rebel",
     location: { name: "Bandō, Shimōsa (the eastern provinces)", lat: 36.0489, lon: 139.8886 },
     summary: "The eastern warrior who rebelled against the court and declared himself a 'new emperor'.",
-    bio: `A provincial member of the Taira, Masakado turned a local feud into open revolt against the Heian court, overrunning the eastern provinces and proclaiming himself Shinnō, a "new emperor" — an almost unthinkable challenge to the throne.
+    bio: `A provincial member of the Taira, Masakado turned a local feud into open revolt against the Heian court, overrunning the eastern provinces and proclaiming himself Shinnō, a "new emperor", an almost unthinkable challenge to the throne.
 
 He was killed in 940, but his rising exposed how far real power had slipped into the hands of armed provincial warriors, foreshadowing the samurai age. His vengeful spirit became legendary, and his shrine (kubizuka) still stands in the heart of modern Tokyo.`,
     battles: ["masakado"],
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/8/87/Taira_no_Masakado_01.jpg",
-        caption: "Taira no Masakado — Wikimedia Commons."
+        caption: "Taira no Masakado, Wikimedia Commons."
       }
     ]
   },
@@ -198,7 +198,7 @@ He was killed in 940, but his rising exposed how far real power had slipped into
   // ---------------- Genpei ----------------
   {
     id: "taira-no-kiyomori",
-    sources: [ { label: "Taira no Kiyomori — Wikipedia", url: "https://en.wikipedia.org/wiki/Taira_no_Kiyomori" } ],
+    sources: [ { label: "Wikipedia: Taira no Kiyomori", url: "https://en.wikipedia.org/wiki/Taira_no_Kiyomori" } ],
     name: "Taira no Kiyomori",
     role: "warlord",
     born: 1118, died: 1181,
@@ -208,25 +208,25 @@ He was killed in 940, but his rising exposed how far real power had slipped into
     summary: "First warrior to seize the court, whose Taira supremacy provoked the Genpei War.",
     bio: `By winning the Hōgen (1156) and Heiji (1160) disturbances, Kiyomori made the Taira the first warrior clan to dominate the imperial court. He took the office of Grand Minister, married his daughter to an emperor, and placed his infant grandson Antoku on the throne.
 
-Taira arrogance and Kiyomori's heavy hand alienated the court, the temples and the rival Minamoto, igniting the Genpei War (1180–85). He died of fever in 1181, before seeing his house annihilated — a downfall immortalised in The Tale of the Heike.`,
+Taira arrogance and Kiyomori's heavy hand alienated the court, the temples and the rival Minamoto, igniting the Genpei War (1180–85). He died of fever in 1181, before seeing his house annihilated, a downfall immortalised in The Tale of the Heike.`,
     battles: ["hogen", "heiji"],
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Taira_no_Kiyomori%2CTenshiSekkanMiei.jpg/960px-Taira_no_Kiyomori%2CTenshiSekkanMiei.jpg",
-        caption: "Taira no Kiyomori — Wikimedia Commons."
+        caption: "Taira no Kiyomori, Wikimedia Commons."
       }
     ]
   },
   {
     id: "minamoto-yoshitsune",
-    sources: [ { label: "Minamoto no Yoshitsune — Wikipedia", url: "https://en.wikipedia.org/wiki/Minamoto_no_Yoshitsune" } ],
+    sources: [ { label: "Wikipedia: Minamoto no Yoshitsune", url: "https://en.wikipedia.org/wiki/Minamoto_no_Yoshitsune" } ],
     name: "Minamoto no Yoshitsune",
     role: "warlord",
     born: 1159, died: 1189,
     dateLabel: "1159–1189",
     period: "Genpei · commander",
     location: { name: "Heian-kyō (Kyoto), his campaign base", lat: 35.0116, lon: 135.7681 },
-    summary: "The brilliant young general who destroyed the Taira — then was hunted down by his own brother.",
+    summary: "The brilliant young general who destroyed the Taira, then was hunted down by his own brother.",
     bio: `Yoshitsune was the tactical genius of the Genpei War. His daring victories at Ichi-no-Tani, Yashima and finally Dan-no-Ura (1185) annihilated the Taira fleet and clan, winning the war for the Minamoto.
 
 But his success and his court honours made his elder brother Yoritomo fear him. Driven into flight, Yoshitsune was cornered at Hiraizumi and forced to take his own life in 1189. His tragic heroism made him one of the most beloved figures in Japanese legend, the archetype of the noble warrior brought down by jealousy.`,
@@ -234,13 +234,13 @@ But his success and his court honours made his elder brother Yoritomo fear him. 
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Minamoto_no_Yoshitsune.jpg/960px-Minamoto_no_Yoshitsune.jpg",
-        caption: "Minamoto no Yoshitsune — Wikimedia Commons."
+        caption: "Minamoto no Yoshitsune, Wikimedia Commons."
       }
     ]
   },
   {
     id: "tomoe-gozen",
-    sources: [ { label: "Tomoe Gozen — Wikipedia", url: "https://en.wikipedia.org/wiki/Tomoe_Gozen" } ],
+    sources: [ { label: "Wikipedia: Tomoe Gozen", url: "https://en.wikipedia.org/wiki/Tomoe_Gozen" } ],
     name: "Tomoe Gozen",
     role: "warlord",
     born: 1157, died: 1247,
@@ -248,35 +248,35 @@ But his success and his court honours made his elder brother Yoritomo fear him. 
     period: "Genpei · woman warrior",
     location: { name: "Awazu, Ōmi (near Lake Biwa)", lat: 35.0083, lon: 135.8767 },
     summary: "The most famous woman warrior of the samurai epics, who rode with Kiso Yoshinaka.",
-    bio: `Tomoe Gozen appears in The Tale of the Heike as a warrior of extraordinary skill — a peerless archer and rider "worth a thousand men" — who fought beside the general Kiso (Minamoto) Yoshinaka. At the Battle of Awazu in 1184, as Yoshinaka's army collapsed, she is said to have taken an enemy head in a last show of valour before leaving the field.
+    bio: `Tomoe Gozen appears in The Tale of the Heike as a warrior of extraordinary skill, a peerless archer and rider "worth a thousand men", who fought beside the general Kiso (Minamoto) Yoshinaka. At the Battle of Awazu in 1184, as Yoshinaka's army collapsed, she is said to have taken an enemy head in a last show of valour before leaving the field.
 
 Her later life is unknown and her historicity debated, but she became the enduring archetype of the onna-musha, the fighting woman of medieval Japan.`,
     battles: ["awazu"],
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/7/7f/Kokon_hime_kagami_Tomoe_onna_by_Tsukioka_Yoshitoshi.jpg",
-        caption: "Tomoe Gozen — Wikimedia Commons."
+        caption: "Tomoe Gozen, Wikimedia Commons."
       }
     ]
   },
   {
     id: "minamoto-yoritomo",
-    sources: [ { label: "Minamoto no Yoritomo — Wikipedia", url: "https://en.wikipedia.org/wiki/Minamoto_no_Yoritomo" } ],
+    sources: [ { label: "Wikipedia: Minamoto no Yoritomo", url: "https://en.wikipedia.org/wiki/Minamoto_no_Yoritomo" } ],
     name: "Minamoto no Yoritomo",
     role: "sovereign",
     born: 1147, died: 1199,
     dateLabel: "1147–1199",
     period: "Genpei/Kamakura · first shogun",
     location: { name: "Kamakura, Sagami", lat: 35.3197, lon: 139.5503 },
-    summary: "Victor of the Genpei War and founder of the Kamakura shogunate — Japan's first warrior government.",
+    summary: "Victor of the Genpei War and founder of the Kamakura shogunate, Japan's first warrior government.",
     bio: `Exiled as a boy after his father's defeat, Yoritomo rose from Izu to lead the Minamoto to victory over the Taira. Rather than settle at the imperial court, he built his own government far to the east at Kamakura, rewarding his vassals with land and appointing military governors (shugo) and stewards (jitō) across the country.
 
-Named sei-i taishōgun in 1192, he created the bakufu — the shogunate — that would let warriors rule Japan, in one form or another, for nearly 700 years. His political genius was matched by ruthlessness, not least toward his own brother Yoshitsune.`,
+Named sei-i taishōgun in 1192, he created the bakufu, the shogunate, that would let warriors rule Japan, in one form or another, for nearly 700 years. His political genius was matched by ruthlessness, not least toward his own brother Yoshitsune.`,
     battles: ["ishibashiyama", "fujigawa"],
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Minamoto_no_Yoritomo.jpg/960px-Minamoto_no_Yoritomo.jpg",
-        caption: "Minamoto no Yoritomo — Wikimedia Commons."
+        caption: "Minamoto no Yoritomo, Wikimedia Commons."
       }
     ]
   },
@@ -284,7 +284,7 @@ Named sei-i taishōgun in 1192, he created the bakufu — the shogunate — that
   // ---------------- Kamakura ----------------
   {
     id: "hojo-tokimune",
-    sources: [ { label: "Hōjō Tokimune — Wikipedia", url: "https://en.wikipedia.org/wiki/H%C5%8Dj%C5%8D_Tokimune" } ],
+    sources: [ { label: "Wikipedia: Hōjō Tokimune", url: "https://en.wikipedia.org/wiki/H%C5%8Dj%C5%8D_Tokimune" } ],
     name: "Hōjō Tokimune",
     role: "sovereign",
     born: 1251, died: 1284,
@@ -299,13 +299,13 @@ He refused the Khan's demands, rallied the warriors of Kyūshū behind defensive
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/H%C5%8Dj%C5%8D_Tokimune.jpg/960px-H%C5%8Dj%C5%8D_Tokimune.jpg",
-        caption: "Hōjō Tokimune — Wikimedia Commons."
+        caption: "Hōjō Tokimune, Wikimedia Commons."
       }
     ]
   },
   {
     id: "nichiren",
-    sources: [ { label: "Nichiren — Wikipedia", url: "https://en.wikipedia.org/wiki/Nichiren" } ],
+    sources: [ { label: "Wikipedia: Nichiren", url: "https://en.wikipedia.org/wiki/Nichiren" } ],
     name: "Nichiren",
     role: "religious",
     born: 1222, died: 1282,
@@ -313,14 +313,14 @@ He refused the Khan's demands, rallied the warriors of Kyūshū behind defensive
     period: "Kamakura · monk",
     location: { name: "Kamakura, Sagami", lat: 35.3197, lon: 139.5503 },
     summary: "Fiery prophet-monk who founded the Buddhism that bears his name.",
-    bio: `Nichiren taught that salvation lay solely in devotion to the Lotus Sutra, expressed in the chant Namu-myōhō-renge-kyō. Uncompromising and combative, he denounced the other Buddhist schools and warned that Japan's misrule would bring invasion and disaster — a prophecy that seemed vindicated when the Mongols came.
+    bio: `Nichiren taught that salvation lay solely in devotion to the Lotus Sutra, expressed in the chant Namu-myōhō-renge-kyō. Uncompromising and combative, he denounced the other Buddhist schools and warned that Japan's misrule would bring invasion and disaster, a prophecy that seemed vindicated when the Mongols came.
 
 His attacks on the authorities earned him exile and a famous brush with execution. The school he founded, Nichiren Buddhism, became one of the most distinctive and enduring strands of Japanese religion.`,
     battles: [],
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/0/06/Nichiren_Daishonin_Hakii_Portrait.jpg",
-        caption: "Nichiren — Wikimedia Commons."
+        caption: "Nichiren, Wikimedia Commons."
       }
     ]
   },
@@ -328,7 +328,7 @@ His attacks on the authorities earned him exile and a famous brush with executio
   // ---------------- Nanboku-chō ----------------
   {
     id: "emperor-go-daigo",
-    sources: [ { label: "Emperor Go-Daigo — Wikipedia", url: "https://en.wikipedia.org/wiki/Emperor_Go-Daigo" } ],
+    sources: [ { label: "Wikipedia: Emperor Go-Daigo", url: "https://en.wikipedia.org/wiki/Emperor_Go-Daigo" } ],
     name: "Emperor Go-Daigo",
     role: "sovereign",
     born: 1288, died: 1339,
@@ -336,20 +336,20 @@ His attacks on the authorities earned him exile and a famous brush with executio
     period: "Nanboku-chō · emperor",
     location: { name: "Yoshino (the Southern Court), Yamato", lat: 34.3666, lon: 135.8584 },
     summary: "The emperor who toppled the Kamakura shogunate and tried to restore direct imperial rule.",
-    bio: `Go-Daigo refused to be a figurehead. He plotted against the Kamakura shogunate, was exiled, escaped, and — with warriors such as Kusunoki Masashige, Ashikaga Takauji and Nitta Yoshisada — brought it down in 1333, launching the Kenmu Restoration of direct imperial government.
+    bio: `Go-Daigo refused to be a figurehead. He plotted against the Kamakura shogunate, was exiled, escaped, and, with warriors such as Kusunoki Masashige, Ashikaga Takauji and Nitta Yoshisada, brought it down in 1333, launching the Kenmu Restoration of direct imperial government.
 
 His attempt to rule without the warriors quickly collapsed. When Takauji turned against him and set up a rival emperor in Kyoto, Go-Daigo fled south to Yoshino and founded the Southern Court, splitting Japan into two rival imperial lines for nearly sixty years.`,
     battles: ["chihaya-1333", "fall-of-kamakura-1333", "minatogawa"],
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/0/0e/Go-Daigo.jpg",
-        caption: "Emperor Go-Daigo — Wikimedia Commons."
+        caption: "Emperor Go-Daigo, Wikimedia Commons."
       }
     ]
   },
   {
     id: "kusunoki-masashige",
-    sources: [ { label: "Kusunoki Masashige — Wikipedia", url: "https://en.wikipedia.org/wiki/Kusunoki_Masashige" } ],
+    sources: [ { label: "Wikipedia: Kusunoki Masashige", url: "https://en.wikipedia.org/wiki/Kusunoki_Masashige" } ],
     name: "Kusunoki Masashige",
     role: "warlord",
     born: 1294, died: 1336,
@@ -364,13 +364,13 @@ When Ashikaga Takauji turned on the emperor, Masashige advised retreat; overrule
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Kusunoki_Masashige.JPG/960px-Kusunoki_Masashige.JPG",
-        caption: "Kusunoki Masashige — Wikimedia Commons."
+        caption: "Kusunoki Masashige, Wikimedia Commons."
       }
     ]
   },
   {
     id: "nitta-yoshisada",
-    sources: [ { label: "Nitta Yoshisada — Wikipedia", url: "https://en.wikipedia.org/wiki/Nitta_Yoshisada" } ],
+    sources: [ { label: "Wikipedia: Nitta Yoshisada", url: "https://en.wikipedia.org/wiki/Nitta_Yoshisada" } ],
     name: "Nitta Yoshisada",
     role: "warlord",
     born: 1301, died: 1338,
@@ -385,13 +385,13 @@ A staunch loyalist of the Southern Court, he became Ashikaga Takauji's great riv
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/f/f4/Nitta_Yoshisada.jpg",
-        caption: "Nitta Yoshisada — Wikimedia Commons."
+        caption: "Nitta Yoshisada, Wikimedia Commons."
       }
     ]
   },
   {
     id: "ashikaga-takauji",
-    sources: [ { label: "Ashikaga Takauji — Wikipedia", url: "https://en.wikipedia.org/wiki/Ashikaga_Takauji" } ],
+    sources: [ { label: "Wikipedia: Ashikaga Takauji", url: "https://en.wikipedia.org/wiki/Ashikaga_Takauji" } ],
     name: "Ashikaga Takauji",
     role: "sovereign",
     born: 1305, died: 1358,
@@ -406,7 +406,7 @@ Named shogun in 1338, he founded the Ashikaga shogunate, governed from the Murom
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Ashikaga_Takauji_J%C5%8Ddo-ji.jpg/960px-Ashikaga_Takauji_J%C5%8Ddo-ji.jpg",
-        caption: "Ashikaga Takauji — Wikimedia Commons."
+        caption: "Ashikaga Takauji, Wikimedia Commons."
       }
     ]
   },
@@ -414,7 +414,7 @@ Named shogun in 1338, he founded the Ashikaga shogunate, governed from the Murom
   // ---------------- Sengoku ----------------
   {
     id: "takeda-shingen",
-    sources: [ { label: "Takeda Shingen — Wikipedia", url: "https://en.wikipedia.org/wiki/Takeda_Shingen" } ],
+    sources: [ { label: "Wikipedia: Takeda Shingen", url: "https://en.wikipedia.org/wiki/Takeda_Shingen" } ],
     name: "Takeda Shingen",
     role: "warlord",
     born: 1521, died: 1573,
@@ -422,20 +422,20 @@ Named shogun in 1338, he founded the Ashikaga shogunate, governed from the Murom
     period: "Sengoku · daimyō of Kai",
     location: { name: "Kōfu (Tsutsujigasaki), Kai", lat: 35.6642, lon: 138.5685 },
     summary: "The 'Tiger of Kai', one of the most feared generals of the warring states.",
-    bio: `Lord of Kai, Takeda Shingen built one of the most formidable war machines of the age, famed for its cavalry and the banner motto Fūrinkazan — "swift as wind, silent as forest, fierce as fire, immovable as mountain." His repeated clashes with Uesugi Kenshin at Kawanakajima became the stuff of legend.
+    bio: `Lord of Kai, Takeda Shingen built one of the most formidable war machines of the age, famed for its cavalry and the banner motto Fūrinkazan, "swift as wind, silent as forest, fierce as fire, immovable as mountain." His repeated clashes with Uesugi Kenshin at Kawanakajima became the stuff of legend.
 
 Late in life he crushed the young Tokugawa Ieyasu at Mikatagahara (1573) and was marching toward Kyoto when he died, removing the one rival Oda Nobunaga most feared.`,
     battles: ["kawanakajima", "uedahara", "odaihara", "mimasetoge", "shiojiritoge", "mikatagahara"],
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Takeda_Harunobu.jpg/960px-Takeda_Harunobu.jpg",
-        caption: "Takeda Shingen — Wikimedia Commons."
+        caption: "Takeda Shingen, Wikimedia Commons."
       }
     ]
   },
   {
     id: "uesugi-kenshin",
-    sources: [ { label: "Uesugi Kenshin — Wikipedia", url: "https://en.wikipedia.org/wiki/Uesugi_Kenshin" } ],
+    sources: [ { label: "Wikipedia: Uesugi Kenshin", url: "https://en.wikipedia.org/wiki/Uesugi_Kenshin" } ],
     name: "Uesugi Kenshin",
     role: "warlord",
     born: 1530, died: 1578,
@@ -450,13 +450,13 @@ His five battles with Takeda Shingen at Kawanakajima are among the most celebrat
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/8/88/Uesugi_Kenshin_Portrait_from_Uesugi_Shrine.png",
-        caption: "Uesugi Kenshin — Wikimedia Commons."
+        caption: "Uesugi Kenshin, Wikimedia Commons."
       }
     ]
   },
   {
     id: "oda-nobunaga",
-    sources: [ { label: "Oda Nobunaga — Wikipedia", url: "https://en.wikipedia.org/wiki/Oda_Nobunaga" } ],
+    sources: [ { label: "Wikipedia: Oda Nobunaga", url: "https://en.wikipedia.org/wiki/Oda_Nobunaga" } ],
     name: "Oda Nobunaga",
     role: "warlord",
     born: 1534, died: 1582,
@@ -464,27 +464,27 @@ His five battles with Takeda Shingen at Kawanakajima are among the most celebrat
     period: "Sengoku · unifier",
     location: { name: "Azuchi Castle, Ōmi", lat: 35.1553, lon: 136.1390 },
     summary: "The ruthless innovator who broke the old order and began the unification of Japan.",
-    bio: `From a minor Owari base, Nobunaga rose by audacity — destroying a far larger Imagawa army at Okehazama (1560) — and by embracing new methods: massed firearms, professional infantry, castle towns and free markets. He toppled the last Ashikaga shogun, broke the warrior-monks, and won the gunpowder battle of Nagashino (1575).
+    bio: `From a minor Owari base, Nobunaga rose by audacity, destroying a far larger Imagawa army at Okehazama (1560), and by embracing new methods: massed firearms, professional infantry, castle towns and free markets. He toppled the last Ashikaga shogun, broke the warrior-monks, and won the gunpowder battle of Nagashino (1575).
 
-By 1582 he controlled central Japan and the path to unification lay open. Then his own general Akechi Mitsuhide turned on him at the Honnō-ji in Kyoto, where Nobunaga died in the flames — leaving his work to be completed by Hideyoshi and Ieyasu.`,
+By 1582 he controlled central Japan and the path to unification lay open. Then his own general Akechi Mitsuhide turned on him at the Honnō-ji in Kyoto, where Nobunaga died in the flames, leaving his work to be completed by Hideyoshi and Ieyasu.`,
     battles: ["okehazama", "anegawa", "nagashino", "kizugawaguchi", "honnoji"],
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Odanobunaga.jpg/960px-Odanobunaga.jpg",
-        caption: "Oda Nobunaga — Wikimedia Commons."
+        caption: "Oda Nobunaga, Wikimedia Commons."
       }
     ]
   },
   {
     id: "sen-no-rikyu",
-    sources: [ { label: "Sen no Rikyū — Wikipedia", url: "https://en.wikipedia.org/wiki/Sen_no_Riky%C5%AB" } ],
+    sources: [ { label: "Wikipedia: Sen no Rikyū", url: "https://en.wikipedia.org/wiki/Sen_no_Riky%C5%AB" } ],
     name: "Sen no Rikyū",
     role: "culture",
     born: 1522, died: 1591,
     dateLabel: "1522–1591",
     period: "Sengoku · tea master",
     location: { name: "Sakai (the merchant city), Izumi", lat: 34.5733, lon: 135.4830 },
-    summary: "The tea master who perfected the way of tea — and was ordered to die by Hideyoshi.",
+    summary: "The tea master who perfected the way of tea, and was ordered to die by Hideyoshi.",
     bio: `Sen no Rikyū gave the Japanese tea ceremony (chanoyu) its enduring form, distilling it into an aesthetic of wabi: rustic simplicity, restraint and the beauty of the imperfect. As tea master to both Nobunaga and Hideyoshi, he wielded quiet cultural authority at the summit of power.
 
 His closeness to Hideyoshi turned to friction, and in 1591 the ruler ordered him to commit seppuku. His influence on Japanese art, architecture and taste, however, has never faded.`,
@@ -492,13 +492,13 @@ His closeness to Hideyoshi turned to friction, and in 1591 the ruler ordered him
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Sen_no_Rikyu_JPN_%28cropped%29.jpg/960px-Sen_no_Rikyu_JPN_%28cropped%29.jpg",
-        caption: "Sen no Rikyū — Wikimedia Commons."
+        caption: "Sen no Rikyū, Wikimedia Commons."
       }
     ]
   },
   {
     id: "toyotomi-hideyoshi",
-    sources: [ { label: "Toyotomi Hideyoshi — Wikipedia", url: "https://en.wikipedia.org/wiki/Toyotomi_Hideyoshi" } ],
+    sources: [ { label: "Wikipedia: Toyotomi Hideyoshi", url: "https://en.wikipedia.org/wiki/Toyotomi_Hideyoshi" } ],
     name: "Toyotomi Hideyoshi",
     role: "warlord",
     born: 1537, died: 1598,
@@ -508,18 +508,18 @@ His closeness to Hideyoshi turned to friction, and in 1591 the ruler ordered him
     summary: "The peasant who rose to rule all Japan and complete its unification.",
     bio: `Born a commoner, Hideyoshi rose through Nobunaga's ranks by sheer ability. After avenging his lord at Yamazaki (1582) and outmanoeuvring his rivals, he completed the unification of Japan, crowned by the great siege of Odawara in 1590.
 
-As ruler he froze society in place — the famous "sword hunt" disarmed the peasantry and separated farmer from warrior — and built Osaka Castle as his seat. Barred by his birth from the title of shogun, he ruled as imperial regent (kampaku). His last years were marred by two ruinous invasions of Korea.`,
+As ruler he froze society in place, the famous "sword hunt" disarmed the peasantry and separated farmer from warrior, and built Osaka Castle as his seat. Barred by his birth from the title of shogun, he ruled as imperial regent (kampaku). His last years were marred by two ruinous invasions of Korea.`,
     battles: ["yamazaki", "shizugatake", "komaki-nagakute", "odawara-1590"],
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Toyotomi_Hideyoshi_c1598_Kodai-ji_Temple.png/960px-Toyotomi_Hideyoshi_c1598_Kodai-ji_Temple.png",
-        caption: "Toyotomi Hideyoshi — Wikimedia Commons."
+        caption: "Toyotomi Hideyoshi, Wikimedia Commons."
       }
     ]
   },
   {
     id: "date-masamune",
-    sources: [ { label: "Date Masamune — Wikipedia", url: "https://en.wikipedia.org/wiki/Date_Masamune" } ],
+    sources: [ { label: "Wikipedia: Date Masamune", url: "https://en.wikipedia.org/wiki/Date_Masamune" } ],
     name: "Date Masamune",
     role: "warlord",
     born: 1567, died: 1636,
@@ -527,20 +527,20 @@ As ruler he froze society in place — the famous "sword hunt" disarmed the peas
     period: "Sengoku/Edo · daimyō of Mutsu",
     location: { name: "Sendai Castle, Mutsu", lat: 38.2528, lon: 140.8694 },
     summary: "The one-eyed 'Dragon of Ōshū' who carved out the great northern domain of Sendai.",
-    bio: `Blind in one eye from childhood smallpox — hence his nickname, the One-Eyed Dragon — Masamune became the dominant warlord of the far north, winning his realm in battles such as Hitotoribashi and Suriagahara before submitting, just in time, to Hideyoshi.
+    bio: `Blind in one eye from childhood smallpox, hence his nickname, the One-Eyed Dragon, Masamune became the dominant warlord of the far north, winning his realm in battles such as Hitotoribashi and Suriagahara before submitting, just in time, to Hideyoshi.
 
-Under the Tokugawa he founded the city of Sendai and ruled one of Japan's largest domains. Famously, he even dispatched an embassy across the Pacific and Atlantic to Mexico, Spain and Rome — one of the boldest diplomatic ventures of the age.`,
+Under the Tokugawa he founded the city of Sendai and ruled one of Japan's largest domains. Famously, he even dispatched an embassy across the Pacific and Atlantic to Mexico, Spain and Rome, one of the boldest diplomatic ventures of the age.`,
     battles: ["hitotoribashi", "suriagehara", "koriyama-campaign"],
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Date_Masamune02.jpg/960px-Date_Masamune02.jpg",
-        caption: "Date Masamune — Wikimedia Commons."
+        caption: "Date Masamune, Wikimedia Commons."
       }
     ]
   },
   {
     id: "tokugawa-ieyasu",
-    sources: [ { label: "Tokugawa Ieyasu — Wikipedia", url: "https://en.wikipedia.org/wiki/Tokugawa_Ieyasu" } ],
+    sources: [ { label: "Wikipedia: Tokugawa Ieyasu", url: "https://en.wikipedia.org/wiki/Tokugawa_Ieyasu" } ],
     name: "Tokugawa Ieyasu",
     role: "warlord",
     born: 1543, died: 1616,
@@ -548,20 +548,20 @@ Under the Tokugawa he founded the city of Sendai and ruled one of Japan's larges
     period: "Sengoku/Edo · founding shogun",
     location: { name: "Edo Castle, Musashi", lat: 35.6852, lon: 139.7528 },
     summary: "The patient victor of Sekigahara who founded the Tokugawa peace that lasted 250 years.",
-    bio: `Held hostage as a child, Ieyasu spent decades as ally, rival and survivor — beaten by Shingen at Mikatagahara, allied with Nobunaga at Nagashino, holding his own against Hideyoshi at Komaki-Nagakute. After Hideyoshi's death he won the decisive Battle of Sekigahara (1600).
+    bio: `Held hostage as a child, Ieyasu spent decades as ally, rival and survivor, beaten by Shingen at Mikatagahara, allied with Nobunaga at Nagashino, holding his own against Hideyoshi at Komaki-Nagakute. After Hideyoshi's death he won the decisive Battle of Sekigahara (1600).
 
-Named shogun in 1603, he made Edo his capital and destroyed the last Toyotomi loyalists at the siege of Osaka (1614–15). The regime he built — the Tokugawa shogunate — gave Japan two and a half centuries of unbroken internal peace.`,
+Named shogun in 1603, he made Edo his capital and destroyed the last Toyotomi loyalists at the siege of Osaka (1614–15). The regime he built, the Tokugawa shogunate, gave Japan two and a half centuries of unbroken internal peace.`,
     battles: ["mikatagahara", "nagashino", "komaki-nagakute", "sekigahara", "osaka-siege"],
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Tokugawa_Ieyasu2.JPG/960px-Tokugawa_Ieyasu2.JPG",
-        caption: "Tokugawa Ieyasu — Wikimedia Commons."
+        caption: "Tokugawa Ieyasu, Wikimedia Commons."
       }
     ]
   },
   {
     id: "sanada-yukimura",
-    sources: [ { label: "Sanada Yukimura — Wikipedia", url: "https://en.wikipedia.org/wiki/Sanada_Yukimura" } ],
+    sources: [ { label: "Wikipedia: Sanada Yukimura", url: "https://en.wikipedia.org/wiki/Sanada_Yukimura" } ],
     name: "Sanada Yukimura",
     role: "warlord",
     born: 1567, died: 1615,
@@ -576,7 +576,7 @@ Cut down in that last battle, he was hailed by his enemies as "the number-one wa
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/b/b3/Sanada_Yukimura.jpg",
-        caption: "Sanada Yukimura — Wikimedia Commons."
+        caption: "Sanada Yukimura, Wikimedia Commons."
       }
     ]
   },
@@ -584,7 +584,7 @@ Cut down in that last battle, he was hailed by his enemies as "the number-one wa
   // ---------------- Edo ----------------
   {
     id: "matsuo-basho",
-    sources: [ { label: "Matsuo Bashō — Wikipedia", url: "https://en.wikipedia.org/wiki/Matsuo_Bash%C5%8D" } ],
+    sources: [ { label: "Wikipedia: Matsuo Bashō", url: "https://en.wikipedia.org/wiki/Matsuo_Bash%C5%8D" } ],
     name: "Matsuo Bashō",
     role: "culture",
     born: 1644, died: 1694,
@@ -599,7 +599,7 @@ The greatest of these became Oku no Hosomichi (The Narrow Road to the Deep North
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/c/ca/Basho_by_Morikawa_Kyoriku_%281656-1715%29.jpg",
-        caption: "Matsuo Bashō — Wikimedia Commons."
+        caption: "Matsuo Bashō, Wikimedia Commons."
       }
     ]
   },
@@ -607,28 +607,28 @@ The greatest of these became Oku no Hosomichi (The Narrow Road to the Deep North
   // ---------------- Bakumatsu ----------------
   {
     id: "ii-naosuke",
-    sources: [ { label: "Ii Naosuke — Wikipedia", url: "https://en.wikipedia.org/wiki/Ii_Naosuke" } ],
+    sources: [ { label: "Wikipedia: Ii Naosuke", url: "https://en.wikipedia.org/wiki/Ii_Naosuke" } ],
     name: "Ii Naosuke",
     role: "statesman",
     born: 1815, died: 1860,
     dateLabel: "1815–1860",
     period: "Bakumatsu · chief minister (tairō)",
     location: { name: "Hikone Castle, Ōmi", lat: 35.2747, lon: 136.2519 },
-    summary: "The chief minister who opened Japan to the West — and was assassinated for it.",
+    summary: "The chief minister who opened Japan to the West, and was assassinated for it.",
     bio: `As tairō, the shogunate's highest minister, Ii Naosuke pushed through the 1858 commercial treaties that opened Japan to foreign trade without imperial sanction. To crush the opposition he unleashed the Ansei Purge, jailing and executing dissident lords and activists.
 
-His high-handedness made him the lightning rod for anti-shogunate fury. In 1860 he was cut down by Mito and Satsuma swordsmen outside the Sakurada Gate of Edo Castle — a killing that shattered the shogunate's prestige and accelerated its fall.`,
+His high-handedness made him the lightning rod for anti-shogunate fury. In 1860 he was cut down by Mito and Satsuma swordsmen outside the Sakurada Gate of Edo Castle, a killing that shattered the shogunate's prestige and accelerated its fall.`,
     battles: [],
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Ii_Naosuke_crop.jpg/960px-Ii_Naosuke_crop.jpg",
-        caption: "Ii Naosuke — Wikimedia Commons."
+        caption: "Ii Naosuke, Wikimedia Commons."
       }
     ]
   },
   {
     id: "sakamoto-ryoma",
-    sources: [ { label: "Sakamoto Ryōma — Wikipedia", url: "https://en.wikipedia.org/wiki/Sakamoto_Ry%C5%8Dma" } ],
+    sources: [ { label: "Wikipedia: Sakamoto Ryōma", url: "https://en.wikipedia.org/wiki/Sakamoto_Ry%C5%8Dma" } ],
     name: "Sakamoto Ryōma",
     role: "statesman",
     born: 1836, died: 1867,
@@ -638,18 +638,18 @@ His high-handedness made him the lightning rod for anti-shogunate fury. In 1860 
     summary: "The low-ranking samurai who brokered the alliance that doomed the shogunate.",
     bio: `A restless visionary from Tosa, Sakamoto Ryōma slipped the bonds of his rank to work for a new Japan. He helped broker the secret Satsuma–Chōshū alliance (1866) that united the two great anti-shogunate domains, and his "Eight-Point Plan" sketched a modern constitutional state.
 
-He pressed for the shogun to resign power peacefully to the emperor — which happened in 1867 — but was assassinated in Kyoto weeks later, at thirty-one. He never saw the Restoration he did so much to bring about, and became one of modern Japan's most romantic heroes.`,
+He pressed for the shogun to resign power peacefully to the emperor, which happened in 1867, but was assassinated in Kyoto weeks later, at thirty-one. He never saw the Restoration he did so much to bring about, and became one of modern Japan's most romantic heroes.`,
     battles: [],
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Sakamoto_Ryoma.jpg/960px-Sakamoto_Ryoma.jpg",
-        caption: "Sakamoto Ryōma — Wikimedia Commons."
+        caption: "Sakamoto Ryōma, Wikimedia Commons."
       }
     ]
   },
   {
     id: "saigo-takamori",
-    sources: [ { label: "Saigō Takamori — Wikipedia", url: "https://en.wikipedia.org/wiki/Saig%C5%8D_Takamori" } ],
+    sources: [ { label: "Wikipedia: Saigō Takamori", url: "https://en.wikipedia.org/wiki/Saig%C5%8D_Takamori" } ],
     name: "Saigō Takamori",
     role: "warlord",
     born: 1828, died: 1877,
@@ -659,18 +659,18 @@ He pressed for the shogun to resign power peacefully to the emperor — which ha
     summary: "The Satsuma leader who commanded the imperial armies that overthrew the shogunate.",
     bio: `A towering figure of Satsuma, Saigō led the restoration forces in the Boshin War, winning at Toba-Fushimi and negotiating the surrender of Edo, before the campaigns at Ueno and in the north completed the shogunate's fall in 1868–69.
 
-Disillusioned with the very Meiji government he had helped create, he later led the doomed Satsuma Rebellion of 1877 and died in its final battle — becoming the archetype of the tragic, principled samurai, the "last samurai" of legend.`,
+Disillusioned with the very Meiji government he had helped create, he later led the doomed Satsuma Rebellion of 1877 and died in its final battle, becoming the archetype of the tragic, principled samurai, the "last samurai" of legend.`,
     battles: ["toba-fushimi", "ueno"], // verified: in exile during the Anglo-Satsuma War (1863); not among the Aizu commanders
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Saigo_Takamori_%28b%29.jpg/960px-Saigo_Takamori_%28b%29.jpg",
-        caption: "Saigō Takamori — Wikimedia Commons."
+        caption: "Saigō Takamori, Wikimedia Commons."
       }
     ]
   },
   {
     id: "tokugawa-yoshinobu",
-    sources: [ { label: "Tokugawa Yoshinobu — Wikipedia", url: "https://en.wikipedia.org/wiki/Tokugawa_Yoshinobu" } ],
+    sources: [ { label: "Wikipedia: Tokugawa Yoshinobu", url: "https://en.wikipedia.org/wiki/Tokugawa_Yoshinobu" } ],
     name: "Tokugawa Yoshinobu",
     role: "sovereign",
     born: 1837, died: 1913,
@@ -678,14 +678,14 @@ Disillusioned with the very Meiji government he had helped create, he later led 
     period: "Bakumatsu · last shogun",
     location: { name: "Nijō Castle, Kyoto (where he resigned power)", lat: 35.0142, lon: 135.7480 },
     summary: "The fifteenth and last Tokugawa shogun, who surrendered power to the emperor.",
-    bio: `Yoshinobu became shogun in 1866 as the regime crumbled. A capable reformer, he tried to remake the shogunate along Western lines — but, outmanoeuvred by Satsuma and Chōshū, he chose in 1867 to resign his authority to the emperor in the act known as the taisei hōkan.
+    bio: `Yoshinobu became shogun in 1866 as the regime crumbled. A capable reformer, he tried to remake the shogunate along Western lines, but, outmanoeuvred by Satsuma and Chōshū, he chose in 1867 to resign his authority to the emperor in the act known as the taisei hōkan.
 
 Defeated at Toba-Fushimi in 1868, he withdrew rather than plunge Japan into total war, surrendering Edo. He lived on quietly for decades into the modern era he had helped usher in, the last of more than 250 years of Tokugawa shoguns.`,
     battles: ["toba-fushimi"],
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/3/31/1867_Osaka_Yoshinobu_Tokugawa.jpg",
-        caption: "Tokugawa Yoshinobu — Wikimedia Commons."
+        caption: "Tokugawa Yoshinobu, Wikimedia Commons."
       }
     ]
   },
@@ -693,7 +693,7 @@ Defeated at Toba-Fushimi in 1868, he withdrew rather than plunge Japan into tota
   // ---------------- Added for fuller coverage (women across the eras) ----------------
   {
     id: "empress-suiko",
-    sources: [ { label: "Empress Suiko — Wikipedia", url: "https://en.wikipedia.org/wiki/Empress_Suiko" } ],
+    sources: [ { label: "Wikipedia: Empress Suiko", url: "https://en.wikipedia.org/wiki/Empress_Suiko" } ],
     name: "Empress Suiko",
     role: "sovereign",
     born: 554, died: 628,
@@ -703,39 +703,39 @@ Defeated at Toba-Fushimi in 1868, he withdrew rather than plunge Japan into tota
     summary: "Japan's first reigning empress, on the throne through the formative Asuka reforms.",
     bio: `Suiko became Japan's first empress regnant in 593 and reigned for 35 years, with her nephew Prince Shōtoku serving as regent. Her reign saw Buddhism promoted as a state faith, the first Chinese-style court ranks and reforms, and official embassies to Sui China.
 
-She is the first of several powerful women rulers of the Asuka–Nara age, when female sovereigns were not unusual — a foundational period for the imperial state.`,
+She is the first of several powerful women rulers of the Asuka–Nara age, when female sovereigns were not unusual, a foundational period for the imperial state.`,
     battles: [],
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Empress_Suiko_by_Tosa_Mitsuyoshi_1726_Eifukuji_Osaka.png/960px-Empress_Suiko_by_Tosa_Mitsuyoshi_1726_Eifukuji_Osaka.png",
-        caption: "Empress Suiko — Wikimedia Commons."
+        caption: "Empress Suiko, Wikimedia Commons."
       }
     ]
   },
   {
     id: "hojo-masako",
-    sources: [ { label: "Hōjō Masako — Wikipedia", url: "https://en.wikipedia.org/wiki/H%C5%8Dj%C5%8D_Masako" } ],
+    sources: [ { label: "Wikipedia: Hōjō Masako", url: "https://en.wikipedia.org/wiki/H%C5%8Dj%C5%8D_Masako" } ],
     name: "Hōjō Masako",
     role: "statesman",
     born: 1157, died: 1225, // verified: Hōgen 2 = 1157 (en+ja Wikipedia; 1156 was an error)
     dateLabel: "1157–1225",
     period: "Kamakura · power behind the shogunate",
     location: { name: "Kamakura, Sagami", lat: 35.3197, lon: 139.5503 },
-    summary: "The 'nun shogun' — Yoritomo's widow, who held real power over the early Kamakura shogunate.",
-    bio: `Wife of Minamoto no Yoritomo and a daughter of the Hōjō, Masako took Buddhist vows on his death in 1199 yet kept decisive political power — earning the name "nun shogun" (ama-shōgun). With her father Tokimasa she helped establish the Hōjō regency that would dominate the Kamakura shogunate.
+    summary: "The 'nun shogun', Yoritomo's widow, who held real power over the early Kamakura shogunate.",
+    bio: `Wife of Minamoto no Yoritomo and a daughter of the Hōjō, Masako took Buddhist vows on his death in 1199 yet kept decisive political power, earning the name "nun shogun" (ama-shōgun). With her father Tokimasa she helped establish the Hōjō regency that would dominate the Kamakura shogunate.
 
 In the Jōkyū War of 1221 her rallying address is traditionally credited with steeling the eastern warriors against Retired Emperor Go-Toba, securing the warriors' victory over the court.`,
     battles: ["jokyu-war"],
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Hojo_Masako.jpg/960px-Hojo_Masako.jpg",
-        caption: "Hōjō Masako — Wikimedia Commons."
+        caption: "Hōjō Masako, Wikimedia Commons."
       }
     ]
   },
   {
     id: "hino-tomiko",
-    sources: [ { label: "Hino Tomiko — Wikipedia", url: "https://en.wikipedia.org/wiki/Hino_Tomiko" } ],
+    sources: [ { label: "Wikipedia: Hino Tomiko", url: "https://en.wikipedia.org/wiki/Hino_Tomiko" } ],
     name: "Hino Tomiko",
     role: "statesman",
     born: 1440, died: 1496,
@@ -751,7 +751,7 @@ That dispute erupted in 1467 into the Ōnin War, the decade-long conflict that g
   },
   {
     id: "tachibana-ginchiyo",
-    sources: [ { label: "Tachibana Ginchiyo — Wikipedia", url: "https://en.wikipedia.org/wiki/Tachibana_Ginchiyo" } ],
+    sources: [ { label: "Wikipedia: Tachibana Ginchiyo", url: "https://en.wikipedia.org/wiki/Tachibana_Ginchiyo" } ],
     name: "Tachibana Ginchiyo",
     role: "warlord",
     born: 1569, died: 1602,
@@ -759,14 +759,14 @@ That dispute erupted in 1467 into the Ōnin War, the decade-long conflict that g
     period: "Sengoku · woman warrior",
     location: { name: "Yanagawa, Chikugo", lat: 33.1632, lon: 130.4017 },
     summary: "An onna-musha who inherited her clan's leadership and castle in her own right.",
-    bio: `Daughter of the Ōtomo general Tachibana Dōsetsu, Ginchiyo inherited the headship of the Tachibana house and its castle in her own name — an extraordinary status for a woman of the age. Renowned as an onna-musha (woman warrior), she is said to have armed her ladies-in-waiting to help defend Tachibanayama Castle.
+    bio: `Daughter of the Ōtomo general Tachibana Dōsetsu, Ginchiyo inherited the headship of the Tachibana house and its castle in her own name, an extraordinary status for a woman of the age. Renowned as an onna-musha (woman warrior), she is said to have armed her ladies-in-waiting to help defend Tachibanayama Castle.
 
 She married Tachibana Muneshige and is remembered for her readiness to take up arms in the defence of Yanagawa during the Sekigahara campaign of 1600.`,
     battles: [],
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/b/bc/%E7%AB%8B%E8%8A%B1%E8%AA%BE%E5%8D%83%E4%BB%A3.jpg",
-        caption: "Tachibana Ginchiyo — Wikimedia Commons."
+        caption: "Tachibana Ginchiyo, Wikimedia Commons."
       }
     ]
   }

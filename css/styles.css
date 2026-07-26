@@ -194,7 +194,11 @@ body { position: fixed; inset: 0; }
 .leaflet-control-layers:not(.leaflet-control-layers-expanded) { display: none; }
 .leaflet-control-layers-expanded {
   width: 274px; color: var(--ink-body); padding: 14px 16px 16px; font-size: 14px;
-  max-height: 78vh; overflow-y: auto;
+  /* stop above the bottom timeline bar (~150px) so the lower options stay reachable */
+  max-height: calc(100vh - 240px); overflow-y: auto;
+}
+@media (max-height: 700px) {
+  .leaflet-control-layers-expanded { max-height: calc(100vh - 200px); }
 }
 .leaflet-control-layers-expanded label {
   color: var(--ink-body); display: flex; align-items: center; gap: 9px;
