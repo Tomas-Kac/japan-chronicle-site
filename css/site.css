@@ -1,8 +1,8 @@
 /* =====================================================================
    site.css — shared styling for the content pages (About, Sources, Eras,
    Glossary). "Paper & ink" identity (redesign 2026-06-28) — matches the map:
-   warm paper, one ink charcoal, a single vermilion accent, Shippori Mincho
-   headings + Zen Kaku Gothic body. Self-contained (the map keeps styles.css).
+   warm paper, one ink charcoal, a single vermilion accent, Noto Serif JP
+   headings + Noto Sans JP body. Self-contained (the map keeps styles.css).
    ===================================================================== */
 :root {
   --page:    #f1ebde;
@@ -20,8 +20,8 @@
   --accent:      #c23b22;
   --accent-deep: #9e2f1c;
   --accent-tint: #f6e3df;
-  --font-disp: 'Shippori Mincho B1', 'Hiragino Mincho ProN', 'Yu Mincho', serif;
-  --font-ui:   'Zen Kaku Gothic New', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --font-disp: 'Noto Serif', 'Noto Serif JP', 'Hiragino Mincho ProN', serif;
+  --font-ui:   'Noto Sans', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
