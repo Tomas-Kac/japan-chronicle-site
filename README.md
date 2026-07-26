@@ -8,10 +8,11 @@ Built by a Japanology student at Charles University in Prague as a free study to
 
 ## What's on it?
 
-- **107 battles** across 8 eras (Asuka–Nara · Heian · Genpei · Kamakura · Nanboku-chō · Sengoku · Edo · Bakumatsu)
+- **173 battles** across 8 eras (Asuka–Nara · Heian · Genpei · Kamakura · Muromachi · Azuchi–Momoyama · Edo · Bakumatsu)
 - **59 non-battle events** — religion, culture, politics, foreign contact, disasters (552–1923)
-- **31 key historical figures** — emperors, warlords, monks, poets and reformers, each shown across their lifespan and linked to the battles they fought
+- **35 key historical figures** — emperors, warlords, monks, poets and reformers, each shown across their lifespan and linked to the battles they fought
 - **47 castles**, type-coded; **41 daimyō-domain** time-slices that rise and fall as you scrub the years
+- **33 temples & shrines** (寺社) and **10 historic highways** (街道), including the Tōkaidō and Nakasendō
 - **70 historical provinces** (旧国), **9 march routes**, and three draped historical maps (1690 / 1779 / 1860)
 - A **year slider** segmented by era, an **events overlay** tied to the timeline, **clan** and **search** filters
 
