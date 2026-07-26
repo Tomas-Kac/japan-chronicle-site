@@ -13,6 +13,7 @@
 const CASTLES = [
   {
     "name": "Odawara Castle",
+    sources: [ { label: "Odawara Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Odawara_Castle" } ],
     "modern": "Odawara, Kanagawa Prefecture",
     "type": "hirayamajiro",
     "clan": "Go-Hojo (Later Hojo)",
@@ -22,6 +23,7 @@ const CASTLES = [
   },
   {
     "name": "Edo Castle",
+    sources: [ { label: "Edo Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Edo_Castle" } ],
     "modern": "Chiyoda, Tokyo",
     "type": "hirayamajiro",
     "clan": "Tokugawa (built by Ota Dokan)",
@@ -31,6 +33,7 @@ const CASTLES = [
   },
   {
     "name": "Kawagoe Castle",
+    sources: [ { label: "Kawagoe Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Kawagoe_Castle" } ],
     "modern": "Kawagoe, Saitama Prefecture",
     "type": "hirayamajiro",
     "clan": "Ogigayatsu Uesugi / Go-Hojo",
@@ -40,6 +43,7 @@ const CASTLES = [
   },
   {
     "name": "Hachigata Castle",
+    sources: [ { label: "Hachigata Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Hachigata_Castle" } ],
     "modern": "Yorii, Osato District, Saitama Prefecture",
     "type": "hirayamajiro",
     "clan": "Go-Hojo (Hojo Ujikuni)",
@@ -49,6 +53,7 @@ const CASTLES = [
   },
   {
     "name": "Hachioji Castle",
+    sources: [ { label: "Hachiōji Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Hachi%C5%8Dji_Castle" } ],
     "modern": "Hachioji, Tokyo",
     "type": "yamashiro",
     "clan": "Go-Hojo (Hojo Ujiteru)",
@@ -58,6 +63,7 @@ const CASTLES = [
   },
   {
     "name": "Kasugayama Castle",
+    sources: [ { label: "Kasugayama Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Kasugayama_Castle" } ],
     "modern": "Joetsu, Niigata Prefecture",
     "type": "yamashiro",
     "clan": "Nagao / Uesugi",
@@ -67,6 +73,7 @@ const CASTLES = [
   },
   {
     "name": "Numata Castle",
+    sources: [ { label: "Numata Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Numata_Castle" } ],
     "modern": "Numata, Gunma Prefecture",
     "type": "hirayamajiro",
     "clan": "Sanada",
@@ -76,6 +83,7 @@ const CASTLES = [
   },
   {
     "name": "Minowa Castle",
+    sources: [ { label: "Minowa Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Minowa_Castle" } ],
     "modern": "Takasaki, Gunma Prefecture",
     "type": "hirayamajiro",
     "clan": "Nagano (later Takeda, then Ii)",
@@ -85,6 +93,7 @@ const CASTLES = [
   },
   {
     "name": "Karasawayama Castle",
+    sources: [ { label: "Karasawa Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Karasawa_Castle" } ],
     "modern": "Sano, Tochigi Prefecture",
     "type": "yamashiro",
     "clan": "Sano",
@@ -94,15 +103,17 @@ const CASTLES = [
   },
   {
     "name": "Utsunomiya Castle",
+    sources: [ { label: "Utsunomiya Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Utsunomiya_Castle" } ],
     "modern": "Utsunomiya, Tochigi Prefecture",
     "type": "hirajiro",
     "clan": "Utsunomiya",
     "lat": 36.55444,
     "lon": 139.88583,
-    "note": "Long-held seat of the powerful Utsunomiya clan, who governed central Shimotsuke from the Kamakura era for roughly five centuries; a key player in the Kanto power struggles before being dispossessed by Hideyoshi in 1597."
+    "note": "Long-held seat of the powerful Utsunomiya clan, who governed central Shimotsuke from the late Heian era (c. 1063) for roughly five centuries; a key player in the Kanto power struggles before being dispossessed by Hideyoshi in 1597."
   },
   {
     "name": "Oyama Castle (Gion Castle)",
+    sources: [ { label: "Oyama Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Oyama_Castle" } ],
     "modern": "Oyama, Tochigi Prefecture",
     "type": "hirajiro",
     "clan": "Oyama",
@@ -112,6 +123,7 @@ const CASTLES = [
   },
   {
     "name": "Aizu-Wakamatsu Castle (Tsuruga Castle)",
+    sources: [ { label: "Aizuwakamatsu Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Aizuwakamatsu_Castle" } ],
     "modern": "Aizuwakamatsu, Fukushima Prefecture",
     "type": "hirayamajiro",
     "clan": "Ashina (later Date, Gamo, Uesugi)",
@@ -121,6 +133,7 @@ const CASTLES = [
   },
   {
     "name": "Yonezawa Castle",
+    sources: [ { label: "Yonezawa Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Yonezawa_Castle" } ],
     "modern": "Yonezawa, Yamagata Prefecture",
     "type": "hirajiro",
     "clan": "Date / Uesugi",
@@ -130,6 +143,7 @@ const CASTLES = [
   },
   {
     "name": "Yamagata Castle (Kasumigajo)",
+    sources: [ { label: "Yamagata Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Yamagata_Castle" } ],
     "modern": "Yamagata, Yamagata Prefecture",
     "type": "hirajiro",
     "clan": "Mogami",
@@ -139,6 +153,7 @@ const CASTLES = [
   },
   {
     "name": "Nihonmatsu Castle (Kasumigajo)",
+    sources: [ { label: "Nihonmatsu Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Nihonmatsu_Castle" } ],
     "modern": "Nihonmatsu, Fukushima Prefecture",
     "type": "hirayamajiro",
     "clan": "Hatakeyama (Nihonmatsu)",
@@ -148,6 +163,7 @@ const CASTLES = [
   },
   {
     "name": "Kubota Castle",
+    sources: [ { label: "Kubota Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Kubota_Castle" } ],
     "modern": "Akita, Akita Prefecture",
     "type": "hirayamajiro",
     "clan": "Satake",
@@ -157,6 +173,7 @@ const CASTLES = [
   },
   {
     "name": "Azuchi Castle",
+    sources: [ { label: "Azuchi Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Azuchi_Castle" } ],
     "modern": "Ōmihachiman (Azuchi), Shiga Prefecture",
     "type": "yamashiro",
     "clan": "Oda",
@@ -166,6 +183,7 @@ const CASTLES = [
   },
   {
     "name": "Gifu Castle (Inabayama)",
+    sources: [ { label: "Gifu Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Gifu_Castle" } ],
     "modern": "Gifu City, Gifu Prefecture",
     "type": "yamashiro",
     "clan": "Saitō / Oda",
@@ -175,6 +193,7 @@ const CASTLES = [
   },
   {
     "name": "Kiyosu Castle",
+    sources: [ { label: "Kiyosu Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Kiyosu_Castle" } ],
     "modern": "Kiyosu City, Aichi Prefecture",
     "type": "hirajiro",
     "clan": "Oda",
@@ -184,6 +203,7 @@ const CASTLES = [
   },
   {
     "name": "Inuyama Castle",
+    sources: [ { label: "Inuyama Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Inuyama_Castle" } ],
     "modern": "Inuyama City, Aichi Prefecture",
     "type": "hirayamajiro",
     "clan": "Oda (織田) / Naruse",
@@ -193,6 +213,7 @@ const CASTLES = [
   },
   {
     "name": "Okazaki Castle",
+    sources: [ { label: "Okazaki Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Okazaki_Castle" } ],
     "modern": "Okazaki City, Aichi Prefecture",
     "type": "hirayamajiro",
     "clan": "Matsudaira / Tokugawa",
@@ -202,6 +223,7 @@ const CASTLES = [
   },
   {
     "name": "Hamamatsu Castle",
+    sources: [ { label: "Hamamatsu Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Hamamatsu_Castle" } ],
     "modern": "Hamamatsu City, Shizuoka Prefecture",
     "type": "hirayamajiro",
     "clan": "Tokugawa",
@@ -211,6 +233,7 @@ const CASTLES = [
   },
   {
     "name": "Sunpu Castle",
+    sources: [ { label: "Sunpu Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Sunpu_Castle" } ],
     "modern": "Shizuoka City (Aoi Ward), Shizuoka Prefecture",
     "type": "hirajiro",
     "clan": "Imagawa / Tokugawa",
@@ -220,6 +243,7 @@ const CASTLES = [
   },
   {
     "name": "Tsutsujigasaki Yakata (Kōfu)",
+    sources: [ { label: "Tsutsujigasaki Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Tsutsujigasaki_Castle" } ],
     "modern": "Kōfu City, Yamanashi Prefecture",
     "type": "hirajiro",
     "clan": "Takeda",
@@ -229,6 +253,7 @@ const CASTLES = [
   },
   {
     "name": "Matsumoto Castle",
+    sources: [ { label: "Matsumoto Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Matsumoto_Castle" } ],
     "modern": "Matsumoto City, Nagano Prefecture",
     "type": "hirajiro",
     "clan": "Ogasawara / Ishikawa",
@@ -238,6 +263,7 @@ const CASTLES = [
   },
   {
     "name": "Ueda Castle",
+    sources: [ { label: "Ueda Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Ueda_Castle" } ],
     "modern": "Ueda City, Nagano Prefecture",
     "type": "hirajiro",
     "clan": "Sanada",
@@ -247,6 +273,7 @@ const CASTLES = [
   },
   {
     "name": "Odani Castle",
+    sources: [ { label: "Odani Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Odani_Castle" } ],
     "modern": "Nagahama City, Shiga Prefecture",
     "type": "yamashiro",
     "clan": "Azai",
@@ -256,6 +283,7 @@ const CASTLES = [
   },
   {
     "name": "Sawayama Castle",
+    sources: [ { label: "Sawayama Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Sawayama_Castle" } ],
     "modern": "Hikone City, Shiga Prefecture",
     "type": "yamashiro",
     "clan": "Ishida",
@@ -265,6 +293,7 @@ const CASTLES = [
   },
   {
     "name": "Kuwana Castle",
+    sources: [ { label: "Kuwana Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Kuwana_Castle" } ],
     "modern": "Kuwana City, Mie Prefecture",
     "type": "hirajiro",
     "clan": "Honda",
@@ -274,6 +303,7 @@ const CASTLES = [
   },
   {
     "name": "Nagashino Castle",
+    sources: [ { label: "Nagashino Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Nagashino_Castle" } ],
     "modern": "Shinshiro City, Aichi Prefecture",
     "type": "hirajiro",
     "clan": "Okudaira (Tokugawa)",
@@ -283,6 +313,7 @@ const CASTLES = [
   },
   {
     "name": "Ichijōdani Castle (Asakura residence)",
+    sources: [ { label: "Ichijōdani Asakura Family Historic Ruins — Wikipedia", url: "https://en.wikipedia.org/wiki/Ichij%C5%8Ddani_Asakura_Family_Historic_Ruins" } ],
     "modern": "Fukui City, Fukui Prefecture",
     "type": "yamashiro",
     "clan": "Asakura",
@@ -292,15 +323,17 @@ const CASTLES = [
   },
   {
     "name": "Takatō Castle",
+    sources: [ { label: "Takatō Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Takat%C5%8D_Castle" } ],
     "modern": "Ina City, Nagano Prefecture",
     "type": "hirayamajiro",
     "clan": "Takeda",
     "lat": 35.8330778,
     "lon": 138.0628028,
-    "note": "Key Takeda mountain castle in southern Shinano; scene of the fierce 1582 last stand of Nishina Morinobu against Oda Nobutada during the Oda conquest of the Takeda. Famous today for its cherry blossoms."
+    "note": "Key Takeda hilltop castle in southern Shinano; scene of the fierce 1582 last stand of Nishina Morinobu against Oda Nobutada during the Oda conquest of the Takeda. Famous today for its cherry blossoms."
   },
   {
     "name": "Osaka Castle",
+    sources: [ { label: "Osaka Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Osaka_Castle" } ],
     "modern": "Osaka, Osaka Prefecture",
     "type": "hirajiro",
     "clan": "Toyotomi (later Tokugawa)",
@@ -310,6 +343,7 @@ const CASTLES = [
   },
   {
     "name": "Nijo Castle",
+    sources: [ { label: "Nijō Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Nij%C5%8D_Castle" } ],
     "modern": "Kyoto (Nakagyo Ward), Kyoto Prefecture",
     "type": "hirajiro",
     "clan": "Tokugawa shogunate",
@@ -319,6 +353,7 @@ const CASTLES = [
   },
   {
     "name": "Himeji Castle",
+    sources: [ { label: "Himeji Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Himeji_Castle" } ],
     "modern": "Himeji, Hyogo Prefecture",
     "type": "hirayamajiro",
     "clan": "Ikeda (earlier Kuroda / Hashiba)",
@@ -328,6 +363,7 @@ const CASTLES = [
   },
   {
     "name": "Bitchu-Matsuyama Castle",
+    sources: [ { label: "Bitchū Matsuyama Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Bitch%C5%AB_Matsuyama_Castle" } ],
     "modern": "Takahashi, Okayama Prefecture",
     "type": "yamashiro",
     "clan": "Mimura (later Mizutani)",
@@ -337,6 +373,7 @@ const CASTLES = [
   },
   {
     "name": "Tottori Castle",
+    sources: [ { label: "Tottori Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Tottori_Castle" } ],
     "modern": "Tottori, Tottori Prefecture",
     "type": "hirayamajiro",
     "clan": "Yamana (later Ikeda)",
@@ -346,15 +383,17 @@ const CASTLES = [
   },
   {
     "name": "Gassan-Toda Castle",
+    sources: [ { label: "Gassantoda Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Gassantoda_Castle" } ],
     "modern": "Yasugi, Shimane Prefecture",
     "type": "yamashiro",
     "clan": "Amago",
     "lat": 35.36095,
     "lon": 133.185261,
-    "note": "Impregnable mountain seat of the Amago clan, who dominated the Izumo region; repelled a major Mori siege in 1542-43 before finally falling to Mori Motonari in 1566."
+    "note": "Impregnable mountain seat of the Amago clan, who dominated the Izumo region; repelled a major Ōuchi siege in 1542-43 (led by Ōuchi Yoshitaka, with Mōri Motonari as an ally) before finally falling to Mori Motonari in 1566."
   },
   {
     "name": "Yoshida-Koriyama Castle",
+    sources: [ { label: "Yoshida-Kōriyama Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Yoshida-K%C5%8Driyama_Castle" } ],
     "modern": "Akitakata, Hiroshima Prefecture",
     "type": "yamashiro",
     "clan": "Mori",
@@ -364,6 +403,7 @@ const CASTLES = [
   },
   {
     "name": "Yuzuki Castle",
+    sources: [ { label: "Yuzuki Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Yuzuki_Castle" } ],
     "modern": "Matsuyama, Ehime Prefecture",
     "type": "hirayamajiro",
     "clan": "Kono",
@@ -373,6 +413,7 @@ const CASTLES = [
   },
   {
     "name": "Urado Castle",
+    sources: [ { label: "Urado Castle (浦戸城) — Japanese Wikipedia", url: "https://ja.wikipedia.org/wiki/浦戸城" } ],
     "modern": "Kochi, Kochi Prefecture",
     "type": "hirayamajiro",
     "clan": "Chosokabe",
@@ -382,6 +423,7 @@ const CASTLES = [
   },
   {
     "name": "Kumamoto Castle",
+    sources: [ { label: "Kumamoto Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Kumamoto_Castle" } ],
     "modern": "Kumamoto (Chuo Ward), Kumamoto Prefecture",
     "type": "hirayamajiro",
     "clan": "Kato (later Hosokawa)",
@@ -391,6 +433,7 @@ const CASTLES = [
   },
   {
     "name": "Funai Castle",
+    sources: [ { label: "Funai Castle (府内城) — Japanese Wikipedia", url: "https://ja.wikipedia.org/wiki/府内城" } ],
     "modern": "Oita, Oita Prefecture",
     "type": "mizujiro",
     "clan": "Fukuhara / Takenaka / Matsudaira (former Ōtomo capital)",
@@ -400,6 +443,7 @@ const CASTLES = [
   },
   {
     "name": "Kagoshima Castle (Tsurumaru)",
+    sources: [ { label: "Kagoshima Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Kagoshima_Castle" } ],
     "modern": "Kagoshima, Kagoshima Prefecture",
     "type": "hirayamajiro",
     "clan": "Shimazu",
@@ -409,6 +453,7 @@ const CASTLES = [
   },
   {
     "name": "Tachibana-yama Castle",
+    sources: [ { label: "Tachibanayama Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Tachibanayama_Castle" } ],
     "modern": "Fukuoka (Higashi Ward) / Shingu / Hisayama, Fukuoka Prefecture",
     "type": "yamashiro",
     "clan": "Tachibana (under Otomo)",
@@ -418,15 +463,17 @@ const CASTLES = [
   },
   {
     "name": "Saiki Castle",
+    sources: [ { label: "Saiki Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Saiki_Castle" } ],
     "modern": "Saiki, Oita Prefecture",
     "type": "yamashiro",
     "clan": "Mori (Saiki branch)",
     "lat": 32.960231,
     "lon": 131.889819,
-    "note": "Mountain castle on Mt. Yahata (144m) built 1601-06 by Mori Takamasa, a former Toyotomi general, to govern the rugged southern Bungo coast after the fall of the Otomo."
+    "note": "Mountain castle on Mt. Yahata (144m), built 1602-06 by Mori Takamasa, a former Toyotomi general (enfeoffed at Saiki in 1601), to govern the rugged southern Bungo coast after the fall of the Otomo."
   },
   {
     "name": "Oka Castle",
+    sources: [ { label: "Oka Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Oka_Castle" } ],
     "modern": "Taketa, Oita Prefecture",
     "type": "yamashiro",
     "clan": "Shiga (under Otomo; later Nakagawa)",

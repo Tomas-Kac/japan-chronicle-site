@@ -43,6 +43,7 @@
 const BATTLES = [
   {
     id: "sekigahara",
+    sources: [ { label: "Battle of Sekigahara — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Sekigahara" } ],
     name: "Battle of Sekigahara",
     images: [
       {
@@ -63,12 +64,12 @@ const BATTLES = [
       side1: {
         name: "Eastern Army",
         leader: "Tokugawa Ieyasu",
-        forces: "approximately 75,000"
+        forces: "approximately 75,000 initially; ~89,000 engaged"
       },
       side2: {
         name: "Western Army",
         leader: "Ishida Mitsunari (de facto)",
-        forces: "approximately 80,000"
+        forces: "approximately 120,000 nominally; ~82,000 engaged"
       }
     },
     outcome: "Decisive Eastern Army victory. Tokugawa Ieyasu's path to the shogunate was secured.",
@@ -82,6 +83,7 @@ Within three years of the battle, Ieyasu was appointed shōgun by Emperor Go-Yō
   },
   {
     id: "gifu-castle",
+    sources: [ { label: "Battle of Gifu Castle — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Gifu_Castle" } ],
     name: "Battle of Gifu Castle",
     images: [
       {
@@ -118,6 +120,7 @@ The fall of Gifu opened the road west and set the stage for the Battle of Sekiga
   },
   {
     id: "mimigawa",
+    sources: [ { label: "Battle of Mimigawa — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Mimigawa" } ],
     name: "Battle of Mimigawa",
     images: [
       {
@@ -154,6 +157,7 @@ Several senior Ōtomo commanders fell, and the survivors fled some 25 kilometres
   },
   {
     id: "kawanakajima",
+    sources: [ { label: "Battles of Kawanakajima — Wikipedia", url: "https://en.wikipedia.org/wiki/Battles_of_Kawanakajima" } ],
     name: "Battles of Kawanakajima",
     images: [
       {
@@ -192,6 +196,7 @@ Despite enormous casualties on both sides, the battles ended without a decisive 
   },
   {
     id: "azukizaka-1542",
+    sources: [ { label: "Battle of Azukizaka (1542) — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Azukizaka_(1542)" } ],
     name: "Battle of Azukizaka (1542)",
     images: [
       {
@@ -218,13 +223,14 @@ Despite enormous casualties on both sides, the battles ended without a decisive 
       }
     },
     outcome: "Oda victory; Nobuhide checked Imagawa expansion into Mikawa.",
-    summary: "Oda Nobuhide, father of Oda Nobunaga, defeated the powerful Imagawa Yoshimoto in Mikawa, asserting Oda strength along the road his son would later make famous.",
+    summary: "Oda Nobuhide, father of Oda Nobunaga, is recorded as defeating Imagawa Yoshimoto in Mikawa, asserting Oda strength along the road his son would later make famous — though some historians hold this first Azukizaka battle to be a later fabrication, since the Imagawa push into eastern Mikawa is dated only from 1543.",
     details: `In 1542 Oda Nobuhide met the westward-pressing Imagawa Yoshimoto at Azukizaka in Mikawa, the province contested with the Matsudaira (the future Tokugawa). Nobuhide's forces prevailed in hard fighting, temporarily blunting Imagawa ambitions there.
 
 Although Yoshimoto recovered and won a second clash at Azukizaka in 1548, the 1542 victory burnished the reputation of the Oda house into which Nobunaga had been born eight years earlier.`
   },
   {
     id: "uedahara",
+    sources: [ { label: "Battle of Uedahara — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Uedahara" } ],
     name: "Battle of Uedahara",
     images: [
       {
@@ -261,6 +267,7 @@ Murakami's victory was costly, however, and within a few years Shingen drove him
   },
   {
     id: "suriagehara",
+    sources: [ { label: "Battle of Suriagehara — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Suriagehara" } ],
     name: "Battle of Suriagehara",
     images: [
       {
@@ -299,6 +306,7 @@ The Date forces broke the Ashina lines, resulting in a disorganized rout. Signif
   },
   {
     id: "hetsugigawa",
+    sources: [ { label: "Battle of Hetsugigawa — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Hetsugigawa" } ],
     name: "Battle of Hetsugigawa",
     images: [
       {
@@ -335,6 +343,7 @@ It was the Shimazu's last victory of the Kyūshū campaign — within months Hid
   },
   {
     id: "hitotoribashi",
+    sources: [ { label: "Battle of Hitotoribashi — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Hitotoribashi" } ],
     name: "Battle of Hitotoribashi",
     images: [
       {
@@ -371,6 +380,7 @@ Forced back toward Motomiya Castle, Masamune nonetheless held his ground, and wh
   },
   {
     id: "taineiji",
+    sources: [ { label: "Tainei-ji incident — Wikipedia", url: "https://en.wikipedia.org/wiki/Tainei-ji_incident" } ],
     name: "Tainei-ji incident",
     images: [
       {
@@ -407,6 +417,7 @@ The fall of the Ōuchi — long the dominant power and trade gateway of western 
   },
   {
     id: "arita-nakaide",
+    sources: [ { label: "Battle of Arita-Nakaide — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Arita-Nakaide" } ],
     name: "Battle of Arita-Nakaide",
     images: [
       {
@@ -425,7 +436,7 @@ The fall of the Ōuchi — long the dominant power and trade gateway of western 
     },
     combatants: {
       side1: {
-        name: "Mōri clan (with Yoshikawa)",
+        name: "Mōri clan (with Kikkawa)",
         leader: "Mōri Motonari",
         forces: "approximately 1,150"
       },
@@ -443,6 +454,7 @@ It was Motonari's first battle and the opening note of a career that would make 
   },
   {
     id: "mimasetoge",
+    sources: [ { label: "Battle of Mimasetōge — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Mimasetoge" } ],
     name: "Battle of Mimasetoge",
     images: [
       {
@@ -470,14 +482,15 @@ It was Motonari's first battle and the opening note of a career that would make 
         forces: "approximately 20,000"
       }
     },
-    outcome: "Takeda victory; the Hōjō pursuit was beaten off.",
-    summary: "Withdrawing from a failed assault on the Hōjō capital at Odawara, Takeda Shingen turned at the Mimase Pass and routed the pursuing Hōjō army.",
+    outcome: "Takeda victory; the Hōjō blocking force under Ujiteru and Ujikuni was driven off and the Takeda withdrew to Kai.",
+    summary: "Withdrawing from a failed assault on the Hōjō capital at Odawara, Takeda Shingen found the Mimase Pass held against him by Hōjō Ujiteru and Ujikuni; he broke their blocking force before Hōjō Ujimasa's main body could come up from Odawara.",
     details: `After failing to take the great Hōjō fortress of Odawara, Takeda Shingen retreated westward and was intercepted at the Mimase Pass by a larger Hōjō force under Ujiteru and Ujikuni.
 
 A fierce counterattack led by Yamagata Masakage shattered the pursuit and let the Takeda withdraw intact — a textbook example of Shingen's skill in managing a fighting retreat.`
   },
   {
     id: "tatarahama-1569",
+    sources: [ { label: "Battle of Tatarahama (1569) — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Tatarahama_(1569)" } ],
     name: "Battle of Tatarahama (1569)",
     images: [
       {
@@ -511,6 +524,7 @@ But the Ōtomo's diplomacy — reviving the Amago to threaten the Mōri rear in 
   },
   {
     id: "odaihara",
+    sources: [ { label: "Battle of Odaihara — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Odaihara" } ],
     name: "Battle of Odaihara",
     images: [
       {
@@ -547,6 +561,7 @@ Following the victory, Shingen had the severed heads of the fallen Uesugi soldie
   },
   {
     id: "sezawa",
+    sources: [ { label: "Battle of Sezawa — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Sezawa" } ],
     name: "Battle of Sezawa (Legendary)",
     images: [
       {
@@ -1037,6 +1052,7 @@ The Rokkaku had long dominated the Azai, even forcing Nagamasa to take a Rokkaku
   },
   {
     id: "kyokoji",
+    sources: [ { label: "Battle of Kyōkōji — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Ky%C5%8Dk%C5%8Dji" } ],
     name: "Battle of Kyōkōji",
     year: 1562,
     date: "1562-05-19",
@@ -1067,6 +1083,7 @@ The Miyoshi clan, controlling the commercial wealth of Sakai and the vital sea r
   },
   {
     id: "kizaki",
+    sources: [ { label: "Battle of Kizaki — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Kizaki" } ],
     name: "Battle of Kizaki",
     year: 1572,
     date: "1572-06-14",
@@ -1097,6 +1114,7 @@ The battle is celebrated as a classic execution of the Shimazu's signature "tsur
   },
   {
     id: "tonegawa",
+    sources: [ { label: "Battle of Tonegawa — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Tonegawa" } ],
     name: "Battle of Tonegawa",
     year: 1571,
     dateLabel: "1571",
@@ -1128,12 +1146,13 @@ The battle is celebrated as a classic execution of the Shimazu's signature "tsur
   },
   {
     id: "mimaomote",
+    sources: [ { label: "Battle of Mimaomote — Wikipedia", url: "https://en.wikipedia.org/wiki/Battle_of_Mimaomote" } ],
     name: "Battle of Mimaomote",
     year: 1581,
     dateLabel: "1581 (Tenshō 9/5/21) — modern dating; traditionally 1579",
     period: "Azuchi–Momoyama",
     location: {
-      name: "Mimaomote, Iyo Province (modern Ehime Prefecture) — coordinates approximate",
+      name: "Okamoto Castle, Mima, Iyo Province (modern Mima-chō, Uwajima, Ehime) — coordinates approximate",
       lat: 33.2897,
       lon: 132.6232
     },
@@ -1144,16 +1163,17 @@ The battle is celebrated as a classic execution of the Shimazu's signature "tsur
       },
       side2: {
         name: "Chōsokabe clan",
-        leader: "Kumu Chikanobu (久武親信)",
+        leader: "Hisatake Chikanobu (久武親信)",
         forces: "approximately 7,000"
       }
     },
-    outcome: "Kōno victory; the Chōsokabe commander Kumu Chikanobu was killed.",
-    summary: "The Kōno of Iyo threw back a Chōsokabe thrust into Shikoku, killing the invading general Kumu Chikanobu (久武親信).",
-    details: `As the Chōsokabe of Tosa pressed their conquest of Shikoku, a Kōno force under Doi Kiyonaga repelled their thrust into Iyo and killed the Chōsokabe commander Kumu Chikanobu (久武親信). Traditional accounts date the battle to Tenshō 7 (1579), but recent scholarship — based on source criticism and surviving epigraphy — places it in Tenshō 9 (1581).`
+    outcome: "Kōno victory; the Chōsokabe commander Hisatake Chikanobu was killed.",
+    summary: "The Kōno of Iyo threw back a Chōsokabe thrust into Shikoku, killing the invading general Hisatake Chikanobu (久武親信).",
+    details: `As the Chōsokabe of Tosa pressed their conquest of Shikoku, a Kōno force under Doi Kiyonaga repelled their thrust into Iyo and killed the Chōsokabe commander Hisatake Chikanobu (久武親信). Traditional accounts date the battle to Tenshō 7 (1579), but recent scholarship — based on source criticism and surviving epigraphy — places it in Tenshō 9 (1581).`
   },
   {
     id: "tensho-iga-war",
+    sources: [ { label: "Tenshō Iga War — Wikipedia", url: "https://en.wikipedia.org/wiki/Tensh%C5%8D_Iga_War" } ],
     name: "Tenshō Iga War",
     yearStart: 1579,
     yearEnd: 1582,
@@ -1184,6 +1204,7 @@ The Iga fighters' mastery of ambush, infiltration and espionage became the histo
   },
   {
     id: "nagasaki-attacks",
+    sources: [ { label: "Donation of Bartolomeu — Wikipedia", url: "https://en.wikipedia.org/wiki/Donation_of_Bartolomeu" } ],
     name: "Attacks on Nagasaki (1574–1579)",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/2/29/Portuguese_silktraders_in_Nagasaki.jpg", caption: "Portuguese traders at Nagasaki, the contested Christian port. Wikimedia Commons." }
@@ -1204,11 +1225,11 @@ The Iga fighters' mastery of ambush, infiltration and espionage became the histo
       },
       side2: {
         name: "Ryūzōji and local rivals",
-        leader: "Ryūzōji Takanobu",
-        forces: "approximately 8,000"
+        leader: "Fukahori Sumikata, Ryūzōji Takanobu & Matsura Shigenobu",
+        forces: "a fleet of 60 ships (Fukahori, 1574)"
       }
     },
-    outcome: "Ōmura held Nagasaki but, hard-pressed, ceded it to the Jesuits in 1580.",
+    outcome: "Ōmura held Nagasaki, but was beaten in his home domain and submitted as a vassal of the Ryūzōji; under continuing pressure he ceded Nagasaki and Mogi to the Society of Jesus in June 1580.",
     summary: "A series of assaults on the new port of Nagasaki, defended by Japan's first Christian daimyō, that led to the town being handed to the Jesuits — the seed of Nagasaki's later role as Japan's window on the West.",
     details: `Ōmura Sumitada, baptised Bartolomeu and the first Christian daimyō, had opened Nagasaki to Portuguese trade. Between 1574 and 1579 his small garrison beat off repeated attacks by rivals such as the Ryūzōji. Worn down, in 1580 Sumitada ceded Nagasaki itself to the Society of Jesus — an extraordinary arrangement that made the port the centre of Christianity in Japan until the faith's suppression.`
   },
