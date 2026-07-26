@@ -189,6 +189,20 @@ function showTempleInfo(t) {
   panel.setAttribute('aria-hidden', 'false');
   if (typeof activeRouteLayer !== 'undefined') activeRouteLayer.clearLayers();
 }
+// Shared image gallery markup (a missing/blocked image hides its own figure).
+function galleryBlock(images, heading) {
+  const imgs = Array.isArray(images) ? images.filter((im) => im && im.src) : [];
+  if (!imgs.length) return '';
+  return `<h3>${heading || 'Images'}</h3><div class="gallery">${imgs
+    .map(
+      (im) =>
+        `<figure><img src="${escapeHtml(im.src)}" alt="${escapeHtml(im.caption || '')}" loading="lazy" onerror="this.closest('figure').style.display='none'">${
+          im.caption ? `<figcaption>${escapeHtml(im.caption)}</figcaption>` : ''
+        }</figure>`
+    )
+    .join('')}</div>`;
+}
+
 function renderTempleHTML(t) {
   const kindLabel = t.kind === 'shrine' ? 'Shinto shrine' : (t.kind === 'monastery' ? 'Buddhist monastery' : 'Buddhist temple');
   const meta = [kindLabel, t.sect, t.founded ? 'founded ' + t.founded : ''].filter(Boolean).join(' · ');
@@ -197,6 +211,7 @@ function renderTempleHTML(t) {
     <h2>${escapeHtml(t.name)}</h2>
     <p class="meta">${escapeHtml(meta)}</p>
     ${t.note ? `<p class="summary">${escapeHtml(t.note)}</p>` : ''}
+    ${galleryBlock(t.images)}
     ${sourcesBlock(t.name, t.sources)}
   `;
 }
