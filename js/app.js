@@ -217,11 +217,13 @@ function renderTempleHTML(t) {
 }
 
 // ---- Historic roads overlay (街道) — the great highways, drawn as polylines ----
-const ROAD_COLORS = ['#b5653f','#5d7a96','#7d8a55','#8a5b76','#c79a4e','#4f8a85','#a0522d','#6b7a82','#9a6a9a','#3f7a8a'];
+const ROAD_COLORS = ['#b5653f','#5d7a96','#7d8a55','#8a5b76','#c79a4e','#4f8a85','#a0522d','#6b7a82','#9a6a9a','#3f7a8a','#5b4a8a'];
 const roadsLayer = L.layerGroup(
   (typeof HISTORIC_ROADS !== 'undefined' ? HISTORIC_ROADS : []).map((road, i) => {
     const color = ROAD_COLORS[i % ROAD_COLORS.length];
-    const line = L.polyline(road.waypoints.map((w) => [w.lat, w.lon]), { color, weight: 3.5, opacity: 0.85, lineJoin: 'round' });
+    const isJourney = /Hosomichi/.test(road.name); // a walked journey, not an official highway
+    const line = L.polyline(road.waypoints.map((w) => [w.lat, w.lon]),
+      { color, weight: isJourney ? 3 : 3.5, opacity: 0.85, lineJoin: 'round', dashArray: isJourney ? '7 5' : null });
     line.bindTooltip(escapeHtml(road.name) + (road.romaji && road.romaji !== road.name ? ' (' + escapeHtml(road.romaji) + ')' : ''), { sticky: true, className: 'route-label' });
     line.on('click', () => showRoadInfo(road));
     return line;
