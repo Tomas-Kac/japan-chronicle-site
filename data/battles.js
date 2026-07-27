@@ -1037,6 +1037,7 @@ When Sue Harukata usurped the Ōuchi clan, Motonari feigned loyalty before break
   },
   {
     id: "norada",
+    images: [ { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Azai_Nagamasa3.jpg/960px-Azai_Nagamasa3.jpg", caption: "Period portrait of Azai Nagamasa, the teenage victor of Norada. Wikimedia Commons." } ],
     sources: [ { label: "Wikipedia: Battle of Norada", url: "https://en.wikipedia.org/wiki/Battle_of_Norada" } ],
     name: "Battle of Norada",
     year: 1560,
@@ -1067,6 +1068,7 @@ The Rokkaku had long dominated the Azai, even forcing Nagamasa to take a Rokkaku
   },
   {
     id: "kyokoji",
+    images: [ { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/%E6%95%99%E8%88%88%E5%AF%BA%E5%B1%B1%E9%96%80.JPG/960px-%E6%95%99%E8%88%88%E5%AF%BA%E5%B1%B1%E9%96%80.JPG", caption: "The mountain gate of Kyōkōji in Yao, Osaka, the temple that gives the battle its name. Wikimedia Commons." } ],
     sources: [ { label: "Wikipedia: Battle of Kyōkōji", url: "https://en.wikipedia.org/wiki/Battle_of_Ky%C5%8Dk%C5%8Dji" } ],
     name: "Battle of Kyōkōji",
     year: 1562,
@@ -1098,6 +1100,7 @@ The Miyoshi clan, controlling the commercial wealth of Sakai and the vital sea r
   },
   {
     id: "kizaki",
+    images: [ { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Earthen_wall_of_Honmaru_%28Iino_Castle%29.jpg/960px-Earthen_wall_of_Honmaru_%28Iino_Castle%29.jpg", caption: "Earthen ramparts of the honmaru at Iino Castle in Ebino, Shimazu Yoshihiro's seat beside the Kizaki plain. Wikimedia Commons." } ],
     sources: [ { label: "Wikipedia: Battle of Kizaki", url: "https://en.wikipedia.org/wiki/Battle_of_Kizaki" } ],
     name: "Battle of Kizaki",
     year: 1572,
@@ -1188,6 +1191,7 @@ The battle is celebrated as a classic execution of the Shimazu's signature "tsur
   },
   {
     id: "tensho-iga-war",
+    images: [ { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Kashihara_Castle_%28Iga%29%2C_honmaru.jpg/960px-Kashihara_Castle_%28Iga%29%2C_honmaru.jpg", caption: "The honmaru of Kashihara Castle in Iga, the last stronghold to hold out against Nobunaga in 1581. Wikimedia Commons." } ],
     sources: [ { label: "Wikipedia: Tenshō Iga War", url: "https://en.wikipedia.org/wiki/Tensh%C5%8D_Iga_War" } ],
     name: "Tenshō Iga War",
     yearStart: 1579,
@@ -1278,6 +1282,7 @@ The Iga fighters' mastery of ambush, infiltration and espionage became the histo
   },
   {
     id: "kanagawa-1582",
+    images: [ { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/NDL-DC_1306238-Keisai_Eisen-%E5%8D%81%E5%A3%B1_%E6%94%AF%E8%98%87%E8%B7%AF%E3%83%8E%E9%A7%85%E6%9C%AC%E5%BA%84%E5%AE%BF%E7%A5%9E%E6%B5%81%E5%B7%9D%E6%B8%A1%E5%A0%B4.jpg/960px-NDL-DC_1306238-Keisai_Eisen-%E5%8D%81%E5%A3%B1_%E6%94%AF%E8%98%87%E8%B7%AF%E3%83%8E%E9%A7%85%E6%9C%AC%E5%BA%84%E5%AE%BF%E7%A5%9E%E6%B5%81%E5%B7%9D%E6%B8%A1%E5%A0%B4.jpg", caption: "Edo period woodblock print of the ferry crossing on the Kanna River at Honjō. Wikimedia Commons." } ],
     sources: [ { label: "Wikipedia: Battle of Kanagawa", url: "https://en.wikipedia.org/wiki/Battle_of_Kanagawa" } ],
     name: "Battle of Kanagawa",
     year: 1582,
@@ -3620,7 +3625,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
     sources: [ { label: "Wikipedia: Koshamain's War", url: "https://en.wikipedia.org/wiki/Koshamain%27s_War" } ]
   },
   {
-    id: "kawagoe-1546", name: "Night Battle of Kawagoe", year: 1546, dateLabel: "1546 (Tenbun 15)", period: "Muromachi",
+    id: "kawagoe-1546",
+    images: [ { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Kawagoejou.jpg/960px-Kawagoejou.jpg", caption: "The surviving honmaru palace on the site of Kawagoe Castle in Saitama, an Edo period building of 1848; Wikimedia Commons." } ], name: "Night Battle of Kawagoe", year: 1546, dateLabel: "1546 (Tenbun 15)", period: "Muromachi",
     location: { name: "Kawagoe Castle, Musashi (modern Saitama)", lat: 35.9244, lon: 139.4914 },
     combatants: { side1: { name: "Later Hōjō", leader: "Hōjō Ujiyasu" }, side2: { name: "Uesugi coalition & Ashikaga", leader: "Uesugi Tomosada & Uesugi Norimasa" } },
     outcome: "Hōjō victory; a night attack routed a far larger besieging army and secured Hōjō dominance of the Kantō.",
@@ -3629,7 +3635,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
     sources: [ { label: "Wikipedia: Siege of Kawagoe Castle", url: "https://en.wikipedia.org/wiki/Siege_of_Kawagoe_Castle" } ]
   },
   {
-    id: "miyajima-1555", name: "Battle of Miyajima", year: 1555, dateLabel: "October 1555 (Kōji 1)", period: "Muromachi",
+    id: "miyajima-1555",
+    images: [ { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/201201-TaroTokyo-Itsukushima-DSC08992.jpg/960px-201201-TaroTokyo-Itsukushima-DSC08992.jpg", caption: "Itsukushima Shrine and its great torii on Miyajima, seen from Mount Misen above the strait crossed by the Sue fleet in 1555; Wikimedia Commons." } ], name: "Battle of Miyajima", year: 1555, dateLabel: "October 1555 (Kōji 1)", period: "Muromachi",
     location: { name: "Itsukushima (Miyajima), Aki (modern Hiroshima)", lat: 34.3016, lon: 132.3223 },
     combatants: { side1: { name: "Ōuchi", leader: "Sue Harukata" }, side2: { name: "Mōri", leader: "Mōri Motonari" } },
     outcome: "Decisive Mōri victory; Sue Harukata was destroyed, launching Mōri Motonari's rise to dominance over western Honshū.",
@@ -3638,7 +3645,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
     sources: [ { label: "Wikipedia: Battle of Miyajima", url: "https://en.wikipedia.org/wiki/Battle_of_Miyajima" } ]
   },
   {
-    id: "nagaragawa-1556", name: "Battle of Nagara-gawa", year: 1556, dateLabel: "1556 (Kōji 2)", period: "Muromachi",
+    id: "nagaragawa-1556",
+    images: [ { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Nagararivergifu.JPG/960px-Nagararivergifu.JPG", caption: "The Nagara River at Gifu, where Saito Dosan was defeated and killed by his son Yoshitatsu in 1556; Wikimedia Commons." } ], name: "Battle of Nagara-gawa", year: 1556, dateLabel: "1556 (Kōji 2)", period: "Muromachi",
     location: { name: "Nagara River, Mino (modern Gifu)", lat: 35.4451, lon: 136.7635 },
     combatants: { side1: { name: "Saitō Yoshitatsu's forces", leader: "Saitō Yoshitatsu" }, side2: { name: "Saitō Dōsan's forces", leader: "Saitō Dōsan" } },
     outcome: "Yoshitatsu's victory; Saitō Dōsan was defeated and killed by his own son.",
@@ -3647,7 +3655,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
     sources: [ { label: "Wikipedia: Battle of Nagara-gawa", url: "https://en.wikipedia.org/wiki/Battle_of_Nagara-gawa" } ]
   },
   {
-    id: "azukizaka-1564", name: "Battle of Azukizaka (1564)", year: 1564, dateLabel: "1564 (Eiroku 7)", period: "Muromachi",
+    id: "azukizaka-1564",
+    images: [ { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Azukizaka_1564.JPG/960px-Azukizaka_1564.JPG", caption: "A woodblock triptych by Tsukioka Yoshitoshi, published in 1873, of the 1564 fighting at Daiju-ji between Matsudaira men and the Mikawa Ikko-ikki; Wikimedia Commons." } ], name: "Battle of Azukizaka (1564)", year: 1564, dateLabel: "1564 (Eiroku 7)", period: "Muromachi",
     location: { name: "Okazaki, Mikawa (modern Aichi)", lat: 34.9303, lon: 137.1783 },
     combatants: { side1: { name: "Mikawa Ikkō-ikki", leader: "Ikkō-ikki leaders" }, side2: { name: "Matsudaira clan", leader: "Matsudaira Motoyasu (Tokugawa Ieyasu)" } },
     outcome: "Matsudaira victory; the young Ieyasu crushed the Ikkō-ikki revolt and consolidated his hold on Mikawa.",
@@ -3656,7 +3665,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
     sources: [ { label: "Wikipedia: Battle of Azukizaka (1564)", url: "https://en.wikipedia.org/wiki/Battle_of_Azukizaka_(1564)" } ]
   },
   {
-    id: "nagashima-1571", name: "Sieges of Nagashima (first)", year: 1571, dateLabel: "1571 (Genki 2)", period: "Muromachi",
+    id: "nagashima-1571",
+    images: [ { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Battle_of_Nagashima.jpg/960px-Battle_of_Nagashima.jpg", caption: "A nineteenth century triptych by Utagawa Yoshikazu showing the fighting at Nagashima between Oda samurai and the Ikko-ikki; Wikimedia Commons." } ], name: "Sieges of Nagashima (first)", year: 1571, dateLabel: "1571 (Genki 2)", period: "Muromachi",
     location: { name: "Nagashima fortress, Owari (modern Mie)", lat: 35.0886, lon: 136.6981 },
     combatants: { side1: { name: "Ikkō-ikki", leader: "Ikkō-ikki of Nagashima" }, side2: { name: "Oda", leader: "Oda Nobunaga (Shibata Katsuie)" } },
     outcome: "Ikkō-ikki victory; Nobunaga's first assault on the river fortress was repelled with heavy loss.",
@@ -3665,7 +3675,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
     sources: [ { label: "Wikipedia: Sieges of Nagashima", url: "https://en.wikipedia.org/wiki/Sieges_of_Nagashima" } ]
   },
   {
-    id: "ichijodani-1573", name: "Siege of Ichijōdani Castle", year: 1573, dateLabel: "1573 (Tenshō 1)", period: "Azuchi–Momoyama",
+    id: "ichijodani-1573",
+    images: [ { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Fukugen-madhinami_of_Ichijodani_Asakura_Family_Historic_Ruins07s3s4500.jpg/960px-Fukugen-madhinami_of_Ichijodani_Asakura_Family_Historic_Ruins07s3s4500.jpg", caption: "The reconstructed street of the Asakura castle town at Ichijodani in Fukui, rebuilt on the excavated foundations of the town Nobunaga burned in 1573; Wikimedia Commons." } ], name: "Siege of Ichijōdani Castle", year: 1573, dateLabel: "1573 (Tenshō 1)", period: "Azuchi–Momoyama",
     location: { name: "Ichijōdani, Echizen (modern Fukui)", lat: 35.9995, lon: 136.2956 },
     combatants: { side1: { name: "Oda", leader: "Oda Nobunaga" }, side2: { name: "Asakura", leader: "Asakura Yoshikage" } },
     outcome: "Oda victory; the Asakura clan was destroyed and their castle-town burned.",
@@ -3674,7 +3685,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
     sources: [ { label: "Wikipedia: Siege of Ichijōdani Castle", url: "https://en.wikipedia.org/wiki/Siege_of_Ichij%C5%8Ddani_Castle" } ]
   },
   {
-    id: "otate-1578", name: "Siege of Otate (Otate no Ran)", year: 1578, dateLabel: "1578–1579 (Tenshō 6–7)", period: "Azuchi–Momoyama",
+    id: "otate-1578",
+    images: [ { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Honmaru_of_Kasugayama_Castle.jpg/960px-Honmaru_of_Kasugayama_Castle.jpg", caption: "The honmaru enclosure on Kasugayama Castle in Joetsu, the Uesugi seat that Kagekatsu seized when the succession war opened; Wikimedia Commons." } ], name: "Siege of Otate (Otate no Ran)", year: 1578, dateLabel: "1578–1579 (Tenshō 6–7)", period: "Azuchi–Momoyama",
     location: { name: "Otate, Kasugayama, Echigo (modern Niigata)", lat: 37.1673, lon: 138.2356 },
     combatants: { side1: { name: "Uesugi Kagetora's faction", leader: "Uesugi Kagetora" }, side2: { name: "Uesugi Kagekatsu's faction", leader: "Uesugi Kagekatsu" } },
     outcome: "Kagekatsu's victory; he won the succession after defeating his rival, who took his own life.",

@@ -156,9 +156,34 @@ const castleLayer = L.layerGroup(
       }`,
       { direction: 'top', className: 'castle-label' }
     );
+    m.on('click', () => showCastleInfo(c));
     return m;
   })
 );
+
+// Castles open the same drawer as everything else, so their notes, images and
+// citations are readable rather than hidden behind a hover tooltip.
+function renderCastleHTML(c) {
+  const meta = [CASTLE_TYPE_LABEL[c.type] || c.type, c.clan, c.built ? 'built ' + c.built : '']
+    .filter(Boolean).join(' · ');
+  return `
+    <div class="kicker">CASTLE</div>
+    <h2>${escapeHtml(c.name)}</h2>
+    <p class="meta">${escapeHtml(meta)}</p>
+    ${c.modern ? `<p class="location">${escapeHtml(c.modern)}</p>` : ''}
+    ${c.note ? `<p class="summary">${escapeHtml(c.note)}</p>` : ''}
+    ${galleryBlock(c.images)}
+    ${sourcesBlock(c.name, c.sources)}
+  `;
+}
+function showCastleInfo(c) {
+  const panel = document.getElementById('infoPanel');
+  document.getElementById('infoContent').innerHTML = renderCastleHTML(c);
+  panel.scrollTop = 0;
+  panel.classList.remove('hidden');
+  panel.setAttribute('aria-hidden', 'false');
+  if (typeof activeRouteLayer !== 'undefined') activeRouteLayer.clearLayers();
+}
 
 // ---- Temples & shrines overlay (toggle in the top-right control) ----
 const TEMPLE_GLYPH = { temple: '☸', monastery: '☸', shrine: '⛩︎' };
