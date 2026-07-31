@@ -18,7 +18,10 @@
 const fs = require('fs');
 const path = require('path');
 
-const DEFAULT_VAULT = path.join(process.env.HOME, 'Documents', 'Obsidian');
+// The vault lives in OneDrive, not under ~/Documents. Override with an argument
+// or the JC_VAULT env var if it moves.
+const DEFAULT_VAULT = path.join(process.env.HOME, 'Library', 'CloudStorage',
+  'OneDrive-DaikinEuropeN.V', 'xSchool', 'Japanologie', 'Bakalářka', 'Vault_Japonské FDI');
 const vault = process.argv[2] || process.env.JC_VAULT || DEFAULT_VAULT;
 
 global.window = {};
@@ -81,9 +84,14 @@ ${D.roads.map((r) => `- **${r.name}**${r.era ? ` (${r.era})` : ''}, ${r.waypoint
 - \`Reading notes/\` for the works in \`Sources/\`
 `;
 
+// --stdout prints the note instead of writing it, so it can be piped into the
+// Obsidian MCP when the vault is not reachable on this filesystem.
+if (process.argv.includes('--stdout')) { process.stdout.write(md); process.exit(0); }
+
 const outDir = path.join(vault, 'Japan Chronicle');
 if (!fs.existsSync(outDir)) {
-  console.error('Vault folder not found: ' + outDir + '\n(pass the vault path as an argument, or set JC_VAULT)');
+  console.error('Vault folder not found: ' + outDir +
+    '\n(pass the vault path as an argument, set JC_VAULT, or use --stdout and write it via the Obsidian MCP)');
   process.exit(1);
 }
 fs.writeFileSync(path.join(outDir, '01 Atlas index.md'), md);
