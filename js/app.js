@@ -75,8 +75,10 @@ map.attributionControl.setPrefix(false);
 // CSS can place the floating map furniture between them. Without this the zoom-in button
 // ends up underneath the header on a phone (untappable), and the stack of bottom-left
 // legends runs off the top of the screen when several overlays are on.
+// --opacity-h is 0 whenever the panel is hidden, so the legend stack only gives up
+// room while an old-map overlay is actually showing.
 function syncBarHeights() {
-  for (const [id, prop] of [['topBar', '--topbar-h'], ['timeBar', '--timebar-h']]) {
+  for (const [id, prop] of [['topBar', '--topbar-h'], ['timeBar', '--timebar-h'], ['opacityPanel', '--opacity-h']]) {
     const el = document.getElementById(id);
     if (el) document.documentElement.style.setProperty(prop, Math.round(el.getBoundingClientRect().height) + 'px');
   }
@@ -84,7 +86,7 @@ function syncBarHeights() {
 syncBarHeights();
 if (window.ResizeObserver) {
   const ro = new ResizeObserver(syncBarHeights);
-  for (const id of ['topBar', 'timeBar']) {
+  for (const id of ['topBar', 'timeBar', 'opacityPanel']) {
     const el = document.getElementById(id);
     if (el) ro.observe(el);
   }
@@ -632,10 +634,12 @@ function showOpacityPanel(blurb) {
   if (blurb) opacityTitle.textContent = blurb;
   opacityPanel.classList.remove('hidden');
   opacityPanel.setAttribute('aria-hidden', 'false');
+  syncBarHeights(); // the legend stack below sizes itself around this panel
 }
 function hideOpacityPanel() {
   opacityPanel.classList.add('hidden');
   opacityPanel.setAttribute('aria-hidden', 'true');
+  syncBarHeights();
 }
 
 // Make the three old maps mutually exclusive (switchable, like base layers) and
