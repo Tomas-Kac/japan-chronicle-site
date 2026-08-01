@@ -17,8 +17,11 @@
   --ink-body:#33312b;
   --ink-soft:#5a5246;
   --ink-mut: #6c6457;
-  --ink-faint:#857a6c;
-  --ink-faint2:#9a8f7e;
+  /* The two faint inks were #857a6c and #9a8f7e, which measured 3.96:1 and 3.00:1
+     on the paper background. They carry real text (figcaptions, locations, panel
+     labels, footers) at 11-13px, so they need 4.5:1 for WCAG AA. Darkened to clear it. */
+  --ink-faint:#6f6555;
+  --ink-faint2:#7a7062;
   --line:    rgba(32,38,46,0.12);
   --line-2:  rgba(32,38,46,0.16);
   /* accent (themeable: ochre #b07d2b · indigo #3a6ea5) */
@@ -68,6 +71,24 @@ body { position: fixed; inset: 0; }
   background: rgba(32,38,46,.18); border-radius: 4px;
 }
 
+/* Skip link: #map is the first thing in the DOM, so without this a keyboard user
+   tabs through every marker before reaching the search box.
+   Clipped rather than parked off-screen at a negative offset: focusing an element
+   outside the viewport makes the browser scroll to it, which shunts the whole
+   fixed-position layout sideways. Clipping keeps it in place until it is revealed. */
+.skipLink {
+  position: absolute; left: 8px; top: 8px; z-index: 3000;
+  width: 1px; height: 1px; padding: 0; overflow: hidden;
+  clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
+  background: var(--panel); border: 1px solid var(--line-2); border-radius: var(--r-input);
+  color: var(--ink); font-family: var(--font-ui); font-size: 14px; font-weight: 700;
+  text-decoration: none; box-shadow: var(--sh-pop);
+}
+.skipLink:focus {
+  width: auto; height: auto; padding: 10px 16px; overflow: visible;
+  clip: auto; clip-path: none; outline: 2px solid var(--accent); outline-offset: 2px;
+}
+
 /* =====================================================================
    TOP BAR
    ===================================================================== */
@@ -92,7 +113,7 @@ body { position: fixed; inset: 0; }
   box-shadow: inset 0 0 0 1px rgba(255,255,255,.18), 0 1px 3px rgba(120,30,10,.4);
 }
 .jc-brandtext { display: flex; flex-direction: column; line-height: 1.05; }
-.jc-word { font-family: var(--font-disp); font-weight: 700; font-size: 19px; letter-spacing: .01em; color: var(--ink); }
+.jc-word { font-family: var(--font-disp); font-weight: 700; font-size: 19px; letter-spacing: .01em; color: var(--ink); margin: 0; }
 .jc-sub  { font-size: 11px; color: var(--ink-faint); letter-spacing: .02em; margin-top: 2px; }
 
 /* search lives centered in the bar */
@@ -162,8 +183,11 @@ body { position: fixed; inset: 0; }
 /* =====================================================================
    LEAFLET CONTROLS → paper material (zoom, home, layer popover, attribution)
    ===================================================================== */
-.leaflet-top.leaflet-left  { top: 70px; left: 6px; }
-.leaflet-top.leaflet-right { top: 70px; right: 6px; }
+/* --topbar-h is measured from #topBar in app.js. The header wraps to two or three
+   rows on narrow screens, so a fixed offset used to leave the zoom-in button
+   underneath it and unclickable on phones. */
+.leaflet-top.leaflet-left  { top: calc(var(--topbar-h, 60px) + 10px); left: 6px; }
+.leaflet-top.leaflet-right { top: calc(var(--topbar-h, 60px) + 10px); right: 6px; }
 
 .leaflet-bar {
   background: var(--panel);
@@ -262,7 +286,8 @@ body { position: fixed; inset: 0; }
 
 #infoContent .kicker {
   display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .09em;
-  color: var(--accent); background: var(--accent-tint); padding: 4px 9px; border-radius: 5px; margin-bottom: 12px;
+  /* accent-deep, not accent: the lighter vermilion on the tint only reaches 4.3:1 at 11px */
+  color: var(--accent-deep); background: var(--accent-tint); padding: 4px 9px; border-radius: 5px; margin-bottom: 12px;
 }
 #infoContent h2 {
   margin: 0 0 8px; font-family: var(--font-disp); font-weight: 800; font-size: 27px;
@@ -320,7 +345,7 @@ body { position: fixed; inset: 0; }
    HISTORICAL-MAP OPACITY PANEL
    ===================================================================== */
 #opacityPanel {
-  position: absolute; top: 70px; left: 56px; z-index: 1100; width: 212px;
+  position: absolute; top: calc(var(--topbar-h, 60px) + 10px); left: 56px; z-index: 1100; width: 212px;
   background: var(--panel); color: var(--ink-body);
   border: 1px solid var(--line-2); border-radius: var(--r-panel);
   padding: 11px 14px 12px; box-shadow: var(--sh-pill);
@@ -368,7 +393,7 @@ body { position: fixed; inset: 0; }
 .era-seg:last-child { border-right: none; }
 .era-seg:hover { background: rgba(32,38,46,.04); }
 .era-seg .lbl { position: relative; display: block; font-weight: 700; font-size: 12px; color: #2c333d; letter-spacing: .01em; }
-.era-seg .sub { position: relative; display: block; font-size: 9px; color: #a0957f; margin-top: 1px; }
+.era-seg .sub { position: relative; display: block; font-size: 9px; color: var(--ink-faint2); margin-top: 1px; }
 .era-seg .seg-fill {
   position: absolute; inset: 0; background: var(--seg-tint, transparent);
   border-top: 3px solid var(--seg-color, transparent);
@@ -560,12 +585,17 @@ body { position: fixed; inset: 0; }
   #topBar { height: auto; flex-wrap: wrap; padding: 8px 12px; }
   #searchBox { order: 3; flex: 1 0 100%; margin-top: 6px; }
   #searchResults { position: absolute; }
-  .leaflet-top.leaflet-left, .leaflet-top.leaflet-right { top: 112px; }
-  #opacityPanel { top: 112px; left: 50px; width: 178px; }
+  #opacityPanel { left: 50px; width: 178px; }
   #yearValue { font-size: 22px; }
   #tbControls { gap: 10px; }
+  /* Eight era names will not fit legibly across 375px, and equal flex columns
+     just clipped them ("Azuchi-Momoya", "Bakuma"). Let the ribbon scroll instead,
+     sizing each segment to its own label. */
+  #eraSelector { overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  #eraSelector::-webkit-scrollbar { display: none; }
+  .era-seg { flex: 0 0 auto; padding: 7px 12px; overflow: visible; }
   .era-seg .sub { display: none; }
-  .era-seg .lbl { font-size: 10.5px; }
+  .era-seg .lbl { font-size: 11.5px; white-space: nowrap; }
   #timeBar { padding: 8px 10px 10px; }
 }
 

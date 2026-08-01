@@ -70,6 +70,22 @@ const map = L.map('map', {
 // (The required © OpenStreetMap / © CARTO tile attributions stay.)
 map.attributionControl.setPrefix(false);
 
+// The top bar wraps to two or three rows on narrow screens, so its height is not a
+// constant. Publish the measured height as --topbar-h; the CSS positions the zoom
+// control and the opacity panel below it. Without this the zoom-in button ends up
+// underneath the header on a phone, where it cannot be tapped at all.
+function syncTopBarHeight() {
+  const bar = document.getElementById('topBar');
+  if (!bar) return;
+  document.documentElement.style.setProperty('--topbar-h', Math.round(bar.getBoundingClientRect().height) + 'px');
+}
+syncTopBarHeight();
+if (window.ResizeObserver) {
+  new ResizeObserver(syncTopBarHeight).observe(document.getElementById('topBar'));
+} else {
+  window.addEventListener('resize', syncTopBarHeight);
+}
+
 // --- "Reset view" button (sits under the +/- zoom control, top-left) ---
 // Flies the camera back up to the whole-Japan overview and closes any open panel.
 const HOME_VIEW = { center: [36.5, 137.8], zoom: 6 };
@@ -995,14 +1011,29 @@ function renderEraSelector() {
 function updateEraSelectorActive() {
   if (!eraSelectorEl) return;
   const active = (currentYear != null && !showAll && !selectedClan) ? eraForYear(currentYear) : null;
+  let activeSeg = null;
   for (const seg of eraSelectorEl.children) {
     const p = seg.dataset.era;
     const on = p === active;
     seg.classList.toggle('active', on);
+    if (on) activeSeg = seg;
     const fill = seg.querySelector('.seg-fill');
     if (fill) {
       fill.style.setProperty('--seg-tint', on ? eraTint(p) : 'transparent');
       fill.style.setProperty('--seg-color', on ? eraColor(p) : 'transparent');
+    }
+  }
+  // On phones the ribbon scrolls sideways, so the highlighted era can sit off-screen.
+  // Measured with rects, not offsetLeft: #eraSelector is not positioned, so offsetLeft
+  // would resolve against #timeBar and land the scroll in the wrong place.
+  if (activeSeg && eraSelectorEl.scrollWidth > eraSelectorEl.clientWidth + 1) {
+    const seg = activeSeg.getBoundingClientRect();
+    const box = eraSelectorEl.getBoundingClientRect();
+    if (seg.left < box.left || seg.right > box.right) {
+      const delta = seg.left - box.left - (box.width - seg.width) / 2;
+      // Plain assignment, not scrollTo({behavior:'smooth'}): the era can change on every
+      // tick of timeline playback, and queued smooth scrolls fight each other.
+      eraSelectorEl.scrollLeft = eraSelectorEl.scrollLeft + delta;
     }
   }
 }

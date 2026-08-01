@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Noto+Serif:wght@500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap" rel="stylesheet">
   <!-- Cache-buster so edits to styles.css always show up on reload -->
-  <script>document.write('<link rel="stylesheet" href="css/styles.css?v=' + '202608011411' + '">');</script>
+  <script>document.write('<link rel="stylesheet" href="css/styles.css?v=' + '202608011613' + '">');</script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -39,7 +39,11 @@
   </script>
 </head>
 <body>
-  <div id="map"></div>
+  <!-- The map is first in the DOM so it sits behind everything, but that also makes it
+       the first thing a keyboard lands on, ahead of ~350 markers. This gets you past them. -->
+  <a class="skipLink" href="#topBar">Skip to search and navigation</a>
+
+  <div id="map" role="main" aria-label="Interactive map of premodern Japan"></div>
 
   <!-- First-visit welcome / help card (also reopened via the "Help" nav link) -->
   <div id="welcomeOverlay" class="hidden" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle">
@@ -62,7 +66,7 @@
     <a class="jc-brand" href="index.html" aria-label="Japan Chronicle, home">
       <span class="jc-seal" aria-hidden="true">史</span>
       <span class="jc-brandtext">
-        <span class="jc-word">Japan&nbsp;Chronicle</span>
+        <h1 class="jc-word">Japan&nbsp;Chronicle</h1>
         <span class="jc-sub">歴史地図 &middot; a historical atlas &middot; 6th&ndash;19th c.</span>
       </span>
     </a>
@@ -130,7 +134,7 @@
   <!-- Load local scripts with a cache-buster so your edits always appear -->
   <script>
     (function () {
-      var v = '202608011411';
+      var v = '202608011613';
       document.write('<script src="data/battles.js?v=' + v + '"><\/script>');
       document.write('<script src="data/castles.js?v=' + v + '"><\/script>');
       document.write('<script src="data/temples.js?v=' + v + '"><\/script>');
