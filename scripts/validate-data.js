@@ -72,6 +72,7 @@ const checks = `
     if (!c.name) { E('castle: an entry has no name'); continue; }
     if (_castleNames.has(c.name)) E('castle: duplicate name "'+c.name+'"'); else _castleNames.add(c.name);
     checkLoc('castle', c.name, { lat: c.lat, lon: c.lon });
+    checkImages('castle', c.name, c.images);
   }
   const _templeNames = new Set();
   for (const t of (typeof TEMPLES !== 'undefined' ? TEMPLES : [])) {
@@ -101,6 +102,7 @@ const checks = `
     if (!r.name) E('road: an entry has no name');
     if (!Array.isArray(r.waypoints) || r.waypoints.length < 2) E('road "'+(r.name||'?')+'": needs at least 2 waypoints');
     else r.waypoints.forEach((w, i) => { if (typeof w.lat !== 'number' || typeof w.lon !== 'number') E('road "'+r.name+'" waypoint '+i+': bad coordinates'); });
+    checkImages('road', r.name, r.images);
   }
   ({ b: BATTLES.length, c: CASTLES.length, e: EVENTS.length, p: PEOPLE.length, r: (typeof MARCH_ROUTES!=='undefined'?MARCH_ROUTES.length:0), t: (typeof TEMPLES!=='undefined'?TEMPLES.length:0), rd: (typeof HISTORIC_ROADS!=='undefined'?HISTORIC_ROADS.length:0) });
 `;
