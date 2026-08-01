@@ -70,20 +70,26 @@ const map = L.map('map', {
 // (The required © OpenStreetMap / © CARTO tile attributions stay.)
 map.attributionControl.setPrefix(false);
 
-// The top bar wraps to two or three rows on narrow screens, so its height is not a
-// constant. Publish the measured height as --topbar-h; the CSS positions the zoom
-// control and the opacity panel below it. Without this the zoom-in button ends up
-// underneath the header on a phone, where it cannot be tapped at all.
-function syncTopBarHeight() {
-  const bar = document.getElementById('topBar');
-  if (!bar) return;
-  document.documentElement.style.setProperty('--topbar-h', Math.round(bar.getBoundingClientRect().height) + 'px');
+// Neither bar has a constant height: the top bar wraps to two or three rows on narrow
+// screens, and the bottom timeline changes with it. Publish both measured heights so the
+// CSS can place the floating map furniture between them. Without this the zoom-in button
+// ends up underneath the header on a phone (untappable), and the stack of bottom-left
+// legends runs off the top of the screen when several overlays are on.
+function syncBarHeights() {
+  for (const [id, prop] of [['topBar', '--topbar-h'], ['timeBar', '--timebar-h']]) {
+    const el = document.getElementById(id);
+    if (el) document.documentElement.style.setProperty(prop, Math.round(el.getBoundingClientRect().height) + 'px');
+  }
 }
-syncTopBarHeight();
+syncBarHeights();
 if (window.ResizeObserver) {
-  new ResizeObserver(syncTopBarHeight).observe(document.getElementById('topBar'));
+  const ro = new ResizeObserver(syncBarHeights);
+  for (const id of ['topBar', 'timeBar']) {
+    const el = document.getElementById(id);
+    if (el) ro.observe(el);
+  }
 } else {
-  window.addEventListener('resize', syncTopBarHeight);
+  window.addEventListener('resize', syncBarHeights);
 }
 
 // --- "Reset view" button (sits under the +/- zoom control, top-left) ---
@@ -1088,6 +1094,11 @@ function nearestEventYear(y) {
 
 recomputeYears();
 renderEraSelector();
+// The first syncBarHeights() ran before the era ribbon existed, so #timeBar was still
+// short (103px rather than 129px) and the legend stack was sized against a stale value.
+// Re-measure now that the bar holds its real content.
+syncBarHeights();
+window.addEventListener('load', syncBarHeights);
 
 // Cluster nearby markers — keeps the map readable, especially in the
 // "Show all years" overview. Individual pins reappear when zoomed in.

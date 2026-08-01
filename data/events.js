@@ -10,7 +10,15 @@
 //   "contact"   foreign contact / first encounters  (⚓, teal)
 //   "capital"   capitals & seats of power            (★, purple)
 //   "culture"   religion, culture & economy          (⛩, green)
-//   "incident"  incidents, rebellions & disasters    (⚠, orange)
+//   "incident"  incidents & rebellions               (⚠, orange)
+//   "politics"  decrees, transitions & governance    (⚑, slate)
+//   "disaster"  earthquakes, fires & famines         (≋, grey)
+//
+// period is display text only (the year slider does the filtering), written as a
+// canonical era name optionally followed by " · " and a short tag, e.g.
+// "Heian · literature". Use the eight era names from ERAS in app.js. Where an entry
+// sits on an era boundary the historically natural era wins over the slider's cut-off:
+// the Tokugawa shogunate (1603) reads "Edo", not "Azuchi–Momoyama".
 //
 // Fields: id, name, type, year, dateLabel, period, location{name,lat,lon},
 //         summary, details, images:[{src,caption}].
@@ -24,7 +32,7 @@ const EVENTS = [
     type: "contact",
     year: 1543,
     dateLabel: "1543",
-    period: "Sengoku · foreign contact",
+    period: "Muromachi · foreign contact",
     location: {
       name: "Tanegashima island, Ōsumi (modern Kagoshima Prefecture)",
       lat: 30.57389,
@@ -50,7 +58,7 @@ The introduction of firearms precipitated a paradigm shift in Japanese military 
     type: "contact",
     year: 1549,
     dateLabel: "1549",
-    period: "Sengoku · foreign contact",
+    period: "Muromachi · foreign contact",
     location: {
       name: "Kagoshima, Satsuma Province (modern Kagoshima)",
       lat: 31.59694,
@@ -124,7 +132,7 @@ The shock exposed the shogunate's weakness, forced the end of seclusion, and ign
     type: "capital",
     year: 710,
     dateLabel: "710",
-    period: "Nara period",
+    period: "Asuka–Nara",
     location: {
       name: "Heijō Palace, Nara",
       lat: 34.6911,
@@ -146,7 +154,7 @@ The shock exposed the shogunate's weakness, forced the end of seclusion, and ign
     type: "capital",
     year: 794,
     dateLabel: "794",
-    period: "Heian period",
+    period: "Heian",
     location: {
       name: "Heian Palace, Heian-kyō (modern Kyoto)",
       lat: 35.0117,
@@ -170,7 +178,7 @@ Kyoto would stay the seat of the emperor until 1868, even as real power passed t
     type: "capital",
     year: 1192,
     dateLabel: "1185 / 1192",
-    period: "Kamakura period",
+    period: "Kamakura",
     location: {
       name: "Kamakura, Sagami (modern Kanagawa)",
       lat: 35.31972,
@@ -192,7 +200,7 @@ Kyoto would stay the seat of the emperor until 1868, even as real power passed t
     type: "capital",
     year: 1576,
     dateLabel: "1576",
-    period: "Azuchi–Momoyama",
+    period: "Azuchi–Momoyama · capital",
     location: {
       name: "Azuchi Castle, Ōmi (modern Ōmihachiman, Shiga)",
       lat: 35.1558,
@@ -216,7 +224,7 @@ The castle burned within days of Nobunaga's death at Honnō-ji in 1582 and was n
     type: "capital",
     year: 1603,
     dateLabel: "1603",
-    period: "Edo period",
+    period: "Edo",
     location: {
       name: "Edo Castle (modern Imperial Palace, Tokyo)",
       lat: 35.6852,
@@ -240,7 +248,7 @@ In 1868 it was renamed Tokyo, "eastern capital", and became the seat of the mode
     type: "culture",
     year: 752,
     dateLabel: "752",
-    period: "Nara period",
+    period: "Asuka–Nara",
     location: {
       name: "Tōdai-ji, Nara",
       lat: 34.68917,
@@ -262,7 +270,7 @@ In 1868 it was renamed Tokyo, "eastern capital", and became the seat of the mode
     type: "culture",
     year: 788,
     dateLabel: "788",
-    period: "Heian period",
+    period: "Heian",
     location: {
       name: "Enryaku-ji, Mount Hiei (Ōtsu, Shiga)",
       lat: 35.07056,
@@ -286,7 +294,7 @@ Oda Nobunaga, determined to break that power, burned the entire mountain complex
     type: "culture",
     year: 816,
     dateLabel: "816",
-    period: "Heian period",
+    period: "Heian",
     location: {
       name: "Mount Kōya, Kii (modern Wakayama)",
       lat: 34.2125,
@@ -308,7 +316,7 @@ Oda Nobunaga, determined to break that power, burned the entire mountain complex
     type: "culture",
     year: 1526,
     dateLabel: "from 1526",
-    period: "Sengoku · economy",
+    period: "Muromachi · economy",
     location: {
       name: "Iwami Ginzan, Ōmori (modern Ōda, Shimane)",
       lat: 35.1116,
@@ -332,7 +340,7 @@ That silver paid for armies, guns and gunpowder and drew Portuguese and Chinese 
     type: "culture",
     year: 1550,
     dateLabel: "16th century",
-    period: "Sengoku · economy",
+    period: "Muromachi · economy",
     location: {
       name: "Sakai, Izumi (modern Sakai, Osaka)",
       lat: 34.57333,
@@ -356,7 +364,7 @@ Its independence ended when Oda Nobunaga forced the city to submit and pay a hea
     type: "incident",
     year: 1637,
     dateLabel: "1637–1638",
-    period: "Edo period",
+    period: "Edo",
     location: {
       name: "Hara Castle, Shimabara (modern Minamishimabara, Nagasaki)",
       lat: 32.63,
@@ -380,7 +388,7 @@ The rising hardened the Tokugawa resolve to ban Christianity and close the count
     type: "incident",
     year: 1703,
     dateLabel: "1701–1703",
-    period: "Edo period",
+    period: "Edo",
     location: {
       name: "Sengaku-ji, Edo (modern Takanawa, Tokyo)",
       lat: 35.6383,
@@ -428,7 +436,7 @@ The murder of so high an official in the heart of Edo shattered the shogunate's 
     type: "incident",
     year: 1707,
     dateLabel: "December 1707",
-    period: "Edo period",
+    period: "Edo",
     location: {
       name: "Mount Fuji (Shizuoka / Yamanashi border)",
       lat: 35.36083,
@@ -474,7 +482,7 @@ The disaster reshaped the modern capital, and, in the ensuing chaos and rumour, 
     type: "politics",
     year: 1467,
     dateLabel: "1467–1477",
-    period: "Muromachi period",
+    period: "Muromachi",
     location: {
       name: "Kyoto",
       lat: 35.0116,
@@ -666,7 +674,7 @@ These decrees abolished the monopolistic control of traditional guilds (za) and 
     type: "disaster",
     year: 1498,
     dateLabel: "September 20, 1498 (Meiō 7/8/25)",
-    period: "Sengoku",
+    period: "Muromachi · disaster",
     location: {
       name: "Suruga Bay",
       lat: 34.8,
@@ -714,7 +722,7 @@ Fires broke out across the region, and rivers changed course. The disaster force
     type: "politics",
     year: 1573,
     dateLabel: "May 13, 1573 (Genki 4/4/12)",
-    period: "Sengoku",
+    period: "Azuchi–Momoyama",
     location: {
       name: "Komaba, Shinano Province (modern Achi, Nagano)",
       lat: 35.4322,
@@ -738,7 +746,7 @@ He died at Komaba in Shinano while his army was retreating to Kai. Shingen order
     type: "politics",
     year: 1578,
     dateLabel: "April 19, 1578 (Tenshō 6/3/13)",
-    period: "Sengoku",
+    period: "Azuchi–Momoyama",
     location: {
       name: "Kasugayama Castle, Echigo (modern Jōetsu, Niigata)",
       lat: 37.1183,
@@ -767,6 +775,7 @@ Having never married or named a clear heir, his death triggered the Otate no Ran
     name: "The Hōkōji Bell Incident",
     type: "politics",
     year: 1614,
+    period: "Edo · incident",
     location: {
       name: "Hōkō-ji Temple, Kyoto",
       lat: 34.991,
@@ -785,6 +794,7 @@ The shogunate rejected all diplomatic overtures and apologies from the Toyotomi 
     name: "The Honnō-ji Incident",
     type: "politics",
     year: 1582,
+    period: "Azuchi–Momoyama · incident",
     location: {
       name: "Honnō-ji Temple, Kyoto",
       lat: 35.009,
@@ -815,6 +825,7 @@ The incident abruptly halted Nobunaga's unification campaign and created a power
     name: "Establishment of the Tokugawa Shogunate",
     type: "politics",
     year: 1603,
+    period: "Edo · governance",
     location: {
       name: "Edo Castle (modern Tokyo)",
       lat: 35.685,
@@ -839,6 +850,7 @@ In 1605, Ieyasu abdicated the shogunal title to his son Hidetada. This action in
     name: "Edict of Expulsion of Missionaries",
     type: "politics",
     year: 1614,
+    period: "Edo · religion",
     location: {
       name: "Edo (Nationwide edict)",
       lat: 35.685,
@@ -863,6 +875,7 @@ The decree initiated state-sponsored persecution, forcing domestic Christian com
     name: "Assassination of the Sword Master Shōgun",
     type: "politics",
     year: 1565,
+    period: "Muromachi · politics",
     location: {
       name: "Nijō Palace, Kyoto",
       lat: 35.014,
@@ -1037,7 +1050,7 @@ Upon being overwhelmed, Yoshiteru committed seppuku. The regicide destabilized r
     type: "culture",
     year: 552,
     dateLabel: "traditionally 552 (some sources 538)",
-    period: "Asuka · religion",
+    period: "Asuka–Nara · religion",
     location: { name: "The Yamato court at Asuka (modern Nara Prefecture)", lat: 34.4730, lon: 135.8200 },
     summary: "The Baekje court sends a gilt-bronze Buddha and sutras to the Yamato court, the official arrival of Buddhism in Japan.",
     details: `In the mid-6th century the king of Baekje, a Korean kingdom allied to Yamato, sent the Japanese court a gilt-bronze image of the Buddha together with sutras and a letter praising the new faith. Traditionally dated to 552 (some texts say 538), this gift marks the official arrival of Buddhism in Japan.
@@ -1054,7 +1067,7 @@ The religion split the court: the Soga clan embraced it while the Mononobe and N
     type: "politics",
     year: 645,
     dateLabel: "645 (Taika 1)",
-    period: "Asuka · reform",
+    period: "Asuka–Nara · reform",
     location: { name: "The Asuka court (modern Nara Prefecture)", lat: 34.4795, lon: 135.8190 },
     summary: "A palace coup destroys the over-mighty Soga clan and launches the reforms that forge a centralized imperial state on the Chinese model.",
     details: `In 645 Prince Naka-no-Ōe and Nakatomi no Kamatari, founder of the Fujiwara, struck down Soga no Iruka in the empress's own presence (the Isshi Incident), breaking the Soga grip on the throne.
@@ -1088,7 +1101,7 @@ Drafted under Prince Osakabe and Fujiwara no Fuhito, the Taihō Code capped the 
     type: "culture",
     year: 712,
     dateLabel: "712 & 720",
-    period: "Nara · culture",
+    period: "Asuka–Nara · culture",
     location: { name: "Heijō-kyō, the capital at Nara", lat: 34.6900, lon: 135.8050 },
     summary: "Japan's first written histories, and the founding myths of the imperial line, are compiled at the Nara court.",
     details: `At the throne's command the Nara court produced Japan's earliest surviving books: the Kojiki ('Record of Ancient Matters,' 712) and the Nihon Shoki ('Chronicles of Japan,' 720). Weaving myth, legend, and dynastic record, they trace the imperial house's descent from the sun goddess Amaterasu down to the legendary first emperor, Jimmu.
@@ -1245,7 +1258,7 @@ The great hall that once enclosed it was destroyed by storms and finally washed 
     type: "politics",
     year: 1333,
     dateLabel: "1333–1336",
-    period: "Nanboku-chō · restoration",
+    period: "Muromachi · restoration",
     location: { name: "The court of Emperor Go-Daigo, Kyoto", lat: 35.0254, lon: 135.7621 },
     summary: "Emperor Go-Daigo destroys the Kamakura shogunate and tries to restore direct imperial rule, a bold experiment that collapses in three years.",
     details: `Having toppled the Kamakura shogunate in 1333 with warriors such as Ashikaga Takauji and Nitta Yoshisada, Emperor Go-Daigo attempted to govern directly, without a shogun, the Kenmu Restoration.

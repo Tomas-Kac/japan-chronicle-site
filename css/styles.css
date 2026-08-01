@@ -533,8 +533,17 @@ body { position: fixed; inset: 0; }
 .domains-legend { max-height: min(260px, calc(100vh - 320px)); overflow-y: auto; }
 /* Legends sit bottom-left, where the timeline bar would otherwise cover them.
    Lift the whole bottom-left control stack above it. */
-.leaflet-bottom.leaflet-left { bottom: 152px; z-index: 1060; }
-@media (max-width: 600px) { .leaflet-bottom.leaflet-left { bottom: 128px; } }
+/* The legend stack sits between the header and the timeline. --timebar-h is measured
+   in app.js, because the bottom bar grows when the top bar wraps. With every overlay on
+   at 375px the stack was 974px tall in an 812px viewport, so ~290px of it ran off the
+   top of the screen where it could not be reached; hence the cap and the scroll. */
+.leaflet-bottom.leaflet-left {
+  bottom: calc(var(--timebar-h, 129px) + 10px);
+  z-index: 1060;
+  max-height: calc(100vh - var(--topbar-h, 60px) - var(--timebar-h, 129px) - 28px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
 .domains-legend .dm-items { display: grid; grid-template-columns: 1fr 1fr; gap: 0 14px; }
 .domains-legend .dm-items > div { white-space: nowrap; }
 .domains-legend .dm-sw { display: inline-block; width: 12px; height: 12px; border-radius: 2px; margin-right: 7px; vertical-align: middle; border: 1px solid rgba(32,38,46,.35); }
