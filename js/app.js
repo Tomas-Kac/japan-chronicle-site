@@ -271,6 +271,7 @@ function renderRoadHTML(road) {
     ${road.purpose ? `<p class="summary">${escapeHtml(road.purpose)}</p>` : ''}
     <h3>Post-stations</h3>
     <p>${road.waypoints.map((w) => escapeHtml(w.name)).join(' › ')}</p>
+    ${galleryBlock(road.images)}
     ${sourcesBlock(road.name, road.sources)}
   `;
 }

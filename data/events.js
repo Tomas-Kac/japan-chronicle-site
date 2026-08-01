@@ -757,6 +757,12 @@ Having never married or named a clear heir, his death triggered the Otate no Ran
   },
   {
     id: "hokoji-bell",
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Hokoji_Kyoto01bs1920.jpg/960px-Hokoji_Kyoto01bs1920.jpg",
+        caption: "The main hall of Hōkō-ji in Kyoto, the temple whose new bell carried the inscription that Tokugawa Ieyasu seized on as his pretext in 1614; Wikimedia Commons."
+      }
+    ],
     sources: [ { label: "Wikipedia: Hōkō-ji (Kyoto)", url: "https://en.wikipedia.org/wiki/Hōkō-ji_(Kyoto)" } ],
     name: "The Hōkōji Bell Incident",
     type: "politics",
@@ -799,6 +805,12 @@ The incident abruptly halted Nobunaga's unification campaign and created a power
   },
   {
     id: "edo-shogunate",
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Tokugawa_Ieyasu2.JPG/960px-Tokugawa_Ieyasu2.JPG",
+        caption: "Early Edo-period portrait of Tokugawa Ieyasu, founder of the shogunate, Osaka Castle Museum; Wikimedia Commons."
+      }
+    ],
     sources: [ { label: "Wikipedia: Tokugawa shogunate", url: "https://en.wikipedia.org/wiki/Tokugawa_shogunate" } ],
     name: "Establishment of the Tokugawa Shogunate",
     type: "politics",
@@ -817,6 +829,12 @@ In 1605, Ieyasu abdicated the shogunal title to his son Hidetada. This action in
   },
   {
     id: "christian-expulsion",
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/JapaneseChristiansInPortugueseCostume16-17thCentury.jpg/960px-JapaneseChristiansInPortugueseCostume16-17thCentury.jpg",
+        caption: "Japanese Christians in Portuguese dress, painted in the sixteenth or seventeenth century, from the community the 1614 edict set out to suppress; Wikimedia Commons."
+      }
+    ],
     sources: [ { label: "Wikipedia: Kirishitan", url: "https://en.wikipedia.org/wiki/Kirishitan" } ],
     name: "Edict of Expulsion of Missionaries",
     type: "politics",
@@ -835,6 +853,12 @@ The decree initiated state-sponsored persecution, forcing domestic Christian com
   },
   {
     id: "yoshiteru-assassination",
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Ashikaga_Yoshiteru_cropped.jpg/960px-Ashikaga_Yoshiteru_cropped.jpg",
+        caption: "Portrait of the shōgun Ashikaga Yoshiteru, painted in 1577, twelve years after his death, National Museum of Japanese History; Wikimedia Commons."
+      }
+    ],
     sources: [ { label: "Wikipedia: Ashikaga Yoshiteru", url: "https://en.wikipedia.org/wiki/Ashikaga_Yoshiteru" } ],
     name: "Assassination of the Sword Master Shōgun",
     type: "politics",
@@ -1090,6 +1114,12 @@ Written in the vernacular kana script favoured by court women, it crowns the ref
   },
   {
     id: "evt-fujiwara-regency",
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Fujiwara_no_Yoshifusa.jpg/960px-Fujiwara_no_Yoshifusa.jpg",
+        caption: "Fujiwara no Yoshifusa, the first Fujiwara regent, in an imagined portrait drawn by Kikuchi Yōsai and published in 1903; Wikimedia Commons."
+      }
+    ],
     sources: [ { label: "Wikipedia: Fujiwara no Yoshifusa", url: "https://en.wikipedia.org/wiki/Fujiwara_no_Yoshifusa" } ],
     name: "The Fujiwara Regency",
     type: "politics",
@@ -1104,6 +1134,12 @@ Their power reached its dazzling height under Fujiwara no Michinaga (c. 1016), w
   },
   {
     id: "evt-jogan-quake",
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Tagajo_Sue-no-Matsuyama_01.JPG/960px-Tagajo_Sue-no-Matsuyama_01.JPG",
+        caption: "The pines of Sue-no-Matsuyama at Tagajō in Miyagi, which classical poetry took as the rise the waves never crossed, a saying long connected with the Jōgan tsunami; Wikimedia Commons."
+      }
+    ],
     sources: [ { label: "Wikipedia: 869 Jōgan earthquake", url: "https://en.wikipedia.org/wiki/869_Sanriku_earthquake" } ],
     name: "The Jōgan Sanriku Earthquake",
     type: "disaster",
@@ -1118,6 +1154,12 @@ Centuries later, geologists traced the Jōgan tsunami's sand deposits and realis
   },
   {
     id: "evt-tang-embassies-end",
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/%E6%9D%9F%E5%B8%AF%E5%A4%A9%E7%A5%9E%E5%83%8F.png/960px-%E6%9D%9F%E5%B8%AF%E5%A4%A9%E7%A5%9E%E5%83%8F.png",
+        caption: "Sugawara no Michizane, who advised breaking off the embassies, shown as the deity Tenjin in court dress; a fifteenth-century hanging scroll at Egara Tenjin Shrine, Wikimedia Commons."
+      }
+    ],
     sources: [ { label: "Wikipedia: Japanese missions to Tang China", url: "https://en.wikipedia.org/wiki/Japanese_missions_to_Tang_China" } ],
     name: "The End of the Tang Embassies",
     type: "contact",
@@ -1132,6 +1174,12 @@ Cut loose from the Chinese model, the Heian court turned inward, and the next ce
   },
   {
     id: "evt-kamakura-buddhism",
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/8/8d/Takanobu-no-miei.jpg",
+        caption: "Portrait of Hōnen, founder of the Pure Land school, attributed to Fujiwara no Takanobu; Wikimedia Commons."
+      }
+    ],
     sources: [ { label: "Wikipedia: Buddhism in Japan", url: "https://en.wikipedia.org/wiki/Buddhism_in_Japan" } ],
     name: "The New Kamakura Buddhism",
     type: "culture",
@@ -1146,6 +1194,12 @@ At the same time Eisai and Dōgen brought Zen, Rinzai and Sōtō, from China, it
   },
   {
     id: "evt-goseibai",
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/WUL-wa03_03332_%E8%B2%9E%E6%B0%B8%E5%BC%8F%E7%9B%AE%E4%B8%80%E5%90%8D%E5%BE%A1%E6%88%90%E6%95%97%E5%BC%8F%E7%9B%AE.pdf/page4-960px-WUL-wa03_03332_%E8%B2%9E%E6%B0%B8%E5%BC%8F%E7%9B%AE%E4%B8%80%E5%90%8D%E5%BE%A1%E6%88%90%E6%95%97%E5%BC%8F%E7%9B%AE.pdf.jpg",
+        caption: "An opening from a manuscript copy of the Goseibai Shikimoku, also called the Jōei Shikimoku, with red reading marks; Waseda University Library, Wikimedia Commons."
+      }
+    ],
     sources: [ { label: "Wikipedia: Goseibai Shikimoku", url: "https://en.wikipedia.org/wiki/Goseibai_Shikimoku" } ],
     name: "The Goseibai Shikimoku",
     type: "politics",
@@ -1160,6 +1214,12 @@ Rooted in practical samurai custom rather than the Chinese-derived law of the im
   },
   {
     id: "evt-kamakura-daibutsu",
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/230128_Kamakura_Daibutsu_Japan04s3.jpg/960px-230128_Kamakura_Daibutsu_Japan04s3.jpg",
+        caption: "The Great Buddha of Kamakura at Kōtoku-in, cast in bronze in the thirteenth century and open to the sky since its hall was lost; Wikimedia Commons."
+      }
+    ],
     sources: [ { label: "Wikipedia: Kōtoku-in", url: "https://en.wikipedia.org/wiki/K%C5%8Dtoku-in" } ],
     name: "The Great Buddha of Kamakura",
     type: "culture",
@@ -1174,6 +1234,12 @@ The great hall that once enclosed it was destroyed by storms and finally washed 
   },
   {
     id: "evt-kenmu",
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/5/50/Emperor_Godaigo_%28cropped%29.jpg",
+        caption: "Portrait of Emperor Go-Daigo, who briefly restored direct imperial rule, painted in 1339 and held at Shōjōkō-ji; Wikimedia Commons."
+      }
+    ],
     sources: [ { label: "Wikipedia: Kenmu Restoration", url: "https://en.wikipedia.org/wiki/Kenmu_Restoration" } ],
     name: "The Kenmu Restoration",
     type: "politics",
@@ -1188,6 +1254,12 @@ But his court-centred rule alienated the very samurai who had won his throne; re
   },
   {
     id: "evt-muromachi-founded",
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Ashikaga_Takauji_J%C5%8Ddo-ji.jpg/960px-Ashikaga_Takauji_J%C5%8Ddo-ji.jpg",
+        caption: "Portrait of Ashikaga Takauji, first shōgun of the Muromachi line, a fourteenth or fifteenth century painting at Jōdo-ji in Onomichi; Wikimedia Commons."
+      }
+    ],
     sources: [ { label: "Wikipedia: Ashikaga shogunate", url: "https://en.wikipedia.org/wiki/Ashikaga_shogunate" } ],
     name: "The Muromachi Shogunate",
     type: "politics",
@@ -1202,6 +1274,12 @@ Its grip on the provincial military governors (shugo) was always precarious, and
   },
   {
     id: "evt-courts-reunify",
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Emperor_Go-Komatsu.jpg/960px-Emperor_Go-Komatsu.jpg",
+        caption: "Portrait of Emperor Go-Komatsu, in whose reign the two courts were reunited in 1392; a mid-Edo painting, Wikimedia Commons."
+      }
+    ],
     sources: [ { label: "Wikipedia: Nanboku-chō period", url: "https://en.wikipedia.org/wiki/Nanboku-ch%C5%8D_period" } ],
     name: "Reunification of the Courts",
     type: "politics",
@@ -1216,6 +1294,12 @@ The promise was soon broken, but the reunification marked the height of Ashikaga
   },
   {
     id: "evt-kinkakuji",
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Kinkaku-ji_2015.JPG/960px-Kinkaku-ji_2015.JPG",
+        caption: "The Golden Pavilion of Kinkaku-ji, Ashikaga Yoshimitsu's retirement villa and the emblem of Kitayama culture; the present building is a 1955 rebuilding. Wikimedia Commons."
+      }
+    ],
     sources: [ { label: "Wikipedia: Kinkaku-ji", url: "https://en.wikipedia.org/wiki/Kinkaku-ji" } ],
     name: "Kinkaku-ji and the Kitayama Culture",
     type: "culture",
