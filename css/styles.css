@@ -300,7 +300,9 @@ body { position: fixed; inset: 0; }
 
 #infoContent .gallery { display: flex; flex-direction: column; gap: 16px; margin-top: 10px; }
 #infoContent .gallery figure { margin: 0; }
-#infoContent .gallery img { width: 100%; border-radius: 8px; display: block; background: var(--hover); }
+/* max-width, not width: some Commons files are only ~270px wide, and stretching
+   them to the panel width just makes them blurry. Small ones sit centred instead. */
+#infoContent .gallery img { max-width: 100%; height: auto; border-radius: 8px; display: block; margin: 0 auto; background: var(--hover); }
 #infoContent .gallery figcaption { margin-top: 6px; font-size: 12px; color: var(--ink-faint); font-style: italic; line-height: 1.4; }
 
 .src-list { list-style: none; padding-left: 0; margin: 4px 0 0; }
