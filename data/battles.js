@@ -805,6 +805,12 @@ The Imagawa forces, led by Fukushima Masashige, had threatened the very heart of
   },
   {
     id: "ningbo-incident",
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/%C5%8Cuchi_Yoshioki.jpg/960px-%C5%8Cuchi_Yoshioki.jpg",
+        caption: "Portrait of Ōuchi Yoshioki, who sent the 1523 mission whose envoy Kendō Sōsetsu attacked the rival Hosokawa party at Ningbo; Yoshioki himself was not there. Yamaguchi Museum, Wikimedia Commons."
+      }
+    ],
     sources: [ { label: "Wikipedia: Ningbo incident", url: "https://en.wikipedia.org/wiki/Ningbo_incident" } ],
     name: "Ningbo incident",
     year: 1523,
@@ -833,6 +839,12 @@ The Imagawa forces, led by Fukushima Masashige, had threatened the very heart of
   },
   {
     id: "nashinokidaira",
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/c/ce/Ujituna_Hojo.jpg",
+        caption: "Portrait of Hōjō Ujitsuna, second head of the Later Hōjō, who was beaten back here by Takeda Nobutora in 1526; Wikimedia Commons."
+      }
+    ],
     sources: [ { label: "Wikipedia: Battle of Nashinokidaira", url: "https://en.wikipedia.org/wiki/Battle_of_Nashinokidaira" } ],
     name: "Battle of Nashinokidaira",
     year: 1526,
@@ -951,6 +963,12 @@ The ten-year-old Matsudaira Hirotada, backed by his uncles Nobutaka and Yasutaka
   },
   {
     id: "ankokuji",
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Portrait_of_Itagaki_Nobukata.jpg/960px-Portrait_of_Itagaki_Nobukata.jpg",
+        caption: "Portrait of Itagaki Nobukata, the Takeda general who defeated Takatō Yoritsugu at Ankokuji, painted by Matsumoto Fūko in 1860 and dedicated to Erin-ji, Wikimedia Commons."
+      }
+    ],
     sources: [ { label: "Wikipedia: Battle of Ankokuji", url: "https://en.wikipedia.org/wiki/Battle_of_Ankokuji" } ],
     name: "Battle of Ankokuji",
     year: 1542,
@@ -1013,6 +1031,12 @@ Nobuhide had launched a massive invasion force to seize Mino Province, pushing t
   },
   {
     id: "oshikibata",
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/1/1c/Sue_Harukata_by_Zoku_Eiyu_Hyakunin_Isshu.jpg",
+        caption: "Sue Harukata, whose general Miyagawa Fusanaga was defeated at Oshikibata, in a woodblock portrait of 1849 from the Zoku Eiyū Hyakunin Isshu; Wikimedia Commons."
+      }
+    ],
     sources: [ { label: "Wikipedia: Battle of Oshikibata", url: "https://en.wikipedia.org/wiki/Battle_of_Oshikibata" } ],
     name: "Battle of Oshikibata",
     year: 1554,
@@ -1170,6 +1194,12 @@ The battle is celebrated as a classic execution of the Shimazu's signature "tsur
   },
   {
     id: "mimaomote",
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/5/53/Tyousokabe_Mototika.jpg",
+        caption: "Portrait of Chōsokabe Motochika, painted 1599 and held at Hada Shrine in Kōchi; the Tosa daimyō's push into Iyo was checked at Mimaomote, where his field commander was Hisatake Chikanobu. Wikimedia Commons."
+      }
+    ],
     sources: [ { label: "Wikipedia: Battle of Mimaomote", url: "https://en.wikipedia.org/wiki/Battle_of_Mimaomote" } ],
     name: "Battle of Mimaomote",
     year: 1581,
@@ -1260,6 +1290,12 @@ The Iga fighters' mastery of ambush, infiltration and espionage became the histo
   },
   {
     id: "numajiri",
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/2/2c/Hojo_Ujinao.jpg",
+        caption: "Posthumous portrait of Hōjō Ujinao, who led the Later Hōjō army at Numajiri, painted in 1803 and held at Hōun-ji. Wikimedia Commons."
+      }
+    ],
     sources: [ { label: "Wikipedia: Battle of Numajiri", url: "https://en.wikipedia.org/wiki/Battle_of_Numajiri" } ],
     name: "Battle of Numajiri",
     year: 1584,
@@ -1355,6 +1391,12 @@ The battle marked the culmination of Motochika's ruthless expansion. Sweeping do
   },
   {
     id: "sendaigawa",
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Niiro_Tadamoto.jpg/960px-Niiro_Tadamoto.jpg",
+        caption: "Niiro Tadamoto, the Shimazu commander who charged the Toyotomi army at the Sendai River, in a 19th-century woodblock print from Utagawa Yoshiiku's Taiheiki eiyūden series. Wikimedia Commons."
+      }
+    ],
     sources: [ { label: "Wikipedia: Battle of Sendaigawa", url: "https://en.wikipedia.org/wiki/Battle_of_Sendaigawa" } ],
     name: "Battle of Sendaigawa",
     year: 1587,
@@ -1384,6 +1426,12 @@ The battle marked the culmination of Motochika's ruthless expansion. Sweeping do
   },
   {
     id: "koriyama-campaign",
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Date_Masamune02.jpg/960px-Date_Masamune02.jpg",
+        caption: "Portrait of Date Masamune, who led the Date forces through this campaign, painted after his death by Tosa Mitsusada (1738 to 1806); Wikimedia Commons."
+      }
+    ],
     sources: [ { label: "Wikipedia: Kōriyama Campaign", url: "https://en.wikipedia.org/wiki/K%C5%8Driyama_Campaign" } ],
     name: "Kōriyama Campaign",
     year: 1588,
@@ -1507,6 +1555,12 @@ The battle marked the culmination of Motochika's ruthless expansion. Sweeping do
   },
   {
     id: "shiojiritoge",
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Kisokaido30_Shiojiri.jpg",
+        caption: "Keisai Eisen's woodblock view from Shiojiri Pass across frozen Lake Suwa, the Shinano pass where the 1548 battle was fought. Wikimedia Commons."
+      }
+    ],
     sources: [ { label: "Wikipedia: Battle of Shiojiritoge", url: "https://en.wikipedia.org/wiki/Battle_of_Shiojiritoge" } ],
     name: "Battle of Shiojiritoge",
     year: 1548,
@@ -1742,6 +1796,12 @@ His self-sacrifice made him an enduring symbol of loyalty in Japanese culture, a
   },
   {
     id: "uchidehama",
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/%E8%B6%B3%E5%88%A9%E7%9B%B4%E7%BE%A9.jpg/960px-%E8%B6%B3%E5%88%A9%E7%9B%B4%E7%BE%A9.jpg",
+        caption: "A nineteenth century woodblock portrait of Ashikaga Tadayoshi, from Mizutani Ryokutei's Eiyū Hyakunin Isshu; in 1351 he routed the army of his brother Takauji at Uchidehama. Wikimedia Commons."
+      }
+    ],
     sources: [ { label: "Japanese Wikipedia: Battle of Uchidehama (打出浜の戦い)", url: "https://ja.wikipedia.org/wiki/打出浜の戦い" } ],
     name: "Battle of Uchidehama",
     year: 1351,
@@ -1805,6 +1865,12 @@ His self-sacrifice made him an enduring symbol of loyalty in Japanese culture, a
   },
   {
     id: "oei-rebellion",
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Yoshimitsu_Ashikaga_cropped.jpg/960px-Yoshimitsu_Ashikaga_cropped.jpg",
+        caption: "Portrait of Ashikaga Yoshimitsu, by 1399 a retired and tonsured shōgun who still held the real power and who directed the campaign that burned Sakai; Wikimedia Commons."
+      }
+    ],
     sources: [ { label: "Japanese Wikipedia: Ōei Rebellion (応永の乱)", url: "https://ja.wikipedia.org/wiki/応永の乱" } ],
     name: "Ōei Rebellion",
     year: 1399,
@@ -2352,6 +2418,12 @@ Unable to break Ieyasu in the field, Hideyoshi turned to diplomacy; the war ende
   },
   {
     id: "okita-nawate",
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ry%C5%ABz%C5%8Dji_Takanobu.jpg/960px-Ry%C5%ABz%C5%8Dji_Takanobu.jpg",
+        caption: "Portrait of Ryūzōji Takanobu, the Hizen lord defeated and killed in this battle; a sixteenth-century painting in the Saga Prefectural Museum, Wikimedia Commons."
+      }
+    ],
     sources: [ { label: "Wikipedia: Battle of Okitanawate", url: "https://en.wikipedia.org/wiki/Battle_of_Okitanawate" } ],
     name: "Battle of Okita-Nawate",
     year: 1584,
@@ -3596,6 +3668,12 @@ The defeat helped push the Taira back on their base at Yashima in Shikoku, the n
   },
   {
     id: "toi-invasion-1019",
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/a/ad/Fujiwara_no_Takaie.png",
+        caption: "Portrait of Fujiwara no Takaie, who directed the defence of northern Kyushu, drawn by Kikuchi Yōsai in 1852, from Wikimedia Commons."
+      }
+    ],
     name: "Toi invasion",
     year: 1019,
     dateLabel: "May 1019 (Kannin 3)",
@@ -3826,6 +3904,12 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "kunohe-1591", name: "Kunohe Rebellion", year: 1591, dateLabel: "1591 (Tenshō 19)", period: "Azuchi–Momoyama",
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/8/8a/Kunohejou001.jpg",
+        caption: "Earth ramparts and a dry moat surviving at the site of Kunohe Castle in Ninohe, Iwate, besieged by the Toyotomi army in 1591; Wikimedia Commons."
+      }
+    ],
     location: { name: "Kunohe Castle, Mutsu (modern Ninohe, Iwate)", lat: 40.2667, lon: 141.3036 },
     combatants: { side1: { name: "Toyotomi", leader: "Toyotomi Hidetsugu & Gamō Ujisato" }, side2: { name: "Kunohe", leader: "Kunohe Masazane" } },
     outcome: "Toyotomi victory; the last armed resistance to Hideyoshi was crushed, completing the unification of Japan.",
@@ -3941,6 +4025,12 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "arai-1516", name: "Siege of Arai", year: 1516, dateLabel: "1516 (Eishō 13)", period: "Muromachi",
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/1/18/Soun_Hojo_portrait.jpg",
+        caption: "Portrait of Hōjō Sōun (1432 to 1519), who besieged and took Arai Castle in 1516; Wikimedia Commons."
+      }
+    ],
     location: { name: "Arai Castle, Miura Peninsula, Sagami (modern Kanagawa)", lat: 35.1597, lon: 139.6128 },
     combatants: { side1: { name: "Miura & Ōgigayatsu Uesugi", leader: "Miura Yoshiatsu" }, side2: { name: "Later Hōjō", leader: "Hōjō Sōun" } },
     outcome: "Hōjō victory; the Miura were destroyed and Hōjō Sōun completed his conquest of Sagami.",
@@ -4102,6 +4192,12 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "takabaru-1576", name: "Siege of Takabaru", year: 1576, dateLabel: "1576 (Tenshō 4)", period: "Azuchi–Momoyama",
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/0/0f/It%C5%8D_Yoshisuke.png",
+        caption: "Portrait of Itō Yoshisuke, whose clan lost Takabaru to the Shimazu in 1576. Wikimedia Commons."
+      }
+    ],
     location: { name: "Takabaru Castle, Hyūga (modern Miyazaki, Kyūshū)", lat: 31.9356, lon: 131.0103 },
     combatants: { side1: { name: "Shimazu", leader: "Shimazu Yoshihisa / Yoshihiro / Toshihisa" }, side2: { name: "Itō", leader: "Itō Yoshisuke" } },
     outcome: "Shimazu victory; a key step in dismantling Itō power in Hyūga.",
@@ -4111,6 +4207,12 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "omosu-1580", name: "Battle of Omosu", year: 1580, dateLabel: "1580 (Tenshō 8)", period: "Azuchi–Momoyama",
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Takeda_Katsuyori.jpg/960px-Takeda_Katsuyori.jpg",
+        caption: "Portrait of Takeda Katsuyori, whose fleet fought the Hōjō off Omosu in 1580. Wikimedia Commons."
+      }
+    ],
     location: { name: "Suruga Bay, off Omosu (modern Numazu, Shizuoka)", lat: 35.0200, lon: 138.8880 },
     combatants: { side1: { name: "Hōjō", leader: "Hōjō Ujimasa (Fūma Kotarō)" }, side2: { name: "Takeda", leader: "Takeda Katsuyori (Ohama Kagetaka)" } },
     outcome: "Inconclusive, claimed as a Hōjō success; a rare Sengoku naval engagement.",
@@ -4150,6 +4252,12 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "fukuda-bay-1565", name: "Battle of Fukuda Bay", year: 1565, dateLabel: "1565 (Eiroku 8)", period: "Muromachi",
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Matsura_Takanobu%2816th%29cr.jpg/960px-Matsura_Takanobu%2816th%29cr.jpg",
+        caption: "Portrait of Matsura Takanobu, the Hirado daimyō whose ships attacked João Pereira's Portuguese carrack at Fukuda Bay; Wikimedia Commons."
+      }
+    ],
     location: { name: "Fukuda Bay, off Nagasaki, Hizen (Kyūshū)", lat: 32.7450, lon: 129.8250 },
     combatants: { side1: { name: "Matsura clan", leader: "Matsura Takanobu" }, side2: { name: "Portuguese Empire", leader: "João Pereira" } },
     outcome: "Portuguese victory; the Japanese assault on the carracks was repelled.",
@@ -4266,6 +4374,12 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "musashi-matsuyama-1563", name: "Siege of Musashi-Matsuyama (1563)", year: 1563, dateLabel: "1563 (Eiroku 6)", period: "Muromachi",
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/e/e5/Musashi_Matsuyama_Castle.jpg",
+        caption: "The wooded remains of Musashi-Matsuyama Castle at Yoshimi in Saitama, the fortress besieged in 1563; Wikimedia Commons."
+      }
+    ],
     location: { name: "Matsuyama Castle, Musashi (modern Yoshimi, Saitama)", lat: 36.0369, lon: 139.4211 },
     combatants: { side1: { name: "Hōjō–Takeda alliance", leader: "Hōjō Ujiyasu & Takeda Shingen" }, side2: { name: "Uesugi–Ōta garrison", leader: "Uesugi Norikatsu & Ōta Sukemasa" } },
     outcome: "Hōjō–Takeda victory; the garrison surrendered after miners undermined the walls.",
@@ -4275,6 +4389,12 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "chokoji-1570", name: "Siege of Chōkō-ji", year: 1570, dateLabel: "1570 (Genki 1)", period: "Muromachi",
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/c/c2/Kamewari_Shibata.jpg",
+        caption: "An Edo period woodblock illustration from the Ehon Taikōki showing Shibata Katsuie smashing the last water jars during the siege of Chōkō-ji, the legend that earned him the nickname Kamewari (jar breaking) Shibata, Wikimedia Commons."
+      }
+    ],
     location: { name: "Chōkō-ji Castle, Ōmi Province (modern Shiga)", lat: 35.1056, lon: 136.1319 },
     combatants: { side1: { name: "Rokkaku", leader: "Rokkaku Yoshisuke" }, side2: { name: "Oda", leader: "Shibata Katsuie (with Sakuma Nobumori)" } },
     outcome: "Oda victory; Shibata Katsuie's defenders sallied out and routed the besieging Rokkaku, lifting the siege.",
@@ -4284,6 +4404,12 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "toyama-1585", name: "Siege of Toyama", year: 1585, dateLabel: "1585 (Tenshō 13)", period: "Azuchi–Momoyama",
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Toyama_Municipal_Folk_Museum_%28mock_keep_tower_of_the_Toyama_Castle%29_20180503.jpg/960px-Toyama_Municipal_Folk_Museum_%28mock_keep_tower_of_the_Toyama_Castle%29_20180503.jpg",
+        caption: "The mock keep on the site of Toyama Castle, now the city folk museum, the fortress Sassa Narimasa surrendered to Hideyoshi in 1585; Wikimedia Commons."
+      }
+    ],
     location: { name: "Toyama Castle, Etchū Province (modern Toyama)", lat: 36.6933, lon: 137.2111 },
     combatants: { side1: { name: "Toyotomi", leader: "Toyotomi Hideyoshi (with Maeda Toshinaga)" }, side2: { name: "Sassa", leader: "Sassa Narimasa" } },
     outcome: "Toyotomi victory; Sassa Narimasa submitted and Etchū passed to Hideyoshi.",
@@ -4293,6 +4419,12 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "ueda-1600", name: "Siege of Ueda (1600)", year: 1600, dateLabel: "1600 (Keichō 5)", period: "Azuchi–Momoyama",
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Ueda_Castle_Amagafuchi.jpg/960px-Ueda_Castle_Amagafuchi.jpg",
+        caption: "Ueda Castle in Nagano Prefecture, held by the Sanada against Tokugawa Hidetada in 1600; the castle was razed soon after, and the surviving turrets belong to a rebuilding begun in 1626. Wikimedia Commons."
+      }
+    ],
     location: { name: "Ueda Castle, Shinano Province (modern Ueda, Nagano)", lat: 36.4042, lon: 138.2439 },
     combatants: { side1: { name: "Tokugawa", leader: "Tokugawa Hidetada" }, side2: { name: "Sanada", leader: "Sanada Masayuki (with Sanada Yukimura)" } },
     outcome: "Sanada victory; ~2,000 defenders held off Hidetada's ~38,000, and the delay made him miss Sekigahara.",
@@ -4424,6 +4556,12 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "nakasendai-1335", name: "Nakasendai Rebellion", year: 1335, dateLabel: "1335 (Kenmu 2)", period: "Muromachi",
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/%E4%BA%95%E6%89%8B%E3%81%AE%E6%B2%A2%E5%8F%A4%E6%88%A6%E5%A0%B4%E7%A2%91.jpg/960px-%E4%BA%95%E6%89%8B%E3%81%AE%E6%B2%A2%E3%81%AE%E6%B2%A2%E5%8F%A4%E6%88%A6%E5%A0%B4%E7%A2%91.jpg",
+        caption: "The battlefield stele at Ide no sawa in Machida, where Hōjō Tokiyuki routed Ashikaga Tadayoshi on the march to Kamakura during the Nakasendai Rebellion of 1335. Wikimedia Commons."
+      }
+    ],
     location: { name: "Kamakura, Sagami Province (campaign from Shinano via Musashi; modern Kanagawa)", lat: 35.3160, lon: 139.5500 },
     combatants: { side1: { name: "Hōjō remnants", leader: "Hōjō Tokiyuki (backed by Suwa Yorishige)" }, side2: { name: "Ashikaga", leader: "Ashikaga Takauji" } },
     outcome: "Ashikaga victory; Takauji crushed the revolt, then broke with the Kenmu court, the spark of the Nanboku-chō wars.",
