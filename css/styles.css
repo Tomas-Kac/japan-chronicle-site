@@ -540,7 +540,10 @@ body { position: fixed; inset: 0; }
 .leaflet-bottom.leaflet-left {
   bottom: calc(var(--timebar-h, 129px) + 10px);
   z-index: 1060;
-  max-height: calc(100vh - var(--topbar-h, 60px) - var(--timebar-h, 129px) - 28px);
+  /* --opacity-h is the floating old-map opacity panel, which shares this top-left
+     corner. It measures 0 while hidden, so the stack only yields room when the panel
+     is actually on screen. */
+  max-height: calc(100vh - var(--topbar-h, 60px) - var(--timebar-h, 129px) - var(--opacity-h, 0px) - 28px);
   overflow-y: auto;
   overflow-x: hidden;
 }
