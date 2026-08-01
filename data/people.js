@@ -769,6 +769,241 @@ She married Tachibana Muneshige and is remembered for her readiness to take up a
         caption: "Tachibana Ginchiyo, Wikimedia Commons."
       }
     ]
+  },
+
+  // ---- Added 2026-08-01. Closes the audited gaps: every founder of the Kamakura
+  // schools was absent though the atlas pins their temples, and culture held only 4.
+  // Coordinates verified against each pinned place; portraits HEAD-verified. ----
+  {
+    id: "honen",
+    sources: [ { label: "Wikipedia: Hōnen", url: "https://en.wikipedia.org/wiki/H%C5%8Dnen" } ],
+    name: "Hōnen",
+    role: "religious",
+    born: 1133, died: 1212,
+    dateLabel: "1133–1212",
+    period: "Kamakura · Pure Land founder",
+    location: { name: "Chion-in, Higashiyama, Kyoto (Yamashiro)", lat: 35.00639, lon: 135.78389 },
+    summary: "Founder of the Pure Land school, who taught that anyone could reach paradise by calling on Amida's name.",
+    bio: `Hōnen was born in the province of Mimasaka, in the west of Honshū. His father, a local official, was killed in a night raid when the boy was eight, and he was sent away to a monastery; by thirteen he was on Mount Hiei, the great Tendai centre above Kyoto. He stayed there for decades and grew dissatisfied. The learning, the discipline and the costly rituals of the old schools were within reach only of monks and of the rich, and ordinary people had no realistic hope of salvation. In 1175, reading the Chinese master Shandao, Hōnen found his answer: anyone at all could be reborn in the Pure Land of Amida Buddha simply by calling Amida's name in trust, the practice known as the nembutsu, "Namu Amida Butsu". He left the mountain and settled at Ōtani in the Higashiyama hills of Kyoto, preaching to courtiers, warriors, farmers, fishermen and women alike.
+
+That simplicity made him famous and made him enemies. The established monasteries of Mount Hiei and Nara accused him of telling people to abandon every other Buddhist practice. In 1198 the regent Kujō Kanezane had him set out his teaching in writing, in the Senchakushū; in 1204 he and his followers signed a pledge of restraint, and in 1205 Kōfuku-ji laid formal charges against him. In 1207 the court banned exclusive nembutsu, executed four of his disciples and sent Hōnen, then in his seventies, into exile on Shikoku. He was pardoned in 1211 and returned to Kyoto, where he died on 29 February 1212, days after dictating the One-Sheet Document that boiled his message down to a single page. His school, Jōdo-shū, grew up around the place where he died, today the great temple of Chion-in, and his pupil Shinran carried the teaching further into Jōdo Shinshū, now the largest Buddhist movement in Japan.`,
+    battles: [],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/%E3%80%8A%E6%B3%95%E7%84%B6%E4%B8%8A%E4%BA%BA%E5%83%8F%EF%BC%88%E9%8F%A1%E5%BE%A1%E5%BD%B1%EF%BC%89%E3%80%8B13%E4%B8%96%E7%B4%80%E3%80%81%E9%8E%8C%E5%80%89%E6%99%82%E4%BB%A3%E3%80%81%E9%87%91%E6%88%92%E5%85%89%E6%98%8E%E5%AF%BA%E3%80%81%E4%BA%AC%E9%83%BD.jpg/960px-%E3%80%8A%E6%B3%95%E7%84%B6%E4%B8%8A%E4%BA%BA%E5%83%8F%EF%BC%88%E9%8F%A1%E5%BE%A1%E5%BD%B1%EF%BC%89%E3%80%8B13%E4%B8%96%E7%B4%80%E3%80%81%E9%8E%8C%E5%80%89%E6%99%82%E4%BB%A3%E3%80%81%E9%87%91%E6%88%92%E5%85%89%E6%98%8E%E5%AF%BA%E3%80%81%E4%BA%AC%E9%83%BD.jpg",
+        caption: "Portrait of Hōnen, a 13th century hanging scroll at Konkai-Kōmyō-ji in Kyoto, so painted within the century of his death; Wikimedia Commons."
+      }
+    ],
+  },
+  {
+    id: "shinran",
+    sources: [ { label: "Wikipedia: Shinran", url: "https://en.wikipedia.org/wiki/Shinran" } ],
+    name: "Shinran",
+    role: "religious",
+    born: 1173, died: 1263,
+    dateLabel: "1173–1263",
+    period: "Kamakura · Jōdo Shinshū founder",
+    location: { name: "Higashi Hongan-ji (Shinran's mausoleum), Kyoto", lat: 34.991, lon: 135.7585 },
+    summary: "Hōnen's exiled disciple, who married openly and founded Jōdo Shinshū, now Japan's largest Buddhist school.",
+    bio: `Shinran was born near Kyoto into a minor branch of the Fujiwara family and was made a monk at nine. He spent twenty years on Mount Hiei as an ordinary hall monk, chanting the name of Amida Buddha, and came away sure that no effort of his own would ever save him. In 1201 he became a pupil of Hōnen, the teacher of the nembutsu. Six years later the court banned Hōnen's movement; both men were stripped of their monastic status and exiled, Shinran to Echigo on the Japan Sea coast. They never met again.
+
+The exile made him. Cut off from the monasteries, he married Eshinni, raised a family, and spent about twenty years preaching in the villages of Hitachi in the east, to farmers, fishermen and low-ranking warriors. He called himself Gutoku, the bald fool, and said he was neither a monk nor a layman. He took Hōnen's teaching further: rebirth in the Pure Land is not earned by reciting the nembutsu often, nor by any merit of one's own, but is already given by Amida's vow, so the recitation is simply gratitude for a gift. Back in Kyoto in old age he finished his great book, the Kyōgyōshinshō, and died there in the winter of 1262 to 1263, ninety by the Japanese count. He founded no temple and named no successor, but his family and followers raised a chapel over his grave, and out of it grew the Hongan-ji and Jōdo Shinshū, today the most widely practised school of Buddhism in Japan.`,
+    battles: [],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Shinran_%28Nara_National_Museum%29.jpg/960px-Shinran_%28Nara_National_Museum%29.jpg",
+        caption: "A portrait of Shinran in the Nara National Museum, painted in the Nanbokuchō period (1334 to 1392), at least seventy years after his death. Wikimedia Commons."
+      }
+    ],
+  },
+  {
+    id: "dogen",
+    sources: [ { label: "Wikipedia: Dōgen", url: "https://en.wikipedia.org/wiki/D%C5%8Dgen" } ],
+    name: "Dōgen",
+    role: "religious",
+    born: 1200, died: 1253,
+    dateLabel: "1200–1253",
+    period: "Kamakura · founder of Sōtō Zen",
+    location: { name: "Eihei-ji, Echizen Province (now Fukui Prefecture)", lat: 36.05306, lon: 136.35556 },
+    summary: "Founder of Sōtō Zen and of Eihei-ji, who taught that sitting in meditation is the act of a buddha, not a route to becoming one.",
+    bio: `Dōgen was born in Kyoto in 1200, probably into the court nobility, and lost his mother as a small boy. At thirteen he entered the great Tendai monastery on Mount Hiei, where one question would not leave him: if every living being already possesses the buddha nature, why does anyone need to practice at all? No teacher in Japan could answer him, so in 1223 he sailed to Song China. At Mount Tiantong he found the Chan master Rujing, and on hearing him speak of casting off body and mind Dōgen felt the question dissolve. He came home in 1227 with an answer that turned the problem inside out. Practice and awakening are not two things, he taught. Sitting in meditation is not a method for becoming a buddha; it is the act of a buddha. He called it shikantaza, just sitting.
+
+In 1233 he opened his own temple at Fukakusa, south of Kyoto, but the Tendai establishment made his position there uncomfortable, and in 1243 a warrior patron, Hatano Yoshishige, offered him land far away in the mountains of Echizen. The temple he built there was renamed Eihei-ji in 1246 and is still one of the two head temples of the Sōtō school, where monks train under the daily rules he wrote for them. His last years went into the Shōbōgenzō, a difficult and beautiful set of essays now counted among the finest philosophical writing in Japanese. He fell ill, traveled to Kyoto for treatment and died there in 1253. He never used the name Sōtō himself; his successors attached that label to the school later.`,
+    battles: [],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/1/10/Dogen.jpg",
+        caption: "Dōgen watching the moon, a hanging scroll at Hōkyōji monastery in Fukui Prefecture that the file dates to about 1250, so within or close to his own lifetime; Wikimedia Commons."
+      }
+    ],
+  },
+  {
+    id: "eisai",
+    sources: [ { label: "Wikipedia, Eisai", url: "https://en.wikipedia.org/wiki/Eisai" } ],
+    name: "Eisai (Yōsai)",
+    role: "religious",
+    born: 1141, died: 1215,
+    dateLabel: "1141–1215",
+    period: "Kamakura · Rinzai Zen founder",
+    location: { name: "Kennin-ji, Kyoto", lat: 35.00099, lon: 135.77366 },
+    summary: "The monk who sailed twice to Song China and brought back both Rinzai Zen and tea.",
+    bio: `Eisai, whose name Kennin-ji itself still reads as Yōsai, was born in 1141 in Bitchū Province, in what is now Okayama, and trained as a Tendai monk on Mount Hiei. Convinced that Japanese Buddhism had gone slack, he twice crossed to China. The first voyage, in 1168, lasted only six months. The second, from 1187 to 1191, was the one that counted: he studied under a master of the Linji line of Chinese Chan and came home carrying the teaching Japan would call Rinzai Zen, a school that trains the mind through seated meditation and through wrestling with knotty questions rather than through scripture alone.
+
+He founded Shōfuku-ji in Kyushu, usually counted as Japan's first Zen temple, and at once met fierce opposition from the established schools. His answer was the treatise Kōzen Gokokuron, which argued that Zen would protect the realm rather than divide it, together with a careful refusal to break with his old school; he never renounced his Tendai ordination and kept up esoteric practice to the end of his life. He also looked east to the new warrior government, and it took him up. Hōjō Masako backed him at Jufuku-ji in Kamakura, and the shogun Minamoto no Yoriie granted him the Kyoto ground on which he opened Kennin-ji in 1202. Eisai brought tea seeds home from China as well, and wrote the Kissa Yōjōki, a short book recommending tea as medicine. From that modest beginning grew the whole culture of tea that Sen no Rikyū would perfect four centuries later. He died in 1215 and was buried in the grounds of Kennin-ji.`,
+    battles: [],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/5/5c/Myoan-Eisai-Kennin-ji-Portrait.png",
+        caption: "Painted portrait of Yōsai seated in an abbot's chair with a Chan master's staff in hand, by an unknown artist and dated on the file page to the twelfth century, close to his own lifetime; Wikimedia Commons."
+      }
+    ],
+  },
+  {
+    id: "rennyo",
+    sources: [ { label: "Wikipedia: Rennyo", url: "https://en.wikipedia.org/wiki/Rennyo" } ],
+    name: "Rennyo",
+    role: "religious",
+    born: 1415, died: 1499,
+    dateLabel: "1415–1499",
+    period: "Muromachi · Hongan-ji restorer",
+    location: { name: "Yoshizaki-gobō, Echizen Province", lat: 36.2871, lon: 136.2508 },
+    summary: "The eighth head of Hongan-ji, whose plain-language letters made it Japan's largest religious movement.",
+    bio: `Rennyo was born in Kyoto in 1415, the son of the seventh head of Hongan-ji and a woman who was not his father's wife and who was sent away when he was six. The temple he inherited in 1457 was poor and obscure, one minor branch of the Pure Land teaching handed down from his ancestor Shinran. In 1465 warrior monks from Mount Hiei burned it, and Rennyo fled. In 1471 he settled far to the north at Yoshizaki, on the border of Echizen and Kaga, and built a hillside compound that drew pilgrims from the northern provinces and had a town growing around it within two years.
+
+What made Rennyo different was how he taught. He wrote pastoral letters, the Ofumi, in plain Japanese that a village priest could read aloud to farmers, and he made a hanging scroll of the six characters Namu Amida Butsu the standard object of worship in every local meeting hall. Scattered villagers now shared one text, one practice and a network of congregations that crossed provincial borders. That network became a political force. In 1488 the believers of Kaga overthrew their governor, Togashi Masachika, and ran the province themselves until 1580, the first and longest of the Ikkō-ikki risings. Rennyo urged his followers to obey the authorities and never blessed their fighting, but the organisation behind it was his. He rebuilt Hongan-ji at Yamashina, finished in 1483, handed the temple to his son Jitsunyo in 1489, and in 1496 founded the retreat at the mouth of the Yodo river that became Ishiyama Hongan-ji, the fortress temple that later held out against Oda Nobunaga for ten years. He died in 1499.`,
+    battles: [],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Rennyo5.1.JPG/960px-Rennyo5.1.JPG",
+        caption: "A Muromachi period portrait of Rennyo, colour on silk, held at Hongan-ji in Kyoto according to the file's own description; that period spans his own lifetime, so the painting is contemporary or not much later. Wikimedia Commons."
+      }
+    ],
+  },
+  {
+    id: "ganjin",
+    sources: [ { label: "Wikipedia: Jianzhen (Ganjin)", url: "https://en.wikipedia.org/wiki/Jianzhen" } ],
+    name: "Ganjin (Jianzhen)",
+    role: "religious",
+    born: 688, died: 763,
+    dateLabel: "688–763",
+    period: "Nara · vinaya master from Tang China",
+    location: { name: "Tōshōdai-ji, Nara (Yamato)", lat: 34.67559, lon: 135.78483 },
+    summary: "The blind Chinese vinaya master who, after five failed crossings, gave Japan its first valid ordination.",
+    bio: `Ganjin was born at Yangzhou in Tang China in 688 and entered monastic life at fourteen. He became southern China's leading authority on the vinaya, the code of rules that governs monks, and is said to have conferred the precepts on tens of thousands of people. In 742 two Japanese monks studying in China asked him to come east. Japan had monks, but no lawful way to make them: the rule required ten fully ordained monks to confer the precepts on a formal platform, and Japan had neither, so men could simply declare themselves monks and slip out of tax and labour service. Ganjin agreed, and then spent eleven years trying to get there. Five voyages failed to storms, to informers and to officials who would not let him sail; one blew him south to Hainan, and he lost his sight on the long road back.
+
+On the sixth attempt, blind and in his mid sixties, he sailed with a returning Japanese embassy and came ashore in Satsuma. That landing is recorded under Tenpyō-shōhō 5, an era year usually written 753, but the twelfth lunar month had already run past the Western new year, so the day was 17 January 754. He reached Nara that spring, raised an ordination platform before the Great Buddha at Tōdai-ji and gave the precepts to some four hundred people, the retired emperor Shōmu among them. In 759 the court granted him land in the western half of the capital, where he founded Tōshōdai-ji and taught until his death in 763. He is counted the founder of the Ritsu school, and his party brought sutras, relics, medicines and Chinese craftsmen, among them the sculptors who introduced hollow dry lacquer.`,
+    battles: [],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Ganjin_Toshodai-ji.jpg/960px-Ganjin_Toshodai-ji.jpg",
+        caption: "The seated dry lacquer statue of Ganjin at Tōshōdai-ji in Nara, named a National Treasure on the file's own description and photographed for a 1952 catalogue; unlike most portraits in this atlas it dates from close to the sitter's own lifetime. Wikimedia Commons."
+      }
+    ],
+  },
+  {
+    id: "zeami",
+    sources: [ { label: "Wikipedia: Zeami Motokiyo", url: "https://en.wikipedia.org/wiki/Zeami_Motokiyo" } ],
+    name: "Zeami Motokiyo",
+    role: "culture",
+    born: 1363, died: 1443,
+    dateLabel: "c. 1363 – c. 1443",
+    period: "Muromachi · Noh master and theorist",
+    location: { name: "Kitayama, Kyoto", lat: 35.0393, lon: 135.7294 },
+    summary: "The actor and playwright who made village sarugaku into the classical theatre of Noh.",
+    bio: `Zeami was born into a family of travelling players from Yamato, the province around Nara, who performed sarugaku: a rough mixture of comic sketches, dance and mime put on at temples and shrines. In the mid 1370s his father Kan'ami brought the troupe to Kyoto, where the young shōgun Ashikaga Yoshimitsu saw the boy Zeami act and was captivated. Players ranked near the bottom of society, so the favour was extraordinary. Zeami was taken into court circles, given a classical education by the poet and statesman Nijō Yoshimoto, and the troupe won shogunal patronage. He inherited it when his father died in 1385, and over the next fifty years he rebuilt sarugaku into Noh, the slow, masked, poetic theatre still performed today, drawing his plots from the Tale of the Heike and from court poetry and aiming at yūgen, a beauty suggested rather than shown.
+
+He also wrote some twenty-one treatises on how to act, beginning with the Fūshikaden, the Transmission of the Flower. They are the oldest works on the theory of drama in Japanese, and they were secret teachings meant for his own family alone; most stayed unknown until manuscripts turned up in a second-hand bookshop in 1908. His last years were hard. The shōgun Ashikaga Yoshinori preferred Zeami's nephew Onnami, barred Zeami from the palace, handed the troupe to Onnami, and in 1434 exiled the old man to Sado Island. He appears to have been pardoned, and he died in 1443 and was buried in his native Yamato. He is pinned at Kitayama, Yoshimitsu's estate above Kyoto, the centre of the culture his theatre came to define.`,
+    battles: [],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Sousetsubon_fushikaden_7_part.PNG/960px-Sousetsubon_fushikaden_7_part.PNG",
+        caption: "No portrait of Zeami is known; this is a page of the secret seventh chapter of his Fūshikaden in a copy made by Kanze Sōsetsu in 1578, some 135 years after Zeami's death. Wikimedia Commons."
+      }
+    ],
+  },
+  {
+    id: "sesshu-toyo",
+    sources: [ { label: "Wikipedia: Sesshū Tōyō", url: "https://en.wikipedia.org/wiki/Sessh%C5%AB_T%C5%8Dy%C5%8D" } ],
+    name: "Sesshū Tōyō",
+    role: "culture",
+    born: 1420, died: 1506,
+    dateLabel: "c. 1420 – 1506",
+    period: "Muromachi · ink painter",
+    location: { name: "Ikō-ji (his garden), Masuda in Iwami", lat: 34.68, lon: 131.86569 },
+    summary: "The Zen monk who studied in Ming China and made ink landscape an art of its own in Japan.",
+    bio: `Sesshū was born around 1420 into a samurai family in Bitchū province, in what is now Sōja in Okayama. Sent as a boy to a local temple, he moved at about twelve to Shōkoku-ji in Kyoto, one of the great Zen monasteries under Ashikaga patronage. There he trained as a monk and learned painting from Tenshō Shūbun, then the leading ink landscapist in Japan. Around 1454 he left the capital for Suō in the far west, where the Ōuchi lords protected him and he kept a studio called Unkoku-an. In 1467, the year the Ōnin War broke out in Kyoto, he sailed to Ming China with a trade mission. He spent some two years travelling from Ningbo to Beijing, and said afterwards that he had learned more from the Chinese countryside itself than from any living Chinese painter.
+
+What he brought home in 1469 was not imitation. In works such as the Long Landscape Scroll of the Four Seasons (1486) and the splashed-ink landscape of 1495 he built pictures out of bare, decisive strokes and wide areas of empty paper, and this is the ink painting that the atlas's Kitayama and Higashiyama entries mean. Six of his paintings are National Treasures of Japan. He also designed gardens, and spent his last years in Iwami province, where the garden at Ikō-ji in Masuda is attributed to him and where tradition says his body was cremated. He is usually said to have died there in 1506 at the age of eighty-seven, though no firm record survives and some sources give 1502.`,
+    battles: [],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Portrait_of_Sesshu.jpg/960px-Portrait_of_Sesshu.jpg",
+        caption: "A hanging scroll portrait of Sesshū, recorded on Commons as a copy by an unknown painter of the sixteenth century, so made at or near the end of his life. Wikimedia Commons."
+      }
+    ],
+  },
+  {
+    id: "katsushika-hokusai",
+    sources: [ { label: "Wikipedia: Hokusai", url: "https://en.wikipedia.org/wiki/Hokusai" } ],
+    name: "Katsushika Hokusai",
+    role: "culture",
+    born: 1760, died: 1849,
+    dateLabel: "c. 1760 – 1849",
+    period: "Edo · ukiyo-e master",
+    location: { name: "Katsushika, eastern Edo (modern Katsushika ward, Tokyo)", lat: 35.7333, lon: 139.85 },
+    summary: "The ukiyo-e master who turned Japanese printmaking toward landscape and made The Great Wave.",
+    bio: `Hokusai was born in 1760 in the Katsushika district on the eastern edge of Edo, and later took that district's name as his own. He was apprenticed to a woodblock carver as a boy and joined a print studio at eighteen. Ukiyo-e, "pictures of the floating world", was at that time mostly cheap portraits of kabuki actors and courtesans sold to city people; Hokusai turned it toward landscape and toward the ordinary working life of the country. He changed his artist's name about thirty times over a career of seventy years, each change marking a new direction in his work.
+
+His best known series, Thirty-six Views of Mount Fuji, appeared around 1830, when he was already past seventy and Japan had caught a fashion for travel. One sheet from it, The Great Wave off Kanagawa, is probably the single most recognised Japanese image in the world. He also filled the sketchbooks known as the Manga with studies of everything he saw, and drew the portrait of Bashō that this atlas uses on the Oku no Hosomichi. A fire destroyed his studio and much of his work in 1839, and he kept painting almost to the end, dying in Edo in 1849 at eighty-eight. Within about ten years his prints were circulating in Paris, where they helped set off the European enthusiasm for Japanese art.`,
+    battles: [],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Hokusai_as_an_old_man.jpg/960px-Hokusai_as_an_old_man.jpg",
+        caption: "Hokusai as an old man, a self-portrait by the artist, undated on the file itself, Wikimedia Commons."
+      }
+    ],
+  },
+  {
+    id: "chikamatsu-monzaemon",
+    sources: [ { label: "Wikipedia: Chikamatsu Monzaemon", url: "https://en.wikipedia.org/wiki/Chikamatsu_Monzaemon" } ],
+    name: "Chikamatsu Monzaemon",
+    role: "culture",
+    born: 1653, died: 1725,
+    dateLabel: "1653–1725",
+    period: "Edo · Genroku playwright",
+    location: { name: "Dōtonbori, Osaka", lat: 34.6687, lon: 135.5013 },
+    summary: "The playwright of the Osaka puppet stage, who made tragedy from the love suicides of townspeople.",
+    bio: `Chikamatsu Monzaemon was born Sugimori Nobumori in 1653 in Echizen province, the son of a samurai who served the Matsudaira lords there as a doctor. While he was a boy the family moved to Kyoto, and instead of entering a lord's service he went into the theatre. His first puppet play appeared in 1683, and for the next twenty years he wrote mainly kabuki, above all for the great Kyoto actor Sakata Tōjūrō. In 1703 a shop clerk and a courtesan killed themselves together in the Sonezaki district of Osaka; within a month Chikamatsu had put their story on the puppet stage as The Love Suicides at Sonezaki. In 1705 or 1706 he left Kyoto for Osaka, the richest merchant city in Japan, and became house playwright of the Takemoto-za, the puppet theatre founded in 1684 by the chanter Takemoto Gidayū in the Dōtonbori theatre district.
+
+Puppet drama, called jōruri then and bunraku today, works by three arts at once: one chanter voices every part, a shamisen player carries the feeling, and three handlers move each doll. Chikamatsu wrote some seventy history plays for it and about two dozen set among living townspeople, and it is the second group that made his reputation. Merchants, clerks and courtesans had never been treated as tragic figures before; in his hands they are destroyed by the gap between duty and love. His most spectacular success, The Battles of Coxinga of 1715, ran for seventeen months. He died on 6 January 1725, which by the old lunar calendar was the twenty-second day of the eleventh month of Kyōhō 9, so many books date his death to 1724.`,
+    battles: [],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/0/0e/Chikamatsu_Monzaemon.jpg",
+        caption: "A portrait of Chikamatsu Monzaemon, given on Commons as a self-portrait. Wikimedia Commons."
+      }
+    ],
+  },
+  {
+    id: "saigyo",
+    sources: [ { label: "Wikipedia: Saigyō", url: "https://en.wikipedia.org/wiki/Saigy%C5%8D" } ],
+    name: "Saigyō",
+    role: "culture",
+    born: 1118, died: 1190,
+    dateLabel: "1118–1190",
+    period: "Heian/Genpei · poet-monk",
+    location: { name: "Hirokawa-dera, Kawachi (Kanan, Osaka)", lat: 34.4745, lon: 135.65294 },
+    summary: "A palace guard who left at twenty-two to wander as a monk, and became the model for every later travelling poet.",
+    bio: `Satō Norikiyo was born into a well-connected warrior family and served in the northern guard of the retired emperor Toba, alongside a young Taira no Kiyomori. In 1140, aged twenty-two, he walked away from the post for reasons no source explains, shaved his head, took the religious name En'i and became known by his pen name Saigyō, "western journey". For the next fifty years he kept hermitages at Saga and Kurama, spent long stretches on Mount Kōya and later near the shrines of Ise, and twice travelled the hard road north into Michinoku. The second journey, in 1186, he made as an old man to raise money for rebuilding Tōdai-ji, burnt in the Genpei War. On the way he was received at Kamakura by Minamoto no Yoritomo, who gave him a silver cat; Saigyō, the story goes, handed it to a child playing at the gate.
+
+He left roughly 2,300 poems, collected in his own Sankashū, and the imperial anthology Shin Kokinshū took ninety-four of them, more than from any other poet. He had asked in verse to die in spring beneath the blossom, at the full moon of the second month. He died at Hirokawa-dera in Kawachi on the sixteenth day of the second month of 1190, one day past that full moon, and readers ever since have treated the near-miss as a kind of proof. Five centuries later Bashō set out on the road to Oku partly to walk where Saigyō had walked.`,
+    battles: [],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/PORTRAIT_OF_THE_PRIEST-POET_SAIGYO_-_Google_Art_Project.jpg/960px-PORTRAIT_OF_THE_PRIEST-POET_SAIGYO_-_Google_Art_Project.jpg",
+        caption: "Portrait of the priest-poet Saigyō by an unknown artist, dated 1300 to 1400, more than a century after his death; MOA Museum of Art, via Wikimedia Commons."
+      }
+    ],
   }
 ];
 
