@@ -1324,5 +1324,388 @@ The promise was soon broken, but the reunification marked the height of Ashikaga
     details: `At the height of his power Ashikaga Yoshimitsu built the gold-leafed Kinkaku-ji (Golden Pavilion) at Kitayama in 1397, a retirement villa of almost imperial splendour. It gave its name to the Kitayama culture, a fusion of warrior, courtly, and Zen taste, enriched by renewed trade with Ming China.
 
 Under Yoshimitsu's patronage the actor-playwright Zeami perfected the Noh theatre, while ink painting, linked verse (renga), and the tea gathering took the refined forms that still define Japanese art.`
+  },
+
+  // ---- Early-period events added 2026-08-01, each verified against its source
+  // article for date (lunar year-end checked), coordinates and image. ----
+  {
+    id: "evt-seventeen-articles",
+    sources: [ { label: "Wikipedia: Seventeen-article constitution", url: "https://en.wikipedia.org/wiki/Seventeen-article_constitution" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Portrait_of_Prince_Sh%C5%8Dtoku_and_Two_Princes.jpg/960px-Portrait_of_Prince_Sh%C5%8Dtoku_and_Two_Princes.jpg",
+        caption: "A painting of the seventh or eighth century, traditionally identified as Prince Shōtoku with two princes, from the Imperial Household collection. Wikimedia Commons."
+      }
+    ],
+    name: "The Seventeen-Article Constitution",
+    type: "politics",
+    year: 604,
+    dateLabel: "604 (Suiko 12), 4th month 3rd day",
+    period: "Asuka–Nara · law",
+    location: { name: "Oharida Palace, the Suiko court; presumed site by Ikazuchi Hill, Asuka, Nara", lat: 34.4836, lon: 135.8156 },
+    summary: "The Nihon Shoki credits Prince Shōtoku with Japan's first written statement of governing principles, seventeen Confucian and Buddhist maxims on how officials should serve the throne.",
+    details: `The Nihon Shoki records that on the third day of the fourth month of Suiko 12, which converts to 6 May 604 on the Julian calendar, the crown prince himself composed a constitution of seventeen articles. That prince is Shōtoku, and the court sat at Oharida Palace in Asuka, the palace Empress Suiko had moved into the year before.
+
+Despite the name it is not a constitution in the modern sense. It is a set of moral instructions to officials, built on Confucian ideas of duty and hierarchy with Buddhist devotion mixed in. Article 1 calls for harmony, Article 2 for reverence toward the Three Treasures of Buddhism, Article 3 for obedience to imperial commands. With the Twelve Cap Ranks of 603 it belongs to the reform drive Suiko's court began after the first embassy to Sui China came home with a poor report on Japanese government.
+
+Whether Shōtoku wrote it is disputed. In 1930 Tsuda Sōkichi argued that terms such as kokushi, provincial governor, belong to a later age and that the text was composed when the Nihon Shoki was compiled around 720. Sakamoto Tarō defended the traditional attribution in 1979; Mori Hiromichi in 1999 found its Chinese prose too Japanese for the seventh century; Yoshikawa Shinji in 2011 judged the substance a good fit for Suiko's court even if later editors polished the wording. No copy older than the Nihon Shoki survives.`
+  },
+  {
+    id: "evt-sui-embassy-imoko",
+    sources: [ { label: "Wikipedia: Japanese missions to Imperial China", url: "https://en.wikipedia.org/wiki/Japanese_missions_to_Imperial_China" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Ono_no_Imoko.jpg/960px-Ono_no_Imoko.jpg",
+        caption: "Ono no Imoko, the envoy of 607, in a later Japanese painting; Wikimedia Commons."
+      }
+    ],
+    name: "Ono no Imoko's Embassy to Sui China",
+    type: "contact",
+    year: 607,
+    dateLabel: "607 (Suiko 15)",
+    period: "Asuka–Nara · foreign relations",
+    location: { name: "Sumiyoshi-tsu, the embassy port, Osaka", lat: 34.6124, lon: 135.4938 },
+    summary: "The court of Empress Suiko sent Ono no Imoko as ambassador to Sui China carrying a letter that addressed the Chinese emperor as an equal, opening the age of official embassies that brought law, writing and Buddhism to Japan.",
+    details: `In the seventh month of 607, early autumn on the Japanese calendar, the court of Empress Suiko sent the official Ono no Imoko as ambassador to the Sui emperor, with the interpreter Kuratsukuri no Fukuri. Missions like this set out from Sumiyoshi-tsu, the harbour on the old shoreline beside Sumiyoshi Taisha in what is now Osaka, where envoys prayed to the sea gods before working down the Inland Sea to Kyushu and crossing to the continent.
+
+Imoko carried a letter, usually credited to Prince Shōtoku, that called Japan "the land of the rising sun" and China the land of the setting sun, and that gave the title Son of Heaven to both rulers. Emperor Yang took offence, since Chinese thinking allowed only one Son of Heaven, but he still sent his own envoy Pei Shiqing back to Japan with Imoko in 608. Imoko sailed again that autumn with eight students and monks, several of whom stayed in China for decades and came home to shape Japan's reforms.
+
+A Japanese mission of 600 appears in the Chinese Book of Sui, so 607 is the first embassy recorded on both sides and the first known to carry a formal letter. The line of embassies it opened ran on to Tang China until the court broke them off in 894.`
+  },
+  {
+    id: "evt-fujiwara-kyo",
+    sources: [ { label: "Wikipedia: Fujiwara-kyō", url: "https://en.wikipedia.org/wiki/Fujiwara-ky%C5%8D" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/210401_One-thousandth_scale_model_of_Aramashinomiyako.jpg/960px-210401_One-thousandth_scale_model_of_Aramashinomiyako.jpg",
+        caption: "A modern 1:1000 scale model of Fujiwara-kyō, displayed in Kashihara City's exhibition room at the Fujiwara capital site. Wikimedia Commons."
+      }
+    ],
+    name: "Fujiwara-kyō, Japan's first grid capital",
+    type: "capital",
+    year: 694,
+    dateLabel: "694 (Jitō 8, 12th month, 6th day; 27 December 694, Julian)",
+    period: "Asuka–Nara · capital",
+    location: { name: "Fujiwara Palace site (藤原宮跡), Kashihara, Nara", lat: 34.50222, lon: 135.80722 },
+    summary: "In the last days of 694 Empress Jitō moved her court into Fujiwara-kyō, the first Japanese capital laid out on a Chinese-style square grid of streets. It served as capital for sixteen years and for three sovereigns, breaking the old habit of building a new palace at every accession.",
+    details: `The Nihon Shoki records the court moving into the Fujiwara Palace on the sixth day of the twelfth lunar month of Jitō 8. That day falls on 27 December 694 in the Julian calendar, right at the end of the Western year. Building had begun under Emperor Tenmu around 676, stopped when he died, and resumed under Empress Jitō in 690. The finished city ran about 5.3 km east to west and 4.8 km north to south and covered at least 25 square kilometres, a larger area than either Heijō-kyō or Heian-kyō would later cover.
+
+Two things made it new. Earlier rulers had usually raised a fresh palace at each accession, but Fujiwara-kyō was kept, and three sovereigns ruled from it: Jitō, Monmu and Genmei. The Taihō Code was issued here in 701. Its walled palace of roughly one square kilometre stood at the centre of the grid rather than at the northern edge as in the later capitals, a plan closer to the Chinese classic the Rites of Zhou than to Chang'an itself, and its halls were the first in Japan set on stone foundations and roofed with Chinese-style tiles. The court left for Heijō-kyō in 710. Excavation has recovered some 1,200 inscribed wooden slips, or mokkan, and most of the site is protected as a Special National Historic Site.`
+  },
+  {
+    id: "evt-ganjin-arrival",
+    sources: [ { label: "Japanese Wikipedia: 鑑真", url: "https://ja.wikipedia.org/wiki/鑑真" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/c/ce/Ganjin_wajyo_portrait.JPG",
+        caption: "The dry lacquer portrait statue of Ganjin at Tōshōdai-ji in Nara, made soon after his death in 763. Wikimedia Commons."
+      }
+    ],
+    name: "Ganjin (Jianzhen) reaches Japan",
+    type: "contact",
+    year: 754,
+    dateLabel: "17 January 754 (Tenpyō-shōhō 5, 12th month, 20th day)",
+    period: "Asuka–Nara · religion",
+    location: { name: "Akime bay, Satsuma (modern Bōnotsu, Minamisatsuma, Kagoshima Prefecture)", lat: 31.36103, lon: 130.19914 },
+    summary: "After five failed crossings and twelve years of trying, the blind Chinese master of monastic discipline Ganjin came ashore in Satsuma. He brought Japan its first proper ordination platform, so that monks could at last be ordained in a recognised lineage.",
+    details: `Nara Japan had no proper way to ordain monks. The rules required ten qualified monks to confer the full precepts on a formal platform, and Japan had neither, so men could simply declare themselves monks and escape tax and labour service. In 742 two Japanese monks studying in Tang China asked Ganjin, abbot of Daming-si at Yangzhou and a celebrated master of monastic discipline, to put this right.
+
+Five crossings failed over eleven years, undone by storms, informers and officials; one voyage blew him to Hainan, and he lost his sight before he got back to Yangzhou. On the sixth attempt he sailed with a returning Japanese embassy, and his ship was driven ashore at Akime, a small bay on the Satsuma coast.
+
+He reached Nara that spring, raised an ordination platform before the Great Buddha at Tōdai-ji and ordained some four hundred people, the retired emperor Shōmu among them. In 759 he founded Tōshōdai-ji on land granted in western Nara, and died there in 763.
+
+Watch the date. The landing is recorded as the twentieth day of the twelfth month of Tenpyō-shōhō 5, an era year normally written 753. The old calendar was lunar, and that twelfth month had already run past the Western New Year, so the real day was 17 January 754.`
+  },
+  {
+    id: "evt-usa-hachiman-oracle",
+    sources: [ { label: "Wikipedia: Empress Kōken (Dōkyō affair)", url: "https://en.wikipedia.org/wiki/Empress_K%C5%8Dken" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Usa_Shrine_Nanchu_Romon.JPG/960px-Usa_Shrine_Nanchu_Romon.JPG",
+        caption: "The Minami Chūrōmon gate at Usa Jingū in Ōita, the shrine that gave both oracles of 769; the present gate is a much later rebuilding. Wikimedia Commons."
+      }
+    ],
+    name: "The Usa Hachiman Oracle",
+    type: "politics",
+    year: 769,
+    dateLabel: "769 (Jingo-keiun 3)",
+    period: "Asuka–Nara · succession",
+    location: { name: "Usa Jingū, Buzen Province (modern Usa, Ōita)", lat: 33.5261, lon: 131.3747 },
+    summary: "A shrine oracle from Usa announces that the monk Dōkyō should be made emperor. The courtier Wake no Kiyomaro is sent to check it and comes back with the opposite message, that the throne belongs only to the imperial line.",
+    details: `By 769 the monk Dōkyō stood higher than any commoner in Japanese history. Empress Shōtoku, whose illness he had treated, had made him chancellor and then hōō, 'Buddhist king', with a palace beside her own.
+
+That year an official of the Dazaifu, the government seat in Kyushu, reported an oracle from the Hachiman shrine at Usa: make Dōkyō emperor and the realm will be at peace. The empress sent the courtier Wake no Kiyomaro to Usa to hear the god again. On the eleventh day of the seventh month he received a very different answer, recorded in the Shoku Nihongi: since the founding of the state, lord and subject have been fixed, and never has a subject been made lord; the throne must go to one of the imperial line. Kiyomaro reported it, was stripped of his office, given a deliberately insulting new name and banished to Ōsumi; his sister was defrocked and exiled as well.
+
+Dōkyō was never enthroned. When Shōtoku died in 770 he was packed off to a provincial temple and Kiyomaro was recalled. Historians still argue over who really wanted the first oracle, Dōkyō or the childless empress herself, but the rule Kiyomaro brought back was quoted for more than a thousand years afterwards.`
+  },
+  {
+    id: "evt-nagaoka-kyo",
+    sources: [ { label: "Wikipedia: Nagaoka-kyō", url: "https://en.wikipedia.org/wiki/Nagaoka-ky%C5%8D" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Nagaokakyo_Chodoin.jpg/960px-Nagaokakyo_Chodoin.jpg",
+        caption: "A scale reconstruction model of the Chōdō-in, the state halls of the Nagaoka palace, in the Mukō City Cultural Museum. Wikimedia Commons."
+      }
+    ],
+    name: "Nagaoka-kyō, the capital that failed",
+    type: "capital",
+    year: 784,
+    dateLabel: "784 (Enryaku 3, 11th month, 11th day)",
+    period: "Asuka–Nara · capital",
+    location: { name: "Nagaoka Palace site, Kaidechō, Mukō (Kyoto Prefecture)", lat: 34.9435, lon: 135.7032 },
+    summary: "In 784 Emperor Kanmu walked away from Nara and built a brand new capital at Nagaoka, then abandoned that too ten years later after an assassination, a dead prince's vengeful ghost and floods. The move to Kyoto in 794 was the second try, not the first.",
+    details: `In the eleventh month of 784 Emperor Kanmu moved his court out of Nara to a new city at Nagaoka, on the plain where three great rivers, the Katsura and the Uji among them, join to form the Yodo. Boats could reach the city directly, spring water flushed its drains, and the palace stood on ground raised above the streets, all things flat, landlocked Heijō-kyō lacked. The site also put the emperor at a distance from the great Nara temples, close to the wealthy immigrant families of Yamashiro, and in the home district of his chief adviser, Fujiwara no Tanetsugu.
+
+Politically it collapsed. Tanetsugu, the official in charge of building the palace, was assassinated in 785, and Kanmu's own brother and heir, Prince Sawara, was accused, stripped of his rank and sent into exile; he died on the road. Famine, epidemic and a run of deaths in the imperial family followed, court diviners blamed Sawara's vengeful spirit, and then floods tore through the city. Kanmu gave up and moved again in 794, to Heian-kyō, modern Kyoto.
+
+Nagaoka was so thoroughly forgotten that its palace was called a phantom capital until the site was rediscovered in 1954. Excavation has since shown a real, largely finished city, with halls brought in from the older palace at Naniwa.`
+  },
+  {
+    id: "evt-sugawara-michizane-exile",
+    sources: [ { label: "Wikipedia: Sugawara no Michizane", url: "https://en.wikipedia.org/wiki/Sugawara_no_Michizane" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Sugawara_Michizane_in_Exile_by_Kobayashi_Kiyochika.jpg/960px-Sugawara_Michizane_in_Exile_by_Kobayashi_Kiyochika.jpg",
+        caption: "Sugawara no Michizane in exile, a woodblock print triptych by Kobayashi Kiyochika, 1884. Wikimedia Commons."
+      }
+    ],
+    name: "Exile of Sugawara no Michizane to Dazaifu",
+    type: "politics",
+    year: 901,
+    dateLabel: "16 February 901 (Shōtai 4, 1st month, 25th day)",
+    period: "Heian · regency",
+    location: { name: "Dazaifu government headquarters, Chikuzen Province (Dazaifu, Fukuoka Prefecture)", lat: 33.514542, lon: 130.515144 },
+    summary: "In the first month of 901 the imperial court stripped Sugawara no Michizane, a scholar who had risen to Minister of the Right, of his rank and packed him off to the Dazaifu in Kyushu. He died there in 903, and the disasters that followed turned him into the dreaded spirit Tenjin.",
+    details: `Michizane was a professor's son who rose by learning rather than birth. Emperor Uda promoted him to offset the Fujiwara, and by 899 he was Minister of the Right, serving beside the Fujiwara head Tokihira as Minister of the Left. Once Uda stepped down, that protection thinned. Tokihira told the young Emperor Daigo that Michizane meant to put his own son-in-law, Prince Tokiyo, on the throne. On the 25th day of the 1st month of Shōtai 4 an imperial decree demoted Michizane to provisional Governor-General of the Dazaifu, the regional government seat for Kyushu. It was exile in all but name; his sons were scattered to the provinces as well. He was kept under guard, wrote his bleakest poems there, and died in 903.
+
+What followed mattered as much as the fall. Tokihira died young in 909, plague and drought came, and in 930 lightning struck the palace hall of Seiryōden and killed two courtiers in front of Emperor Daigo, who died months later. The court read all of it as the revenge of Michizane's angry spirit. It restored his rank in 923, and in 947 built him a shrine at Kitano in Kyoto. At Dazaifu a shrine already stood over his grave, rebuilt on a grand scale in 919. The wronged minister became Tenjin, now the god of learning.`
+  },
+  {
+    id: "evt-kokin-wakashu",
+    sources: [ { label: "Wikipedia: Kokin Wakashū", url: "https://en.wikipedia.org/wiki/Kokin_Wakash%C5%AB" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Kokin_Wakashu_Genei.jpg/960px-Kokin_Wakashu_Genei.jpg",
+        caption: "Part of the kana preface to the Kokin Wakashū, from the Gen'ei manuscript of 1120 now in the Tokyo National Museum. Wikimedia Commons."
+      }
+    ],
+    name: "The Kokin Wakashū, the first imperial poetry anthology",
+    type: "culture",
+    year: 905,
+    dateLabel: "905 (Engi 5, fourth month)",
+    period: "Heian · literature",
+    location: { name: "Heian Palace (Daidairi), Heian-kyō, modern Kyoto", lat: 35.0136, lon: 135.7422 },
+    summary: "Emperor Daigo orders the first anthology of Japanese poetry compiled by imperial command. Its preface, written by Ki no Tsurayuki in Japanese instead of Chinese, is the oldest literary criticism in the Japanese language.",
+    details: `In 905 four court poets, led by Ki no Tsurayuki, presented Emperor Daigo with the Kokin Wakashū, the 'Collection of Japanese Poems of Ancient and Modern Times'. It gathered roughly 1,100 short poems (waka) into twenty books arranged by season, love, parting, grief and other themes, and it was the first anthology of Japanese verse ever assembled by imperial command. All twenty-one later imperial anthologies followed its pattern.
+
+What made it revolutionary was the language. For a century the court had treated Chinese as the proper medium for serious writing, and earlier imperial anthologies had collected Chinese verse. Tsurayuki opened this one with a preface written in Japanese, in the kana script, arguing that poetry grows out of human feeling and appraising the poets of the past. It is the earliest work of literary criticism in the Japanese language, and it set the vernacular beside Chinese at the very top of court culture.
+
+The prefaces are dated to the fourth month of Engi 5, that is 905, but the collection contains poems composed after that year, so scholars think it reached its final shape somewhere around 914 to 920. The work was done at the Heian Palace in Kyoto; Tsurayuki's own poetry collection places the selection sessions in a room just east of the Jōkyōden hall, inside the emperor's private quarters.`
+  },
+  {
+    id: "evt-byodoin-phoenix-hall",
+    sources: [ { label: "Wikipedia: Byōdō-in", url: "https://en.wikipedia.org/wiki/By%C5%8Dd%C5%8D-in" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/%E5%B9%B3%E7%AD%89%E9%99%A2%E9%B3%B3%E5%87%B0%E5%A0%82%EF%BC%882023%E5%B9%B4%EF%BC%89.jpg/960px-%E5%B9%B3%E7%AD%89%E9%99%A2%E9%B3%B3%E5%87%B0%E5%A0%82%EF%BC%882023%E5%B9%B4%EF%BC%89.jpg",
+        caption: "The Phoenix Hall of Byōdō-in seen across its pond at Uji, the hall completed in 1053. Wikimedia Commons."
+      }
+    ],
+    name: "The Phoenix Hall of Byōdō-in",
+    type: "culture",
+    year: 1053,
+    dateLabel: "1053 (Tenki 1, third month, fourth day)",
+    period: "Heian · religion",
+    location: { name: "Byōdō-in, Uji, Yamashiro (modern Uji, Kyoto Prefecture)", lat: 34.88944, lon: 135.80778 },
+    summary: "Fujiwara no Yorimichi completes an Amida hall at Uji designed to look like the Pure Land made visible, the finest surviving building of the Heian aristocracy.",
+    details: `In 1052 the regent Fujiwara no Yorimichi turned his family's riverside villa at Uji, south of the capital, into a temple. Many people believed that year was the first of mappō, the 'Latter Day of the Law', an age in which Buddhist teaching would decay and no one could reach enlightenment by their own effort. The comfort on offer was Amida Buddha, who had vowed to carry the faithful to his Pure Land in the west.
+
+The Amida hall was dedicated on the fourth day of the third month of Tenki 1, that is 26 March 1053. Its later nickname Hōō-dō, the Phoenix Hall, comes from the two bronze phoenixes on the roof and from the outstretched corridors that look like wings. It stands beyond a pond and faces east, so a worshipper approaching over the water repeats the journey of a soul travelling to paradise. Inside sits a gilded cypress Amida almost three metres tall, carved by Jōchō; it is the only sculpture certainly by his hand that survives, and its calm proportions became the model for Japanese Buddhist sculpture for centuries.
+
+Fire during the fighting of 1336 destroyed almost all of Byōdō-in, but the Phoenix Hall came through. It is a National Treasure, part of the UNESCO Historic Monuments of Ancient Kyoto, and the building on the Japanese ten yen coin.`
+  },
+  {
+    id: "evt-shirakawa-insei-1087",
+    sources: [ { label: "Wikipedia: Cloistered rule", url: "https://en.wikipedia.org/wiki/Cloistered_rule" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/%E7%99%BD%E6%B2%B3%E4%B8%8A%E7%9A%87%E3%81%AE%E5%BE%A1%E5%B9%B8.jpg/960px-%E7%99%BD%E6%B2%B3%E4%B8%8A%E7%9A%87%E3%81%AE%E5%BE%A1%E5%B9%B8.jpg",
+        caption: "Retired Emperor Shirakawa's procession, with his ox carriage and armed escort, from the fourteenth century Kasuga Gongen Genki-e handscrolls in an 1870 copy; Wikimedia Commons."
+      }
+    ],
+    name: "Retired Emperor Shirakawa begins cloistered rule (insei)",
+    type: "politics",
+    year: 1087,
+    dateLabel: "3 January 1087 (Ōtoku 3, 26th day of the 11th month)",
+    period: "Heian · insei",
+    location: { name: "Shirakawa district, Hosshō-ji site, Okazaki, Sakyō-ku, Kyoto", lat: 35.01378, lon: 135.78781 },
+    summary: "Emperor Shirakawa gave the throne to his eight year old son Horikawa and then, as retired emperor, went on running the government himself from the Shirakawa district east of the capital. This was the start of insei, cloistered rule, the system that shaped court politics for a century.",
+    details: `Shirakawa named his eight year old son Taruhito crown prince and abdicated to him on the same day, the 26th of the 11th month of Ōtoku 3, which falls on 3 January 1087 in the Western calendar. The boy became Emperor Horikawa. The point was to lock the succession into Shirakawa's own line and shut out his half brother Sukehito. As a retired emperor, Daijō Tennō, Shirakawa held no office and no formal power, but he was the reigning emperor's father, and he simply carried on governing. He did so for 43 years, through the reigns of Horikawa, Toba and Sutoku, until his death in 1129.
+
+His base was Shirakawa, a district on the east bank of the Kamo river just outside the capital, where he had already raised Hosshō-ji, a huge vow temple with an octagonal nine storey pagoda about 80 metres tall. From around 1090 he built his retirement palaces beside it, and the district gave him the name history uses. Historians caution that he probably did not set out to invent a new system. For the first decade the regent Fujiwara no Morozane still handled much of the business of state, and the retired emperor only became the dominant figure after 1099. Even the word insei is a later label, coined in the Edo period.`
+  },
+  {
+    id: "evt-konjikido-chusonji",
+    sources: [ { label: "Wikipedia: Chūson-ji", url: "https://en.wikipedia.org/wiki/Ch%C5%ABson-ji" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Interior_of_Konjikido%2C_Chusonji_%2862%29.jpg/960px-Interior_of_Konjikido%2C_Chusonji_%2862%29.jpg",
+        caption: "The gilded interior of the Konjikidō, showing a seated Amida Buddha with attendant figures on one of its three altars, in a photograph published in 1915; Wikimedia Commons."
+      }
+    ],
+    name: "The Konjikidō (Golden Hall) of Chūson-ji, Hiraizumi",
+    type: "culture",
+    year: 1124,
+    dateLabel: "1124 (Tenji 1)",
+    period: "Heian · northern Fujiwara",
+    location: { name: "Konjikidō, Chūson-ji, Hiraizumi, Mutsu Province (modern Hiraizumi, Iwate Prefecture)", lat: 39.001361, lon: 141.099889 },
+    summary: "In 1124 the northern lord Fujiwara no Kiyohira raised the Konjikidō, a small hall gilded inside and out, at his temple of Chūson-ji in Hiraizumi. It is the only building of his era still standing there, and it holds the embalmed bodies of his family.",
+    details: `Fujiwara no Kiyohira ruled Mutsu and Dewa, the far north of Japan, from Hiraizumi, roughly 650 kilometres in a straight line from the imperial capital at Heian-kyō. He had survived the brutal northern wars of the eleventh century, and from about 1100 he spent the gold, horses and trade wealth of the region on a temple complex meant to be a Pure Land on earth, a memorial for the dead of all sides.
+
+The Konjikidō is what survives of that plan. An inscription written on its ridgepole dates the raising of the frame to Tenji 1, 1124. The hall is small, roughly five and a half metres square, but it is gilded on every surface inside and out, and its pillars and altar rails carry mother of pearl inlay and gold lacquer equal to anything being made in Kyoto. Three altars stand inside, each with a seated Amida Buddha and attendant figures. Beneath them lie the embalmed bodies of Kiyohira, his son Motohira and his grandson Hidehira, along with the head of Yasuhira, so the building is a mausoleum as well as a chapel.
+
+Minamoto no Yoritomo destroyed the Northern Fujiwara in 1189, but the Konjikidō itself was spared and was later enclosed in a protective covering hall. It is the only building of the Fujiwara era still standing at Chūson-ji, a National Treasure, and part of the Hiraizumi World Heritage site.`
+  },
+  {
+    id: "evt-kiyomori-daijo-daijin-1167",
+    sources: [ { label: "Wikipedia: Taira no Kiyomori", url: "https://en.wikipedia.org/wiki/Taira_no_Kiyomori" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Taira_no_Kiyomori%2CTenshiSekkanMiei.jpg/960px-Taira_no_Kiyomori%2CTenshiSekkanMiei.jpg",
+        caption: "Taira no Kiyomori as painted in the fourteenth century scroll Tenshi Sekkan Miei, a posthumous court portrait made long after his death. Wikimedia Commons."
+      }
+    ],
+    name: "Taira no Kiyomori becomes Chancellor of the Realm",
+    type: "politics",
+    year: 1167,
+    dateLabel: "4 March 1167 (Nin'an 2, 2nd month, 11th day)",
+    period: "Heian · Taira ascendancy",
+    location: { name: "Rokuhara, Higashiyama-ku, Kyoto", lat: 34.9971, lon: 135.7733 },
+    summary: "In 1167 Taira no Kiyomori became Daijō-daijin, chancellor of the realm and the highest office in the imperial government. He was the first man from a warrior house ever to hold it, and he ran the country from his clan's mansion quarter at Rokuhara in Kyoto.",
+    details: `Taira no Kiyomori headed the Ise branch of the Taira, a warrior family that had risen through service to the retired emperors. He came out of the Hōgen disturbance of 1156 and the Heiji disturbance of 1160 as the strongest military man in the capital, then climbed the ordinary ladder of court office rather than building a rival government. On the eleventh day of the second month of Nin'an 2, which falls on 4 March 1167 in the Western calendar, he was made Daijō-daijin, the chancellor who sat at the top of the civil government created by the Taihō Code. No man from a provincial warrior house had ever held the post.
+
+The title was largely honorary, and Kiyomori resigned it after about three months, then took Buddhist vows the following year. What mattered was the precedent and what came with it. His sons and kinsmen filled court posts, his daughter Tokuko married Emperor Takakura and bore the future Emperor Antoku, and Kiyomori went on directing affairs from the family mansion quarter at Rokuhara, east of the Kamo river, until his death in 1181. Historians sometimes call the regime he built the Rokuhara government for that reason.
+
+The appointment itself was a court act, made at the palace. The pin marks Rokuhara, the Taira headquarters, whose surviving landmark is the temple Rokuharamitsu-ji.`
+  },
+  {
+    id: "evt-bunji-shugo-jito",
+    sources: [ { label: "Japanese Wikipedia: 文治の勅許", url: "https://ja.wikipedia.org/wiki/文治の勅許" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Emperor_Goshirakawa%2Cmy%C5%8Dh%C5%8Din.jpg/960px-Emperor_Goshirakawa%2Cmy%C5%8Dh%C5%8Din.jpg",
+        caption: "Thirteenth-century portrait of the cloistered emperor Go-Shirakawa, who granted the sanction; the painting is kept at Myōhō-in in Kyoto. Wikimedia Commons."
+      }
+    ],
+    name: "The Bunji Sanction: shugo and jitō granted to Yoritomo",
+    type: "politics",
+    year: 1185,
+    dateLabel: "December 21, 1185 (Bunji 1/11/28)",
+    period: "Kamakura · politics",
+    location: { name: "Rokujō-dono, the cloistered emperor's palace at Rokujō and Nishinotōin, Kyoto", lat: 34.9941, lon: 135.7552 },
+    summary: "In December 1185 the retired emperor Go-Shirakawa authorised Minamoto no Yoritomo to appoint constables (shugo) in the provinces and stewards (jitō) on the estates. Many historians date the birth of national warrior government to this decree rather than to Yoritomo's shogun title of 1192.",
+    details: `Three months after the Genpei War ended at Dan-no-ura, Yoritomo's father-in-law Hōjō Tokimasa rode into Kyoto with an armed escort. On the 28th day of the 11th month of Bunji 1 he put a request to the cloistered emperor Go-Shirakawa through the courtier Yoshida Tsunefusa, and it was granted. Yoritomo could place his own men across the country as shugo (constables, holding police and military authority) and jitō (stewards, with rights over land and its taxes), and could levy a war-rice tax of five shō per tan of paddy. The stated pretext was the hunt for his fugitive brother Yoshitsune; the effect was permanent.
+
+Historians still argue over how much was really settled that day. The Kamakura chronicle Azuma Kagami describes a nationwide system of shugo and jitō and credits the plan to Yoritomo's adviser Ōe no Hiromoto. The courtier Kujō Kanezane, writing in his diary Gyokuyō at the time, records the same decision without those words. Many specialists now think what was created was a broader provincial office, the kuni-jitō, which only later hardened into the shugo of later Kamakura practice. Either way, this is why Japanese textbooks no longer simply date the shogunate to 1192.`
+  },
+  {
+    id: "evt-sanetomo-assassination",
+    sources: [ { label: "Wikipedia: Minamoto no Sanetomo", url: "https://en.wikipedia.org/wiki/Minamoto_no_Sanetomo" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Sanetomo%27s_assassination_Crime_scene.jpg/960px-Sanetomo%27s_assassination_Crime_scene.jpg",
+        caption: "The great stone steps at Tsurugaoka Hachimangū where Sanetomo was killed, photographed in 2008 with the shrine's old ginkgo still standing at left; the tree blew down in 2010. Wikimedia Commons."
+      }
+    ],
+    name: "The Assassination of Minamoto no Sanetomo",
+    type: "incident",
+    year: 1219,
+    dateLabel: "13 February 1219 (Kenpō 7, 1st month, 27th day)",
+    period: "Kamakura · succession",
+    location: { name: "Tsurugaoka Hachimangū, Kamakura", lat: 35.32609, lon: 139.55644 },
+    summary: "On a snowy evening in February 1219 the third shogun, Minamoto no Sanetomo, was cut down on the stone steps of Tsurugaoka Hachimangū by his own nephew Kugyō. With his death the Minamoto line of shoguns ended after three generations, leaving the Hōjō regents in sole command of Kamakura.",
+    details: `Sanetomo became shogun at eleven, but real power in Kamakura lay with his mother Hōjō Masako and his uncle Hōjō Yoshitoki. Shut out of government, he turned to poetry and to court rank, and in 1218 he was made Minister of the Right. On the 27th day of the first month of Kenpō 7, in deep snow, he went up to Tsurugaoka Hachimangū to give thanks for the appointment. Coming back down the great stone steps after dark, he was attacked and beheaded by Kugyō, son of his murdered elder brother Yoriie. Kugyō was head priest of the shrine itself and had been raised as Sanetomo's adopted heir. He shouted that he had avenged his father, then was hunted down and killed the same night.
+
+Sanetomo left no children, so the Minamoto line of shoguns ended after three generations. The shogunate itself survived: the Hōjō brought a two year old boy of the Kujō branch of the Fujiwara from Kyoto to serve as a figurehead, with Masako governing in his name. Retired Emperor Go-Toba refused to send a prince of his own, and the quarrel that followed led to the Jōkyū War of 1221. A well known story has Kugyō hiding behind the shrine's great ginkgo, but that detail appears only in Edo period writing, not in the thirteenth century sources; the tree blew down in 2010.`
+  },
+  {
+    id: "evt-rokuhara-tandai",
+    sources: [ { label: "Wikipedia: Rokuhara Tandai", url: "https://en.wikipedia.org/wiki/Rokuhara_Tandai" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Higashiyama_Kaiseikan_ac.jpg/960px-Higashiyama_Kaiseikan_ac.jpg",
+        caption: "Nothing of the headquarters survives; a Kyoto city school now covers the Rokuhara ground where it stood. Wikimedia Commons."
+      }
+    ],
+    name: "The Rokuhara Tandai",
+    type: "politics",
+    year: 1221,
+    dateLabel: "1221 (Jōkyū 3, 6th month)",
+    period: "Kamakura · governance",
+    location: { name: "Rokuhara, Higashiyama, Kyoto", lat: 34.996083, lon: 135.774472 },
+    summary: "After crushing Retired Emperor Go-Toba's rebellion in 1221, the Kamakura shogunate posted two of its own deputies at Rokuhara in Kyoto. From there warriors watched the imperial court, policed the capital and judged disputes across western Japan until 1333.",
+    details: `Rokuhara is the strip of ground on the east bank of the Kamo river below the Higashiyama hills, between the old Gojō and Shichijō avenues. The Taira family filled it with mansions in the twelfth century; they burned in 1183 when the Taira fled the capital, and the land passed to Minamoto no Yoritomo and his Kyoto deputies. In the sixth month of Jōkyū 3, the summer of 1221, the two commanders who had just beaten Go-Toba, Hōjō Yasutoki and Hōjō Tokifusa, stayed on in the city rather than return east. They took offices at Rokuhara, one north and one south, and the post came to be called the Rokuhara Tandai. It was reserved for members of the Hōjō family and ranked just below the top posts at Kamakura; several holders later became regent. The deputies watched the court, oversaw the estates confiscated after the war, judged lawsuits between warriors and landholders across western Japan, and from 1238 ran the watch-houses that guarded Kyoto at night. Their power had limits, since verdicts were referred back to Kamakura and the great temples could still force the shogunate to give way. The office died with the shogunate in 1333, when Ashikaga Takauji changed sides and stormed Rokuhara; the last two deputies fled with two retired emperors and Emperor Kōgon, and Hōjō Nakatoki killed himself at Banba in Ōmi.`
+  },
+  {
+    id: "evt-utsunomiya-tsuji",
+    sources: [ { label: "Japanese Wikipedia: 宇都宮辻子幕府", url: "https://ja.wikipedia.org/wiki/宇都宮辻子幕府" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Utsunomiya_Inari_shrine_in_Kamakura_city.jpg/960px-Utsunomiya_Inari_shrine_in_Kamakura_city.jpg",
+        caption: "The stone marker recording the site of the Utsunomiya-tsuji palace, standing beside Utsunomiya Inari Shrine in Komachi, Kamakura; Wikimedia Commons."
+      }
+    ],
+    name: "The Hōjō Council of State at Utsunomiya-tsuji",
+    type: "politics",
+    year: 1226,
+    dateLabel: "January 1226 (Karoku 1/12/20 and 12/21)",
+    period: "Kamakura · governance",
+    location: { name: "Utsunomiya-tsuji palace site, Komachi, Kamakura, Sagami Province", lat: 35.320306, lon: 139.553944 },
+    summary: "The Kamakura shogunate moves its palace from Ōkura to a new site beside Wakamiya-ōji, and the next day the regent Hōjō Yasutoki seats a standing council of senior vassals to decide law and policy by discussion.",
+    details: `When Hōjō Yoshitoki died in 1224, and Hōjō Masako and Ōe no Hiromoto followed in 1225, the founding generation of the Kamakura shogunate was gone. Yoshitoki's son Yasutoki, the third shikken or regent, had already taken his uncle Hōjō Tokifusa as rensho, a co-signer whose name went on shogunal documents beside his own. Then, on the 20th day of the 12th month of Karoku 1, which falls in January 1226, Yasutoki moved the shogunal palace out of Ōkura, which sat below Yoritomo's grave and was thought unlucky, to a plot in Komachi just east of Wakamiya-ōji, next to his own family's houses. The following day he seated the hyōjōshū, a standing council of eleven senior vassals and legal officers who settled lawsuits and policy by discussion.
+
+Nine days later the child shōgun Kujō Yoritsune came of age in the new hall, and he was formally appointed shōgun in the next month. From then on the shogunate's business was transacted by a named council under a regent and a co-signer, not by the shōgun in person. This is the machinery the Hōjō used to govern Japan for a century without ever holding the office of shōgun themselves, and it was this council that issued the Goseibai Shikimoku in 1232. The palace stood eleven years before Yasutoki rebuilt it in 1236 as the Wakamiya-ōji palace.`
+  },
+  {
+    id: "evt-genko-borui-hakata-wall",
+    sources: [ { label: "Wikipedia: Genkō Bōrui", url: "https://en.wikipedia.org/wiki/Genk%C5%8D_B%C5%8Drui" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Genko_Defence_Stone_Wall_in_Iki_Pine_Grove.JPG/960px-Genko_Defence_Stone_Wall_in_Iki_Pine_Grove.JPG",
+        caption: "The excavated and restored stretch of the Genkō Bōrui behind the pines at Ikinomatsubara, Nishi Ward, Fukuoka. Wikimedia Commons."
+      }
+    ],
+    name: "The Genkō Bōrui, the Hakata Bay Stone Wall",
+    type: "contact",
+    year: 1276,
+    dateLabel: "1276 (Kenji 2, 3rd month)",
+    period: "Kamakura · defence",
+    location: { name: "Ikinomatsubara, Nishi Ward, Fukuoka", lat: 33.5855556, lon: 130.3083333 },
+    summary: "After the first Mongol landing of 1274, the Kamakura government ordered a stone wall built right around Hakata Bay. Each Kyushu province was assigned a stretch, about 20 km in all. When the Mongols came back in 1281 they could not get ashore where the wall stood.",
+    details: `The first Mongol landing in 1274 showed the Kamakura shogunate that Hakata Bay, the gateway to northern Kyushu, lay wide open. In the third month of Kenji 2, spring 1276, the government ordered a continuous stone rampart along the shore. At the time it was simply called ishitsuiji, the stone embankment; the name Genkō Bōrui, Mongol invasion wall, was coined only in 1913 by the scholar Nakayama Heijirō.
+
+Finished, it ran about 20 km from Imazu in the west to Kashii in the east, averaging two metres in height and width. The core was packed with rubble, the landward face was sloped, the seaward face left sheer so that defenders could stand on top and shoot down at anyone wading ashore. The work was parcelled out province by province, and the levy fell on every rice field regardless of whether a warrior house or a court proprietor held it. At Ikinomatsubara the join is visible in the stone itself: granite from Nagatare to the west, sandstone from Odo to the east.
+
+Enough stood by 1281 that the second Mongol fleet gave up on landing at Hakata and anchored off Shikanoshima instead. The picture scroll commissioned by the warrior Takezaki Suenaga shows the wall as it then looked. Repairs went on until 1332. Later the stones were carted off to build Fukuoka Castle, but excavated stretches survive at Ikinomatsubara, Imazu and Nishijin, a National Historic Site since 1931.`
+  },
+  {
+    id: "evt-einin-tokusei",
+    sources: [ { label: "Japanese Wikipedia: 永仁の徳政令", url: "https://ja.wikipedia.org/wiki/永仁の徳政令" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/H%C5%8Dj%C5%8D_Sadatoki.jpg/960px-H%C5%8Dj%C5%8D_Sadatoki.jpg",
+        caption: "Hōjō Sadatoki, the regent who issued the edict, in an imagined portrait drawn some five centuries later by Kurihara Nobumitsu. Wikimedia Commons."
+      }
+    ],
+    name: "The Einin Debt Cancellation Edict",
+    type: "politics",
+    year: 1297,
+    dateLabel: "March 30, 1297 (Einin 5/3/6)",
+    period: "Kamakura · law",
+    location: { name: "The Wakamiya Ōji palace, seat of the Kamakura shogunate, Sagami Province", lat: 35.3223, lon: 139.5558 },
+    summary: "The Kamakura shogunate cancels its vassals' debts and orders land they had sold or pawned returned to them without payment, the first tokusei, or 'virtuous government', edict in Japanese history.",
+    details: `The warriors who beat back the Mongol invasions of 1274 and 1281 had defended Japan rather than conquered anyone, so there was no captured land to share out as reward. Many gokenin, the shogunate's sworn vassals, had gone into debt paying for those campaigns and for the coastal guard duty that followed, and had pawned or sold their estates. On March 30, 1297 the regent Hōjō Sadatoki responded: the courts would no longer hear suits about debts, vassals were forbidden to sell or pawn their land, and land already sold or foreclosed was to go back to its original holder for nothing.
+
+The exact wording is lost. Three of its articles survive only in copies kept in the archive of Tō-ji in Kyoto, and that very document shows peasants, not only warriors, using the edict to reclaim land they had sold. Two of the three clauses were repealed in 1298, though the order to return sold land was reaffirmed. Historians now read the edict less as relief for hard-up warriors than as an attempt to freeze vassal landholding in place and so shore up the shogunate's own power base. It did not work. Divided inheritance kept splitting estates, the money economy kept advancing, and the Kamakura regime fell in 1333.`
   }
 ];
