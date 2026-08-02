@@ -1755,6 +1755,20 @@ function searchEverything(query) {
     const hay = [ev.name, ev.location && ev.location.name, ev.type].filter(Boolean).join(' ').toLowerCase();
     if (norm(hay).includes(q)) res.push({ type: 'event', item: ev, name: ev.name, year: (ev.dateLabel || ev.year || ''), s: score(ev.name) });
   }
+  // Castles, temples and roads were missing here, so the placeholder promised "places"
+  // while a search for "Himeji" returned nothing at all.
+  if (typeof CASTLES !== 'undefined') for (const c of (Array.isArray(CASTLES) ? CASTLES : Object.values(CASTLES))) {
+    const hay = [c.name, c.modern, c.clan].filter(Boolean).join(' ').toLowerCase();
+    if (norm(hay).includes(q)) res.push({ type: 'castle', item: c, name: c.name, year: (c.clan || ''), s: score(c.name) });
+  }
+  if (typeof TEMPLES !== 'undefined') for (const t of TEMPLES) {
+    const hay = [t.name, t.sect, t.kind].filter(Boolean).join(' ').toLowerCase();
+    if (norm(hay).includes(q)) res.push({ type: 'temple', item: t, name: t.name, year: (t.founded || ''), s: score(t.name) });
+  }
+  if (typeof HISTORIC_ROADS !== 'undefined') for (const rd of HISTORIC_ROADS) {
+    const hay = [rd.name, rd.romaji, (rd.waypoints || []).map((w) => w.name).join(' ')].filter(Boolean).join(' ').toLowerCase();
+    if (norm(hay).includes(q)) res.push({ type: 'road', item: rd, name: rd.name, year: (rd.era || ''), s: score(rd.name) });
+  }
   res.sort((a, b) => b.s - a.s);
   return res.slice(0, 10);
 }
@@ -1795,6 +1809,16 @@ function selectSearchResult(r) {
   } else if (r.type === 'person') {
     showPersonInfo(r.item);
     focusBattle(r.item);
+  } else if (r.type === 'castle') {
+    showCastleInfo(r.item);
+    map.flyTo([r.item.lat, r.item.lon], 11, { duration: 1.0 });
+  } else if (r.type === 'temple') {
+    showTempleInfo(r.item);
+    map.flyTo([r.item.lat, r.item.lon], 12, { duration: 1.0 });
+  } else if (r.type === 'road') {
+    showRoadInfo(r.item);
+    const pts = (r.item.waypoints || []).map((w) => [w.lat, w.lon]);
+    if (pts.length > 1) map.flyToBounds(L.latLngBounds(pts), { paddingTopLeft: [40, 70], paddingBottomRight: [40, 170], duration: 1.0 });
   }
   searchInput.value = '';
   hideSearchResults();
