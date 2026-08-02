@@ -230,7 +230,7 @@ Taira arrogance and Kiyomori's heavy hand alienated the court, the temples and t
     bio: `Yoshitsune was the tactical genius of the Genpei War. His daring victories at Ichi-no-Tani, Yashima and finally Dan-no-Ura (1185) annihilated the Taira fleet and clan, winning the war for the Minamoto.
 
 But his success and his court honours made his elder brother Yoritomo fear him. Driven into flight, Yoshitsune was cornered at Hiraizumi and forced to take his own life in 1189. His tragic heroism made him one of the most beloved figures in Japanese legend, the archetype of the noble warrior brought down by jealousy.`,
-    battles: ["ichi-no-tani", "yashima", "dan-no-ura", "awazu"],
+    battles: ["ichi-no-tani", "awazu", "uji-1184", "yashima", "dan-no-ura"],
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Minamoto_no_Yoshitsune.jpg/960px-Minamoto_no_Yoshitsune.jpg",
@@ -272,7 +272,7 @@ Her later life is unknown and her historicity debated, but she became the enduri
     bio: `Exiled as a boy after his father's defeat, Yoritomo rose from Izu to lead the Minamoto to victory over the Taira. Rather than settle at the imperial court, he built his own government far to the east at Kamakura, rewarding his vassals with land and appointing military governors (shugo) and stewards (jitō) across the country.
 
 Named sei-i taishōgun in 1192, he created the bakufu, the shogunate, that would let warriors rule Japan, in one form or another, for nearly 700 years. His political genius was matched by ruthlessness, not least toward his own brother Yoshitsune.`,
-    battles: ["ishibashiyama", "fujigawa"],
+    battles: ["ishibashiyama", "fujigawa", "oshu-1189"],
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Minamoto_no_Yoritomo.jpg/960px-Minamoto_no_Yoritomo.jpg",
@@ -339,7 +339,7 @@ His attacks on the authorities earned him exile and a famous brush with executio
     bio: `Go-Daigo refused to be a figurehead. He plotted against the Kamakura shogunate, was exiled, escaped, and, with warriors such as Kusunoki Masashige, Ashikaga Takauji and Nitta Yoshisada, brought it down in 1333, launching the Kenmu Restoration of direct imperial government.
 
 His attempt to rule without the warriors quickly collapsed. When Takauji turned against him and set up a rival emperor in Kyoto, Go-Daigo fled south to Yoshino and founded the Southern Court, splitting Japan into two rival imperial lines for nearly sixty years.`,
-    battles: ["chihaya-1333", "fall-of-kamakura-1333", "minatogawa"],
+    battles: ["kasagi-1331", "chihaya-1333", "fall-of-kamakura-1333", "minatogawa"],
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/0/0e/Go-Daigo.jpg",
@@ -381,7 +381,7 @@ When Ashikaga Takauji turned on the emperor, Masashige advised retreat; overrule
     bio: `In 1333 Nitta Yoshisada led the eastern assault that broke into Kamakura and destroyed the Hōjō regency, ending the Kamakura shogunate. Legend says the sea itself parted for his attack along the shore after he cast his sword into the waves.
 
 A staunch loyalist of the Southern Court, he became Ashikaga Takauji's great rival. After years of campaigning he was killed at Echizen in 1338, his cause failing as the Ashikaga consolidated power in the north.`,
-    battles: ["fall-of-kamakura-1333", "kanegasaki-1337"],
+    battles: ["fall-of-kamakura-1333", "bubaigawara", "minatogawa", "kanegasaki-1337", "fujishima"],
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/f/f4/Nitta_Yoshisada.jpg",
@@ -402,7 +402,7 @@ A staunch loyalist of the Southern Court, he became Ashikaga Takauji's great riv
     bio: `Takauji first fought for Go-Daigo, helping destroy the Kamakura shogunate in 1333. But when the emperor's restoration failed the warriors, he rebelled, defeated the loyalists at Minatogawa (1336), and installed a rival emperor in Kyoto.
 
 Named shogun in 1338, he founded the Ashikaga shogunate, governed from the Muromachi district of Kyoto. His regime presided over the long split between Northern and Southern Courts and over a brilliant courtly culture, even as it never fully controlled the provincial warlords.`,
-    battles: ["tatarahama-1336", "minatogawa"],
+    battles: ["nakasendai-1335", "tatarahama-1336", "minatogawa", "kanno-incident", "uchidehama"],
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Ashikaga_Takauji_J%C5%8Ddo-ji.jpg/960px-Ashikaga_Takauji_J%C5%8Ddo-ji.jpg",
@@ -425,7 +425,7 @@ Named shogun in 1338, he founded the Ashikaga shogunate, governed from the Murom
     bio: `Lord of Kai, Takeda Shingen built one of the most formidable war machines of the age, famed for its cavalry and the banner motto Fūrinkazan, "swift as wind, silent as forest, fierce as fire, immovable as mountain." His repeated clashes with Uesugi Kenshin at Kawanakajima became the stuff of legend.
 
 Late in life he crushed the young Tokugawa Ieyasu at Mikatagahara (1573) and was marching toward Kyoto when he died, removing the one rival Oda Nobunaga most feared.`,
-    battles: ["kawanakajima", "uedahara", "odaihara", "mimasetoge", "shiojiritoge", "mikatagahara"],
+    battles: ["sezawa", "ankokuji", "takato-1545", "odaihara", "uedahara", "shiojiritoge", "toishi-1550", "kawanakajima", "musashi-matsuyama-1563", "minowa-1566", "mimasetoge", "odawara-1569", "tonegawa", "mikatagahara", "noda-1573"],
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Takeda_Harunobu.jpg/960px-Takeda_Harunobu.jpg",
@@ -446,7 +446,7 @@ Late in life he crushed the young Tokugawa Ieyasu at Mikatagahara (1573) and was
     bio: `Devout, austere and a superb field commander, Uesugi Kenshin dominated the Hokuriku region from his fortress at Kasugayama. He revered the war-god Bishamonten and fought, he claimed, for honour and justice rather than conquest.
 
 His five battles with Takeda Shingen at Kawanakajima are among the most celebrated duels in samurai history. Late in life he crushed an Oda army at Tedorigawa (1577), proving even Nobunaga's forces could be beaten, before his sudden death in 1578.`,
-    battles: ["kawanakajima", "tedorigawa"],
+    battles: ["kawanakajima", "odawara-1561", "tonegawa", "tedorigawa", "nanao-1577"],
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/8/88/Uesugi_Kenshin_Portrait_from_Uesugi_Shrine.png",
@@ -467,7 +467,7 @@ His five battles with Takeda Shingen at Kawanakajima are among the most celebrat
     bio: `From a minor Owari base, Nobunaga rose by audacity, destroying a far larger Imagawa army at Okehazama (1560), and by embracing new methods: massed firearms, professional infantry, castle towns and free markets. He toppled the last Ashikaga shogun, broke the warrior-monks, and won the gunpowder battle of Nagashino (1575).
 
 By 1582 he controlled central Japan and the path to unification lay open. Then his own general Akechi Mitsuhide turned on him at the Honnō-ji in Kyoto, where Nobunaga died in the flames, leaving his work to be completed by Hideyoshi and Ieyasu.`,
-    battles: ["okehazama", "anegawa", "nagashino", "kizugawaguchi", "honnoji"],
+    battles: ["kiyosu-1552", "muraki-1554", "ino-1556", "okehazama", "inabayama-1567", "anegawa", "nagashima-1571", "ichijodani-1573", "nagashino", "kizugawaguchi", "tensho-iga-war", "honnoji"],
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Odanobunaga.jpg/960px-Odanobunaga.jpg",
@@ -509,7 +509,7 @@ His closeness to Hideyoshi turned to friction, and in 1591 the ruler ordered him
     bio: `Born a commoner, Hideyoshi rose through Nobunaga's ranks by sheer ability. After avenging his lord at Yamazaki (1582) and outmanoeuvring his rivals, he completed the unification of Japan, crowned by the great siege of Odawara in 1590.
 
 As ruler he froze society in place, the famous "sword hunt" disarmed the peasantry and separated farmer from warrior, and built Osaka Castle as his seat. Barred by his birth from the title of shogun, he ruled as imperial regent (kampaku). His last years were marred by two ruinous invasions of Korea.`,
-    battles: ["yamazaki", "shizugatake", "komaki-nagakute", "odawara-1590"],
+    battles: ["yamazaki", "shizugatake", "komaki-nagakute", "toyama-1585", "kyushu-campaign-1586", "sendaigawa", "odawara-1590"],
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Toyotomi_Hideyoshi_c1598_Kodai-ji_Temple.png/960px-Toyotomi_Hideyoshi_c1598_Kodai-ji_Temple.png",
@@ -530,7 +530,7 @@ As ruler he froze society in place, the famous "sword hunt" disarmed the peasant
     bio: `Blind in one eye from childhood smallpox, hence his nickname, the One-Eyed Dragon, Masamune became the dominant warlord of the far north, winning his realm in battles such as Hitotoribashi and Suriagahara before submitting, just in time, to Hideyoshi.
 
 Under the Tokugawa he founded the city of Sendai and ruled one of Japan's largest domains. Famously, he even dispatched an embassy across the Pacific and Atlantic to Mexico, Spain and Rome, one of the boldest diplomatic ventures of the age.`,
-    battles: ["hitotoribashi", "suriagehara", "koriyama-campaign"],
+    battles: ["hitotoribashi", "koriyama-campaign", "suriagehara", "domyoji-1615"],
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Date_Masamune02.jpg/960px-Date_Masamune02.jpg",
@@ -551,7 +551,7 @@ Under the Tokugawa he founded the city of Sendai and ruled one of Japan's larges
     bio: `Held hostage as a child, Ieyasu spent decades as ally, rival and survivor, beaten by Shingen at Mikatagahara, allied with Nobunaga at Nagashino, holding his own against Hideyoshi at Komaki-Nagakute. After Hideyoshi's death he won the decisive Battle of Sekigahara (1600).
 
 Named shogun in 1603, he made Edo his capital and destroyed the last Toyotomi loyalists at the siege of Osaka (1614–15). The regime he built, the Tokugawa shogunate, gave Japan two and a half centuries of unbroken internal peace.`,
-    battles: ["mikatagahara", "nagashino", "komaki-nagakute", "sekigahara", "osaka-siege"],
+    battles: ["terabe-1558", "azukizaka-1564", "anegawa", "mikatagahara", "nagashino", "takatenjin-1581", "komaki-nagakute", "sekigahara", "osaka-siege", "tennoji-1615"],
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Tokugawa_Ieyasu2.JPG/960px-Tokugawa_Ieyasu2.JPG",
@@ -572,7 +572,7 @@ Named shogun in 1603, he made Edo his capital and destroyed the last Toyotomi lo
     bio: `Sanada Yukimura (Nobushige) made his name defying far larger Tokugawa armies, first at Ueda and finally in the great siege of Osaka. There he built the Sanada-maru bastion and, in 1615, led a desperate charge that nearly reached Ieyasu's own command post.
 
 Cut down in that last battle, he was hailed by his enemies as "the number-one warrior in Japan" (Hinomoto-ichi no tsuwamono). His heroic defiance made him one of the most popular samurai in later legend and theatre.`,
-    battles: ["osaka-siege"],
+    battles: ["ueda-1600", "osaka-siege", "tennoji-1615", "domyoji-1615"],
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/b/b3/Sanada_Yukimura.jpg",
@@ -660,7 +660,7 @@ He pressed for the shogun to resign power peacefully to the emperor, which happe
     bio: `A towering figure of Satsuma, Saigō led the restoration forces in the Boshin War, winning at Toba-Fushimi and negotiating the surrender of Edo, before the campaigns at Ueno and in the north completed the shogunate's fall in 1868–69.
 
 Disillusioned with the very Meiji government he had helped create, he later led the doomed Satsuma Rebellion of 1877 and died in its final battle, becoming the archetype of the tragic, principled samurai, the "last samurai" of legend.`,
-    battles: ["toba-fushimi", "ueno"], // verified: in exile during the Anglo-Satsuma War (1863); not among the Aizu commanders
+    battles: ["kinmon", "toba-fushimi", "ueno"], // verified: in exile during the Anglo-Satsuma War (1863); not among the Aizu commanders
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Saigo_Takamori_%28b%29.jpg/960px-Saigo_Takamori_%28b%29.jpg",
