@@ -156,6 +156,9 @@ body { position: fixed; inset: 0; }
 .r-type.r-battle { background: var(--accent-tint); color: var(--accent-deep); }
 .r-type.r-person { background: #eef0e3; color: #5f6b3a; }
 .r-type.r-event  { background: #e7edf0; color: #3a5b6b; }
+.r-type.r-castle { background: #f0e7dc; color: #7a5a34; }
+.r-type.r-temple { background: #e4ece7; color: #3d6350; }
+.r-type.r-road   { background: #eee9f1; color: #5c4a6b; }
 
 /* nav */
 #siteNav { display: flex; align-items: center; gap: 4px; flex: none; }
