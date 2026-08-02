@@ -4569,5 +4569,155 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
     details: `In 1335 (Kenmu 2), Hōjō Tokiyuki, son of Takatoki, the last Hōjō regent of the fallen Kamakura shogunate, launched the Nakasendai Rebellion in an attempt to re-establish the shogunate at Kamakura. Backed by Suwa Yorishige and other clans loyal to the Hōjō, the rebels briefly occupied Kamakura and forced Ashikaga Tadayoshi to flee. Ashikaga Takauji then put down the revolt and took Kamakura for himself; Suwa Yorishige committed suicide at Shōchōju-in alongside his son and dozens of others. Having recovered the city, Takauji claimed the title of Sei-i Taishōgun and granted land to his followers without the court's permission, an act of defiance that ruptured his relationship with Emperor Go-Daigo, who sent Nitta Yoshisada against him. A rebellion meant to revive the old Hōjō order thus became the catalyst for the rise of the Ashikaga.`,
     leadsTo: "minatogawa",
     sources: [ { label: "Japanese Wikipedia: Nakasendai Rebellion (中先代の乱)", url: "https://ja.wikipedia.org/wiki/中先代の乱" }, { label: "Wikipedia: Ashikaga Takauji", url: "https://en.wikipedia.org/wiki/Ashikaga_Takauji" } ]
+  },
+
+  // ---- Added 2026-08-02. Audited gaps: the Boshin War had 5 of its engagements
+  // pinned, the Edo layer held ONE battle across 237 years, and Nitta Yoshisada was in
+  // the People layer though the battle he died in was not on the map. ----
+  {
+    id: "tadatsune-1028",
+    sources: [ { label: "Japanese Wikipedia: 平忠常の乱 (Taira no Tadatsune Rebellion)", url: "https://ja.wikipedia.org/wiki/平忠常の乱" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/b/b1/Minamotono_Yorinobu.jpg",
+        caption: "Minamoto no Yorinobu, the commander whose appointment ended the rising; woodblock print by Tsukioka Yoshitoshi, 1879, from the series Dai Nippon Meishō Kagami. The file's Commons description links the scene to the Konjaku Monogatarishū account of his march against Tadatsune; Wikimedia Commons."
+      }
+    ],
+    name: "Taira no Tadatsune's Rebellion",
+    year: 1028,
+    dateLabel: "1028 to 1031 (Chōgen 1 to Chōgen 4)",
+    period: "Heian",
+    location: { name: "Kazusa provincial headquarters, Ichihara, Chiba Prefecture", lat: 35.49806, lon: 140.11544 },
+    combatants: { side1: { name: "Rebels of the Bōsō provinces", leader: "Taira no Tadatsune", forces: "his own retainers and the landholders of Kazusa, Shimōsa and Awa" }, side2: { name: "Imperial court forces", leader: "Taira no Naokata and Nakahara Narimichi, later Minamoto no Yorinobu", forces: "pursuit envoys with levies raised from the eastern and central provinces" } },
+    outcome: "Court victory. Tadatsune surrendered to Minamoto no Yorinobu in 1031 without a battle and died on the road to Kyoto; the three Bōsō provinces were left in ruins.",
+    summary: "Taira no Tadatsune, the greatest landholder on the Bōsō peninsula, burned out a provincial governor and seized the Kazusa government office, then held off the court for three years. He gave in only when Minamoto no Yorinobu, his former lord, took command, and that surrender handed the Minamoto the east.",
+    details: `Tadatsune was a grandson of Taira no Yoshifumi, an uncle of the rebel Masakado, and by the 1020s the largest landholder in Kazusa, Shimōsa and Hitachi. He ignored the governors sent from Kyoto and paid no tax. In the sixth lunar month of 1028 he had the governor of Awa burned to death and then occupied the Kazusa provincial headquarters, which stood in what is now Ichihara. The vice governor's family fled to the capital, local warriors joined him, and the rising spread across all three provinces of the Bōsō peninsula.
+
+The court answered slowly and badly. Fujiwara no Sanesuke urged sending Minamoto no Yorinobu, who had made Tadatsune his sworn man years earlier while vice governor of Hitachi, but the command went to Taira no Naokata and Nakahara Narimichi, who left Kyoto with only two hundred men. The two quarrelled, achieved nothing in two years, and Narimichi was dismissed. Tadatsune stormed the Awa headquarters in 1030 and held a stronghold in Isumi district. Fighting, requisitioning by both sides and famine ruined the countryside; one official report claimed the cultivated land of Kazusa had fallen from 22,000 chō to 18.
+
+In late 1030 the court finally gave the command to Yorinobu, by then governor of Kai. In the spring of 1031 Tadatsune shaved his head as a monk and surrendered without a fight, and he died of illness at Nogami in Mino on the road to the capital. His sons were pardoned and their line became the Chiba clan. The bloodless ending mattered more than any battle: the warriors of the east had seen that Tadatsune would yield to a Minamoto but not to the court's Taira, and many of them became Yorinobu's men. That allegiance is where Minamoto power in the Kantō begins.`
+  },
+  {
+    id: "fujishima",
+    sources: [ { label: "Japanese Wikipedia: 藤島の戦い (Battle of Fujishima)", url: "https://ja.wikipedia.org/wiki/%E8%97%A4%E5%B3%B6%E3%81%AE%E6%88%A6%E3%81%84" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/%E6%96%B0%E7%94%B0%E7%BE%A9%E8%B2%9E%E6%88%A6%E6%B2%A1%E4%BC%9D%E8%AA%AC%E5%9C%B0.jpg/960px-%E6%96%B0%E7%94%B0%E7%BE%A9%E8%B2%9E%E6%88%A6%E6%B2%A1%E4%BC%9D%E8%AA%AC%E5%9C%B0.jpg",
+        caption: "The memorial at the traditional site of Nitta Yoshisada's death, Nittazuka, Fukui City. Photograph taken 2007. Wikimedia Commons, CC BY-SA 3.0."
+      }
+    ],
+    name: "Battle of Fujishima",
+    year: 1338,
+    dateLabel: "August 17, 1338 (Engen 3 / Ryakuō 1, intercalary 7th month, 2nd day)",
+    period: "Muromachi",
+    location: { name: "Tōmyōji causeway, Fujishima, Echizen Province (modern Nittazuka, Fukui City)", lat: 36.08828889, lon: 136.20928611 },
+    combatants: { side1: { name: "Ashikaga (Northern Court)", leader: "Shiba Takatsune, with Hosokawa of Echizen", forces: "about 300 horse in the encounter" }, side2: { name: "Southern Court", leader: "Nitta Yoshisada", forces: "an escort of about 50 horse" } },
+    outcome: "Northern Court victory; Nitta Yoshisada was killed and the Southern Court lost its hold on Echizen.",
+    summary: "The death of Nitta Yoshisada, the general who had destroyed Kamakura in 1333. Riding out with about fifty horsemen, he was cornered by a far larger Ashikaga force in the flooded rice country north of Fukui, hit by an arrow and killed himself.",
+    details: `By 1338 Nitta Yoshisada had been fighting in Echizen for over a year, ever since Kanegasaki fell the previous spring. His target was Kuromaru, the fortress of Shiba Takatsune, the Ashikaga commander in the province. Yoshisada had drawn the warrior monks of Heisenji into his army, but Takatsune bought them off by confirming their claim to the Fujishima estate, and they changed sides. On the second day of the intercalary seventh month, Yoshisada rode out with an escort of about fifty horsemen to see why his troops were held up outside Fujishima castle. On the causeway at Tōmyōji, flat and waterlogged rice country, he ran into a relief column of roughly three hundred Ashikaga men. They dismounted and shot; his small party was caught in the open with nowhere to turn. The Taiheiki says his horse was brought down, that an arrow struck him between the eyes, and that he cut his own throat rather than be taken alive. He was about thirty-seven. The chronicle's numbers are not to be trusted in detail, but the outcome is not in doubt. Yoshisada's death came barely two months after Kitabatake Akiie was killed at Ishizu, and it left the Southern Court without either of its two best field commanders. Ashikaga Takauji was appointed shogun before the year was out. The spot where Yoshisada is said to have fallen, in what is now Nittazuka in Fukui City, was made a national historic site in 1924.`
+  },
+  {
+    id: "shakushains-revolt-1669",
+    sources: [ { label: "Wikipedia, Shakushain's revolt", url: "https://en.wikipedia.org/wiki/Shakushain%27s_revolt" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/01%E3%82%B7%E3%83%A3%E3%82%AF%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%B3%E5%83%8F%EF%BC%88%E6%96%9C%E3%82%81%EF%BC%89IMG_6337.jpg/960px-01%E3%82%B7%E3%83%A3%E3%82%AF%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%B3%E5%83%8F%EF%BC%88%E6%96%9C%E3%82%81%EF%BC%89IMG_6337.jpg",
+        caption: "Statue of Shakushain at Shinhidaka, Hokkaido, photographed in 2016. Photo by Kakohamatugeniikou, CC BY-SA 4.0."
+      }
+    ],
+    name: "Shakushain's Revolt",
+    year: 1669,
+    dateLabel: "June to 16 November 1669 (Kanbun 9/6 to 9/10/23)",
+    period: "Edo",
+    location: { name: "Shibuchari, Hidaka, Ezo (present-day Shinhidaka, Hokkaido)", lat: 42.329722, lon: 142.368056 },
+    combatants: { side1: { name: "Ainu coalition of Ezo", leader: "Shakushain, chief of Shibuchari", forces: "About 2,000 fighters at the outbreak, mainly bows, with roughly 27 firearms" }, side2: { name: "Matsumae domain, backed by the Tokugawa shogunate", leader: "Matsumae Yasuhiro, shogunal commander, for the boy daimyo Matsumae Norihiro", forces: "Matsumae troops with about 70 firearms; men, guns and rice sent by Hirosaki, Morioka and Akita, including 700 Hirosaki soldiers on garrison duty" } },
+    outcome: "Matsumae victory. Shakushain was murdered at a peace banquet at Pipok on 16 November 1669, resistance collapsed, and Matsumae took undisputed control of all trade in Ezo.",
+    summary: "The largest Ainu rising against Japanese rule. Shakushain, chief of Shibuchari, united Ainu groups across Ezo against the Matsumae domain's trade monopoly in the summer of 1669, then was murdered at a peace banquet four months later, and the revolt died with him.",
+    details: `Trade caused this war. From the early 1600s the shogunate gave the Matsumae domain the sole right to trade with the Ainu of Ezo, today's Hokkaido. Matsumae paid its samurai not in land but in trading posts, and those men set the exchange rates. In 1665 the rate for rice against salmon was moved so sharply against the Ainu that many families were left short of food.
+
+The rising began as a quarrel between Ainu. Shakushain led the Menashikuru of the Shibuchari valley; Onibishi led the rival Shumkuru. Shakushain killed Onibishi in 1668. Onibishi's kin asked Matsumae for weapons and were refused, and when one envoy died of smallpox on the way home a rumour spread that Matsumae had poisoned him. That false report turned two feuding groups into one alliance.
+
+In the sixth month of Kanbun 9, June 1669, Ainu rose from Shiranuka in the east to Mashike in the north west. Some two thousand fighters attacked gold panners, falconers and trading ships and killed about 356 Japanese, most of them not soldiers. Shakushain drove south west towards Matsumae Castle and was stopped at Kunnui, near modern Oshamambe. There the war turned. Edo ordered Hirosaki, Morioka and Akita to send men, guns and rice, and sent the hatamoto Matsumae Yasuhiro to command. Shakushain had about 27 firearms; his enemies gathered about 70.
+
+Cut off from the Ainu of the Oshima peninsula, Shakushain fell back on his fort at Shibuchari and then accepted terms, his life promised. On Kanbun 9, tenth month, twenty third day, 16 November 1669, he entered the Matsumae camp at Pipok in today's Niikappu and was cut down at the peace banquet. His fort fell the next day. Mopping up ran to 1672, the Ainu swore obedience in a seven article oath, and Matsumae control of Ezo was never seriously challenged again.`
+  },
+  {
+    id: "oshio-heihachiro-rebellion-1837",
+    sources: [ { label: "Japanese Wikipedia, 大塩平八郎の乱 (Ōshio Heihachirō's Rebellion)", url: "https://ja.wikipedia.org/wiki/%E5%A4%A7%E5%A1%A9%E5%B9%B3%E5%85%AB%E9%83%8E%E3%81%AE%E4%B9%B1" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Oshio_Heihachiro.jpg/960px-Oshio_Heihachiro.jpg",
+        caption: "Ōshio Heihachirō, painted by Kikuchi Yōsai in the nineteenth century. Osaka Castle Museum collection."
+      }
+    ],
+    name: "Ōshio Heihachirō's Rebellion",
+    year: 1837,
+    dateLabel: "25 March 1837 (Tenpō 8/2/19)",
+    period: "Edo",
+    location: { name: "Temma, Osaka", lat: 34.6968, lon: 135.5212 },
+    combatants: { side1: { name: "Ōshio Heihachirō's insurgents", leader: "Ōshio Heihachirō", forces: "About 300; students of his Senshindō academy, villagers from the Osaka plain and townspeople, with a few light cannon" }, side2: { name: "Tokugawa shogunate, Osaka city magistracy and castle garrison", leader: "Atobe Yoshisuke, east city magistrate, under Osaka jōdai Doi Toshitsura", forces: "Yoriki and dōshin of the two city magistracies, backed by troops from Osaka Castle" } },
+    outcome: "Rising broken up within half a day. The fires it lit destroyed about a fifth of Osaka. Ōshio hid for forty days, then killed himself on 1 May 1837.",
+    summary: "A serving shogunal police officer turned Confucian teacher led some 300 followers against the magistrates of Osaka during the Tenpō famine. The rising was crushed in half a day, but the fires it started burned roughly a fifth of the city.",
+    details: `Ōshio Heihachirō was no outsider. For years he served as a yoriki, a senior police officer in Osaka's east city magistracy, and he ran a private academy, the Senshindō, teaching the Wang Yangming school of Confucianism, which held that knowing what is right obliges you to act on it.
+
+The Tenpō famine of the 1830s hit Osaka hard. Rice prices soared and the poor starved in the streets, while the magistrate Atobe Yoshisuke, brother of the senior councillor Mizuno Tadakuni, kept shipping rice to Edo. Ōshio sold his library and gave the money to the hungry, then petitioned the magistrate to open the granaries. Nothing came of it. He began buying weapons and had a manifesto cut on woodblocks and sent out to the villages, accusing officials and rich merchants of feeding themselves while the people died.
+
+Two of his own followers informed on him. Ōshio moved at once. At dawn he set fire to his house in Temma as a signal, raised a banner reading kyūmin, save the people, and marched south with about 300 men. They crossed into Senba, the merchant quarter, and shelled and burned the great trading houses.
+
+The magistrate's men met them within hours and the column broke apart. The fighting was over in half a day; the fires were not. They destroyed roughly a fifth of the city and drove tens of thousands from their homes. Ōshio hid in a merchant's house for forty days, then blew it up with himself and his adopted son inside.
+
+The shock was national. A serving bakufu official had taken up arms against the bakufu, copycat risings followed within months, and the failure to feed Japan's richest city helped drive the Tenpō Reforms.`
+  },
+  {
+    id: "hokuetsu-nagaoka-1868",
+    sources: [ { label: "Wikipedia: Battle of Hokuetsu", url: "https://en.wikipedia.org/wiki/Battle_of_Hokuetsu" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/8/8a/Kawai_Tugunosuke.jpg",
+        caption: "Kawai Tsugunosuke, chief retainer of Nagaoka domain, in a photograph of the late Edo period; Nagaoka City Central Library collection, via Wikimedia Commons."
+      }
+    ],
+    name: "Hokuetsu War (Battle of Nagaoka Castle)",
+    year: 1868,
+    dateLabel: "June to September 1868 (Keiō 4, fifth to eighth lunar months)",
+    period: "Bakumatsu",
+    location: { name: "Nagaoka Castle, Echigo Province (modern Nagaoka, Niigata Prefecture)", lat: 37.4476, lon: 138.8531 },
+    combatants: { side1: { name: "Imperial (Meiji government) forces", leader: "Yamagata Aritomo and Yamada Akiyoshi", forces: "several tens of thousands across the campaign; figures vary widely" }, side2: { name: "Nagaoka domain and the Ōuetsu Reppan Dōmei", leader: "Kawai Tsugunosuke, for the daimyō Makino Tadakuni", forces: "about 2,000 Nagaoka troops, with Aizu, Yonezawa and Kuwana contingents" } },
+    outcome: "Imperial victory. Nagaoka Castle fell on 8 July 1868, was retaken by Kawai Tsugunosuke on 10 September and lost again on 15 September; all Echigo passed to the new government.",
+    summary: "Nagaoka domain tried to stay out of the Boshin War, and when the imperial commanders refused to hear it, its chief retainer Kawai Tsugunosuke fought them with modern rifles and two of the only three Gatling guns in Japan. His castle fell, was recaptured in a night crossing of a marsh, then fell for good.",
+    details: `Nagaoka was a mid-sized domain on the Sea of Japan coast. Its chief retainer, Kawai Tsugunosuke, had spent years buying modern weapons through the foreign traders at Yokohama and Nagasaki, and he wanted his domain to stay out of the war and broker peace instead. On 21 June 1868 (Keiō 4/5/2) he met the imperial army inspector Iwamura Seiichirō at Jigen-ji temple in Ojiya and asked for a pause. Iwamura, who saw only the retainer of a small domain, broke off the talks almost at once. Nagaoka joined the Ōuetsu Reppan Dōmei, the alliance of northern domains, and fought.
+
+What followed was the hardest fighting of the northern war. Nagaoka's small army had imported rifles and two of the only three Gatling guns then in Japan, and it held the passes and river crossings south of the town for weeks. On 8 July (5/19) government troops crossed the Shinano River at an unguarded point and took Nagaoka Castle, which burned.
+
+Kawai did not leave it there. On the night of 10 September (7/24) he ferried some 680 men across the Hatchōoki, a shallow marsh the government side had thought impassable, and retook the castle at dawn. It was the boldest stroke of the campaign, but he was shot through the knee in the street fighting. Government troops recovered the town on 15 September (7/29) and landed on the coast to seize the port of Niigata, cutting the alliance off from imported arms. Carried over the mountains toward Aizu, Kawai died of the infected wound on 1 October 1868 (8/16).
+
+Roughly a thousand men died on each side. With Echigo gone, Aizu stood alone. The dates here are converted from the lunar calendar; the era name was still Keiō, since Meiji was proclaimed only that October.`
+  },
+  {
+    id: "miyako-bay-1869",
+    sources: [ { label: "Wikipedia: Battle of Miyako Bay", url: "https://en.wikipedia.org/wiki/Battle_of_Miyako_Bay" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Takao1869.jpg/960px-Takao1869.jpg",
+        caption: "The Takao, as pictured in the 1874 French account 'Une aventure au Japon 1868-1869'. Wikimedia Commons."
+      }
+    ],
+    name: "Naval Battle of Miyako Bay",
+    year: 1869,
+    dateLabel: "6 May 1869 (Meiji 2/3/25)",
+    period: "Bakumatsu",
+    location: { name: "Miyako Bay, Mutsu Province (modern Iwate Prefecture)", lat: 39.66, lon: 142 },
+    combatants: { side1: { name: "Imperial forces (Meiji government)", leader: "Masuda Toranosuke; Kōtetsu under Nakajima Shirō", forces: "8 ships including the ironclad Kōtetsu; about 2,500 sailors and officers" }, side2: { name: "Ezo Republic (Tokugawa loyalists)", leader: "Arai Ikunosuke; boarding party under Kōga Gengo", forces: "3 warships sent, only the Kaiten reached the target; about 500 samurai" } },
+    outcome: "Imperial victory. The Kōtetsu was not taken, the boarding party was shot down, and the Ezo steamer Takao was beached and scuttled during the retreat.",
+    summary: "The Ezo Republic's one attempt to go on the offensive: a boarding raid meant to capture the imperial ironclad Kōtetsu at anchor in Miyako Bay. Only one of the three attacking ships arrived, and a Gatling gun cut the boarders down as they dropped onto the ironclad's deck.",
+    details: `When the Meiji government sent its fleet north in the spring of 1869 to finish off the Ezo Republic, the Tokugawa loyalists on Hokkaido knew they could not beat it in a straight fight. One imperial ship decided everything: the Kōtetsu, a French built ironclad bought from the United States and the only armoured warship in Japanese waters. Wooden ships could not hurt it.
+
+Enomoto Takeaki decided to steal it instead. On 6 May 1869 three Ezo warships headed for Miyako Bay in northern Honshu, where the imperial fleet lay at anchor. The plan, drawn up by the French adviser Eugène Collache, was to enter flying an American flag, pull alongside the Kōtetsu and take her by boarding, in the old style, with swords.
+
+The weather wrecked it. The Banryū lost the squadron and turned back; the Takao broke down and straggled. Only the flagship Kaiten arrived. She swapped the American flag for the Ezo flag and rammed the ironclad's side. But the Kaiten's deck stood nearly three metres above the Kōtetsu's, so the boarders had to drop down one at a time instead of swarming across. The imperial crew recovered from the shock, swung a Gatling gun onto the gap and cut them down. Kōga Gengo, who led the boarding party, was killed at his post.
+
+The Kaiten tore free and ran for Hokkaido, damaging three ships on the way out. The Takao, arriving just as the flagship left, was too slow to escape, so her crew beached her, blew her up and fled inland before surrendering.
+
+This was the first attempt in Japan to capture an ironclad steamship by boarding, and it failed. The Kōtetsu sailed on undamaged to cover the imperial landings at Hakodate.`
   }
 ];
