@@ -854,7 +854,7 @@ const ERAS = [
   { name: 'Muromachi',       start: 1334, end: 1573, label: '1336–1573', color: '#b07d2b', tint: '#f4ebd8' },
   { name: 'Azuchi–Momoyama', start: 1573, end: 1616, label: '1573–1615', color: '#c23b22', tint: '#f6e3df' },
   { name: 'Edo',             start: 1616, end: 1853, label: '1603–1868', color: '#4a6b57', tint: '#e4ece7' },
-  { name: 'Bakumatsu',       start: 1853, end: 1870, label: '1853–1868', color: '#6a5b8a', tint: '#e8e4f1' },
+  { name: 'Bakumatsu',       start: 1853, end: 1870, label: '1853–1869', color: '#6a5b8a', tint: '#e8e4f1' },
 ];
 const ERA_BY_NAME = {}; for (const e of ERAS) ERA_BY_NAME[e.name] = e;
 const ERA_RANGES = {}; for (const e of ERAS) ERA_RANGES[e.name] = [e.start, e.end];
