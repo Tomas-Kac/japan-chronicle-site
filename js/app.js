@@ -1114,6 +1114,43 @@ const clusterGroup = L.markerClusterGroup({
 });
 clusterGroup.addTo(map);
 
+// Leaflet gives every marker tabindex=0 and role="button", but a CLUSTER carries only
+// its count as text, so a screen reader announces it as "button, 3". Name them.
+// Deferred a frame: markercluster builds the cluster DOM after addLayers returns.
+clusterGroup.on('animationend spiderfied unspiderfied', labelClusters);
+// Clusters are also rebuilt on zoom and pan, and the very first set appears after the
+// initial render, which none of the cluster events above cover.
+map.on('zoomend moveend', labelClusters);
+window.addEventListener('load', labelClusters);
+function labelClusters() {
+  const apply = () => {
+    for (const el of document.querySelectorAll('.marker-cluster')) {
+      const n = (el.textContent || '').trim();
+      if (!n) continue;
+      const label = n + ' markers in this area, activate to zoom in';
+      if (el.getAttribute('aria-label') !== label) el.setAttribute('aria-label', label);
+    }
+  };
+  // Once now for clusters that already exist, and once on a timer for the ones
+  // markercluster has not built yet. setTimeout rather than requestAnimationFrame,
+  // because rAF does not fire while the tab is in the background.
+  apply();
+  setTimeout(apply, 0);
+}
+
+// Leaflet 1.9 makes markers focusable (tabindex=0, role="button") but only wires Enter
+// to a click for POPUP-bound layers; _onKeyPress lives inside bindPopup. This atlas
+// opens its own side panel from m.on('click'), so every marker could be reached by
+// keyboard and never activated. That is a WCAG 2.1.1 (Keyboard) failure across all
+// 400-plus markers, so translate Enter and Space into a click here.
+map.getContainer().addEventListener('keydown', (e) => {
+  if (e.key !== 'Enter' && e.key !== ' ' && e.key !== 'Spacebar') return;
+  const el = document.activeElement;
+  if (!el || !el.classList || !el.classList.contains('leaflet-marker-icon')) return;
+  e.preventDefault(); // Space would otherwise scroll or pan
+  el.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true, view: window }));
+});
+
 // Layer + colour for the march route highlighted while a battle's panel is open
 // (declared here, before the first showYear()/hideBattleInfo() call).
 const activeRouteLayer = L.layerGroup().addTo(map);
@@ -1288,6 +1325,7 @@ function refreshMarkers(opts) {
   for (const m of battleMarkers) if (visSet.has(m.battle)) layers.push(m.marker);
   clusterGroup.clearLayers();
   clusterGroup.addLayers(layers);
+  labelClusters(); // clusters are rebuilt here, so re-apply their accessible names
   currentPresent = vis;
 
   hideBattleInfo(); // a previously open battle may no longer be shown

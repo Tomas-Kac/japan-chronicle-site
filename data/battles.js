@@ -2029,7 +2029,7 @@ His self-sacrifice made him an enduring symbol of loyalty in Japanese culture, a
   {
     id: "itsukushima",
     sources: [ { label: "Wikipedia: Battle of Miyajima", url: "https://en.wikipedia.org/wiki/Battle_of_Miyajima" } ],
-    name: "Battle of Itsukushima",
+    name: "Battle of Itsukushima (Miyajima)",
     year: 1555,
     date: "1555-10-16",
     dateLabel: "October 16, 1555",
@@ -2052,7 +2052,7 @@ His self-sacrifice made him an enduring symbol of loyalty in Japanese culture, a
       }
     },
     outcome: "Decisive Mōri victory; Sue Harukata committed suicide.",
-    summary: "Mōri Motonari lured the far larger Sue army onto the sacred island of Itsukushima and destroyed it in a daring night amphibious assault, the victory that made the Mōri masters of western Japan.",
+    summary: "Mōri Motonari lured the far larger Sue army onto the sacred island of Itsukushima and destroyed it in a daring night amphibious assault, the victory that made the Mōri masters of western Japan and one of the three classic surprise attacks of Japanese history.",
     details: `The Battle of Itsukushima was fought on October 16, 1555, on the island of Miyajima in Aki Province. Mōri Motonari, commanding 4,000 troops, engaged an Ōuchi faction army of 20,000 men commanded by Sue Harukata.
 
 Motonari established Miyao Castle on the island and disseminated disinformation suggesting the fort's vulnerability. Sue Harukata subsequently transported his army to the island, isolating his forces geographically. Exploiting adverse weather conditions, the Mōri forces executed a nocturnal amphibious transit and launched a coordinated land and naval assault at dawn, supported by the Murakami naval clan.
@@ -2060,8 +2060,8 @@ Motonari established Miyao Castle on the island and disseminated disinformation 
 The Sue forces were enveloped and destroyed. Sue Harukata committed seppuku. The strategic victory established the Mōri clan as the paramount military power in the Chūgoku region.`,
     images: [
       {
-        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Mori_Motonari.jpg/960px-Mori_Motonari.jpg",
-        caption: "Portrait of Mōri Motonari, the victor at Itsukushima. Wikimedia Commons."
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/201201-TaroTokyo-Itsukushima-DSC08992.jpg/960px-201201-TaroTokyo-Itsukushima-DSC08992.jpg",
+        caption: "Itsukushima Shrine and its great torii on Miyajima, seen from Mount Misen above the strait the Sue fleet crossed in 1555; Wikimedia Commons."
       }
     ]
   },
@@ -3795,16 +3795,6 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
     summary: "One of the most famous night attacks of the Sengoku: Hōjō Ujiyasu, badly outnumbered, relieved the besieged Kawagoe Castle with a surprise assault that shattered the great Uesugi coalition. The victory made the Later Hōjō the masters of the Kantō plain.",
     details: `In 1546 a huge coalition of the two Uesugi houses and the Kantō Kubō besieged the Hōjō garrison in Kawagoe Castle. Hōjō Ujiyasu marched to its relief and, rather than fight a pitched battle against the odds, struck at night in a co-ordinated attack with the garrison.`,
     sources: [ { label: "Wikipedia: Siege of Kawagoe Castle", url: "https://en.wikipedia.org/wiki/Siege_of_Kawagoe_Castle" } ]
-  },
-  {
-    id: "miyajima-1555",
-    images: [ { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/201201-TaroTokyo-Itsukushima-DSC08992.jpg/960px-201201-TaroTokyo-Itsukushima-DSC08992.jpg", caption: "Itsukushima Shrine and its great torii on Miyajima, seen from Mount Misen above the strait crossed by the Sue fleet in 1555; Wikimedia Commons." } ], name: "Battle of Miyajima", year: 1555, dateLabel: "October 1555 (Kōji 1)", period: "Muromachi",
-    location: { name: "Itsukushima (Miyajima), Aki (modern Hiroshima)", lat: 34.3016, lon: 132.3223 },
-    combatants: { side1: { name: "Ōuchi", leader: "Sue Harukata" }, side2: { name: "Mōri", leader: "Mōri Motonari" } },
-    outcome: "Decisive Mōri victory; Sue Harukata was destroyed, launching Mōri Motonari's rise to dominance over western Honshū.",
-    summary: "Mōri Motonari lured Sue Harukata's much larger army onto the sacred island of Itsukushima, then crushed it in a surprise amphibious dawn attack in a storm. The victory broke Ōuchi power and made the Mōri the great power of the Chūgoku region, one of Japan's three classic surprise attacks.",
-    details: `In 1555 Mōri Motonari enticed Sue Harukata's army to land on the narrow island of Itsukushima by feigning weakness. Crossing by sea in a night storm, the Mōri fell on the trapped Ōuchi host at dawn and annihilated it; Sue Harukata took his own life.`,
-    sources: [ { label: "Wikipedia: Battle of Miyajima", url: "https://en.wikipedia.org/wiki/Battle_of_Miyajima" } ]
   },
   {
     id: "nagaragawa-1556",
