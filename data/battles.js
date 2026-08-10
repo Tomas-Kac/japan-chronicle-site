@@ -4711,5 +4711,479 @@ The weather wrecked it. The Banryū lost the squadron and turned back; the Takao
 The Kaiten tore free and ran for Hokkaido, damaging three ships on the way out. The Takao, arriving just as the flagship left, was too slow to escape, so her crew beached her, blew her up and fled inland before surrendering.
 
 This was the first attempt in Japan to capture an ironclad steamship by boarding, and it failed. The Kōtetsu sailed on undamaged to cover the imperial landings at Hakodate.`
+  },
+
+  // ---- Sengoku additions 2026-08-10. Proposed per theatre, triaged per theatre,
+  // then 15 of 36 cut as second rank. Coordinates reverse-geosearched: most land within
+  // metres of the site, several on the article for the event itself. ----
+  {
+    id: "kyotoku-war",
+    sources: [ { label: "Wikipedia: Kyōtoku incident", url: "https://en.wikipedia.org/wiki/Ky%C5%8Dtoku_incident" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Koga_castle_suwakuruwa_dorui_hori.jpg/960px-Koga_castle_suwakuruwa_dorui_hori.jpg",
+        caption: "Earth rampart and moat of the Suwa bailey at Koga Castle in Koga, Ibaraki, the seat Ashikaga Shigeuji took in 1455 and held as Koga kubō. Photograph by Monado, 2007, CC BY-SA 2.5 via Wikimedia Commons."
+      }
+    ],
+    name: "Kyōtoku War (Kyōtoku no Ran)",
+    year: 1455,
+    dateLabel: "Kyōtoku 3.12.27 to Bunmei 14.11.27 (1455 to 1483)",
+    period: "Muromachi",
+    location: { name: "Koga Castle, Shimōsa Province (modern Koga, Ibaraki)", lat: 36.186889, lon: 139.695472 },
+    combatants: { side1: { name: "Koga kubō side", leader: "Ashikaga Shigeuji", forces: "Yūki, Oyama, Nasu, Takeda of Kazusa and other eastern Kantō houses" }, side2: { name: "Uesugi houses and the shogunate", leader: "Uesugi Fusaaki, later Uesugi Akisada and Uesugi Sadamasa", forces: "Yamanouchi and Ōgigayatsu Uesugi with Ōta Dōkan, a shogunal army under Imagawa Noritada, and from 1457 the Horigoe kubō Ashikaga Masatomo" } },
+    outcome: "Stalemate closed by the peace of Bunmei 14. Shigeuji kept the east as Koga kubō, the Uesugi held the west, and Kamakura ceased to be the seat of Kantō government.",
+    summary: "A twenty eight year civil war for the Kantō, begun when the Kamakura kubō Ashikaga Shigeuji murdered his own deputy, the Kantō kanrei Uesugi Noritada. It split the region along the Tone, created the rival Koga and Horigoe kubō, and for many historians opens the warring states age in the east.",
+    details: `In the twelfth month of Kyōtoku 3, Ashikaga Shigeuji, the shogun's governor at Kamakura, invited his own deputy to his palace and had him cut down. Uesugi Noritada belonged to the house that had driven Shigeuji's father to suicide in 1439, and the killing settled that score at the cost of the Kantō. The Uesugi vassals rose at once, the shogun Yoshimasa declared Shigeuji a rebel, and in 1455 a shogunal army under Imagawa Noritada took Kamakura. Shigeuji withdrew east to Koga and ruled from there as the Koga kubō.
+
+Neither side could finish the other. The Tone became a military frontier, with Koga and the eastern houses, Yūki, Oyama and Chiba, on one bank and the two Uesugi branches, Yamanouchi and Ōgigayatsu, on the other, dug in at their long standing camp at Igarasu in Musashi. In 1457 the shogun sent his half brother Ashikaga Masatomo east as the lawful governor, but Masatomo could not enter Kamakura and settled at Horigoe in Izu, so the Kantō now had two kubō. In the same year the Uesugi retainer Ōta Dōkan raised new fortresses to hold the western line, among them Kawagoe and Edo.
+
+The war outlasted the Ōnin War in the capital and was decided less by any battle than by the Uesugi side tearing itself apart in the revolt of Nagao Kageharu, which carried the Igarasu camp in 1477. Peace came in the eleventh month of Bunmei 14. Shigeuji was recognised as kubō at Koga, Izu was left to the Horigoe line, and nobody went back to Kamakura. Both institutions the war created were later swept away by the Later Hōjō, Horigoe in 1493. Many historians date the warring states age in eastern Japan from 1455, not 1467.`
+  },
+  {
+    id: "yamashiro-kuni-ikki",
+    sources: [ { label: "Wikipedia: Yamashiro ikki", url: "https://en.wikipedia.org/wiki/Yamashiro_ikki" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Jinson.jpg/960px-Jinson.jpg",
+        caption: "Jinson (1430 to 1508), abbot of the Daijōin at Kōfuku-ji, whose diary is the only record of the assembly and of its verdict on gekokujō. Sixteenth-century portrait, artist unknown. Wikimedia Commons."
+      }
+    ],
+    name: "Yamashiro no Kuni Ikki",
+    year: 1486,
+    dateLabel: "Bunmei 17/12/11 (January 1486); self-rule to Meiō 2 (1493)",
+    period: "Muromachi",
+    location: { name: "Kami-Koma, Sōraku district, southern Yamashiro Province (modern Kizugawa, Kyoto); one of the league's assembly villages", lat: 34.75049, lon: 135.82108 },
+    combatants: { side1: { name: "Yamashiro provincial league (kuni-ikki)", leader: "The kokujin of Kuse, Tsuzuki and Sōraku districts, later organised as the 'thirty-six'", forces: "the assembled landholders of the three southern districts, from men of sixty to boys of fifteen, with a crowd of villagers" }, side2: { name: "Hatakeyama clan, both warring branches", leader: "Hatakeyama Masanaga (east) and Hatakeyama Yoshinari (west)", forces: "about 1,500 under Masanaga, about 1,000 under Yoshinari" } },
+    outcome: "Both Hatakeyama armies withdrew within six days; the league then governed the three southern districts itself until it voted to submit to the shogunate's governor in 1493.",
+    summary: "On the eleventh day of the twelfth month of Bunmei 17, a date that falls in January 1486, the warrior landholders of the three southern districts of Yamashiro met in assembly, ordered both warring Hatakeyama armies out of the province, and then governed it themselves for close to eight years.",
+    details: `After the Ōnin War ended, the two claimants to the Hatakeyama house, Masanaga and Yoshinari, kept fighting, and southern Yamashiro became their battleground. By the tenth month of Bunmei 17 the two armies were dug in either side of the Kuse and Tsuzuki district boundary, roughly 1,500 men to the north and 1,000 to the south, feeding off villages that had been fought over for years.
+
+On the eleventh day of the twelfth month the kokujin, the resident warrior landholders of Kuse, Tsuzuki and Sōraku, called a general assembly with a crowd of villagers looking on. Jinson, abbot of the Daijōin at Kōfuku-ji in Nara, wrote in his diary that they came from men of sixty down to boys of fifteen or sixteen, then added the line every textbook now quotes: fitting, perhaps, but also gekokujō in the extreme, the low overturning the high.
+
+The assembly ordered both armies out, and within six days both had gone. At Byōdō-in in Uji, in the second month of Bunmei 18, the league put its terms in writing: no Hatakeyama troops in the province, estate rights as before, dues to be paid, no new toll barriers. A council remembered as the thirty-six, served by officers who rotated month by month, then ran policing, the roads and taxation.
+
+Self-rule lasted close to eight years. Taxing the villages to pay for itself split the league from the farmers who had backed it, the shogunate installed Ise Sadamichi as governor, and in 1493 an assembly voted to submit. Holdouts were stormed in Inayazuma castle in Sōraku.`
+  },
+  {
+    id: "izu-invasion",
+    sources: [ { label: "Japanese Wikipedia: 伊豆討ち入り (Invasion of Izu)", url: "https://ja.wikipedia.org/wiki/%E4%BC%8A%E8%B1%86%E8%A8%8E%E3%81%A1%E5%85%A5%E3%82%8A" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/%E4%BC%9D%E5%A0%80%E8%B6%8A%E5%BE%A1%E6%89%80%E8%B7%A1.jpg/960px-%E4%BC%9D%E5%A0%80%E8%B6%8A%E5%BE%A1%E6%89%80%E8%B7%A1.jpg",
+        caption: "The site of the Horigoe palace at Jike, Izunokuni, Shizuoka Prefecture, a national historic site. Photograph, 2022. Wikimedia Commons."
+      }
+    ],
+    name: "Invasion of Izu (fall of the Horigoe kubō)",
+    year: 1493,
+    dateLabel: "Meiō 2, 10th month (November 1493); exact day unrecorded",
+    period: "Muromachi",
+    location: { name: "Horigoe palace site, Jike, Izu Province (modern Izunokuni, Shizuoka Prefecture)", lat: 35.0485, lon: 138.9382 },
+    combatants: { side1: { name: "Ise (later Hōjō) forces, with Imagawa support", leader: "Ise Moritoki (Sōzui), later known as Hōjō Sōun", forces: "Numbers unrecorded. Ise housemen from Bitchū, Tōtōmi and Mikawa, Imagawa retainers under the Kazurayama, and Izu landholders such as the Suzuki of Enashi and the Tominaga" }, side2: { name: "Horigoe kubō", leader: "Ashikaga Chachamaru", forces: "Numbers unrecorded. Retainers of the kubō house and Izu warriors, with Yamanouchi Uesugi backing" } },
+    outcome: "Chachamaru abandoned the Horigoe palace and fled south. The Horigoe kubō ended after two holders, and Izu passed to Ise Moritoki, the future Hōjō Sōun.",
+    summary: "In 1493 the shogunal officer Ise Moritoki, later known as Hōjō Sōun, crossed from Suruga into Izu and stormed the palace of the Horigoe kubō, the Ashikaga branch the shogunate had planted there. Its holder fled, the line ended, and Sōun gained the province that became the cradle of the Later Hōjō.",
+    details: `Izu held an awkward experiment. In 1457 the shogunate sent Ashikaga Masatomo east to replace the rebel Kamakura kubō, but he could never enter Kamakura and settled instead at Horigoe in the north of the province, becoming the Horigoe kubō. The settlement of 1483 that closed the Kyōtoku War recognised his rival at Koga and left Masatomo lord of Izu alone.
+
+Masatomo died in 1491. He had disinherited his eldest son, Chachamaru, in favour of a younger half-brother, Jundōji; Chachamaru struck first, killed Jundōji and the boy's mother inside the palace, and seized the office by force. That made him the killer of the mother and brother of Kyoto's next shogun, for Jundōji's full brother Seikō was being groomed for the succession. When Hosokawa Masamoto's coup in the fourth month of 1493 installed Seikō as shogun Ashikaga Yoshizumi, Chachamaru's crime became a matter of state.
+
+Ise Moritoki, a shogunal retainer who had made himself indispensable to the Imagawa of Suruga, held Kōkokuji castle just across the border and had lost his own Izu estates to Chachamaru. Whether he was formally ordered to avenge the new shogun's kin or simply read the mood in Kyoto, he attacked that year with Imagawa backing and with Izu landholders joining him. In the tenth month Chachamaru abandoned Horigoe and fled south.
+
+Older accounts make this the opening act of gekokujō, the low overthrowing the high; recent scholarship stresses instead how closely it tracked Kyoto politics. Moritoki, remembered by his monastic name as Hōjō Sōun, built a base at Nirayama, took Odawara the next year, and founded the house that held the Kantō for a century. Chachamaru fought on until his death in 1498.`
+  },
+  {
+    id: "nagamorihara",
+    sources: [ { label: "Japanese Wikipedia: 長森原の戦い (Battle of Nagamorihara)", url: "https://ja.wikipedia.org/wiki/%E9%95%B7%E6%A3%AE%E5%8E%9F%E3%81%AE%E6%88%A6%E3%81%84" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/%E7%AE%A1%E9%A0%98%E5%A1%9A.jpg/960px-%E7%AE%A1%E9%A0%98%E5%A1%9A.jpg",
+        caption: "The Kanreizuka mound, traditionally held to be the grave of Uesugi Akisada, in the historic park at Shimobara-shinden, Minamiuonuma, Niigata. Photograph by 黒エサ屋さん, 2023, CC BY-SA 4.0, via Wikimedia Commons."
+      }
+    ],
+    name: "Battle of Nagamorihara",
+    year: 1510,
+    dateLabel: "July 25, 1510 (Eishō 7/6/20)",
+    period: "Muromachi",
+    location: { name: "Nagamorihara, Echigo Province (modern Shimobara-shinden, Minamiuonuma, Niigata Prefecture)", lat: 37.1018, lon: 138.9202 },
+    combatants: { side1: { name: "Echigo Nagao clan, with Takanashi reinforcements from Shinano", leader: "Nagao Tamekage and Takanashi Masamori", forces: "about 500 under Tamekage, joined by roughly 700 Takanashi troops" }, side2: { name: "Yamanouchi Uesugi clan", leader: "Uesugi Akisada, Kantō kanrei", forces: "about 800 in the retreating column" } },
+    outcome: "Nagao victory. Akisada died on the field with Nagao Sadaaki and Takayama Norishige; Tamekage took effective control of Echigo and the Yamanouchi Uesugi never recovered.",
+    summary: "Retreating from a failed occupation of Echigo, the Kantō kanrei Uesugi Akisada was overtaken on the Nagamorihara plain and died there. Nagao Tamekage, the deputy governor whose revolt had killed Akisada's brother, then held Echigo outright and founded the line that produced Uesugi Kenshin.",
+    details: `Nagamorihara closed the Eishō disturbance, the quarrel that broke the old order in Echigo. In 1507 the shugodai, or deputy governor, Nagao Tamekage rebelled against his lord Uesugi Fusayoshi, drove him to suicide at Amamizukoshi, and installed a puppet, Uesugi Sadazane, in his place. Fusayoshi's elder brother was Uesugi Akisada, head of the Yamanouchi Uesugi and Kantō kanrei, the shogunate's deputy for the eastern provinces, an office he had held for more than forty years.
+
+In the seventh month of 1509 Akisada crossed into Echigo to avenge his brother. He seized the provincial seat at Funai and drove Tamekage and Sadazane out of the province altogether. The occupation then went wrong. Akisada governed heavily, and the Echigo kokujin, the local warrior landholders, turned against him. Tamekage came back across the sea the next summer, retook Funai, and Akisada began to withdraw southward toward the Mikuni road and home.
+
+On the twentieth day of the sixth month his column of some 800 men was caught on the alluvial fan of the Udasawa river. Tamekage attacked with about 500 and was held off, but Takanashi Masamori then arrived from Shinano with roughly 700 more and struck the flank. Akisada died in the rout, aged fifty-seven, along with Nagao Sadaaki and Takayama Norishige; the sources differ over whether he was cut down or took his own life.
+
+Tamekage now ruled Echigo in fact, with Sadazane as a figurehead. The Yamanouchi Uesugi fell into a succession war and never recovered. Half a century later, in 1561, it was Tamekage's son Kagetora who received both the Uesugi surname and the kanrei title, becoming Uesugi Kenshin.`
+  },
+  {
+    id: "yoshida-koriyama-1540",
+    sources: [ { label: "Wikipedia: Siege of Yoshida-Kōriyama Castle", url: "https://en.wikipedia.org/wiki/Siege_of_Yoshida-K%C5%8Driyama_Castle" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Yoshida-kouriyama_Castle_Honmaru.JPG/960px-Yoshida-kouriyama_Castle_Honmaru.JPG",
+        caption: "The honmaru and inner enclosures of the Yoshida-Kōriyama Castle ruins at Akitakata, Hiroshima Prefecture; Wikimedia Commons."
+      }
+    ],
+    name: "Siege of Yoshida-Kōriyama Castle",
+    year: 1540,
+    dateLabel: "1540–1541 (Tenbun 9/9/4 to Tenbun 10/1/13)",
+    period: "Muromachi",
+    location: { name: "Yoshida-Kōriyama Castle, Aki (modern Akitakata, Hiroshima)", lat: 34.674286, lon: 132.709589 },
+    combatants: { side1: { name: "Mōri, with Ōuchi relief", leader: "Mōri Motonari; relief under Sue Takafusa", forces: "About 3,000 fighting men in the castle with some 5,000 non-combatants sheltering inside, plus an Ōuchi relief army of 10,000" }, side2: { name: "Amago", leader: "Amago Haruhisa, then still named Akihisa", forces: "A reported 30,000" } },
+    outcome: "Mōri victory; the Amago broke off the siege after Amago Hisayuki was killed. Aki stayed in Ōuchi hands and Amago expansion westward ended permanently.",
+    summary: "Amago Haruhisa brought a reported 30,000 men into Aki to destroy Mōri Motonari, who held Yoshida-Kōriyama with about 3,000. Motonari raided out of the castle all winter until an Ōuchi relief army arrived and drove the Amago off. Aki stayed Ōuchi, and the Mōri became a power in their own right.",
+    details: `Yoshida-Kōriyama was the Mōri seat, a fortified mountain in the hills of Aki. Through the 1530s Mōri Motonari had balanced between the two great powers of western Japan, the Ōuchi of Suō to his west and the Amago of Izumo to his north. By 1540 he had committed to the Ōuchi, and Amago Haruhisa, then still called Akihisa, invaded Aki to settle the matter.
+
+The Amago camped below the castle in the ninth month of Tenbun 9 with a reported 30,000 men. Motonari had perhaps 3,000 fighting men and some 5,000 villagers sheltering behind his walls, and he refused to simply sit there. Through the autumn he fought a running series of sorties and ambushes down the wooded spurs, denying the Amago the open battle they wanted and bleeding them in the ravines instead.
+
+Late in the year an Ōuchi relief army of 10,000 arrived under Sue Takafusa, the man who would later destroy his own lord and die at Itsukushima. On the thirteenth day of the first month of Tenbun 10 a joint Mōri and Ōuchi attack broke the Amago lines. The aged Amago Hisayuki, brother of the clan's builder Tsunehisa, had opposed the invasion and been mocked as a coward for it; he was killed by an arrow leading a last charge. That night the Amago withdrew through the snow.
+
+Three things followed. Amago expansion westward stopped for good. The emboldened Ōuchi invaded Izumo the next year and were wrecked at Gassantoda. And Motonari, who had held his own castle with his own men, stepped out of the crowd of small Aki lords into the front rank.`
+  },
+  {
+    id: "tenbun-no-ran",
+    sources: [ { label: "Japanese Wikipedia: 天文の乱 (Tenbun no Ran)", url: "https://ja.wikipedia.org/wiki/天文の乱" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Date_Tanemune.JPG/960px-Date_Tanemune.JPG",
+        caption: "Portrait of Date Tanemune, whose plan to place a son over the Uesugi split his house; Edo period painting held by the Sendai City Museum. Wikimedia Commons."
+      }
+    ],
+    name: "Tenbun no Ran (Date Succession War)",
+    year: 1542,
+    dateLabel: "Sixth month, Tenbun 11 to ninth month, Tenbun 17 (1542 to 1548)",
+    period: "Muromachi",
+    location: { name: "Koori Nishiyama Castle, Date district, Mutsu Province (modern Koori, Fukushima)", lat: 37.855417, lon: 140.508333 },
+    combatants: { side1: { name: "Date clan, Tanemune faction, with Sōma, Kakeda, Ōsaki and Mogami allies", leader: "Date Tanemune", forces: "most of the houses of southern Ōu at the outset" }, side2: { name: "Date clan, Harumune faction, with the Nakano and Koori retainers and, from 1547, the Ashina", leader: "Date Harumune", forces: "core Date retainers, growing steadily by defection" } },
+    outcome: "Harumune victory. Tanemune retired, Harumune took the clan and moved its seat to Yonezawa, but Date overlordship of southern Ōu was broken.",
+    summary: "A six year civil war inside the Date house, fought between Date Tanemune and his son Harumune over a plan to place a Date son over the Uesugi of Echigo. It pulled in almost every clan of southern Ōu and broke Date power for a generation.",
+    details: `Date Tanemune, fourteenth head of the house, had spent thirty years marrying his many children into the neighbouring clans of southern Ōu. By the 1540s he held ten districts, the office of shugo of Mutsu, and the submission of the Ashina, Sōma, Mogami, Ōsaki and Kasai; his law code, the Jinkaishū of 1536, was one of the most ambitious of the age. In 1542 he proposed to send his third son Tokimunemaru, later Date Sanemoto, to be adopted as heir of Uesugi Sadazane, the shugo of Echigo, and to send a hundred picked retainers with him. His heir Harumune, backed by senior men who resented his father's centralising, refused.
+
+In the sixth month of Tenbun 11 Harumune ambushed his father returning from a hawking trip and shut him in the family seat, Koori Nishiyama Castle. Tanemune was smuggled out by the retainer Koyanagawa Munetomo, reached Kakeda Castle held by his son-in-law Kakeda Toshimune, and called on his relatives by marriage. Sōma, Mogami, Ōsaki and others rose for him, and the quarrel became a general war. Tanemune held the advantage until 1547, when a falling out between Tamura Takaaki and Ashina Moriuji carried the Ashina over to Harumune. Defections followed, and in the ninth month of Tenbun 17 a settlement issued in the name of the shogun Ashikaga Yoshiteru required Tanemune to retire.
+
+The cost was enormous. Tanemune withdrew to Marumori, Harumune moved the seat to Yonezawa and Nishiyama was razed. Ashina, Sōma and Mogami broke free, the Ashina rising to rival the Date outright, and the Date sons planted on the Ōsaki and Kasai were killed. Kakeda fought on for five more years. Not until Date Masamune, two generations later, did the house recover its reach.`
+  },
+  {
+    id: "eguchi",
+    sources: [ { label: "Japanese Wikipedia: Battle of Eguchi (江口の戦い)", url: "https://ja.wikipedia.org/wiki/%E6%B1%9F%E5%8F%A3%E3%81%AE%E6%88%A6%E3%81%84" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Eguti9.jpg/960px-Eguti9.jpg",
+        caption: "The Yodo River in Higashiyodogawa Ward, Osaka, near the presumed site of Eguchi Castle. Wikimedia Commons."
+      }
+    ],
+    name: "Battle of Eguchi",
+    year: 1549,
+    dateLabel: "July 6–18, 1549 (Tenbun 18/6/12–24)",
+    period: "Muromachi",
+    location: { name: "Eguchi Castle, Settsu Province (modern Higashiyodogawa Ward, Osaka)", lat: 34.749908, lon: 135.550727 },
+    combatants: { side1: { name: "Miyoshi Nagayoshi, allied with Hosokawa Ujitsuna", leader: "Miyoshi Nagayoshi", forces: "about 3,000 at Eguchi, with his brothers Atagi Fuyuyasu and Sogō Kazumasa" }, side2: { name: "Hosokawa Harumoto's party", leader: "Miyoshi Masanaga (killed), with Hosokawa Harumoto in support at Miyake", forces: "about 3,000 in the castle" } },
+    outcome: "Decisive victory for Nagayoshi. Masanaga was killed with about 800 men; Harumoto abandoned Kyoto and the Miyoshi took control of the capital region.",
+    summary: "Miyoshi Nagayoshi trapped his kinsman and rival Miyoshi Masanaga between the Yodo and Kanzaki rivers north of Osaka and destroyed him, breaking the shogunal deputy Hosokawa Harumoto and driving the shogun himself out of Kyoto.",
+    details: `Eguchi sat on low, flat ground where the Kanzaki River branches off the Yodo, north of modern Osaka. Water on three sides made it a strong post and, if the waterways were closed, a trap. Miyoshi Masanaga occupied it on the eleventh day of the sixth month of 1549, meaning to wedge himself between his enemy's two forces and hold the road open until a relief army from Ōmi arrived.
+
+Masanaga was Hosokawa Harumoto's trusted kinsman and confidant. Harumoto governed the capital region in the shogun's name, and Masanaga had spent years intriguing against the senior Miyoshi line. Its head, Miyoshi Nagayoshi, asked Harumoto to have Masanaga put to death; when Harumoto refused, Nagayoshi went over to Harumoto's rival Hosokawa Ujitsuna. He now posted his brothers Atagi Fuyuyasu and Sogō Kazumasa north of Eguchi, severing the castle from Harumoto's army and from its supplies.
+
+Fighting began on the twelfth. For nearly two weeks the garrison waited on food that never came. On the twenty fourth, with a Rokkaku relief column of some ten thousand men only half a day away at Yamazaki, Nagayoshi struck from two sides at once. The starving defenders broke. Masanaga fell with roughly eight hundred of his men; one tradition holds that he drowned trying to escape down the Yodo.
+
+Harumoto never gave battle. He withdrew the next day, then fled to Sakamoto on Lake Biwa with the young shogun Ashikaga Yoshiteru and his father Yoshiharu. Nagayoshi entered Kyoto three weeks later. For the next fifteen years the Kinai was run neither by the shogun nor by a Hosokawa deputy, but by the Miyoshi.`
+  },
+  {
+    id: "satta-pass",
+    sources: [ { label: "Japanese Wikipedia: 薩埵峠の戦い (戦国時代) (Battle of Satta Pass, Sengoku period)", url: "https://ja.wikipedia.org/wiki/薩埵峠の戦い_(戦国時代)" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Mount_Fuji_and_Ashitaka_Mountains_from_Satta_Pass.JPG/960px-Mount_Fuji_and_Ashitaka_Mountains_from_Satta_Pass.JPG",
+        caption: "Satta Pass looking east across Suruga Bay to Mount Fuji. Road, railway and expressway share the one narrow shelf between cliff and sea that the Imagawa tried to hold. Photograph by Alpsdake, 2016, Wikimedia Commons, CC BY-SA 4.0."
+      }
+    ],
+    name: "Battle of Satta Pass and the Fall of Sunpu",
+    year: 1568,
+    dateLabel: "December 30 to 31, 1568 (Eiroku 11/12/12 to 12/13)",
+    period: "Muromachi",
+    location: { name: "Satta Pass, Suruga Province (modern Shimizu ward, Shizuoka city)", lat: 35.0717, lon: 138.5412 },
+    combatants: { side1: { name: "Takeda clan", leader: "Takeda Shingen", forces: "army out of Kai; strength not reliably recorded" }, side2: { name: "Imagawa clan", leader: "Imagawa Ujizane", forces: "a reported 15,000 at the pass under Ihara Tadatane" } },
+    outcome: "Decisive Takeda victory. Sunpu fell in a day and Ujizane fled to Kakegawa; the Imagawa ended as a daimyo house and the Kai-Sagami-Suruga alliance collapsed.",
+    summary: "Takeda Shingen tore up the Kai-Sagami-Suruga alliance and marched on Suruga. His agents had already bought the Imagawa high command, so the defence of Satta Pass dissolved without a real battle and Sunpu fell in a single day.",
+    details: `For fourteen years the Kai-Sagami-Suruga alliance of 1554 had kept the Takeda, Hōjō and Imagawa from one another's throats. After Imagawa Yoshimoto fell at Okehazama in 1560 his son Ujizane could not carry that weight. Takeda Shingen, landlocked in Kai, wanted a coastline, and he agreed secretly with Tokugawa Ieyasu to divide the Imagawa lands at the Ōi River.
+
+Shingen left Kōfu on Eiroku 11/12/6 and was in Suruga six days later. Ujizane sent Ihara Tadatane with a reported 15,000 men to hold Satta Pass, where the mountains fall into Suruga Bay and the Tōkaidō is squeezed onto a shelf between cliff and water. It is the one place a small force can stop a large one, and Ujizane meant to pin Shingen there until his father-in-law Hōjō Ujiyasu came up behind. The plan never reached the fighting. Takeda and Tokugawa agents had already turned the Imagawa's own senior men, among them Asahina Nobuoki and Sena Nobuteru; the chronicle Matsudaira ki counts twenty-one. Fighting opened on 12/12. On the 13th Ujizane fled his camp at Seiken-ji, the line dissolved behind him, and Takeda troops were inside Sunpu the same day. Baba Nobuharu took the hill fort above the town and burned the Imagawa mansion. Ujizane's wife, Ujiyasu's daughter, escaped on foot for want of a palanquin.
+
+Ujizane reached Kakegawa in Tōtōmi and gave it up in the fifth month of 1569. The Imagawa were finished as a daimyo house. The insult to his daughter turned Ujiyasu against Shingen, and the eastern settlement of 1554 came apart, producing the Hōjō pact with Uesugi, Shingen's raid on Odawara and the running fight at Mimasetōge later in 1569.`
+  },
+  {
+    id: "ishiyama-honganji",
+    sources: [ { label: "Wikipedia: Ishiyama Hongan-ji War", url: "https://en.wikipedia.org/wiki/Ishiyama_Hongan-ji_War" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Utagawa_Yoshifuji_-_The_Battle_of_Ishiyama_Hongan-ji.jpg/960px-Utagawa_Yoshifuji_-_The_Battle_of_Ishiyama_Hongan-ji.jpg",
+        caption: "\"The Battle of Ishiyama Hongan-ji\", a woodblock print (nishiki-e) by Utagawa Yoshifuji, 1869, made nearly three centuries after the war. Museum of Fine Arts, Boston; Wikimedia Commons."
+      }
+    ],
+    name: "Ishiyama Hongan-ji War",
+    year: 1570,
+    dateLabel: "Genki 1/9/12 to Tenshō 8/8/2 (11 October 1570 to 10 September 1580)",
+    period: "Muromachi",
+    location: { name: "Ishiyama Hongan-ji, Settsu Province (modern Osaka)", lat: 34.684295, lon: 135.524889 },
+    combatants: { side1: { name: "Oda clan", leader: "Oda Nobunaga", forces: "Rotating field armies and blockading forces under Sakuma Nobumori, Akechi Mitsuhide and Kuki Yoshitaka's fleet" }, side2: { name: "Hongan-ji and the Ikkō-ikki", leader: "Kennyo (Kōsa), eleventh abbot", forces: "Temple garrison reported at some 15,000, Saika gunners, Mōri supply fleets" } },
+    outcome: "Oda victory. Kennyo surrendered under imperial mediation and the complex burned; the Hongan-ji never again fielded an army.",
+    summary: "Ten years of siege for the fortified temple-city at Osaka, the longest war Nobunaga ever fought. The abbot Kennyo called out the Ikkō-ikki of every province against him, and only when the Mōri supply route was cut at sea did the temple give in and burn.",
+    details: `Ishiyama Hongan-ji was not a castle in the ordinary sense but a fortified temple-city on the bluff at Osaka, ringed with moats and walls and surrounded by the townships of its own believers. It sat at the mouth of the Yodo River and controlled the sea road into the capital region, which is why Nobunaga wanted it and why its abbot, Kennyo, refused to give it up. On the twelfth day of the ninth month of Genki 1 the temple's men fell on the Oda siege lines at Noda and Fukushima in Settsu, and the war began.
+
+What followed was less a siege than a ten-year contest for the centre of Japan. Kennyo wrote to Ikkō congregations in every province, so Nobunaga had to fight them in Ise, Echizen and Kaga as well as at Osaka; the Nagashima strongholds were destroyed in 1574 and the Echizen ikki crushed in 1575. Around Osaka the war turned on supply. Nobunaga was wounded in the leg at Tennōji in 1576, and that summer the Mōri fleet broke his blockade at the mouth of the Kizu River. Only when Kuki Yoshitaka's armoured ships won there in 1578 did the sea road finally close.
+
+Starving and isolated, Kennyo accepted a peace brokered by the court of Emperor Ōgimachi and withdrew to Kii in the spring of 1580. His son Kyōnyo held out into the eighth month; when he too rode away the complex caught fire and burned for three days and nights. Jōdo Shinshū survived and is still one of Japan's largest Buddhist schools, but it never again put an army in the field, and three years later Hideyoshi began Osaka Castle on the cleared hill.`
+  },
+  {
+    id: "imayama",
+    sources: [ { label: "Japanese Wikipedia: 今山の戦い (Battle of Imayama)", url: "https://ja.wikipedia.org/wiki/今山の戦い" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/b/bd/Nabeshima_Naoshige_by_Miura_Shisan_%28Chokokan%29_%28detail%29.jpg",
+        caption: "Portrait of Nabeshima Naoshige, who led the night attack at Imayama; an eighteenth-century painting by Miura Shisan in the Chōkokan, Saga. Wikimedia Commons."
+      }
+    ],
+    name: "Battle of Imayama",
+    year: 1570,
+    dateLabel: "Genki 1, 8th month, 20th day (19 September 1570)",
+    period: "Muromachi",
+    location: { name: "Imayama, Hizen Province (modern Kuruma, Yamato-chō, Saga City, Saga)", lat: 33.3171667, lon: 130.2431111 },
+    combatants: { side1: { name: "Ryūzōji clan", leader: "Ryūzōji Takanobu (raid led by Nabeshima Naoshige)", forces: "approximately 5,000 in Saga castle; roughly 500 in the night attack" }, side2: { name: "Ōtomo clan", leader: "Ōtomo Sōrin (Ōtomo Chikasada commanding at Imayama)", forces: "war tales give 60,000 to 80,000, certainly inflated; some 3,000 in the Imayama camp" } },
+    outcome: "Ryūzōji victory; the Ōtomo field commander Ōtomo Chikasada was killed and his camp destroyed, though the siege itself ended only with a negotiated peace in the tenth month.",
+    summary: "Besieged in Saga castle by a far larger Ōtomo army, the Ryūzōji sent about five hundred men out by night against the enemy forward camp on Imayama, killed its commander and wrecked it. The raid made Nabeshima Naoshige's name and set the Ryūzōji on the road to becoming a great Kyūshū power.",
+    details: `In the third month of Genki 1 the Bungo warlord Ōtomo Sōrin invaded Hizen to break Ryūzōji Takanobu, whose expansion was eating into Ōtomo authority in northern Kyūshū. Takanobu shut himself in Saga castle with perhaps five thousand men. War tales credit the besiegers with sixty to eighty thousand, certainly an inflated figure, but the disparity was real and no relief army was coming. After months of stalemate Sōrin, directing the campaign from Kōrasan in Chikugo, sent forward his kinsman Ōtomo Chikasada with orders to storm the place. Chikasada camped on the hill of Imayama north of the town and fixed the assault for the twentieth day of the eighth month.
+
+The night before, his men held a victory banquet. Ryūzōji scouts reported it, and Nabeshima Naoshige, one of Takanobu's captains, proposed a night attack. The council called it suicide; Saga tradition says Takanobu's mother, the nun Keigin-ni, shamed them into agreeing. Naoshige slipped out with some five hundred men, worked round behind the camp before dawn, opened fire and spread word that the Ōtomo had been betrayed from within. In the confusion the besiegers fought each other, Chikasada was cut down and his army scattered.
+
+The siege was not lifted at once; peace was negotiated only in the tenth month, and Takanobu remained nominally an Ōtomo subordinate. Yet Imayama made the Ryūzōji. Within a decade Takanobu held Chikugo, Chikuzen and much of Higo and was reckoned with the Ōtomo and Shimazu as one of the three powers of Kyūshū. Naoshige, whose heirs would rule Saga into the nineteenth century, marked the victory by adopting the Ōtomo gyōyō as the Nabeshima crest.`
+  },
+  {
+    id: "kanegasaki-1570",
+    sources: [ { label: "Japanese Wikipedia: Kanegasaki no nokiguchi (金ヶ崎の戦い)", url: "https://ja.wikipedia.org/wiki/%E9%87%91%E3%83%B6%E5%B4%8E%E3%81%AE%E6%88%A6%E3%81%84" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Kanegasaki_Castle_Site.jpg/960px-Kanegasaki_Castle_Site.jpg",
+        caption: "The stone marker on the Kanegasaki castle ridge above Tsuruga, Fukui Prefecture, reading \"Historic Site, Kanegasaki Castle Ruins\"; only earthworks survive on the hill, Wikimedia Commons."
+      }
+    ],
+    name: "Kanegasaki Retreat (Kanegasaki no Nokiguchi)",
+    year: 1570,
+    dateLabel: "May 30 to June 3, 1570 (Genki 1/4/26 to 4/30)",
+    period: "Muromachi",
+    location: { name: "Kanegasaki Castle, Tsuruga, Echizen Province (modern Fukui)", lat: 35.666083, lon: 136.074167 },
+    combatants: { side1: { name: "Oda–Tokugawa army", leader: "Oda Nobunaga, with Tokugawa Ieyasu", forces: "approximately 30,000 (Tokitsugu kyōki)" }, side2: { name: "Asakura clan, joined mid-campaign by the Azai", leader: "Asakura Yoshikage and Azai Nagamasa; Asakura Kagetsune held Kanegasaki", forces: "not reliably recorded" } },
+    outcome: "The Oda took Kanegasaki, then abandoned Echizen and escaped to Kyoto through the Kutsuki valley. No province changed hands; the campaign against the Asakura had to be begun again.",
+    summary: "Nobunaga had taken Kanegasaki and was pushing into Echizen when his brother-in-law Azai Nagamasa changed sides and closed the road home. He ran for Kyoto with a rearguard holding the pass behind him, and the escape became the most famous fighting withdrawal in Japanese military history.",
+    details: `Nobunaga left Kyoto on the twentieth day of the fourth month with an Oda and Tokugawa army of about thirty thousand, giving out that he was disciplining the Mutō of Wakasa for the shogun Ashikaga Yoshiaki. The real target was Asakura Yoshikage, who had ignored a summons to the capital. The era name changed from Eiroku to Genki while the army was on the road. On the twenty fifth the Oda stormed Tezutsuyama; the next day Asakura Kagetsune surrendered Kanegasaki. Then word came that Azai Nagamasa of northern Ōmi, married to Nobunaga's sister Oichi, had gone over to the Asakura, whose alliance with his house was two generations old. Facing encirclement, Nobunaga abandoned the campaign, slipped south through the Kutsuki valley under the local lord Kutsuki Motosuna, and reached Kyoto on the thirtieth with a handful of companions.
+
+The rearguard, the shingari, is why the episode is taught. Tradition has the young Kinoshita Tōkichirō, the future Toyotomi Hideyoshi, volunteering for the most dangerous post, and Nobunaga did reward him with gold. But the sources also place Ikeda Katsumasa, military governor of Settsu, and Akechi Mitsuhide in the rearguard, both senior to him, and Ieyasu's share appears only in Tokugawa records written long afterwards. The story of Oichi warning her brother with a bean bag tied at both ends is a later invention. Losses are reported as anything from negligible to two thousand, and one reading of Nobunaga's letter to Mōri Motonari has him learning of the betrayal only after he had turned for home. No province changed hands here. The pin marks a lesson and a cause: Anegawa followed eight weeks later.`
+  },
+  {
+    id: "mount-hiei-1571",
+    sources: [ { label: "Wikipedia: Siege of Mount Hiei", url: "https://en.wikipedia.org/wiki/Siege_of_Mount_Hiei" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/c/c2/Enryakuji1.jpg",
+        caption: "The burning of Mount Hiei, an Edo-period woodblock illustration catalogued on Commons under the Ehon Taikōki. Public domain, Wikimedia Commons."
+      }
+    ],
+    name: "Burning of Mount Hiei (Enryaku-ji)",
+    year: 1571,
+    dateLabel: "30 September 1571 (Genki 2/9/12)",
+    period: "Muromachi",
+    location: { name: "Enryaku-ji on Mount Hiei, above Sakamoto, Ōmi Province (modern Ōtsu, Shiga)", lat: 35.070556, lon: 135.841111 },
+    combatants: { side1: { name: "Oda clan", leader: "Oda Nobunaga, with Sakuma Nobumori, Akechi Mitsuhide, Niwa Nagahide and Ikeda Tsuneoki", forces: "reported at about 30,000" }, side2: { name: "Enryaku-ji, the Tendai head temple", leader: "the temple's own abbots and sōhei captains, not named in the records", forces: "around 4,000 warrior monks and armed residents" } },
+    outcome: "Oda victory; Enryaku-ji, the Hiyoshi shrine and the town of Sakamoto were burned, the temple estates confiscated, and Tendai military power destroyed.",
+    summary: "Nobunaga encircled Mount Hiei and burned Enryaku-ji, the head temple of the Tendai school, together with the town of Sakamoto below it. Six centuries of monastic military power ended in a day. The standard teaching case for his campaign against Japan's armed temples.",
+    details: `Enryaku-ji, founded on Mount Hiei in 788, was the head temple of the Tendai school and the most feared religious power near the capital. Its sōhei, the warrior monks, had marched down on Kyoto for centuries to press the court, and the mountain overlooked the roads linking the capital to Lake Biwa.
+
+The quarrel with Oda Nobunaga began after Anegawa in 1570, when beaten Asai and Asakura troops withdrew onto Mount Hiei and the monks sheltered them through the winter. Nobunaga offered to restore confiscated temple estates in return for neutrality, and promised destruction if the offer was refused. It was refused.
+
+On Genki 2/9/12, 30 September 1571, an Oda army reported at some 30,000 men closed on the mountain from every side. Sakamoto and Katata at the foot were fired first, then the troops worked upward, burning the Konpon Chūdō, the Hiyoshi shrine complex and the halls along the ridge. Contemporary witnesses put the dead between 1,500 and 4,000, monks, servants, women and children among them; later chronicles inflated the number. Recent excavation suggests much of the complex was already derelict and that fewer buildings burned than the chronicles claim.
+
+Nobunaga forbade rebuilding and split the temple lands among his commanders. Akechi Mitsuhide took the Shiga district and raised Sakamoto Castle on the lakeshore to watch the mountain. Enryaku-ji revived as a place of learning under Hideyoshi and the Tokugawa, but never again as a military power. The burning set the pattern for Nagashima and the long war on Ishiyama Hongan-ji.`
+  },
+  {
+    id: "odani-1573",
+    sources: [ { label: "Wikipedia: Siege of Odani Castle", url: "https://en.wikipedia.org/wiki/Siege_of_Odani_Castle" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Odanij18.jpg/960px-Odanij18.jpg",
+        caption: "The ōishigaki, the large surviving stone rampart on the ridge of the Odani Castle site in Nagahama, Shiga; uploader's photograph, 2008, Wikimedia Commons."
+      }
+    ],
+    name: "Siege of Odani Castle",
+    year: 1573,
+    dateLabel: "1573 (Tenshō 1/8/8 to 9/1)",
+    period: "Azuchi–Momoyama",
+    location: { name: "Odani Castle, Ōmi Province (modern Nagahama, Shiga)", lat: 35.459284, lon: 136.277 },
+    combatants: { side1: { name: "Oda", leader: "Oda Nobunaga", forces: "about 30,000" }, side2: { name: "Azai", leader: "Azai Nagamasa and Azai Hisamasa", forces: "about 5,000" } },
+    outcome: "Oda victory; the Azai clan was destroyed, Nagamasa and his father Hisamasa took their own lives, and northern Ōmi passed to Hashiba Hideyoshi.",
+    summary: "Nobunaga's final reckoning with the brother-in-law who had betrayed him. With the Asakura destroyed days earlier, the Azai stronghold on Mount Odani was split in two and stormed. The clan was wiped out, and Hideyoshi received northern Ōmi as the first domain he held in his own name.",
+    details: `Odani was a yamashiro, a fortress strung along a ridge north of Lake Biwa, and it had been the Azai seat since the 1520s. Azai Nagamasa was married to Nobunaga's sister Oichi, but in 1570 he chose his older alliance with the Asakura of Echizen over his brother-in-law. That betrayal led to Anegawa and to three years of war. In the eighth month of Tenshō 1 Nobunaga brought some thirty thousand men against the mountain. When Asakura Yoshikage marched south to relieve it, Nobunaga turned on him, broke his army at Tonezaka and pursued it home, destroying Ichijōdani and the Asakura within days. Then he came back to Odani. The garrison numbered perhaps five thousand. The decisive stroke came from Hashiba Hideyoshi, who seized the Kyōgoku-maru enclosure in the middle of the ridge and so cut the retired lord Hisamasa, in the Komaru above, off from Nagamasa in the main keep below. Hisamasa killed himself on the twenty-seventh day of the eighth month. Nagamasa sent Oichi and their three daughters out to Nobunaga, then took his own life on the first day of the ninth month. His infant son Manpukumaru was hunted down and killed, and the Azai line ended. The daughters mattered later: Chacha became Hideyoshi's consort Yodo-dono and mother of Hideyori, and Gō married the second Tokugawa shogun. Nobunaga granted the three northern districts of Ōmi to Hideyoshi, the first land he held in his own right. Finding the mountain awkward to govern from, he soon built a new castle on the lakeshore at Nagahama and quarried Odani for its stone.`
+  },
+  {
+    id: "echizen-ikko-ikki-1575",
+    sources: [ { label: "Japanese Wikipedia: 越前一向一揆 (Echizen Ikkō-ikki)", url: "https://ja.wikipedia.org/wiki/%E8%B6%8A%E5%89%8D%E4%B8%80%E5%90%91%E4%B8%80%E6%8F%86" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Kinome-touge.jpg/960px-Kinome-touge.jpg",
+        caption: "Kinome Pass on the old Hokuriku road in Fukui, one of the hardest stretches of the route and a position the Echizen ikki fortified against Nobunaga in 1575; photograph by TR15336300101, Wikimedia Commons, CC BY-SA 4.0."
+      }
+    ],
+    name: "Nobunaga's Suppression of the Echizen Ikkō-ikki",
+    year: 1575,
+    dateLabel: "1575 (Tenshō 3, 8th month)",
+    period: "Azuchi–Momoyama",
+    location: { name: "Fuchū, Echizen (modern Echizen City, Fukui)", lat: 35.9033, lon: 136.1684 },
+    combatants: { side1: { name: "Oda", leader: "Oda Nobunaga (Shibata Katsuie, Hashiba Hideyoshi, Akechi Mitsuhide, Niwa Nagahide)", forces: "About 30,000, with several hundred ships from Wakasa and Tango" }, side2: { name: "Echizen Ikkō-ikki", leader: "Shimotsuma Raishō, Shichiri Yorichika, Sugiura Gennin", forces: "Unknown; provincial congregations holding the Kinome pass line and the coastal forts" } },
+    outcome: "Oda victory; the ikki state in Echizen was destroyed with mass killing and enslavement, and Nobunaga granted eight districts of the province to Shibata Katsuie.",
+    summary: "Echizen threw off Oda rule in 1574 and became a province governed by the Honganji and its congregations. In 1575 Nobunaga returned with some thirty thousand men, broke the ikki within days, and handed the province to Shibata Katsuie, whose castle at Kitanoshō became the Oda base in the north.",
+    details: `When Nobunaga destroyed the Asakura in 1573 he left Echizen in the hands of a former Asakura retainer, Katsurada Nagatoshi, as deputy governor. In the first month of 1574 a rival, Tomita Nagashige, raised the villages against him and killed him. The risen peasants then turned on Tomita, killed him too, and invited leaders of the Kaga Ikkō-ikki to command them. Honganji sent the priest-official Shimotsuma Raishō to govern, and Echizen joined Kaga as a province run by its congregations rather than by a warrior house. The new rulers taxed harder than the man they had replaced, and revolts against them began within the year.
+
+Free after Nagashino, Nobunaga left Gifu on the twelfth day of the eighth month of 1575 and entered Echizen from Tsuruga three days later with some thirty thousand men, while several hundred ships from Wakasa and Tango landed and burned the ports behind the ikki lines. The defenders held the Kinome pass and the castles along the Hokuriku road, but a night attack on Fuchū took them from the rear, and about two thousand were cut down in the town. Hachibuse, Suizu and, on the eighteenth, Toba castle fell; the ikki commanders fled into the mountains and were hunted down. Nobunaga's own letters and the Shinchō kōki count more than twelve thousand executed and thirty to forty thousand sent as slaves to Owari and Mino.
+
+Nobunaga then gave eight districts of Echizen to Shibata Katsuie, who built Kitanoshō castle on the site of modern Fukui, with Maeda Toshiie, Sassa Narimasa and Fuwa Mitsuharu at Fuchū to assist and watch him. That settlement made Katsuie the Oda commander in the north.`
+  },
+  {
+    id: "oyama-gobo",
+    sources: [ { label: "Wikipedia: Kanazawa Castle", url: "https://en.wikipedia.org/wiki/Kanazawa_Castle" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/d/db/Morimasa.jpg",
+        caption: "Sakuma Morimasa on horseback. He led the storming of the Gobō and built the first castle on the site. Painter unknown; original held by Kenkun Shrine, Kyoto. Wikimedia Commons."
+      }
+    ],
+    name: "Fall of Oyama Gobō (Kanazawa Gobō)",
+    year: 1580,
+    dateLabel: "Spring 1580 (Tenshō 8, intercalary 3rd month)",
+    period: "Azuchi–Momoyama",
+    location: { name: "Oyama Gobō, Kaga Province (site of Kanazawa Castle, Kanazawa, Ishikawa)", lat: 36.564317, lon: 136.659228 },
+    combatants: { side1: { name: "Oda clan", leader: "Shibata Katsuie and Sakuma Morimasa", forces: "reported at about 15,000" }, side2: { name: "Kaga Ikkō-ikki (Hongan-ji)", leader: "Matsunaga Tanba and the Hongan-ji deputies", forces: "not reliably recorded" } },
+    outcome: "Oda victory; the temple fortress was stormed and its captains killed, ending 92 years of Ikkō-ikki rule in Kaga. Sakuma Morimasa held the site and turned it into a castle.",
+    summary: "The fortified cathedral that served as the capital of Ikkō-ikki Kaga fell to Shibata Katsuie and Sakuma Morimasa. Ninety-two years of rule by a Buddhist league ended, and Morimasa raised a castle on the ridge; three years later it became the Maeda seat of Kanazawa.",
+    details: `Oyama Gobō, also called the Kanazawa Gobō, was not a castle but a fortified cathedral. The Hongan-ji branch of True Pure Land Buddhism built it in 1546 on the tip of the Kodatsuno ridge, hills at its back and rivers on two flanks, and made it the seat of government for Kaga. Since the rising of 1488 the province had been run by the Ikkō leagues rather than by a warrior house, the only province in Japan governed by a religious confederation. A temple town grew below it, the ancestor of modern Kanazawa.
+
+Oda Nobunaga had been grinding the leagues down since the early 1570s and gave Echizen to Shibata Katsuie in 1575. Uesugi Kenshin's victory at Tedorigawa in 1577 delayed the advance, but Kenshin died the following spring. In the intercalary third month of Tenshō 8, imperial mediation ended the ten-year siege of the Ishiyama Hongan-ji and the abbot Kennyo told his followers to disarm. Many in Kaga refused. Katsuie crossed from Echizen on the ninth of that month, and his nephew Sakuma Morimasa stormed the Gobō; Matsunaga Tanba and the other ikki captains died there.
+
+Morimasa took the site, began moats and a castle town, and was made lord of half of Kaga that winter. Fighting went on in the hills around Torigoe and Futoge until 1582, when the last few hundred holdouts were crucified. Morimasa was executed after Shizugatake in 1583 and Kanazawa passed to Maeda Toshiie, whose family held it until 1869.`
+  },
+  {
+    id: "tensho-jingo-1582",
+    sources: [ { label: "Wikipedia: Tenshō-Jingo war", url: "https://en.wikipedia.org/wiki/Tensh%C5%8D-Jingo_war" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Wakamiko_castle_01.jpg/960px-Wakamiko_castle_01.jpg",
+        caption: "The main enclosure of the ruined Wakamiko Castle in Hokuto, Yamanashi, where Hōjō Ujinao made his headquarters during the eighty-day standoff. Wikimedia Commons."
+      }
+    ],
+    name: "Tenshō-Jingo War",
+    year: 1582,
+    dateLabel: "Tenshō 10, 6th month to 10th month, 29th day (1582)",
+    period: "Azuchi–Momoyama",
+    location: { name: "Wakamiko Castle, Kai Province (modern Hokuto, Yamanashi)", lat: 35.79403, lon: 138.41811 },
+    combatants: { side1: { name: "Tokugawa clan", leader: "Tokugawa Ieyasu", forces: "about 8,000, swelled by more than 800 former Takeda retainers" }, side2: { name: "Later Hōjō clan", leader: "Hōjō Ujinao, backed by Hōjō Ujimasa", forces: "reported at 40,000 to 55,000, with Satomi reinforcements" } },
+    outcome: "Truce mediated by Oda Nobukatsu on the 29th day of the 10th month. Kai and most of Shinano went to Ieyasu, Kōzuke to the Hōjō; the Uesugi kept four districts of northern Shinano.",
+    summary: "When Oda Nobunaga was killed in 1582, the former Takeda provinces of Kai and Shinano were left with no ruler, and the Tokugawa, the Later Hōjō and the Uesugi all marched in to claim them. Tokugawa Ieyasu, badly outnumbered, held on for eighty days and came away with two new provinces.",
+    details: `Nobunaga destroyed the Takeda at Tenmokuzan in the third month of 1582 and handed their provinces to his own officers. Eleven weeks later he was dead at the Honnō-ji, and his governors in the east were murdered or driven out. Kai, Shinano and western Kōzuke suddenly belonged to nobody, and three neighbours moved at once: Hōjō Ujinao from the Kantō, Uesugi Kagekatsu from Echigo, and Tokugawa Ieyasu from Suruga. Japanese historians call the resulting three-way scramble the Tenshō-Jingo War, after the cyclical name of the year.
+
+Ieyasu entered Kai with about 8,000 men against a Hōjō army that the chronicles put at forty thousand and more. From the seventh month the two sides faced each other across the upper Kamanashi valley for roughly eighty days, Ieyasu at Shinpu Castle and Ujinao at Wakamiko. Ujinao tried to break the deadlock by sending a column, reported at 10,000, over the Misaka Pass to come round behind. Torii Mototada and Mizuno Katsunari intercepted it near Kurokoma village on the twelfth day of the eighth month and turned it back. Meanwhile the Uesugi had already made their own truce, and Sanada Masayuki changed sides to Ieyasu in the tenth month.
+
+Oda Nobukatsu brokered the settlement. Ujinao married Ieyasu's daughter Tokuhime, Kai and Shinano were conceded to the Tokugawa and Kōzuke to the Hōjō. Ieyasu now held five provinces instead of three, and absorbed hundreds of masterless Takeda veterans, including the red-armoured cavalry he gave to Ii Naomasa. Two years later that army fought Hideyoshi to a standstill at Komaki and Nagakute. The one loose end, Numata, led straight to the Sanada war at Ueda.`
+  },
+  {
+    id: "shikoku-campaign-1585",
+    sources: [ { label: "Wikipedia: Invasion of Shikoku (1585)", url: "https://en.wikipedia.org/wiki/Invasion_of_Shikoku_(1585)" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Shikoku_Seit%C5%8D.jpg/960px-Shikoku_Seit%C5%8D.jpg",
+        caption: "Hōkō Shikoku Seitō no zu, an 1883 woodblock print of Hideyoshi's conquest of Shikoku by Toyohara Chikanobu; Wikimedia Commons."
+      }
+    ],
+    name: "Shikoku Campaign (Hideyoshi's invasion)",
+    year: 1585,
+    dateLabel: "Tenshō 13, 6th to 8th months (12 July to 30 August 1585)",
+    period: "Azuchi–Momoyama",
+    location: { name: "Ichinomiya Castle, Awa (modern Tokushima, Shikoku)", lat: 34.03404, lon: 134.46321 },
+    combatants: { side1: { name: "Hashiba (Toyotomi)", leader: "Hashiba Hidenaga, with Hashiba Hidetsugu, Ukita Hideie and Kobayakawa Takakage", forces: "about 100,000 in three seaborne columns" }, side2: { name: "Chōsokabe", leader: "Chōsokabe Motochika", forces: "20,000 to 40,000, split across three fronts" } },
+    outcome: "Toyotomi victory; Motochika submitted and was left only Tosa, while Awa, Sanuki and Iyo were parcelled out to Hideyoshi's and the Mōri's men.",
+    summary: "In the summer of 1585 Hideyoshi sent about a hundred thousand men across the Inland Sea in three columns to break Chōsokabe Motochika, who had just made himself master of all four provinces of Shikoku. Within two months Motochika submitted, keeping only his native Tosa.",
+    details: `Chōsokabe Motochika had fought his way out of a corner of Tosa to hold all four provinces of Shikoku by 1585, and he had backed nearly every enemy Hideyoshi made, first Shibata Katsuie, then Oda Nobukatsu and Tokugawa Ieyasu. When Hideyoshi destroyed the Negoro and Saiga warrior bands in Kii that spring, Motochika was left without allies.
+
+The armies sailed on the sixteenth day of the sixth month. Hideyoshi, unwell and still watching Sassa Narimasa in Etchū, stayed behind at Kishiwada and gave command to his younger brother Hashiba Hidenaga, with their nephew Hidetsugu under him. Roughly a hundred thousand men crossed in three columns: from Awaji into Awa, from Bizen into Sanuki, and from Aki into Iyo under Kobayakawa Takakage and the Mōri. Motochika could raise perhaps forty thousand and had to divide them three ways.
+
+Everything turned on Ichinomiya Castle in Awa. Hidenaga's troops cut the garrison off from supplies and mined a tunnel to destroy its water source, and the castle opened its gates in the middle of the seventh month. With Waki and Iwakura also lost, Motochika's headquarters at Hakuchi lay between two converging armies, and his retainer Tani Tadasumi talked him into terms: Tosa alone, hostages, three thousand men for Hideyoshi's future campaigns, and no dealings with Ieyasu.
+
+Hideyoshi was appointed kampaku while the fighting was still going on. Awa went to Hachisuka Iemasa, Sanuki to Sengoku Hidehisa, Iyo to Kobayakawa Takakage, and Shikoku became the staging ground for the invasion of Kyūshū the next year.`
+  },
+  {
+    id: "higo-kokujin-ikki-1587",
+    sources: [ { label: "Japanese Wikipedia: 肥後国人一揆 (Higo kokujin ikki)", url: "https://ja.wikipedia.org/wiki/%E8%82%A5%E5%BE%8C%E5%9B%BD%E4%BA%BA%E4%B8%80%E6%8F%86" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Tanaka_Castle_in_Kumamoto_01.jpg/960px-Tanaka_Castle_in_Kumamoto_01.jpg",
+        caption: "Tanaka Castle in Nagomi, Kumamoto Prefecture, one of the rebel strongholds besieged during the uprising; photograph by YAPON, Wikimedia Commons (CC BY-SA 3.0)."
+      }
+    ],
+    name: "Higo Kokujin Uprising (Higo kokujin ikki)",
+    year: 1587,
+    dateLabel: "1587–1588 (Tenshō 15, 7th to 12th month)",
+    period: "Azuchi–Momoyama",
+    location: { name: "Jōmura Castle, Yamaga, Higo Province (modern Kumamoto Prefecture)", lat: 33.04825, lon: 130.670178 },
+    combatants: { side1: { name: "Higo kokujin league (ikki)", leader: "Kumabe Chikanaga and his son Kumabe Chikayasu, with Kai Chikahide, Wani Chikazane and Kikuchi Takekuni", forces: "reported at some 35,000 including armed farmers; over 18,000 said to have held Jōmura Castle with 830 matchlocks and 500 bows" }, side2: { name: "Toyotomi forces", leader: "Sassa Narimasa, then Kobayakawa Hidekane with Tachibana Muneshige, Nabeshima Naoshige and Katō Kiyomasa", forces: "7,000 under Sassa at the outset, later a coalition of Kyūshū and Shikoku daimyo mobilised by Hideyoshi" } },
+    outcome: "Toyotomi victory. Sassa Narimasa lost Higo and was made to commit seppuku in 1588; most of the province's old warrior houses were destroyed with him.",
+    summary: "When Sassa Narimasa forced a cadastral survey on the warrior houses of Higo, the whole province rose against him. The revolt held him off for five months, cost him his life, and left Higo to be carved up between Katō Kiyomasa and Konishi Yukinaga. Its scale helped prompt Hideyoshi's sword hunt of 1588.",
+    details: `Hideyoshi's Kyūshū campaign ended in the fifth month of Tenshō 15 (1587). In the resettlement that followed he confirmed fifty-two Higo kokujin, small warrior houses holding land of their own, as vassals of a newcomer from Etchū, Sassa Narimasa. Told to bring the province to order fast, Sassa began a cadastral survey at once.
+
+In the seventh month Kumabe Chikanaga refused the surveyors and took up arms, citing a letter under Hideyoshi's own vermilion seal. Sassa marched with 7,000 men and stormed Chikanaga's castle at Waifu, but the family dug in at Jōmura, a hill fort on the edge of the Kikuka basin that local record credits with 830 matchlocks. While that siege dragged, other houses raised the countryside; a force reported at 35,000, much of it armed farmers, closed on Sassa's own base at Kumamoto.
+
+Hideyoshi needed Kyūshū quiet as a supply base for his coming invasion of Korea, so he called in daimyo from Kyūshū and Shikoku under Kobayakawa Hidekane. Tachibana Muneshige forced the road at Nankan, Tanaka castle fell after weeks of assault, and Jōmura opened on the twenty-sixth day of the twelfth month, late January 1588 by the Western calendar.
+
+The reckoning was severe. Sassa was refused an audience, confined at Amagasaki and made to commit seppuku in 1588. Of the fifty-two houses, forty-eight are said to have died fighting or been executed, and twelve Kumabe were cut down at the black gate of Yanagawa Castle. Higo went to Katō Kiyomasa in the north and Konishi Yukinaga in the south. Because so many rebels were farmers who owned blades, the rising is the usual explanation for Hideyoshi's sword hunt edict of 1588.`
+  },
+  {
+    id: "jugorigahara-1588",
+    sources: [ { label: "Japanese Wikipedia: 十五里ヶ原の戦い (Battle of Jūgorigahara)", url: "https://ja.wikipedia.org/wiki/%E5%8D%81%E4%BA%94%E9%87%8C%E3%83%B6%E5%8E%9F%E3%81%AE%E6%88%A6%E3%81%84" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Honjo_Shigenaga_parriying_an_exploding_shell.jpg/960px-Honjo_Shigenaga_parriying_an_exploding_shell.jpg",
+        caption: "Honjō Shigenaga, the victor at Jūgorigahara, in the woodblock print Kōetsu yūshōden: Honjō Echizen no Kami Shigenaga by Utagawa Kuniyoshi. The exploding shell he parries is a legendary feat attached to his name, not a scene from this battle. Wikimedia Commons, public domain."
+      }
+    ],
+    name: "Battle of Jūgorigahara",
+    year: 1588,
+    dateLabel: "8th month, Tenshō 16 (autumn 1588)",
+    period: "Azuchi–Momoyama",
+    location: { name: "Jūgorigahara, Tomoe, Tagawa District, Dewa Province (modern Tsuruoka, Yamagata Pref.)", lat: 38.747534, lon: 139.78765 },
+    combatants: { side1: { name: "Uesugi and Mutō (Daihōji) allied army", leader: "Honjō Shigenaga, with Daihōji (Mutō) Yoshikatsu", forces: "about 5,000" }, side2: { name: "Mogami army of Shōnai", leader: "Tōzenji Yoshinaga and Tōzenji Katsumasa, both killed", forces: "about 10,000 including troops from Yamagata; one account says 18,000, probably inflated" } },
+    outcome: "Uesugi and Mutō victory; both Tōzenji brothers killed and the Shōnai plain with the port of Sakata passed to the Uesugi.",
+    summary: "While Mogami Yoshiaki was pinned down against Date Masamune in the Ōsaki war, Honjō Shigenaga led an Uesugi army into Shōnai and destroyed the Mogami force under the Tōzenji brothers on the plain west of Tsuruoka, winning the Shōnai rice plain and the port of Sakata for Uesugi Kagekatsu.",
+    details: `Shōnai, the rice plain behind the port of Sakata, was the richest ground in Dewa, and the Daihōji (Mutō) house that had held it for generations tore itself apart in the 1580s. Mogami Yoshiaki exploited the feuds. In 1583 his client Tōzenji Yoshinaga drove Daihōji Yoshiuji to suicide, and in 1587 the Tōzenji and Mogami killed Yoshiuji's brother Yoshioki. The heir Yoshikatsu, a son of the Echigo lord Honjō Shigenaga adopted into the Daihōji, fled to Oguni Castle on the Echigo border, and Shōnai passed to Mogami, governed from Tōzenji Castle at Sakata.
+
+In the first month of Tenshō 16 Date Masamune intervened in the Ōsaki succession quarrel and Yoshiaki marched east to fight him. Uesugi Kagekatsu used the opening. In the eighth month he sent Shigenaga and Yoshikatsu against Oura Castle, and the Tōzenji brothers chose to meet them in the open at Jūgorigahara. The Mogami had perhaps twice the numbers, though the war tales inflate the figures, but Shigenaga had already turned the local landholders and the fight went against Mogami from the start. Yoshinaga charged the Uesugi command post and was killed; his brother Katsumasa rode in alone and split Shigenaga's helmet from temple to ear before he too was cut down. The blade he used, so the story goes, became the celebrated sword Honjō Masamune.
+
+Resistance at Asahiyama Castle collapsed soon after and the whole plain was Uesugi. Hideyoshi had banned private war in the northeast only months earlier, yet he let the result stand. Yoshikatsu was restored at Oura, then stripped of it in 1591 after the Fujishima rising, and Shōnai went to Kagekatsu outright. Yoshiaki did not get it back until 1601.`
+  },
+  {
+    id: "kasai-osaki-ikki-1590",
+    sources: [ { label: "Japanese Wikipedia: Kasai-Ōsaki ikki (葛西大崎一揆)", url: "https://ja.wikipedia.org/wiki/%E8%91%9B%E8%A5%BF%E5%A4%A7%E5%B4%8E%E4%B8%80%E6%8F%86" } ],
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Toyoma_teraike_castle_gate.JPG/960px-Toyoma_teraike_castle_gate.JPG",
+        caption: "The entrance to the site of Teraike Castle at Toyoma in Tome, Miyagi, the seat Kimura Yoshikiyo took as new lord of the Kasai and Ōsaki districts; the rebels held it until its fall in 1591 ended the rising. Photograph by Hokahoka, Wikimedia Commons, CC BY-SA 3.0."
+      }
+    ],
+    name: "Kasai-Ōsaki Ikki",
+    year: 1590,
+    dateLabel: "Tenshō 18/10/16 to Tenshō 19/7/4 (Nov 1590 to Aug 1591)",
+    period: "Azuchi–Momoyama",
+    location: { name: "Teraike Castle, Mutsu (modern Toyoma, Tome, Miyagi)", lat: 38.6554, lon: 141.2816 },
+    combatants: { side1: { name: "Toyotomi forces of the Ōshū settlement", leader: "Kimura Yoshikiyo and Kimura Kiyohisa, then Gamō Ujisato and Date Masamune", forces: "The new lord's thin garrisons, then the field armies of Aizu and the Date; Tokugawa Ieyasu was later sent to survey the districts and repair their castles" }, side2: { name: "Kasai and Ōsaki rebels", leader: "Former Kasai and Ōsaki retainers, with no single commander", forces: "Dispossessed samurai and villagers across thirteen districts; a Date document calls the whole fief ikki held" } },
+    outcome: "Rebellion crushed; Kimura Yoshikiyo was stripped of his fief, and Date Masamune, suspected of provoking the rising, lost Yonezawa and was moved north to Iwadeyama at about 580,000 koku.",
+    summary: "When Hideyoshi's Ōshū settlement dispossessed the Kasai and Ōsaki and handed their thirteen districts to an outsider, the whole country rose. The new lord was besieged in his own fief, and the man sent to rescue him, Date Masamune, was widely believed to have started it.",
+    details: `In the seventh month of Tenshō 18 Hideyoshi stripped Kasai Harunobu and Ōsaki Yoshitaka of their lands for missing the Odawara campaign, and gave their thirteen districts, some 300,000 koku, to Kimura Yoshikiyo, a Toyotomi captain rewarded for that campaign. Yoshikiyo took the Kasai seat at Teraike and put his son Kiyohisa in the Ōsaki seat at Myō. Their survey and demands were resented at once. On the sixteenth day of the tenth month, days after the commissioner Asano Nagayoshi started home, retainers of the old castellan of Iwatezawa seized that castle; within weeks a Date document called the whole fief ikki held, with Kiyohisa and his father shut up in Sanuma.
+
+Asano turned back and ordered Gamō Ujisato of Aizu and Date Masamune to rescue them. On the eve of the joint advance one of Masamune's own retainers told Ujisato that Masamune had written to the rebels, and a secretary produced the letters. Ujisato barricaded himself in Myō Castle and reported to Kyoto; Masamune went on alone, took Sanuma and handed the Kimura over. Questioned before Hideyoshi in the second month of Tenshō 19, he said the letters were forged, since his true seal carried a pinhole in the eye of its wagtail. Hideyoshi let that stand and sent him back to finish the work. Teraike fell on the fourth day of the seventh month; a month later Masamune called the surviving leaders to Sueyama and had them killed.
+
+The reckoning came as an exchange of land. Kimura was dispossessed. Masamune gained the wrecked thirteen districts but surrendered six older ones, Nagai with Yonezawa among them, ending at about 580,000 koku. He moved to Iwatezawa, renamed Iwadeyama, and kept it until he built Sendai in 1601.`
   }
 ];
