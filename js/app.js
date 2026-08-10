@@ -185,29 +185,6 @@ const castleLayer = L.layerGroup(
   })
 );
 
-// Castles open the same drawer as everything else, so their notes, images and
-// citations are readable rather than hidden behind a hover tooltip.
-function renderCastleHTML(c) {
-  const meta = [CASTLE_TYPE_LABEL[c.type] || c.type, c.clan, c.built ? 'built ' + c.built : '']
-    .filter(Boolean).join(' · ');
-  return `
-    <div class="kicker">CASTLE</div>
-    <h2>${escapeHtml(c.name)}</h2>
-    <p class="meta">${escapeHtml(meta)}</p>
-    ${c.modern ? `<p class="location">${escapeHtml(c.modern)}</p>` : ''}
-    ${c.note ? `<p class="summary">${escapeHtml(c.note)}</p>` : ''}
-    ${galleryBlock(c.images)}
-    ${sourcesBlock(c.name, c.sources)}
-  `;
-}
-function showCastleInfo(c) {
-  const panel = document.getElementById('infoPanel');
-  document.getElementById('infoContent').innerHTML = renderCastleHTML(c);
-  panel.scrollTop = 0;
-  panel.classList.remove('hidden');
-  panel.setAttribute('aria-hidden', 'false');
-  if (typeof activeRouteLayer !== 'undefined') activeRouteLayer.clearLayers();
-}
 
 // ---- Temples & shrines overlay (toggle in the top-right control) ----
 const TEMPLE_GLYPH = { temple: '☸', monastery: '☸', shrine: '⛩︎' };
@@ -230,40 +207,7 @@ const templeLayer = L.layerGroup(
     return m;
   })
 );
-function showTempleInfo(t) {
-  const panel = document.getElementById('infoPanel');
-  document.getElementById('infoContent').innerHTML = renderTempleHTML(t);
-  panel.scrollTop = 0;
-  panel.classList.remove('hidden');
-  panel.setAttribute('aria-hidden', 'false');
-  if (typeof activeRouteLayer !== 'undefined') activeRouteLayer.clearLayers();
-}
-// Shared image gallery markup (a missing/blocked image hides its own figure).
-function galleryBlock(images, heading) {
-  const imgs = Array.isArray(images) ? images.filter((im) => im && im.src) : [];
-  if (!imgs.length) return '';
-  return `<h3>${heading || 'Images'}</h3><div class="gallery">${imgs
-    .map(
-      (im) =>
-        `<figure><img src="${escapeHtml(im.src)}" alt="${escapeHtml(im.caption || '')}" loading="lazy" onerror="this.closest('figure').style.display='none'">${
-          im.caption ? `<figcaption>${escapeHtml(im.caption)}</figcaption>` : ''
-        }</figure>`
-    )
-    .join('')}</div>`;
-}
 
-function renderTempleHTML(t) {
-  const kindLabel = t.kind === 'shrine' ? 'Shinto shrine' : (t.kind === 'monastery' ? 'Buddhist monastery' : 'Buddhist temple');
-  const meta = [kindLabel, t.sect, t.founded ? 'founded ' + t.founded : ''].filter(Boolean).join(' · ');
-  return `
-    <div class="kicker">${t.kind === 'shrine' ? 'SHRINE' : 'TEMPLE'}</div>
-    <h2>${escapeHtml(t.name)}</h2>
-    <p class="meta">${escapeHtml(meta)}</p>
-    ${t.note ? `<p class="summary">${escapeHtml(t.note)}</p>` : ''}
-    ${galleryBlock(t.images)}
-    ${sourcesBlock(t.name, t.sources)}
-  `;
-}
 
 // ---- Historic roads overlay (街道) — the great highways, drawn as polylines ----
 const ROAD_COLORS = ['#b5653f','#5d7a96','#7d8a55','#8a5b76','#c79a4e','#4f8a85','#a0522d','#6b7a82','#9a6a9a','#3f7a8a','#5b4a8a'];
@@ -278,27 +222,6 @@ const roadsLayer = L.layerGroup(
     return line;
   })
 );
-function showRoadInfo(road) {
-  const panel = document.getElementById('infoPanel');
-  document.getElementById('infoContent').innerHTML = renderRoadHTML(road);
-  panel.scrollTop = 0;
-  panel.classList.remove('hidden');
-  panel.setAttribute('aria-hidden', 'false');
-  if (typeof activeRouteLayer !== 'undefined') activeRouteLayer.clearLayers();
-}
-function renderRoadHTML(road) {
-  const meta = [road.era, 'historic highway (街道)'].filter(Boolean).join(' · ');
-  return `
-    <div class="kicker">ROAD</div>
-    <h2>${escapeHtml(road.name)}</h2>
-    <p class="meta">${escapeHtml(meta)}</p>
-    ${road.purpose ? `<p class="summary">${escapeHtml(road.purpose)}</p>` : ''}
-    <h3>Post-stations</h3>
-    <p>${road.waypoints.map((w) => escapeHtml(w.name)).join(' › ')}</p>
-    ${galleryBlock(road.images)}
-    ${sourcesBlock(road.name, road.sources)}
-  `;
-}
 
 // ---- March-routes overlay ----
 const ROUTE_COLORS = ['#3a6ea5', '#c79a3a', '#4f8a85']; // Eastern indigo, Western ochre, teal
@@ -438,18 +361,6 @@ function personIcon(role) {
     iconAnchor: [13, 13],
     tooltipAnchor: [0, -14],
   });
-}
-function personTickYears(p) {
-  const ys = [];
-  if (p.born != null) ys.push(p.born);
-  if (p.died != null) ys.push(p.died);
-  return ys;
-}
-function personActiveInYear(p, y) {
-  if (y == null) return false;
-  const b = p.born != null ? p.born : y;
-  const d = p.died != null ? p.died : y;
-  return y >= b && y <= d;
 }
 const personMarkers = (typeof PEOPLE !== 'undefined' ? PEOPLE : []).map((p) => {
   const m = L.marker([p.location.lat, p.location.lon], { icon: personIcon(p.role), title: p.name });
@@ -820,18 +731,6 @@ const battleMarkers = BATTLES.map((battle) => {
   return { battle, marker };
 });
 
-// --- Year timeline slider --------------------------------------------------
-// Every calendar year a battle should appear on. A single-year battle uses
-// `year`; a multi-year campaign uses `yearStart` + `yearEnd`.
-function battleYears(b) {
-  if (b.yearStart != null && b.yearEnd != null) {
-    const years = [];
-    for (let y = b.yearStart; y <= b.yearEnd; y++) years.push(y);
-    return years;
-  }
-  const y = b.year != null ? b.year : (b.date ? parseInt(String(b.date).slice(0, 4), 10) : null);
-  return y != null ? [y] : [];
-}
 
 // Periods present in the data, ordered by their earliest battle year.
 const ALL_PERIODS = [...new Set(BATTLES.map((b) => b.period).filter(Boolean))].sort((p1, p2) => {
@@ -858,13 +757,6 @@ const ERAS = [
 ];
 const ERA_BY_NAME = {}; for (const e of ERAS) ERA_BY_NAME[e.name] = e;
 const ERA_RANGES = {}; for (const e of ERAS) ERA_RANGES[e.name] = [e.start, e.end];
-function eraColor(p) { return (ERA_BY_NAME[p] && ERA_BY_NAME[p].color) || '#8a9a5b'; }
-function eraTint(p)  { return (ERA_BY_NAME[p] && ERA_BY_NAME[p].tint)  || 'rgba(32,38,46,.06)'; }
-function eraForYear(y) {
-  if (y == null) return null;
-  for (const e of ERAS) if (y >= e.start && y < e.end) return e.name;
-  return null;
-}
 
 // --- Clan detection (for the clan filter) ---------------------------------
 // Battles store combatants as free text, so we detect clans by scanning the side
@@ -884,12 +776,6 @@ const CLAN_KEYS = [
   ['Kusunoki', 'Kusunoki'], ['Ashina', 'Ashina'], ['Hatakeyama', 'Hatakeyama'],
   ['Akechi', 'Akechi'], ['Shibata', 'Shibata'], ['Maeda', 'Maeda'],
 ];
-function battleClanHay(b) {
-  const c = b.combatants || {};
-  return [c.side1 && c.side1.name, c.side1 && c.side1.leader, c.side2 && c.side2.name, c.side2 && c.side2.leader]
-    .filter(Boolean)
-    .join(' | ');
-}
 const clanCounts = {};
 for (const b of BATTLES) {
   const hay = battleClanHay(b);
@@ -924,155 +810,18 @@ let eventYears = [];
 let MIN_YEAR = 0;
 let MAX_YEAR = 0;
 
-function recomputeYears() {
-  const set = new Set();
-  for (const b of BATTLES) {
-    if (!inSelectedPeriod(b)) continue;
-    for (const y of battleYears(b)) set.add(y);
-  }
-  // When the Events overlay is on, its years join the timeline too, so the slider
-  // and ticks reach events outside the battle range (e.g. 552, 1923).
-  if (eventsOn) {
-    for (const em of eventMarkers) for (const y of battleYears(em.event)) set.add(y);
-  }
-  // When the People overlay is on, each figure's birth & death years join the ticks too.
-  if (peopleOn) {
-    for (const pm of personMarkers) for (const y of personTickYears(pm.person)) set.add(y);
-  }
-  // Safety: if nothing is selected (e.g. every era filtered off), fall back to all
-  // battle years so the slider never ends up with an undefined range.
-  if (!set.size) { for (const b of BATTLES) for (const y of battleYears(b)) set.add(y); }
-  eventYears = [...set].sort((a, b) => a - b);
-  MIN_YEAR = eventYears[0];
-  MAX_YEAR = eventYears[eventYears.length - 1];
-  slider.min = MIN_YEAR;
-  slider.max = MAX_YEAR;
-  renderTicks();
-  renderEraBands();
-}
 
 // The scrubber uses EQUAL era slots (one eighth each) that line up exactly with the
 // era ribbon above it: within a slot, position is linear in the year. So a year maps
 // to (eraIndex + fraction-through-era) / 8. This keeps every era equally clickable
 // and the knob always sits under its highlighted ribbon segment.
 const N_ERAS = ERAS.length;
-function eraIndexForYear(y) {
-  for (let i = 0; i < ERAS.length; i++) if (y >= ERAS[i].start && y < ERAS[i].end) return i;
-  return y < ERAS[0].start ? 0 : ERAS.length - 1;
-}
-function yearToPct(y) {
-  if (y == null) return 0;
-  const i = eraIndexForYear(y);
-  const e = ERAS[i];
-  const f = Math.max(0, Math.min(1, (y - e.start) / (e.end - e.start)));
-  return ((i + f) / N_ERAS) * 100;
-}
 
-function renderTicks() {
-  yearTicksEl.innerHTML = '';
-  for (const y of eventYears) {
-    const tick = document.createElement('div');
-    tick.className = 'yearTick';
-    tick.style.left = yearToPct(y) + '%';
-    const tEra = eraForYear(y);
-    if (tEra) tick.style.background = eraColor(tEra);
-    tick.title = String(y);
-    tick.addEventListener('click', (e) => { e.stopPropagation(); showYear(y); });
-    yearTicksEl.appendChild(tick);
-  }
-}
 
-// Equal-width era bands, one per slot, aligned under the ribbon segments above.
-function renderEraBands() {
-  if (!eraBandsEl) return;
-  eraBandsEl.innerHTML = '';
-  for (let i = 0; i < ERAS.length; i++) {
-    const band = document.createElement('div');
-    band.className = 'era-band';
-    band.style.left = (i / N_ERAS) * 100 + '%';
-    band.style.width = 100 / N_ERAS + '%';
-    band.style.background = ERAS[i].color;
-    eraBandsEl.appendChild(band);
-  }
-}
 
-// The 8-era segmented selector. Clicking a segment jumps to that era's midpoint.
-function renderEraSelector() {
-  if (!eraSelectorEl) return;
-  eraSelectorEl.innerHTML = '';
-  for (const e of ERAS) {
-    const seg = document.createElement('button');
-    seg.type = 'button';
-    seg.className = 'era-seg';
-    seg.dataset.era = e.name;
-    seg.innerHTML =
-      `<span class="seg-fill" aria-hidden="true"></span>` +
-      `<span class="lbl">${escapeHtml(e.name)}</span>` +
-      `<span class="sub">${escapeHtml(e.label)}</span>`;
-    seg.addEventListener('click', () => {
-      const mid = Math.round((e.start + e.end) / 2);
-      showYear(nearestEventYear(mid));
-    });
-    eraSelectorEl.appendChild(seg);
-  }
-}
 
-// Highlight the segment whose era contains the current year.
-function updateEraSelectorActive() {
-  if (!eraSelectorEl) return;
-  const active = (currentYear != null && !showAll && !selectedClan) ? eraForYear(currentYear) : null;
-  let activeSeg = null;
-  for (const seg of eraSelectorEl.children) {
-    const p = seg.dataset.era;
-    const on = p === active;
-    seg.classList.toggle('active', on);
-    if (on) activeSeg = seg;
-    const fill = seg.querySelector('.seg-fill');
-    if (fill) {
-      fill.style.setProperty('--seg-tint', on ? eraTint(p) : 'transparent');
-      fill.style.setProperty('--seg-color', on ? eraColor(p) : 'transparent');
-    }
-  }
-  // On phones the ribbon scrolls sideways, so the highlighted era can sit off-screen.
-  // Measured with rects, not offsetLeft: #eraSelector is not positioned, so offsetLeft
-  // would resolve against #timeBar and land the scroll in the wrong place.
-  if (activeSeg && eraSelectorEl.scrollWidth > eraSelectorEl.clientWidth + 1) {
-    const seg = activeSeg.getBoundingClientRect();
-    const box = eraSelectorEl.getBoundingClientRect();
-    if (seg.left < box.left || seg.right > box.right) {
-      const delta = seg.left - box.left - (box.width - seg.width) / 2;
-      // Plain assignment, not scrollTo({behavior:'smooth'}): the era can change on every
-      // tick of timeline playback, and queued smooth scrolls fight each other.
-      eraSelectorEl.scrollLeft = eraSelectorEl.scrollLeft + delta;
-    }
-  }
-}
 
-// Position the scrubber knob at the current year.
-function updateScrub() {
-  if (!scrubKnob) return;
-  if (currentYear == null || showAll || selectedClan) {
-    scrubKnob.style.display = 'none';
-    if (scrubKnobLine) scrubKnobLine.style.display = 'none';
-    return;
-  }
-  const pct = Math.max(0, Math.min(100, yearToPct(currentYear)));
-  scrubKnob.style.display = '';
-  scrubKnob.style.left = pct + '%';
-  if (scrubKnobLine) { scrubKnobLine.style.display = ''; scrubKnobLine.style.left = pct + '%'; }
-}
 
-// Click / drag anywhere on the track → set the year from the x-position
-// (inverse of yearToPct: figure out which era slot x fell in, then the year within).
-function yearFromTrackX(clientX) {
-  const rect = scrubTrackEl.getBoundingClientRect();
-  const frac = Math.max(0, Math.min(0.999999, (clientX - rect.left) / Math.max(1, rect.width)));
-  let slot = Math.floor(frac * N_ERAS);
-  slot = Math.max(0, Math.min(N_ERAS - 1, slot));
-  const within = frac * N_ERAS - slot;
-  const e = ERAS[slot];
-  return Math.round(e.start + within * (e.end - e.start));
-}
 if (scrubTrackEl) {
   let dragging = false;
   const setFromX = (x, frame) => showYear(nearestEventYear(yearFromTrackX(x)), { frame: frame });
@@ -1091,10 +840,6 @@ if (scrubTrackEl) {
   });
 }
 
-function nearestEventYear(y) {
-  if (!eventYears.length) return y;
-  return eventYears.reduce((best, cur) => (Math.abs(cur - y) < Math.abs(best - y) ? cur : best), eventYears[0]);
-}
 
 recomputeYears();
 renderEraSelector();
@@ -1202,31 +947,6 @@ function updateDomains() {
   refreshDomainsLegend();
 }
 
-// Reuse the info panel for a clicked domain (no march route, unlike a battle).
-function showDomainInfo(props) {
-  const panel = document.getElementById('infoPanel');
-  document.getElementById('infoContent').innerHTML = renderDomainHTML(props);
-  panel.scrollTop = 0;
-  panel.classList.remove('hidden');
-  panel.setAttribute('aria-hidden', 'false');
-  if (typeof activeRouteLayer !== 'undefined') activeRouteLayer.clearLayers();
-}
-function renderDomainHTML(p) {
-  const provs = Array.isArray(p.provinces) && p.provinces.length
-    ? `<h3>Provinces (旧国)</h3><p>${escapeHtml(p.provinces.join('、'))}</p>`
-    : '';
-  return `
-    <div class="kicker">DOMAIN</div>
-    <h2>${escapeHtml(p.name || p.clan || '')}</h2>
-    <p class="meta">${escapeHtml(p.clan ? p.clan + ' clan' : '')}${
-      p.daimyo ? ' &middot; ' + escapeHtml(p.daimyo) : ''
-    }</p>
-    <p class="location">Active ${escapeHtml(domainRangeLabel(p))}</p>
-    ${p.note ? `<p class="summary">${escapeHtml(p.note)}</p>` : ''}
-    ${provs}
-    <p class="route-note">⚑ Shown at province level — a clan's characteristic (peak) extent, not its exact borders in a given year. See NOTES.md.</p>
-  `;
-}
 
 // Legend (clan colour key) listing the clans active in the current year, shown
 // only while the Domains overlay is on. It refreshes as you scrub the slider.
@@ -1405,14 +1125,6 @@ function frameBattles(present) {
   });
 }
 
-// Jump to the previous / next year that actually has a battle
-function stepEventYear(direction) {
-  const next =
-    direction < 0
-      ? eventYears.filter((y) => y < currentYear).pop()
-      : eventYears.filter((y) => y > currentYear).shift();
-  if (next != null) showYear(next);
-}
 
 // While dragging, update the markers live but DON'T fly (it would be jerky);
 // frame the map once the slider is released.
@@ -1426,17 +1138,6 @@ let _playTimer = null;
 const playBtn = document.getElementById('playBtn');
 const PLAY_ICON = '▶';            // ▶
 const PAUSE_ICON = '❚❚';     // ❚❚
-function stopPlay() { if (_playTimer) { clearInterval(_playTimer); _playTimer = null; } if (playBtn) playBtn.innerHTML = PLAY_ICON; }
-function startPlay() {
-  if (!eventYears.length) return;
-  if (showAll || selectedClan) showYear(eventYears.includes(1600) ? 1600 : eventYears[0]);
-  if (playBtn) playBtn.innerHTML = PAUSE_ICON;
-  _playTimer = setInterval(() => {
-    const next = eventYears.filter((y) => y > currentYear).shift();
-    if (next == null) { stopPlay(); return; }   // reached the end — stop
-    showYear(next);
-  }, 1100);
-}
 if (playBtn) playBtn.addEventListener('click', () => { _playTimer ? stopPlay() : startPlay(); });
 // Manually scrubbing the hidden range input also stops playback.
 slider.addEventListener('input', () => { if (_playTimer) stopPlay(); });
@@ -1464,10 +1165,6 @@ browseControls.appendChild(showAllBtn);
 _browseControls = browseControls; // picked up by labelLayerGroups() on the next _update
 if (typeof layerControl !== 'undefined' && layerControl._update) layerControl._update();
 
-function setShowAllButton() {
-  showAllBtn.textContent = showAll ? '↩ Back to timeline' : 'Show all years';
-  showAllBtn.classList.toggle('active', showAll);
-}
 
 showAllBtn.addEventListener('click', () => {
   clearClanFilter(); // the overview shows every clan, so leave any clan view
@@ -1481,20 +1178,8 @@ showAllBtn.addEventListener('click', () => {
   }
 });
 
-function populateClanFilter() {
-  clanFilter.innerHTML =
-    '<option value="">All clans</option>' +
-    CLAN_OPTIONS.map(
-      (cl) => `<option value="${escapeHtml(cl)}">${escapeHtml(cl)} (${clanCounts[cl]})</option>`
-    ).join('');
-}
 populateClanFilter();
 
-function clearClanFilter() {
-  if (!selectedClan) return;
-  selectedClan = null;
-  if (clanFilter) clanFilter.value = '';
-}
 
 // Enter clan view: show every battle that involves the clan, across all years.
 function showClan(clan) {
@@ -1577,163 +1262,11 @@ function drawActiveRoute(battle) {
   });
 }
 
-// --- Info panel ---
-function showBattleInfo(battle) {
-  const panel = document.getElementById('infoPanel');
-  const content = document.getElementById('infoContent');
-  content.innerHTML = renderBattleHTML(battle);
-  panel.scrollTop = 0; // the panel itself is the scroll container
-  panel.classList.remove('hidden');
-  panel.setAttribute('aria-hidden', 'false');
-  drawActiveRoute(battle);
-  setHash((isEventId(battle.id) ? 'e=' : 'b=') + battle.id);
-}
 
-function hideBattleInfo() {
-  const panel = document.getElementById('infoPanel');
-  panel.classList.add('hidden');
-  panel.setAttribute('aria-hidden', 'true');
-  if (typeof activeRouteLayer !== 'undefined') activeRouteLayer.clearLayers();
-  if (currentYear != null) setHash('y=' + currentYear);
-}
 
-// "Further reading" for the info panel: any precise citations from an optional
-// `sources: [{label, url}]` field on the entry, plus a Wikipedia look-up that works
-// for every entry. Add `sources` to a battle/event/person to show real references.
-function sourcesBlock(name, sources) {
-  const list = (Array.isArray(sources) ? sources : [])
-    .map((s) => `<li><a href="${escapeHtml(s.url)}" target="_blank" rel="noopener">${escapeHtml(s.label || s.url)}</a></li>`)
-    .join('');
-  const lookup = 'https://en.wikipedia.org/w/index.php?search=' + encodeURIComponent(name || '');
-  return `<h3>Further reading</h3><ul class="src-list">${list}<li><a href="${escapeHtml(lookup)}" target="_blank" rel="noopener">Look up "${escapeHtml(name || '')}" on Wikipedia &rarr;</a></li></ul>`;
-}
 
-function renderBattleHTML(battle) {
-  const c = battle.combatants || {};
-  const sideHTML = (s, cls) => `
-    <div class="side ${cls}">
-      <h4>${escapeHtml(s.name || '')}</h4>
-      ${s.leader ? `<p><strong>Leader:</strong> ${escapeHtml(s.leader)}</p>` : ''}
-      ${s.forces ? `<p><strong>Forces:</strong> ${escapeHtml(s.forces)}</p>` : ''}
-    </div>`;
-  const sides = [];
-  if (c.side1) sides.push(sideHTML(c.side1, 'side-a'));
-  if (c.side2) sides.push(sideHTML(c.side2, 'side-b'));
 
-  const detailsHTML = battle.details
-    ? `<h3>Details</h3><div class="details">${battle.details
-        .split(/\n\s*\n/)
-        .map((p) => `<p>${escapeHtml(p.trim())}</p>`)
-        .join('')}</div>`
-    : '';
 
-  // Images are shown at the BOTTOM of the panel, beneath the details.
-  // Use `images: [{ src, caption }]` (a list) and/or a single `image` string.
-  const imgs = [];
-  if (Array.isArray(battle.images)) imgs.push(...battle.images);
-  if (battle.image) imgs.push({ src: battle.image });
-  const galleryHTML = imgs.length
-    ? `<h3>Images</h3><div class="gallery">${imgs
-        .map(
-          (im) =>
-            `<figure><img src="${escapeHtml(im.src)}" alt="${escapeHtml(im.caption || '')}" loading="lazy" onerror="this.closest('figure').style.display='none'">${
-              im.caption ? `<figcaption>${escapeHtml(im.caption)}</figcaption>` : ''
-            }</figure>`
-        )
-        .join('')}</div>`
-    : '';
-
-  const routes = routesForBattle(battle);
-  const routeNoteHTML = routes.length
-    ? `<p class="route-note">⚑ ${routes.length === 1 ? 'March route' : routes.length + ' march routes'} shown on the map (army movements before the battle).</p>`
-    : '';
-
-  // "What happened next": optional leadsTo (a battle id or array of ids) → clickable links.
-  const _leads = battle.leadsTo ? (Array.isArray(battle.leadsTo) ? battle.leadsTo : [battle.leadsTo]) : [];
-  const _leadsLinked = _leads.map((id) => BATTLES.find((b) => b.id === id)).filter(Boolean);
-  const nextHTML = _leadsLinked.length
-    ? `<h3>What happened next</h3><ul class="person-battles">${_leadsLinked
-        .map((b) => `<li><a href="#" class="battle-link" data-battle="${escapeHtml(b.id)}">${escapeHtml(b.name)}</a> <span class="pb-year">${escapeHtml(String(b.dateLabel || b.year || ''))}</span></li>`)
-        .join('')}</ul>`
-    : '';
-
-  const kicker = isEventId(battle.id) ? 'EVENT' : 'BATTLE';
-  return `
-    <div class="kicker">${kicker}</div>
-    <h2>${escapeHtml(battle.name)}</h2>
-    <p class="meta">${escapeHtml(battle.dateLabel || battle.date || '')}${
-    battle.period ? ' &middot; <span class="era">' + escapeHtml(battle.period) + '</span>' : ''
-  }</p>
-    <p class="location">${escapeHtml(battle.location.name || '')}</p>
-    ${battle.summary ? `<p class="summary">${escapeHtml(battle.summary)}</p>` : ''}
-    ${routeNoteHTML}
-    ${sides.length ? `<h3>Combatants</h3><div class="combatants">${sides.join('')}</div>` : ''}
-    ${battle.outcome ? `<h3>Outcome</h3><p>${escapeHtml(battle.outcome)}</p>` : ''}
-    ${detailsHTML}
-    ${nextHTML}
-    ${galleryHTML}
-    ${sourcesBlock(battle.name, battle.sources)}
-  `;
-}
-
-// --- Person info panel (People overlay) ---
-function showPersonInfo(p) {
-  const panel = document.getElementById('infoPanel');
-  const content = document.getElementById('infoContent');
-  content.innerHTML = renderPersonHTML(p);
-  panel.scrollTop = 0;
-  panel.classList.remove('hidden');
-  panel.setAttribute('aria-hidden', 'false');
-  if (typeof activeRouteLayer !== 'undefined') activeRouteLayer.clearLayers(); // people carry no march route
-  setHash('p=' + p.id);
-}
-
-function renderPersonHTML(p) {
-  const roleLabel = (PERSON_ROLE[p.role] || {}).label || '';
-  const bioHTML = p.bio
-    ? `<h3>Life</h3><div class="details">${p.bio
-        .split(/\n\s*\n/)
-        .map((par) => `<p>${escapeHtml(par.trim())}</p>`)
-        .join('')}</div>`
-    : '';
-
-  // Battles this figure fought — each links to that battle's own panel.
-  const linked = (p.battles || []).map((id) => BATTLES.find((b) => b.id === id)).filter(Boolean);
-  const battlesHTML = linked.length
-    ? `<h3>Battles</h3><ul class="person-battles">${linked
-        .map(
-          (b) =>
-            `<li><a href="#" class="battle-link" data-battle="${escapeHtml(b.id)}">${escapeHtml(
-              b.name
-            )}</a> <span class="pb-year">${escapeHtml(String(b.dateLabel || b.year || ''))}</span></li>`
-        )
-        .join('')}</ul>`
-    : '';
-
-  const imgs = Array.isArray(p.images) ? p.images : [];
-  const galleryHTML = imgs.length
-    ? `<h3>Images</h3><div class="gallery">${imgs
-        .map(
-          (im) =>
-            `<figure><img src="${escapeHtml(im.src)}" alt="${escapeHtml(im.caption || '')}" loading="lazy" onerror="this.closest('figure').style.display='none'">${
-              im.caption ? `<figcaption>${escapeHtml(im.caption)}</figcaption>` : ''
-            }</figure>`
-        )
-        .join('')}</div>`
-    : '';
-
-  return `
-    <div class="kicker">FIGURE</div>
-    <h2>${escapeHtml(p.name)}</h2>
-    <p class="meta">${escapeHtml(p.dateLabel || '')}${roleLabel ? ' &middot; ' + escapeHtml(roleLabel) : ''}</p>
-    <p class="location">${escapeHtml(p.location.name || '')}</p>
-    ${p.summary ? `<p class="summary">${escapeHtml(p.summary)}</p>` : ''}
-    ${bioHTML}
-    ${battlesHTML}
-    ${galleryHTML}
-    ${sourcesBlock(p.name, p.sources)}
-  `;
-}
 
 // Clicking a battle link inside a person panel opens that battle.
 document.getElementById('infoContent').addEventListener('click', (e) => {
@@ -1767,101 +1300,10 @@ const searchInput = document.getElementById('searchInput');
 const searchResults = document.getElementById('searchResults');
 let searchMatches = [];
 
-// Search battles, people AND events. Returns typed results: {type, item, name, year}.
-function searchEverything(query) {
-  // Macron-insensitive: users type "kukai"/"saigo", the data has "Kūkai"/"Saigō".
-  const norm = (s) => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-  const q = norm(query.trim());
-  if (!q) return [];
-  const res = [];
-  // Rank a match by how well the QUERY hits the NAME (so a person/battle whose
-  // name contains the query outranks one that only matched via a commander/place).
-  const score = (name) => { const n = norm(name); return n === q ? 4 : n.startsWith(q) ? 3 : n.includes(q) ? 2 : 1; };
-  for (const b of BATTLES) {
-    const c = b.combatants || {};
-    const hay = [b.name, b.location && b.location.name,
-      c.side1 && c.side1.name, c.side1 && c.side1.leader,
-      c.side2 && c.side2.name, c.side2 && c.side2.leader].filter(Boolean).join(' ').toLowerCase();
-    if (norm(hay).includes(q)) res.push({ type: 'battle', item: b, name: b.name,
-      year: (b.year != null ? b.year : `${b.yearStart}–${b.yearEnd}`), s: score(b.name) });
-  }
-  if (typeof PEOPLE !== 'undefined') for (const p of PEOPLE) {
-    const hay = [p.name, p.role, p.location && p.location.name].filter(Boolean).join(' ').toLowerCase();
-    if (norm(hay).includes(q)) res.push({ type: 'person', item: p, name: p.name, year: (p.dateLabel || ''), s: score(p.name) });
-  }
-  if (typeof EVENTS !== 'undefined') for (const ev of EVENTS) {
-    const hay = [ev.name, ev.location && ev.location.name, ev.type].filter(Boolean).join(' ').toLowerCase();
-    if (norm(hay).includes(q)) res.push({ type: 'event', item: ev, name: ev.name, year: (ev.dateLabel || ev.year || ''), s: score(ev.name) });
-  }
-  // Castles, temples and roads were missing here, so the placeholder promised "places"
-  // while a search for "Himeji" returned nothing at all.
-  if (typeof CASTLES !== 'undefined') for (const c of (Array.isArray(CASTLES) ? CASTLES : Object.values(CASTLES))) {
-    const hay = [c.name, c.modern, c.clan].filter(Boolean).join(' ').toLowerCase();
-    if (norm(hay).includes(q)) res.push({ type: 'castle', item: c, name: c.name, year: (c.clan || ''), s: score(c.name) });
-  }
-  if (typeof TEMPLES !== 'undefined') for (const t of TEMPLES) {
-    const hay = [t.name, t.sect, t.kind].filter(Boolean).join(' ').toLowerCase();
-    if (norm(hay).includes(q)) res.push({ type: 'temple', item: t, name: t.name, year: (t.founded || ''), s: score(t.name) });
-  }
-  if (typeof HISTORIC_ROADS !== 'undefined') for (const rd of HISTORIC_ROADS) {
-    const hay = [rd.name, rd.romaji, (rd.waypoints || []).map((w) => w.name).join(' ')].filter(Boolean).join(' ').toLowerCase();
-    if (norm(hay).includes(q)) res.push({ type: 'road', item: rd, name: rd.name, year: (rd.era || ''), s: score(rd.name) });
-  }
-  res.sort((a, b) => b.s - a.s);
-  return res.slice(0, 10);
-}
 
-function battleStartYear(b) {
-  return b.year != null ? b.year : b.yearStart;
-}
 
-function renderSearchResults(list) {
-  if (!list.length) {
-    hideSearchResults();
-    return;
-  }
-  searchResults.innerHTML = list
-    .map((r) =>
-      `<li><span class="r-name">${escapeHtml(r.name)}</span><span class="r-meta"><span class="r-type r-${r.type}">${r.type}</span> ${escapeHtml(String(r.year))}</span></li>`
-    )
-    .join('');
-  [...searchResults.children].forEach((li, i) => {
-    li.addEventListener('click', () => selectSearchResult(list[i]));
-  });
-  searchResults.classList.remove('hidden');
-}
 
-function hideSearchResults() {
-  searchResults.classList.add('hidden');
-  searchResults.innerHTML = '';
-}
 
-function selectSearchResult(r) {
-  if (r.type === 'battle') {
-    showYear(battleStartYear(r.item), { frame: false }); // show that year's markers
-    showBattleInfo(r.item);
-    focusBattle(r.item);
-  } else if (r.type === 'event') {
-    showBattleInfo(r.item); // events render through the same info panel
-    focusBattle(r.item);
-  } else if (r.type === 'person') {
-    showPersonInfo(r.item);
-    focusBattle(r.item);
-  } else if (r.type === 'castle') {
-    showCastleInfo(r.item);
-    map.flyTo([r.item.lat, r.item.lon], 11, { duration: 1.0 });
-  } else if (r.type === 'temple') {
-    showTempleInfo(r.item);
-    map.flyTo([r.item.lat, r.item.lon], 12, { duration: 1.0 });
-  } else if (r.type === 'road') {
-    showRoadInfo(r.item);
-    const pts = (r.item.waypoints || []).map((w) => [w.lat, w.lon]);
-    if (pts.length > 1) map.flyToBounds(L.latLngBounds(pts), { paddingTopLeft: [40, 70], paddingBottomRight: [40, 170], duration: 1.0 });
-  }
-  searchInput.value = '';
-  hideSearchResults();
-  searchInput.blur();
-}
 
 let _searchTimer = null;
 searchInput.addEventListener('input', () => {
