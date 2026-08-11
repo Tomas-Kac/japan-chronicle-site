@@ -407,7 +407,7 @@ Their graves at Sengaku-ji are still visited today, and their story became the b
   },
   {
     id: "evt-sakuradamon",
-    sources: [ { label: "Wikipedia: Sakuradamon incident (1860)", url: "https://en.wikipedia.org/wiki/Sakuradamon_incident_(1860)" } ],
+    sources: [ { label: "Wikipedia: Sakuradamon Incident (1860)", url: "https://en.wikipedia.org/wiki/Sakuradamon_Incident_(1860)" } ],
     name: "Sakuradamon Incident",
     type: "incident",
     year: 1860,
@@ -453,7 +453,7 @@ The murder of so high an official in the heart of Edo shattered the shogunate's 
   },
   {
     id: "evt-kanto-1923",
-    sources: [ { label: "Wikipedia: 1923 Great Kantō earthquake", url: "https://en.wikipedia.org/wiki/1923_Great_Kant%C5%8D_earthquake" } ],
+    sources: [ { label: "Wikipedia: Great Kantō Earthquake", url: "https://en.wikipedia.org/wiki/Great_Kant%C5%8D_Earthquake" } ],
     name: "Great Kantō Earthquake",
     type: "incident",
     year: 1923,
@@ -549,7 +549,7 @@ This revolutionary act, combined with his nationwide land surveys, formalized th
   },
   {
     id: "evt-korean-invasions",
-    sources: [ { label: "Wikipedia: Japanese invasions of Korea (1592–1598)", url: "https://en.wikipedia.org/wiki/Japanese_invasions_of_Korea_(1592–1598)" } ],
+    sources: [ { label: "Wikipedia: Imjin War", url: "https://en.wikipedia.org/wiki/Imjin_War" } ],
     name: "Invasions of Korea (Bunroku–Keichō Wars)",
     type: "politics",
     year: 1592,
@@ -1153,7 +1153,7 @@ Their power reached its dazzling height under Fujiwara no Michinaga (c. 1016), w
         caption: "The pines of Sue-no-Matsuyama at Tagajō in Miyagi, which classical poetry took as the rise the waves never crossed, a saying long connected with the Jōgan tsunami; Wikimedia Commons."
       }
     ],
-    sources: [ { label: "Wikipedia: 869 Jōgan earthquake", url: "https://en.wikipedia.org/wiki/869_Sanriku_earthquake" } ],
+    sources: [ { label: "Wikipedia: 869 Jōgan earthquake", url: "https://en.wikipedia.org/wiki/869_J%C5%8Dgan_earthquake" } ],
     name: "The Jōgan Sanriku Earthquake",
     type: "disaster",
     year: 869,
