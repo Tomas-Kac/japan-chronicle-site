@@ -5,7 +5,10 @@
 // ---------------------------------------------------------------------
 
 // --- Map background styles you can switch between (top-right control) ---
-const CARTO_ATTR = '&copy; OpenStreetMap contributors &copy; CARTO';
+// CARTO withdrew keyless basemap tiles in 2026: their CDN now answers HTTP 200 with a
+// 2 KB "API KEY REQUIRED" placeholder instead of a tile, so the map silently went blank.
+// Replaced with Esri, which this atlas already used for satellite, and which needs no key.
+const ESRI_ATTR = 'Tiles &copy; Esri | &copy; OpenStreetMap contributors';
 
 // Shared options that make zooming/panning feel smoother:
 //   keepBuffer        - keep a wide ring of off-screen tiles ready, so panning
@@ -17,15 +20,18 @@ const SMOOTH = { keepBuffer: 8, updateWhenZooming: false, updateWhenIdle: false 
 // Modern, clean street map. Shows only major cities when zoomed out and
 // reveals smaller places as you zoom in. This is the default.
 const modern = L.tileLayer(
-  'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png',
-  { maxZoom: 19, subdomains: 'abcd', attribution: CARTO_ATTR, ...SMOOTH }
+  'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',
+  { maxZoom: 19, attribution: ESRI_ATTR, ...SMOOTH }
 );
 
 // Minimal, light-grey map — fewest labels of all
-const light = L.tileLayer(
-  'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png',
-  { maxZoom: 19, subdomains: 'abcd', attribution: CARTO_ATTR, ...SMOOTH }
-);
+const LIGHT_BASE = 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}';
+const light = L.layerGroup([
+  L.tileLayer(LIGHT_BASE, { maxZoom: 16, attribution: ESRI_ATTR, ...SMOOTH }),
+  // the grey canvas ships unlabelled; its reference layer puts the place names back
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}',
+    { maxZoom: 16, ...SMOOTH }),
+]);
 
 // Satellite imagery
 const satellite = L.tileLayer(
@@ -125,7 +131,6 @@ map.addControl(new ResetViewControl());
 // SAME url + subdomain Leaflet would request (subdomain = (x+y) % 4), so these hits
 // land in the same cache entries. Bounded + throttled to stay polite to the servers.
 (function prefetchOverview() {
-  const SUBS = ['a', 'b', 'c', 'd'];
   const lon2x = (lon, z) => Math.floor(((lon + 180) / 360) * Math.pow(2, z));
   const lat2y = (lat, z) => {
     const r = (lat * Math.PI) / 180;
@@ -137,7 +142,8 @@ map.addControl(new ResetViewControl());
     const x0 = lon2x(W, z), x1 = lon2x(E, z), y0 = lat2y(N, z), y1 = lat2y(S, z);
     for (let x = x0; x <= x1; x++) {
       for (let y = y0; y <= y1; y++) {
-        urls.push(`https://${SUBS[Math.abs(x + y) % 4]}.basemaps.cartocdn.com/rastertiles/voyager/${z}/${x}/${y}.png`);
+        // Esri serves one host and orders the path z/y/x, not z/x/y
+        urls.push(`https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/${z}/${y}/${x}`);
       }
     }
   }
