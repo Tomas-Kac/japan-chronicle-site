@@ -358,30 +358,6 @@ Its independence ended when Oda Nobunaga forced the city to submit and pay a hea
     ]
   },
   {
-    id: "evt-shimabara",
-    sources: [ { label: "Wikipedia: Shimabara Rebellion", url: "https://en.wikipedia.org/wiki/Shimabara_Rebellion" } ],
-    name: "Shimabara Rebellion",
-    type: "incident",
-    year: 1637,
-    dateLabel: "1637–1638",
-    period: "Edo",
-    location: {
-      name: "Hara Castle, Shimabara (modern Minamishimabara, Nagasaki)",
-      lat: 32.63,
-      lon: 130.268
-    },
-    summary: "The great Christian-and-peasant uprising whose suppression sealed Japan's seclusion.",
-    details: `In 1637–38 overtaxed peasants and persecuted Christians of the Shimabara peninsula rose in revolt, some 37,000 holding out in the ruined Hara Castle. The shogunate crushed them with an overwhelming army, even firing on them from a Dutch ship, and killed almost all the defenders.
-
-The rising hardened the Tokugawa resolve to ban Christianity and close the country to the outside world.`,
-    images: [
-      {
-        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Shimabara-Battle-Map-c17th-century.png/960px-Shimabara-Battle-Map-c17th-century.png",
-        caption: "A 17th-century map of the Shimabara Rebellion. Wikimedia Commons."
-      }
-    ]
-  },
-  {
     id: "evt-ako-47ronin",
     sources: [ { label: "Wikipedia: Forty-seven rōnin", url: "https://en.wikipedia.org/wiki/Forty-seven_r%C5%8Dnin" } ],
     name: "The Forty-seven Rōnin (Akō incident)",
@@ -472,30 +448,6 @@ The disaster reshaped the modern capital, and, in the ensuing chaos and rumour, 
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/The_Great_Kanto_Earthquake_%283767766524%29_%28cropped%29.jpg/960px-The_Great_Kanto_Earthquake_%283767766524%29_%28cropped%29.jpg",
         caption: "Devastation from the 1923 Great Kantō earthquake. Wikimedia Commons."
-      }
-    ]
-  },
-  {
-    id: "evt-onin-war",
-    sources: [ { label: "Wikipedia: Ōnin War", url: "https://en.wikipedia.org/wiki/%C5%8Cnin_War" } ],
-    name: "Ōnin War begins",
-    type: "politics",
-    year: 1467,
-    dateLabel: "1467–1477",
-    period: "Muromachi",
-    location: {
-      name: "Kyoto",
-      lat: 35.0116,
-      lon: 135.7681
-    },
-    summary: "The devastating civil war that destroyed the capital and sparked the Sengoku period.",
-    details: `Triggered by a succession dispute in the Ashikaga shogunate and rivalries between the powerful Hosokawa and Yamana clans, the Ōnin War turned Kyoto into a battlefield. For a decade, massive armies fought street by street, burning the imperial capital to the ground.
-
-While the war ended in exhaustion with no clear victor, it utterly shattered the central authority of the shogunate, ushering in the century-long Sengoku period of warring states.`,
-    images: [
-      {
-        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Onin-War-1467-1477-The-Battle-of-Onin-by-Utagawa-Yoshitora.png/960px-Onin-War-1467-1477-The-Battle-of-Onin-by-Utagawa-Yoshitora.png",
-        caption: "‘The Battle of Ōnin’ by Utagawa Yoshitora. Wikimedia Commons."
       }
     ]
   },
@@ -592,30 +544,6 @@ They traveled via Macau, India, and Portugal, eventually meeting King Philip II 
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/First_Japanese_Embassy_to_Europe_1586.png/960px-First_Japanese_Embassy_to_Europe_1586.png",
         caption: "The Tenshō embassy of young Japanese Christians to Europe, 1586. Wikimedia Commons."
-      }
-    ]
-  },
-  {
-    id: "evt-enryakuji-burning",
-    sources: [ { label: "Wikipedia: Siege of Mount Hiei", url: "https://en.wikipedia.org/wiki/Siege_of_Mount_Hiei" } ],
-    name: "Burning of Enryaku-ji",
-    type: "culture",
-    year: 1571,
-    dateLabel: "September 30, 1571 (Genki 2/9/12)",
-    period: "Azuchi–Momoyama",
-    location: {
-      name: "Mount Hiei (modern Ōtsu, Shiga)",
-      lat: 35.0706,
-      lon: 135.8411
-    },
-    summary: "Nobunaga destroys the powerful Tendai monastic complex to break the power of its warrior-monks.",
-    details: `The vast temple complex of Enryaku-ji on Mount Hiei had sheltered Oda Nobunaga's enemies (the Asakura and Azai) and wielded immense political and military power through its armies of warrior-monks (sōhei).
-
-Determined to eliminate this threat, Nobunaga ordered his forces to encircle the mountain. They burned every building to the ground and massacred thousands of monks, women, and children. The destruction permanently broke the secular military power of the great Buddhist institutions.`,
-    images: [
-      {
-        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Enryakuji_Konponchudo02s5s3200.jpg/960px-Enryakuji_Konponchudo02s5s3200.jpg",
-        caption: "Enryaku-ji on Mount Hiei, burned by Nobunaga in 1571. Wikimedia Commons."
       }
     ]
   },
@@ -787,31 +715,6 @@ Having never married or named a clear heir, his death triggered the Otate no Ran
 Toyotomi Hideyori sponsored the casting of a large bronze bell for the Hōkō-ji temple in Kyoto. The bell's inscription included the characters "Kokka ankō" (May the state be peaceful and prosperous). Tokugawa scholars argued that separating the characters for "Ie" and "Yasu" constituted a curse against Ieyasu and an act of treason.
 
 The shogunate rejected all diplomatic overtures and apologies from the Toyotomi administration. The incident precipitated the Siege of Osaka, resulting in the eradication of the Toyotomi lineage in 1615.`
-  },
-  {
-    id: "honnoji-incident",
-    sources: [ { label: "Wikipedia: Honnō-ji Incident", url: "https://en.wikipedia.org/wiki/Honnō-ji_Incident" } ],
-    name: "The Honnō-ji Incident",
-    type: "politics",
-    year: 1582,
-    period: "Azuchi–Momoyama · incident",
-    location: {
-      name: "Honnō-ji Temple, Kyoto",
-      lat: 35.009,
-      lon: 135.768
-    },
-    summary: "The shocking betrayal and assassination of Oda Nobunaga by his trusted general Akechi Mitsuhide, instantly plunging Japan back into chaos.",
-    details: `The Honnō-ji Incident occurred on June 21, 1582, when Oda Nobunaga was betrayed and assassinated by his subordinate general, Akechi Mitsuhide.
-
-Nobunaga was resting at the Honnō-ji temple in Kyoto with a minimal guard detachment, en route to reinforce military operations against the Mōri clan. Akechi Mitsuhide, commanding an army of 10,000 troops, diverted his forces to Kyoto and besieged the temple. Facing overwhelming odds, Nobunaga committed seppuku within the burning structure.
-
-The incident abruptly halted Nobunaga's unification campaign and created a power vacuum. Akechi Mitsuhide's subsequent administration was defeated thirteen days later by Toyotomi Hideyoshi at the Battle of Yamazaki.`,
-    images: [
-      {
-        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Honnoj.jpg/960px-Honnoj.jpg",
-        caption: "The Honnō-ji, where Oda Nobunaga met his end in 1582. Wikimedia Commons."
-      }
-    ]
   },
   {
     id: "edo-shogunate",

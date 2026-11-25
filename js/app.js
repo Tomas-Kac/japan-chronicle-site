@@ -1389,6 +1389,10 @@ document.addEventListener('click', (e) => {
 var _hashReady = false;
 function setHash(s) { if (!_hashReady) return; try { history.replaceState(null, '', '#' + s); } catch (e) {} }
 function isEventId(id) { return typeof EVENTS !== 'undefined' && EVENTS.some((e) => e.id === id); }
+var MERGED_EVENTS = {
+  'honnoji-incident': 'honnoji', 'evt-onin-war': 'onin',
+  'evt-shimabara': 'shimabara', 'evt-enryakuji-burning': 'mount-hiei-1571',
+};
 function applyHash() {
   const m = (location.hash || '').replace(/^#/, '').match(/^([ybpe])=(.+)$/);
   if (m) {
@@ -1396,7 +1400,16 @@ function applyHash() {
     let v; try { v = decodeURIComponent(m[2]); } catch (e) { v = m[2]; }
     if (k === 'y') { const y = parseInt(v, 10); if (!isNaN(y)) showYear(Math.max(MIN_YEAR, Math.min(MAX_YEAR, y)), { frame: false }); }
     else if (k === 'b') { const b = BATTLES.find((x) => x.id === v); if (b) { showYear(battleStartYear(b), { frame: false }); showBattleInfo(b); focusBattle(b); } }
-    else if (k === 'e') { const ev = (typeof EVENTS !== 'undefined' ? EVENTS : []).find((x) => x.id === v); if (ev) { showBattleInfo(ev); focusBattle(ev); } }
+    else if (k === 'e') {
+      const ev = (typeof EVENTS !== 'undefined' ? EVENTS : []).find((x) => x.id === v);
+      if (ev) { showBattleInfo(ev); focusBattle(ev); }
+      else {
+        // Four events were battles counted twice (2026 coordinate audit, Nov 2026) and were folded into
+        // their battle records. Old shared links to the event still open the battle.
+        const b = BATTLES.find((x) => x.id === MERGED_EVENTS[v]);
+        if (b) { showYear(battleStartYear(b), { frame: false }); showBattleInfo(b); focusBattle(b); }
+      }
+    }
     else if (k === 'p') { const p = (typeof PEOPLE !== 'undefined' ? PEOPLE : []).find((x) => x.id === v); if (p) { showPersonInfo(p); focusBattle(p); } }
   }
   _hashReady = true; // from now on, user actions update the URL

@@ -2067,7 +2067,10 @@ The Sue forces were enveloped and destroyed. Sue Harukata committed seppuku. The
   },
   {
     id: "okehazama",
-    sources: [ { label: "Wikipedia: Battle of Okehazama", url: "https://en.wikipedia.org/wiki/Battle_of_Okehazama" } ],
+    sources: [
+      { label: "Wikipedia: Battle of Okehazama", url: "https://en.wikipedia.org/wiki/Battle_of_Okehazama" },
+      { label: "Japanese Wikipedia: 桶狭間の戦い (Battle of Okehazama)", url: "https://ja.wikipedia.org/wiki/桶狭間の戦い" }
+    ],
     name: "Battle of Okehazama",
     year: 1560,
     date: "1560-06-12",
@@ -2091,10 +2094,12 @@ The Sue forces were enveloped and destroyed. Sue Harukata committed seppuku. The
       }
     },
     outcome: "Stunning Oda victory; Imagawa Yoshimoto was killed.",
-    summary: "Oda Nobunaga's audacious surprise attack destroyed an army ten times his size and killed the great Imagawa Yoshimoto, the upset that announced Nobunaga to the realm.",
+    summary: "Oda Nobunaga's attack destroyed an army ten times his size and killed the great Imagawa Yoshimoto, the upset that announced Nobunaga to the realm. How he did it is disputed: the famous story of a hidden flanking march under cover of a storm is now doubted by many historians, who read the earliest chronicle as describing a frontal assault.",
     details: `The Battle of Okehazama occurred in June 1560 in Owari Province. Imagawa Yoshimoto, commanding an army of approximately 25,000 troops, invaded the territory of Oda Nobunaga, whose forces numbered between 2,000 and 3,000.
 
-The Imagawa army established an encampment in a narrow gorge known as Dengakuhazama. Taking advantage of a severe thunderstorm to mask his movements, Nobunaga launched a rapid, downhill surprise attack directly against the Imagawa headquarters. 
+The Imagawa army halted near Okehazama. In the version told for centuries, Nobunaga led his men on a hidden detour through the hills and, masked by a violent thunderstorm, fell on Yoshimoto's headquarters in a narrow hollow called Dengakuhazama from the side.
+
+That story comes from a later retelling of Nobunaga's life. The Shinchō kōki of Ōta Gyūichi, who served Nobunaga, describes something plainer: Nobunaga advanced from the Nakajima fort and, once the rain had stopped, attacked head-on. Following the historian Fujimoto Masayuki, many scholars now treat the battle as a frontal assault that happened to break through to Yoshimoto's own guard, either by design or by luck. Where exactly Yoshimoto fell is also disputed: Toyoake holds the designated national historic site, while Nagoya's Midori Ward keeps its own battlefield park nearby.
 
 The Imagawa forces were routed. Imagawa Yoshimoto was killed in action by Oda retainers Hattori Koheita and Mōri Shinsuke. This decisive victory eliminated the Imagawa clan as a major regional power and initiated Oda Nobunaga's military ascendancy in central Japan.`,
     images: [
@@ -2269,7 +2274,9 @@ The combination of the sudden deluge and the Uesugi offensive resulted in critic
     dateLabel: "June 21, 1582 (Tenshō 10/6/2)",
     period: "Azuchi–Momoyama",
     location: {
-      name: "Honnō-ji temple, Kyoto",
+      // 2026 coordinate audit: the coordinate is right (18 m from the marker of the 1582 site), but the
+      // label named the present temple, which stands 1.4 km away on Teramachi since 1591.
+      name: "Original site of Honnō-ji (the temple was rebuilt on Teramachi in 1591), Kyoto",
       lat: 35.005833,
       lon: 135.753889
     },
@@ -2865,7 +2872,10 @@ In August 1281 a typhoon struck the crowded fleet and destroyed it; great number
   },
   {
     id: "chihaya-1333",
-    sources: [ { label: "Wikipedia: Siege of Chihaya", url: "https://en.wikipedia.org/wiki/Siege_of_Chihaya" } ],
+    sources: [
+      { label: "Wikipedia: Siege of Chihaya", url: "https://en.wikipedia.org/wiki/Siege_of_Chihaya" },
+      { label: "Japanese Wikipedia: 千早城の戦い (Siege of Chihaya)", url: "https://ja.wikipedia.org/wiki/千早城の戦い" }
+    ],
     name: "Siege of Chihaya",
     images: [
       { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Chihaya_Castle16.jpg/960px-Chihaya_Castle16.jpg", caption: "The site of Chihaya Castle, held by Kusunoki Masashige. Wikimedia Commons." }
@@ -2874,9 +2884,12 @@ In August 1281 a typhoon struck the crowded fleet and destroyed it; great number
     dateLabel: "1333 (Genkō 3)",
     period: "Kamakura",
     location: {
-      name: "Chihaya Castle, Mt. Kongō, Kawachi Province (modern Chihayaakasaka, Osaka)",
-      lat: 34.4189,
-      lon: 135.6717
+      // 2026 coordinate audit: the label named both the castle and the mountain, and the old pin
+      // (34.4189, 135.6717) took the mountain, 1.89 km from the designated castle remains.
+      // Now the cited article's coordinate for the castle (same in ja 千早城).
+      name: "Chihaya Castle site, on the western slopes of Mt. Kongō, Kawachi Province (modern Chihayaakasaka, Osaka)",
+      lat: 34.417225,
+      lon: 135.651197
     },
     combatants: {
       side1: {
@@ -2890,7 +2903,11 @@ In August 1281 a typhoon struck the crowded fleet and destroyed it; great number
     },
     outcome: "Loyalist success; Kusunoki held out and tied down the shogunate's forces.",
     summary: "Kusunoki Masashige's legendary defense of the small mountain fortress of Chihaya against a vast Hōjō army. His ingenious guerrilla tricks, logs, boulders and feints, held the castle for months, tying down the shogunate's strength and emboldening Emperor Go-Daigo's supporters to rise across the country.",
-    details: `The Siege of Chihaya occurred in 1333 at Chihaya Castle, Mt. Kongō, Kawachi Province (modern Chihayaakasaka, Osaka). The engagement involved forces of the Go-Daigo loyalists, commanded by Kusunoki Masashige, engaging the Kamakura shogunate, commanded by Hōjō army. Kusunoki Masashige's legendary defense of the small mountain fortress of Chihaya against a vast Hōjō army. His ingenious guerrilla tricks, logs, boulders and feints, held the castle for months, tying down the shogunate's strength and emboldening Emperor Go-Daigo's supporters to rise across the country. The conflict resulted in a Loyalist success; Kusunoki held out and tied down the shogunate's forces. This event remains a historically significant military engagement within the context of the Kamakura period, contributing to the broader geopolitical realignment of the era.`
+    details: `Chihaya was a small mountain fortress that Kusunoki Masashige built in 1332 on the western slopes of Mt. Kongō, deeper in the hills than his two Akasaka forts. In 1333 it became the main stronghold of the loyalist cause.
+
+Contemporary documents show that the shogunate's army opened its attack on Chihaya on the 27th day of the 2nd month, while the siege of Kami-Akasaka was still under way, and that the siege ended on the 9th day of the 5th month. Because that year had an intercalary second month, the garrison held out for about three and a half months. The war tale Taiheiki tells a more dramatic story with impossibly large numbers, two million attackers among them.
+
+Kusunoki had learned from Akasaka, which fell when its water was cut off. At Chihaya he made the most of the cramped ridge-top position and his men's knowledge of the ravines, used dummy troops and surprise raids, and beat off attacks with movable bridges and fire. The besiegers withdrew when news came that the shogunate's Rokuhara headquarters in Kyoto had fallen, and less than two weeks later the Kamakura regime itself collapsed.`
   },
   {
     id: "fall-of-kamakura-1333",
@@ -3294,7 +3311,10 @@ Only with the help of the powerful Kiyowara clan of Dewa did the Minamoto finall
     yearStart: 1083, yearEnd: 1087,
     dateLabel: "1083–1087 (Gosannen no Eki)",
     period: "Heian",
-    location: { name: "Dewa Province, the Kanezawa stockade (modern Yokote, Akita)", lat: 39.3186, lon: 140.5666 },
+    // 2026 coordinate audit: the old pin (39.3186, 140.5666) was central Yokote, 6 km from Kanezawa. The
+    // stockade has never been found by excavation; Kanazawa Park (Kanazawa Hachiman shrine) on
+    // the hill of the later Kanazawa castle is the traditional site. Coordinate: ja 金澤八幡宮.
+    location: { name: "Traditional site of the Kanezawa stockade, Kanazawa Park, Dewa Province (modern Yokote, Akita); not confirmed by excavation", lat: 39.3735, lon: 140.576361 },
     combatants: {
       side1: { name: "Minamoto & Fujiwara no Kiyohira", leader: "Minamoto no Yoshiie" },
       side2: { name: "Kiyowara clan", leader: "Kiyowara no Iehira & Takehira" }
@@ -3439,11 +3459,13 @@ Soga no Umako led a coalition, including the young Prince Shōtoku, against Mono
   {
     id: "akasaka",
     sources: [ { label: "Wikipedia: Siege of Akasaka", url: "https://en.wikipedia.org/wiki/Siege_of_Akasaka" } ],
-    name: "Siege of Akasaka",
+    name: "Siege of Akasaka (Shimo-Akasaka)",
     year: 1331,
     dateLabel: "1331 (Genkō 1)",
     period: "Kamakura",
-    location: { name: "Akasaka Castle, Kawachi Province (modern Chihaya-Akasaka, Osaka)", lat: 34.4583, lon: 135.6361 },
+    // 2026 coordinate audit: the old pin (34.4583, 135.6361) sat between the TWO Akasaka forts, nearer the
+    // wrong one. The 1331 siege was at Shimo-Akasaka; the 1333 siege of Kami-Akasaka is its own entry.
+    location: { name: "Shimo-Akasaka Castle (Lower Akasaka), Kawachi Province (modern Chihayaakasaka, Osaka)", lat: 34.459722, lon: 135.618611 },
     combatants: {
       side1: { name: "Imperial loyalists", leader: "Kusunoki Masashige" },
       side2: { name: "Kamakura shogunate", leader: "Hōjō forces" }
@@ -3453,12 +3475,46 @@ Soga no Umako led a coalition, including the young Prince Shōtoku, against Mono
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Shimo-akasaka-jyo02.jpg/960px-Shimo-akasaka-jyo02.jpg",
-        caption: "Siege of Akasaka. Wikimedia Commons."
+        caption: "The site of Shimo-Akasaka Castle, where Kusunoki Masashige held out in 1331. Wikimedia Commons."
       }
     ],
+    leadsTo: "kami-akasaka-1333",
     details: `When Emperor Go-Daigo rose against the Kamakura shogunate in 1331, the warrior Kusunoki Masashige raised the imperial banner in the hills of Kawachi and held the small fort of Akasaka against a vast shogunal army.
 
-Wildly outnumbered, he held out with ingenious improvised defences, logs, boiling water, and dummy troops, before the fort finally fell, slipping away by faking his own death in the flames. His resistance kept Go-Daigo's cause alive and made Kusunoki the very model of the loyal samurai, revered for centuries.`
+Wildly outnumbered, he held out with ingenious improvised defences, logs, boiling water, and dummy troops, before the fort finally fell, slipping away by faking his own death in the flames. His resistance kept Go-Daigo's cause alive and made Kusunoki the very model of the loyal samurai, revered for centuries.
+
+There were two Akasaka fortresses. This siege was fought at the lower one, Shimo-Akasaka. When Kusunoki returned in 1332 he built a stronger fort higher up, Kami-Akasaka, which was besieged in its turn in 1333. The two sites stand about 1.7 km apart and were designated national historic sites separately on the same day in 1934.`
+  },
+  {
+    id: "kami-akasaka-1333",
+    sources: [
+      { label: "Japanese Wikipedia: 上赤坂城の戦い (Siege of Kami-Akasaka)", url: "https://ja.wikipedia.org/wiki/上赤坂城の戦い" },
+      { label: "Japanese Wikipedia: 上赤坂城 (Kami-Akasaka Castle)", url: "https://ja.wikipedia.org/wiki/上赤坂城" },
+      { label: "Wikipedia: Siege of Akasaka", url: "https://en.wikipedia.org/wiki/Siege_of_Akasaka" }
+    ],
+    name: "Siege of Kami-Akasaka",
+    year: 1333,
+    dateLabel: "March 8–17, 1333 (Genkō 3/2/22 – intercalary 2/1)",
+    period: "Kamakura",
+    location: { name: "Kami-Akasaka Castle (Upper Akasaka, also called Kusunoki Castle), Kawachi Province (modern Chihayaakasaka, Osaka)", lat: 34.448, lon: 135.630806 },
+    combatants: {
+      side1: { name: "Go-Daigo loyalists", leader: "Hirano Shōgen nyūdō and Kusunoki Shichirō (Masasue)" },
+      side2: { name: "Kamakura shogunate", leader: "Aso Harutoki and Nagasaki Takasada" }
+    },
+    outcome: "The fort fell and about thirty defenders surrendered, but the attackers took more than 1,800 casualties while the same army was also besieging Chihaya.",
+    summary: "The second Akasaka siege. Kusunoki Masashige's new upper fort, held by the noted warrior Hirano Shōgen and Masashige's brother, fell after nine days, but at a cost to the shogunate that a surviving contemporary record lets historians count.",
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Kamiakasakajyo1.jpg/960px-Kamiakasakajyo1.jpg",
+        caption: "The memorial stone at the site of Kami-Akasaka Castle. Wikimedia Commons."
+      }
+    ],
+    leadsTo: "chihaya-1333",
+    details: `After the fall of Shimo-Akasaka in 1331, Kusunoki Masashige vanished for more than a year. He reappeared late in 1332, retook the lower fort and raided across the home provinces, and built a stronger stronghold higher in the hills: Kami-Akasaka. He himself waited at Chihaya, deeper in the mountains, and gave command of Kami-Akasaka to Hirano Shōgen nyūdō, a well-known local warrior, with his own brother Masasue as second.
+
+The shogunate's army opened the attack on the 22nd day of the 2nd month of 1333. Its commanders at first treated Kami-Akasaka, not Chihaya, as the main objective. The fort fell on the 1st day of the intercalary 2nd month. Hirano and some thirty men surrendered, while Masasue escaped.
+
+The siege is unusually well documented. The Kusunoki kassen chūmon, a contemporary record kept by a monk of Tōfuku-ji in Kyoto, lists the attackers' losses at more than 1,800 killed and wounded, at least 203 of them dead, which is far more trustworthy than the vast numbers given by the later war tale Taiheiki. The losses here, and the siege of Chihaya that followed, wore down the shogunate's armies in the months before Kamakura fell.`
   },
   {
     id: "bubaigawara",
@@ -4226,6 +4282,9 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
     sources: [ { label: "Wikipedia: Siege of Uozu", url: "https://en.wikipedia.org/wiki/Siege_of_Uozu" } ]
   },
   {
+    // 2026 coordinate audit: the old pin (35.1997, 136.8528) was the cited article's title coordinate,
+    // 2.05 km from the castle and close to the site of the 1552 Kayazu fight. The label names
+    // the castle, so the pin now matches the castle layer (= ja 清洲城).
     id: "kiyosu-1552", name: "Battle of Kiyosu Castle", yearStart: 1552, yearEnd: 1554, dateLabel: "1552–1554 (Tenbun 21–23)", period: "Muromachi",
     images: [
       {
@@ -4233,7 +4292,7 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
         caption: "The modern reconstructed keep of Kiyosu Castle in Kiyosu, Aichi Prefecture, via Wikimedia Commons."
       }
     ],
-    location: { name: "Kiyosu Castle, Owari (modern Kiyosu, Aichi)", lat: 35.1997, lon: 136.8528 },
+    location: { name: "Kiyosu Castle, Owari (modern Kiyosu, Aichi)", lat: 35.216575, lon: 136.843597 },
     combatants: { side1: { name: "Oda (Nagoya line)", leader: "Oda Nobunaga" }, side2: { name: "Oda (Kiyosu line)", leader: "Oda Nobutomo" } },
     outcome: "Nobunaga victory; the rival Kiyosu branch was destroyed and Kiyosu became his base.",
     summary: "A struggle within the Oda house itself. The young Nobunaga overcame the rival Kiyosu branch of his own clan, took their castle, and made it his headquarters, a decisive step toward unifying his home province of Owari.",
