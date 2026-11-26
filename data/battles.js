@@ -2230,7 +2230,7 @@ The Sue forces were enveloped and destroyed. Sue Harukata committed seppuku. The
   },
   {
     id: "okehazama",
-    coordSource: { kind: "gsi", ref: "桶狭間古戦場伝説地 (GSI place-name search)", how: "set" },
+    coordSource: { kind: "gsi", ref: "桶狭間古戦場伝説地", how: "set" },
     certainty: { location: "C", referent: "point", historicity: "attested", basis: "verified", why: "Two localities claim the site. Toyoake holds the nationally designated historic site, and Nagoya's Midori Ward keeps a rival battlefield park about 1 km to the west. The marker sits on the designated site; both candidates are drawn while this entry is open. How the attack was made is disputed too (see the text)." },
     alternatives: [{ label: "Okehazama battlefield, Toyoake: the nationally designated historic site (桶狭間古戦場伝説地)", lat: 35.0598174, lon: 136.9807802, source: { label: "Agency for Cultural Affairs register; position from the GSI place-name search", url: "https://kunishitei.bunka.go.jp/heritage/detail/401/1432" } }, { label: "Okehazama battlefield park, Nagoya (Midori Ward), the ground long called Dengakutsubo; position is the GSI representative point of Okehazama-kita 3-chōme", lat: 35.054768, lon: 136.971405, source: { label: "Midori Ward Office, Nagoya: Okehazama sights", url: "https://www.city.nagoya.jp/midori/miryoku/1024793/1024801/1024811.html" } }],
     gazetteer: { dataset: "nrct-poi", id: "230000116300", name: "桶狭間古戦場伝説地", lat: 35.06, lon: 136.980833, match: "battlefield of the same name", d: 21, shared: 0 },
