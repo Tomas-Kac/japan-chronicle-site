@@ -555,7 +555,7 @@ body { position: fixed; inset: 0; }
 .battle-pin.pin-legend:hover { transform: rotate(-45deg); }
 .battle-pin.pin-legend::after { width: 4px; height: 4px; margin: -2px 0 0 -2px; }
 .battle-pin.pin-q.pin-legend::after { width: auto; height: auto; margin: 0; font-size: 9px; }
-.certainty-legend summary { cursor: pointer; list-style-position: outside; }
+.certainty-legend summary { cursor: pointer; list-style-position: inside; }
 .certainty-legend .secured-only { display: block; margin-top: 4px; border-top: 1px solid var(--line); padding-top: 4px; cursor: pointer; }
 .certainty-legend .secured-only input { vertical-align: -2px; margin-right: 5px; }
 .certainty-chip {
@@ -666,3 +666,19 @@ body { position: fixed; inset: 0; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
 }
+
+/* events whose marker stands for a seat of power or a wider area, not a spot */
+.event-icon.ev-loose { outline: 2px dashed currentColor; outline-offset: 2px; }
+/* nationwide events: no marker, a strip at the top of the map instead */
+.nationwide-strip {
+  position: absolute; z-index: 800; left: 50%; transform: translateX(-50%);
+  top: calc(var(--topbar-h, 64px) + 10px); max-width: min(680px, calc(100% - 140px));
+  background: var(--panel); border: 1px dashed var(--accent); border-radius: var(--r-card);
+  padding: 6px 12px; font-size: 12.5px; color: var(--ink-body); box-shadow: var(--sh-pill);
+}
+.nationwide-strip.hidden { display: none; }
+.nationwide-strip .nw-label { color: var(--ink-mut); }
+.nationwide-strip a { color: var(--accent-deep); font-weight: 600; margin-right: 10px; text-decoration: none; }
+.nationwide-strip a:hover, .nationwide-strip a:focus-visible { text-decoration: underline; }
+.nationwide-strip .evt-yr { font-weight: 400; color: var(--ink-mut); }
+@media (max-width: 600px) { .nationwide-strip { max-width: calc(100% - 90px); left: auto; right: 12px; transform: none; } }

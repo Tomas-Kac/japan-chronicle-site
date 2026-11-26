@@ -78,7 +78,7 @@ function selectSearchResult(r) {
     focusBattle(r.item);
   } else if (r.type === 'event') {
     showBattleInfo(r.item); // events render through the same info panel
-    focusBattle(r.item);
+    focusEvent(r.item); // a nationwide edict has no place to fly to
   } else if (r.type === 'person') {
     showPersonInfo(r.item);
     focusBattle(r.item);

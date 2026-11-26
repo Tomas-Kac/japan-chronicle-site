@@ -119,8 +119,21 @@ function renderDomainHTML(p) {
     <p class="location">Active ${escapeHtml(domainRangeLabel(p))}</p>
     ${p.note ? `<p class="summary">${escapeHtml(p.note)}</p>` : ''}
     ${provs}
-    <p class="route-note">⚑ Shown at province level — a clan's characteristic (peak) extent, not its exact borders in a given year. See NOTES.md.</p>
+    <p class="route-note">⚑ Approximate. The area is drawn as whole provinces, which claims more than the sources do: that this house controlled every part of each province, and nothing outside them. It shows the house's characteristic extent, not its borders in a given year.</p>
+    ${domainCastlesHTML(p)}
   `;
+}
+// The castles of this house that the castle layer holds: the network the house actually
+// controlled, rather than the provinces it is drawn with. Linked through castle.houses.
+function domainCastles(p) {
+  return (Array.isArray(CASTLES) ? CASTLES : Object.values(CASTLES)).filter((c) => (c.houses || []).includes(p.clan));
+}
+function domainCastlesHTML(p) {
+  const list = domainCastles(p);
+  if (!list.length) return `<h3>Castles of the ${escapeHtml(p.clan || '')}</h3><p class="ev-basis">None of this house's castles is in the atlas's castle layer yet.</p>`;
+  return `<h3>Castles of the ${escapeHtml(p.clan)} in the atlas</h3>
+    <p class="ev-basis">Ringed on the map while this panel is open. A castle is listed if its record names this house among its holders; the record does not say in which years.</p>
+    <ul class="person-battles">${list.map((c) => `<li><a href="#" class="castle-link" data-castle="${escapeHtml(c.id)}">${escapeHtml(c.name)}</a> <span class="pb-year">${escapeHtml(c.houses.join(' · '))}</span></li>`).join('')}</ul>`;
 }
 
 // Reuse the info panel for a clicked domain (no march route, unlike a battle).
@@ -132,6 +145,15 @@ function showDomainInfo(props) {
   panel.classList.remove('hidden');
   panel.setAttribute('aria-hidden', 'false');
   if (typeof activeRouteLayer !== 'undefined') activeRouteLayer.clearLayers();
+  // ring the house's castles: its real network of strongholds
+  if (typeof evidenceLayer !== 'undefined') for (const c of domainCastles(props)) {
+    L.circleMarker([c.lat, c.lon], { radius: 11, color: props.color || '#5a4a3a', weight: 3, fill: false, interactive: false }).addTo(evidenceLayer);
+  }
+  for (const a of document.querySelectorAll('#infoContent .castle-link')) a.addEventListener('click', (e) => {
+    e.preventDefault();
+    const c = (Array.isArray(CASTLES) ? CASTLES : Object.values(CASTLES)).find((x) => x.id === a.dataset.castle);
+    if (c) { showCastleInfo(c); map.flyTo([c.lat, c.lon], Math.max(map.getZoom(), 10)); }
+  });
 }
 
 function renderBattleHTML(battle) {
@@ -191,7 +213,7 @@ function renderBattleHTML(battle) {
     <p class="meta">${escapeHtml(battle.dateLabel || battle.date || '')}${
     battle.period ? ' &middot; <span class="era">' + escapeHtml(battle.period) + '</span>' : ''
   }</p>
-    <p class="location">${escapeHtml(battle.location.name || '')}</p>
+    ${battle.certainty && battle.certainty.referent === 'nationwide' ? '' : `<p class="location">${escapeHtml(battle.location.name || '')}</p>`}
     ${ev.chip}
     ${battle.summary ? `<p class="summary">${escapeHtml(battle.summary)}</p>` : ''}
     ${routeNoteHTML}
@@ -269,9 +291,30 @@ function placeEvidenceHTML(r) {
   return `<h3>How we know where it is</h3><div class="evidence"><dl class="ev-rows">${rows.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join('')}</dl></div>`;
 }
 
+const EVENT_REF_TEXT = {
+  point: ['At this place', 'Something that happened at this place.'],
+  seat: ['Seat of power', 'An act of a court or government. The marker shows its seat, not a place where something happened in a narrow sense, and the decision reached far beyond it.'],
+  area: ['Wider area', 'A phenomenon over a wider region. The marker is only one place in it.'],
+  nationwide: ['Whole country', 'Applied across the whole country. It has no single place, so the atlas shows it without a marker.'],
+};
+function eventEvidenceParts(e) {
+  const c = e.certainty;
+  const r = EVENT_REF_TEXT[c.referent] || EVENT_REF_TEXT.point;
+  const chip = c.referent === 'point' ? '' : `<p class="certainty-chip">${escapeHtml(r[0])}</p>`;
+  // a nationwide edict's `why` already says everything the rows would
+  const rows = c.referent === 'nationwide' ? [] : [['The marker stands for', escapeHtml(r[1])], ['Coordinate', coordSourceHTML(e.coordSource)]];
+  const section = `
+    <h3>How we know where it was</h3>
+    <div class="evidence">
+      ${c.why ? `<p class="ev-why">${escapeHtml(c.why)}</p>` : ''}
+      ${rows.length ? `<dl class="ev-rows">${rows.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join('')}</dl>` : ''}
+    </div>`;
+  return { chip, section };
+}
 function evidenceParts(b) {
   const c = b.certainty;
   if (!c) return { chip: '', section: '' };
+  if (!c.location) return eventEvidenceParts(b); // events carry a referent only
   const loc = LOC_TEXT[c.location] || LOC_TEXT.B;
   const bits = [loc[0]];
   if (c.referent === 'area') bits.push('stands for a wider area');

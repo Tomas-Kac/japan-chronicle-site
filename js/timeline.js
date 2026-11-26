@@ -67,7 +67,13 @@ function recomputeYears() {
   // When the Events overlay is on, its years join the timeline too, so the slider
   // and ticks reach events outside the battle range (e.g. 552, 1923).
   if (eventsOn) {
-    for (const em of eventMarkers) for (const y of battleYears(em.event)) set.add(y);
+    // A span (e.g. Genroku culture, c. 1688–1704) adds only its two ends as ticks, as
+    // people do, or a long span would flood the timeline with ticks.
+    for (const em of eventMarkers) {
+      const ev = em.event;
+      if (ev.yearStart != null && ev.yearEnd != null) { set.add(ev.yearStart); set.add(ev.yearEnd); }
+      else for (const y of battleYears(ev)) set.add(y);
+    }
   }
   // When the People overlay is on, each figure's birth & death years join the ticks too.
   if (peopleOn) {

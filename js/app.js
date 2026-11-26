@@ -312,20 +312,26 @@ const EVENT_TYPE = {
   politics: { cls: 'ev-politics', glyph: '⚑︎', label: 'Politics / decree / transition' },
   disaster: { cls: 'ev-disaster', glyph: '≋', label: 'Natural disaster' },
 };
-function eventIcon(type) {
+function eventIcon(type, loose) {
   const t = EVENT_TYPE[type] || EVENT_TYPE.incident;
   return L.divIcon({
     className: '',
-    html: `<div class="event-icon ${t.cls}">${t.glyph}</div>`,
+    // a dashed ring = the marker stands for a seat of power or a wider area, not a spot
+    html: `<div class="event-icon ${t.cls}${loose ? ' ev-loose' : ''}">${t.glyph}</div>`,
     iconSize: [22, 22],
     iconAnchor: [11, 11],
     tooltipAnchor: [0, -12],
   });
 }
+// Nationwide edicts have no place, so they get NO marker (they were pinned to a Kyoto street
+// corner with "(Nationwide edict)" in the label). They are listed in a strip on the map instead.
+const isNationwide = (ev) => !!(ev && ev.certainty && ev.certainty.referent === 'nationwide');
+function focusEvent(ev) { if (!isNationwide(ev)) focusBattle(ev); }
 // Each event keeps a reference to its marker so the Events overlay can be filtered
 // by the year slider instead of showing every event at once.
 const eventMarkers = (typeof EVENTS !== 'undefined' ? EVENTS : []).map((ev) => {
-  const m = L.marker([ev.location.lat, ev.location.lon], { icon: eventIcon(ev.type), title: ev.name });
+  const loose = ev.certainty && (ev.certainty.referent === 'seat' || ev.certainty.referent === 'area');
+  const m = L.marker([ev.location.lat, ev.location.lon], { icon: eventIcon(ev.type, loose), title: ev.name });
   m.bindTooltip(
     `${escapeHtml(ev.name)} <span class="evt-yr">${escapeHtml(String(ev.dateLabel || ev.year || ''))}</span>`,
     { direction: 'top', className: 'castle-label' }
@@ -338,13 +344,31 @@ const eventMarkers = (typeof EVENTS !== 'undefined' ? EVENTS : []).map((ev) => {
 });
 const eventsLayer = L.layerGroup();
 let eventsOn = false; // true while the Events overlay is toggled on
+// The strip for nationwide events, top centre of the map
+const nationwideStrip = L.DomUtil.create('div', 'nationwide-strip hidden', map.getContainer());
+L.DomEvent.disableClickPropagation(nationwideStrip);
+nationwideStrip.addEventListener('click', (e) => {
+  const a = e.target.closest('[data-event]');
+  if (!a) return;
+  e.preventDefault();
+  const ev = EVENTS.find((x) => x.id === a.dataset.event);
+  if (ev) showBattleInfo(ev);
+});
 // Sync the events layer to the current year (or show them all in overview mode).
 function refreshEvents() {
   eventsLayer.clearLayers();
-  if (!eventsOn) return;
-  for (const em of eventMarkers) {
-    if (showAll || battleYears(em.event).includes(currentYear)) eventsLayer.addLayer(em.marker);
+  const now = [];
+  if (eventsOn) {
+    for (const em of eventMarkers) {
+      if (!(showAll || battleYears(em.event).includes(currentYear))) continue;
+      if (isNationwide(em.event)) now.push(em.event); else eventsLayer.addLayer(em.marker);
+    }
   }
+  nationwideStrip.classList.toggle('hidden', !now.length);
+  nationwideStrip.innerHTML = now.length
+    ? '<span class="nw-label">Across the whole country, no single place:</span> ' + now.map((ev) =>
+        `<a href="#" data-event="${escapeHtml(ev.id)}">${escapeHtml(ev.name)} <span class="evt-yr">${escapeHtml(String(ev.dateLabel || ev.year || ''))}</span></a>`).join(' ')
+    : '';
 }
 
 // ---- People overlay (the actors of history; shown across their lifespan when the slider is on) ----
@@ -633,7 +657,8 @@ eventsLegend.onAdd = function () {
         const t = EVENT_TYPE[k];
         return `<div><span class="event-icon ${t.cls} ev-legend">${t.glyph}</span> ${t.label}</div>`;
       })
-      .join('');
+      .join('') +
+    '<div class="ev-key-note"><span class="event-icon ev-politics ev-legend ev-loose">⚑︎</span> dashed ring: a seat of power or a wider area</div>';
   return div;
 };
 map.on('overlayadd', (e) => {
@@ -1021,7 +1046,8 @@ function domainActive(p, year) {
 }
 function styleDomain(color) {
   const c = color || DOMAIN_FALLBACK_COLOR;
-  return { color: c, weight: 1.2, opacity: 0.7, fillColor: c, fillOpacity: 0.25 };
+  // dashed outline and a lighter fill: these are whole provinces, an approximation, not borders
+  return { color: c, weight: 1.4, opacity: 0.8, dashArray: '5 4', fillColor: c, fillOpacity: 0.18 };
 }
 
 // Show/hide each clan's pre-built layer so only those active in the current year
@@ -1064,7 +1090,7 @@ function refreshDomainsLegend() {
           )
           .join('')}</div>`
       : '<div class="dm-foot">No domains mapped for this year</div>') +
-    '<div class="dm-foot">province-level approximation</div>';
+    '<div class="dm-foot">Approximate: drawn as whole provinces, not real borders. Click a domain for the castles the house held.</div>';
 }
 const domainsLegend = L.control({ position: 'bottomleft' });
 domainsLegend.onAdd = function () {
@@ -1487,7 +1513,7 @@ function applyHash() {
     else if (k === 'b') { const b = BATTLES.find((x) => x.id === v); if (b) { showYear(battleStartYear(b), { frame: false }); showBattleInfo(b); focusBattle(b); } }
     else if (k === 'e') {
       const ev = (typeof EVENTS !== 'undefined' ? EVENTS : []).find((x) => x.id === v);
-      if (ev) { showBattleInfo(ev); focusBattle(ev); }
+      if (ev) { showBattleInfo(ev); focusEvent(ev); }
       else {
         // Four events were battles counted twice (2026 coordinate audit, Nov 2026) and were folded into
         // their battle records. Old shared links to the event still open the battle.
