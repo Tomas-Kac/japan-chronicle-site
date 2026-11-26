@@ -42,6 +42,7 @@ function renderCastleHTML(c) {
     <p class="meta">${escapeHtml(meta)}</p>
     ${c.modern ? `<p class="location">${escapeHtml(c.modern)}</p>` : ''}
     ${c.note ? `<p class="summary">${escapeHtml(c.note)}</p>` : ''}
+    ${placeEvidenceHTML(c)}
     ${galleryBlock(c.images)}
     ${sourcesBlock(c.name, c.sources)}
   `;
@@ -54,6 +55,7 @@ function showCastleInfo(c) {
   panel.classList.remove('hidden');
   panel.setAttribute('aria-hidden', 'false');
   if (typeof activeRouteLayer !== 'undefined') activeRouteLayer.clearLayers();
+  if (typeof evidenceLayer !== 'undefined') evidenceLayer.clearLayers();
 }
 
 function renderTempleHTML(t) {
@@ -64,6 +66,7 @@ function renderTempleHTML(t) {
     <h2>${escapeHtml(t.name)}</h2>
     <p class="meta">${escapeHtml(meta)}</p>
     ${t.note ? `<p class="summary">${escapeHtml(t.note)}</p>` : ''}
+    ${placeEvidenceHTML(t)}
     ${galleryBlock(t.images)}
     ${sourcesBlock(t.name, t.sources)}
   `;
@@ -76,6 +79,7 @@ function showTempleInfo(t) {
   panel.classList.remove('hidden');
   panel.setAttribute('aria-hidden', 'false');
   if (typeof activeRouteLayer !== 'undefined') activeRouteLayer.clearLayers();
+  if (typeof evidenceLayer !== 'undefined') evidenceLayer.clearLayers();
 }
 
 function renderRoadHTML(road) {
@@ -93,6 +97,7 @@ function renderRoadHTML(road) {
 }
 
 function showRoadInfo(road) {
+  if (typeof evidenceLayer !== 'undefined') evidenceLayer.clearLayers(); // a battle's rival sites must not linger
   const panel = document.getElementById('infoPanel');
   document.getElementById('infoContent').innerHTML = renderRoadHTML(road);
   panel.scrollTop = 0;
@@ -120,6 +125,7 @@ function renderDomainHTML(p) {
 
 // Reuse the info panel for a clicked domain (no march route, unlike a battle).
 function showDomainInfo(props) {
+  if (typeof evidenceLayer !== 'undefined') evidenceLayer.clearLayers(); // a battle's rival sites must not linger
   const panel = document.getElementById('infoPanel');
   document.getElementById('infoContent').innerHTML = renderDomainHTML(props);
   panel.scrollTop = 0;
@@ -240,6 +246,29 @@ function coordSourceHTML(cs) {
     default: return 'Placed by hand on the named place. No published coordinate it was copied from has been identified.';
   }
 }
+// CODH gazetteer anchor (scripts/match-codh.py): recorded beside the coordinate, not applied.
+const NRCT_METHOD = {
+  honda: "the late-Edo village boundaries in Honda Ken'ichi's data",
+  oketani: 'the historical place-name data of the late Oketani Ikuo',
+  centroid: 'the centre of the modern place names the entry lists',
+  manual: 'their own placement by hand',
+  uncertain_location: 'an identification they mark as uncertain',
+};
+function gazetteerHTML(g) {
+  if (!g) return '';
+  const dist = g.d < 1000 ? g.d + ' m' : (g.d / 1000).toFixed(1) + ' km';
+  if (g.dataset === 'nrct') {
+    return `CODH gazetteer of historical place names (<a href="https://doi.org/10.20676/00000448" target="_blank" rel="noopener">地名項目データセット</a>): ${escapeHtml(g.name)}, item ${escapeHtml(g.id)}, ${dist} from the marker. Its compilers derived that position from ${escapeHtml(NRCT_METHOD[g.method] || g.method)}.`;
+  }
+  return `CODH gazetteer of sites (<a href="https://doi.org/10.20676/00000456" target="_blank" rel="noopener">施設・地点項目データセット</a>): ${escapeHtml(g.name)}, item ${escapeHtml(g.id)}, ${dist} from the marker.${g.shared ? ` The gazetteer gives the same position to ${g.shared} other item${g.shared === 1 ? '' : 's'}, which usually means its compilers could place it only at the level of the administrative unit.` : ''}`;
+}
+function placeEvidenceHTML(r) {
+  if (!r.coordSource && !r.gazetteer) return '';
+  const rows = [['Coordinate', coordSourceHTML(r.coordSource)]];
+  if (r.gazetteer) rows.push(['Gazetteer', gazetteerHTML(r.gazetteer)]);
+  return `<h3>How we know where it is</h3><div class="evidence"><dl class="ev-rows">${rows.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join('')}</dl></div>`;
+}
+
 function evidenceParts(b) {
   const c = b.certainty;
   if (!c) return { chip: '', section: '' };
@@ -254,6 +283,7 @@ function evidenceParts(b) {
   rows.push(['The place', escapeHtml(loc[1])]);
   rows.push(['The marker stands for', escapeHtml(REF_TEXT[c.referent] || '')]);
   rows.push(['Coordinate', coordSourceHTML(b.coordSource)]);
+  if (b.gazetteer) rows.push(['Gazetteer', gazetteerHTML(b.gazetteer)]);
   const alts = (b.alternatives || []);
   const altHTML = alts.length
     ? `<ol class="alt-list">${alts.map((a) => `<li>${escapeHtml(a.label)}${a.source ? ` <span class="alt-src">(${a.source.url ? `<a href="${escapeHtml(a.source.url)}" target="_blank" rel="noopener">${escapeHtml(a.source.label)}</a>` : escapeHtml(a.source.label)})</span>` : ''}</li>`).join('')}</ol>`
@@ -336,6 +366,7 @@ function renderPersonHTML(p) {
 
 // --- Person info panel (People overlay) ---
 function showPersonInfo(p) {
+  if (typeof evidenceLayer !== 'undefined') evidenceLayer.clearLayers(); // a battle's rival sites must not linger
   const panel = document.getElementById('infoPanel');
   const content = document.getElementById('infoContent');
   content.innerHTML = renderPersonHTML(p);
