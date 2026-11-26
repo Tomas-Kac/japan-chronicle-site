@@ -533,6 +533,50 @@ body { position: fixed; inset: 0; }
 }
 .castle-legend .cl-title { font-family: var(--font-disp); font-weight: 700; color: var(--ink); margin-bottom: 3px; }
 .castle-legend .castle { margin-right: 7px; vertical-align: middle; }
+
+/* ---- Certainty of a battle's place (see pinKind in app.js) ----
+   A filled · B hollow · C dashed · ? contested. Hollow pins use the paper colour so the
+   difference survives in greyscale print, not only in colour. */
+.battle-pin.pin-b, .battle-pin.pin-c, .battle-pin.pin-q { background: var(--raised); border-color: var(--accent); }
+.battle-pin.pin-b::after { background: var(--accent); }
+.battle-pin.pin-c { border-style: dashed; }
+.battle-pin.pin-c::after { background: var(--accent); width: 7px; height: 7px; margin: -3.5px 0 0 -3.5px; }
+.battle-pin.pin-q { border-style: dotted; }
+.battle-pin.pin-q::after {
+  content: '?'; background: none; width: auto; height: auto; margin: 0;
+  left: 50%; top: 50%; transform: translate(-50%, -52%) rotate(45deg);
+  color: var(--accent-deep); font: 700 14px/1 var(--font-disp, serif);
+}
+/* the same shapes, small and static, for the key and the panel chip */
+.battle-pin.pin-legend {
+  position: relative; display: inline-block; left: auto; top: auto; margin: 0 8px 0 2px;
+  width: 12px; height: 12px; border-width: 2px; vertical-align: -1px; box-shadow: none; cursor: default;
+}
+.battle-pin.pin-legend:hover { transform: rotate(-45deg); }
+.battle-pin.pin-legend::after { width: 4px; height: 4px; margin: -2px 0 0 -2px; }
+.battle-pin.pin-q.pin-legend::after { width: auto; height: auto; margin: 0; font-size: 9px; }
+.certainty-legend summary { cursor: pointer; list-style-position: outside; }
+.certainty-legend .secured-only { display: block; margin-top: 4px; border-top: 1px solid var(--line); padding-top: 4px; cursor: pointer; }
+.certainty-legend .secured-only input { vertical-align: -2px; margin-right: 5px; }
+.certainty-chip {
+  display: inline-block; margin: 2px 0 8px; padding: 2px 9px 2px 6px; border-radius: 14px;
+  border: 1px solid var(--line-2); background: var(--raised); font-size: 12px; color: var(--ink-soft);
+}
+.certainty-chip.pin-c, .certainty-chip.pin-q { border-color: var(--accent); color: var(--accent-deep); }
+.evidence { font-size: 13.5px; }
+.evidence .ev-why { margin: 0 0 8px; }
+.evidence .ev-alt-h { margin: 6px 0 2px; font-weight: 600; }
+.evidence .alt-list { margin: 0 0 8px; padding-left: 20px; }
+.evidence .alt-src, .evidence .ev-basis, .evidence .ext-note { color: var(--ink-mut); font-size: 12.5px; }
+.evidence .ev-rows { display: grid; grid-template-columns: max-content 1fr; gap: 3px 10px; margin: 6px 0; }
+.evidence .ev-rows dt { font-weight: 600; color: var(--ink-soft); }
+.evidence .ev-rows dd { margin: 0; }
+@media (max-width: 480px) { .evidence .ev-rows { grid-template-columns: 1fr; } .evidence .ev-rows dd { margin-bottom: 4px; } }
+.alt-pin {
+  width: 22px; height: 22px; border-radius: 50%; background: var(--raised); color: var(--accent-deep);
+  border: 2px dashed var(--accent); font: 700 12px/18px var(--font-disp, serif); text-align: center;
+  box-shadow: 0 1px 4px rgba(40,30,20,.35);
+}
 .domains-legend { max-height: min(260px, calc(100vh - 320px)); overflow-y: auto; }
 /* Legends sit bottom-left, where the timeline bar would otherwise cover them.
    Lift the whole bottom-left control stack above it. */

@@ -43,6 +43,8 @@
 const BATTLES = [
   {
     id: "sekigahara",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "high" },
     sources: [ { label: "Wikipedia: Battle of Sekigahara", url: "https://en.wikipedia.org/wiki/Battle_of_Sekigahara" } ],
     name: "Battle of Sekigahara",
     images: [
@@ -83,6 +85,8 @@ Within three years of the battle, Ieyasu was appointed shōgun by Emperor Go-Yō
   },
   {
     id: "gifu-castle",
+    coordSource: { kind: "wikipedia-en", ref: "Battle of Gifu Castle", how: "matched" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "high" },
     sources: [ { label: "Wikipedia: Battle of Gifu Castle", url: "https://en.wikipedia.org/wiki/Battle_of_Gifu_Castle" } ],
     name: "Battle of Gifu Castle",
     images: [
@@ -120,6 +124,8 @@ The fall of Gifu opened the road west and set the stage for the Battle of Sekiga
   },
   {
     id: "mimigawa",
+    coordSource: { kind: "wikipedia-en", ref: "Battle of Mimigawa", how: "matched" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Wikipedia: Battle of Mimigawa", url: "https://en.wikipedia.org/wiki/Battle_of_Mimigawa" } ],
     name: "Battle of Mimigawa",
     images: [
@@ -157,6 +163,9 @@ Several senior Ōtomo commanders fell, and the survivors fled some 25 kilometres
   },
   {
     id: "kawanakajima",
+    coordSource: { kind: "wikipedia-en", ref: "Battles of Kawanakajima", how: "matched" },
+    certainty: { location: "B", referent: "series", historicity: "attested", basis: "high", why: "The name covers five campaigns in the same district between 1553 and 1564. Only the fourth, in 1561, was a major battle, fought around Hachimanbara. The marker is the Kawanakajima plain as a whole; the sites of the 1561 battle and the 1564 standoff are drawn while this entry is open." },
+    alternatives: [{ label: "1553, first campaign (battle of Fuse): site not marked" }, { label: "1555, second campaign: a standoff of some 200 days along the Sai river; site not marked" }, { label: "1557, third campaign (Uenohara): site not marked" }, { label: "1561, fourth campaign: the great battle, around Hachimanbara (Kawanakajima battlefield park)", lat: 36.59, lon: 138.1875, source: { label: "Japanese Wikipedia: 川中島古戦場史跡公園", url: "https://ja.wikipedia.org/wiki/川中島古戦場史跡公園" } }, { label: "1564, fifth campaign: the standoff at Shiozaki Castle", lat: 36.549806, lon: 138.095306, source: { label: "Japanese Wikipedia: 塩崎城", url: "https://ja.wikipedia.org/wiki/塩崎城" } }],
     sources: [ { label: "Wikipedia: Battles of Kawanakajima", url: "https://en.wikipedia.org/wiki/Battles_of_Kawanakajima" } ],
     name: "Battles of Kawanakajima",
     images: [
@@ -196,6 +205,8 @@ Despite enormous casualties on both sides, the battles ended without a decisive 
   },
   {
     id: "azukizaka-1542",
+    coordSource: { kind: "wikipedia-en", ref: "Battle of Azukizaka (1542)", how: "matched" },
+    certainty: { location: "B", referent: "point", historicity: "contested", basis: "high", why: "Whether this battle happened at all is doubted. The historian Owada Tetsuo dates the Imagawa advance into eastern Mikawa to 1543 or later, which leaves a battle in 1542 without an occasion. The second battle at Azukizaka, in 1548, is well attested." },
     sources: [ { label: "Wikipedia: Battle of Azukizaka (1542)", url: "https://en.wikipedia.org/wiki/Battle_of_Azukizaka_(1542)" } ],
     name: "Battle of Azukizaka (1542)",
     images: [
@@ -229,7 +240,37 @@ Despite enormous casualties on both sides, the battles ended without a decisive 
 Although Yoshimoto recovered and won a second clash at Azukizaka in 1548, the 1542 victory burnished the reputation of the Oda house into which Nobunaga had been born eight years earlier.`
   },
   {
+    id: "azukizaka-1548",
+    coordSource: { kind: "codh", ref: "nrct-poi:230000366400", how: "set" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "high", why: "The battlefield on the slope of Azukizaka is a traditional site; the marker is the position the CODH gazetteer of historical place names gives for it." },
+    sources: [ { label: "Japanese Wikipedia: 小豆坂の戦い (Battles of Azukizaka)", url: "https://ja.wikipedia.org/wiki/小豆坂の戦い" } ],
+    name: "Second Battle of Azukizaka (1548)",
+    images: [
+      {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Site_of_Azukizaka_Battle.jpg/960px-Site_of_Azukizaka_Battle.jpg",
+        caption: "A monument at the battlefield of Azukizaka in Okazaki, Aichi. Wikimedia Commons."
+      }
+    ],
+    year: 1548,
+    dateLabel: "April 27, 1548 (Tenbun 17/3/19)",
+    period: "Muromachi",
+    location: { name: "Azukizaka slope, Nukata district, Mikawa Province (modern Okazaki, Aichi)", lat: 34.930311, lon: 137.180486 },
+    combatants: {
+      side1: { name: "Imagawa clan", leader: "Taigen Sessai, with Asahina Yasuyoshi", forces: "about 10,000" },
+      side2: { name: "Oda clan", leader: "Oda Nobuhide (vanguard under Oda Nobuhiro)", forces: "about 4,000" }
+    },
+    outcome: "Imagawa victory; the Oda army broke and fled back across the Yahagi river to Anjō.",
+    summary: "The better-attested of the two Azukizaka battles. Oda Nobuhide's drive on Okazaki was met on the hill road east of the castle by an Imagawa army under the monk-general Taigen Sessai, and a flank attack from an ambush routed the Oda.",
+    details: `By 1548 the Oda of Owari and the Imagawa of Suruga were fighting over western Mikawa, where the weakened Matsudaira house held Okazaki Castle. Oda Nobuhide had taken Anjō Castle in 1540, and the year before this battle the young Matsudaira heir, the future Tokugawa Ieyasu, had fallen into Oda hands on his way to be a hostage of the Imagawa.
+
+In the third month of 1548 Nobuhide crossed the Yahagi river with some 4,000 men, his eldest son Nobuhiro leading the vanguard. Imagawa Yoshimoto sent about 10,000 under Taigen Sessai and Asahina Yasuyoshi. The armies met on the 19th at Azukizaka, the slope on a hill road south-east of Okazaki. The Oda at first held their own, but an Imagawa force waiting in ambush struck their flank, and the Oda army broke and fled back across the Yahagi to Anjō.
+
+The traditional account assumes that the Matsudaira and Okazaki were on the Imagawa side. The historian Muraoka Mikio has argued from a letter of the monk Nichikaku that Okazaki had fallen to the Oda in 1547, and that the Matsudaira returned to the Imagawa only after this battle. Unlike the first Azukizaka battle of 1542, whose occurrence is doubted, this one is not in question.`
+  },
+  {
     id: "uedahara",
+    coordSource: { kind: "wikipedia-en", ref: "Battle of Uedahara", how: "matched" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Wikipedia: Battle of Uedahara", url: "https://en.wikipedia.org/wiki/Battle_of_Uedahara" } ],
     name: "Battle of Uedahara",
     images: [
@@ -267,6 +308,8 @@ Murakami's victory was costly, however, and within a few years Shingen drove him
   },
   {
     id: "suriagehara",
+    coordSource: { kind: "wikipedia-en", ref: "Battle of Suriagehara", how: "matched" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Wikipedia: Battle of Suriagehara", url: "https://en.wikipedia.org/wiki/Battle_of_Suriagehara" } ],
     name: "Battle of Suriagehara",
     images: [
@@ -306,6 +349,8 @@ The Date forces broke the Ashina lines, resulting in a disorganized rout. Signif
   },
   {
     id: "hetsugigawa",
+    coordSource: { kind: "wikipedia-en", ref: "Battle of Hetsugigawa", how: "matched" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Wikipedia: Battle of Hetsugigawa", url: "https://en.wikipedia.org/wiki/Battle_of_Hetsugigawa" } ],
     name: "Battle of Hetsugigawa",
     images: [
@@ -343,6 +388,8 @@ It was the Shimazu's last victory of the Kyūshū campaign, within months Hideyo
   },
   {
     id: "hitotoribashi",
+    coordSource: { kind: "wikipedia-en", ref: "Battle of Hitotoribashi", how: "rounded" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Wikipedia: Battle of Hitotoribashi", url: "https://en.wikipedia.org/wiki/Battle_of_Hitotoribashi" } ],
     name: "Battle of Hitotoribashi",
     images: [
@@ -380,6 +427,8 @@ Forced back toward Motomiya Castle, Masamune nonetheless held his ground, and wh
   },
   {
     id: "taineiji",
+    coordSource: { kind: "wikipedia-en", ref: "Tainei-ji incident", how: "rounded" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "high" },
     sources: [ { label: "Wikipedia: Tainei-ji incident", url: "https://en.wikipedia.org/wiki/Tainei-ji_incident" } ],
     name: "Tainei-ji incident",
     images: [
@@ -417,6 +466,8 @@ The fall of the Ōuchi, long the dominant power and trade gateway of western Hon
   },
   {
     id: "arita-nakaide",
+    coordSource: { kind: "wikipedia-en", ref: "Battle of Arita-Nakaide", how: "matched" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Wikipedia: Battle of Arita-Nakaide", url: "https://en.wikipedia.org/wiki/Battle_of_Arita-Nakaide" } ],
     name: "Battle of Arita-Nakaide",
     images: [
@@ -454,6 +505,8 @@ It was Motonari's first battle and the opening note of a career that would make 
   },
   {
     id: "mimasetoge",
+    coordSource: { kind: "wikipedia-en", ref: "Battle of Mimasetoge", how: "matched" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Wikipedia: Battle of Mimasetōge", url: "https://en.wikipedia.org/wiki/Battle_of_Mimasetoge" } ],
     name: "Battle of Mimasetoge",
     images: [
@@ -490,6 +543,8 @@ A fierce counterattack led by Yamagata Masakage shattered the pursuit and let th
   },
   {
     id: "tatarahama-1569",
+    coordSource: { kind: "wikipedia-en", ref: "Battle of Tatarahama (1569)", how: "matched" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "high" },
     sources: [ { label: "Wikipedia: Battle of Tatarahama (1569)", url: "https://en.wikipedia.org/wiki/Battle_of_Tatarahama_(1569)" } ],
     name: "Battle of Tatarahama (1569)",
     images: [
@@ -524,6 +579,8 @@ But the Ōtomo's diplomacy, reviving the Amago to threaten the Mōri rear in Izu
   },
   {
     id: "odaihara",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "high" },
     sources: [ { label: "Wikipedia: Battle of Odaihara", url: "https://en.wikipedia.org/wiki/Battle_of_Odaihara" } ],
     name: "Battle of Odaihara",
     images: [
@@ -561,6 +618,8 @@ Following the victory, Shingen had the severed heads of the fallen Uesugi soldie
   },
   {
     id: "sezawa",
+    coordSource: { kind: "wikipedia-en", ref: "Battle of Sezawa", how: "matched" },
+    certainty: { location: "A", referent: "point", historicity: "contested", basis: "verified", why: "The battle may be legendary, yet its site is well marked: the town of Fujimi designates the Sezawa battlefield and the Kokonotsuzuka mounds as a town historic site. A secure place for an event whose occurrence is in doubt." },
     sources: [ { label: "Wikipedia: Battle of Sezawa", url: "https://en.wikipedia.org/wiki/Battle_of_Sezawa" } ],
     name: "Battle of Sezawa (Legendary)",
     images: [
@@ -598,6 +657,8 @@ Following the victory, Shingen had the severed heads of the fallen Uesugi soldie
   },
   {
     id: "konodai-1538",
+    coordSource: { kind: "wikipedia-en", ref: "Battle of Kōnodai (1538)", how: "matched" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Wikipedia: Battle of Kōnodai (1538)", url: "https://en.wikipedia.org/wiki/Battle_of_K%C5%8Dnodai_(1538)" } ],
     name: "Battle of Kōnodai (1538)",
     images: [
@@ -632,6 +693,8 @@ The battle was a critical milestone in the rise of the Later Hōjō clan. By des
   },
   {
     id: "konodai-1564",
+    coordSource: { kind: "wikipedia-en", ref: "Battle of Kōnodai (1564)", how: "matched" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Wikipedia: Battle of Kōnodai (1564)", url: "https://en.wikipedia.org/wiki/Battle_of_K%C5%8Dnodai_(1564)" } ],
     name: "Battle of Kōnodai (1564)",
     images: [
@@ -668,6 +731,8 @@ According to the Hōjō Godaiki, the Satomi forces initially gained the upper ha
   },
   {
     id: "unnokuchi",
+    coordSource: { kind: "wikidata", ref: "Q2890433", how: "matched" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Wikipedia: Battle of Un no Kuchi", url: "https://en.wikipedia.org/wiki/Battle_of_Un_no_Kuchi" } ],
     name: "Battle of Un no Kuchi",
     images: [
@@ -704,6 +769,9 @@ It was an early sign of the tactical gifts that would define his career.`
   },
   {
     id: "kaga-rebellion",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "A", referent: "area", historicity: "attested", basis: "heuristic", why: "The league took control of the whole province of Kaga, which is shaded. The marker is Takao Castle, where the governor Togashi Masachika fell." },
+    extent: { kind: "provinces", label: "the province of Kaga", provinces: ["加賀"], source: { label: "CODH 旧国・旧郡境界データセット (CC BY-NC 4.0)", url: "https://geoshape.ex.nii.ac.jp/kg/" } },
     sources: [ { label: "Wikipedia: Kaga Rebellion", url: "https://en.wikipedia.org/wiki/Kaga_Rebellion" } ],
     name: "Kaga Rebellion",
     images: [
@@ -739,6 +807,8 @@ The Ikkō-ikki then governed Kaga themselves for almost a hundred years, a remar
   },
   {
     id: "sakainehara",
+    coordSource: { kind: "wikipedia-en", ref: "Battle of Sakainehara", how: "matched" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Wikipedia: Battle of Sakainehara", url: "https://en.wikipedia.org/wiki/Battle_of_Sakainehara" } ],
     name: "Battle of Sakainehara",
     year: 1479,
@@ -774,6 +844,8 @@ The engagement was part of the labyrinthine Kyōtoku Incident, a thirty-year con
   },
   {
     id: "iidagawara",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Japanese Wikipedia: 飯田河原の戦い", url: "https://ja.wikipedia.org/wiki/飯田河原の戦い" } ],
     name: "Battle of Iidagawara",
     images: [
@@ -805,6 +877,8 @@ The Imagawa forces, led by Fukushima Masashige, had threatened the very heart of
   },
   {
     id: "ningbo-incident",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "high" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/%C5%8Cuchi_Yoshioki.jpg/960px-%C5%8Cuchi_Yoshioki.jpg",
@@ -839,6 +913,8 @@ The Imagawa forces, led by Fukushima Masashige, had threatened the very heart of
   },
   {
     id: "nashinokidaira",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "high" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/c/ce/Ujituna_Hojo.jpg",
@@ -873,6 +949,8 @@ The victory was a crucial defensive success for Nobutora, who had spent years un
   },
   {
     id: "ozawahara",
+    coordSource: { kind: "wikipedia-en", ref: "Battle of Ozawahara", how: "matched" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Wikipedia: Battle of Ozawahara", url: "https://en.wikipedia.org/wiki/Battle_of_Ozawahara" } ],
     name: "Battle of Ozawahara",
     year: 1530,
@@ -907,6 +985,8 @@ According to the Hōjō Godaiki, when the Hōjō vanguard was initially pushed b
   },
   {
     id: "idano",
+    coordSource: { kind: "wikidata", ref: "Q4871267", how: "matched" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Japanese Wikipedia: 井田野の戦い", url: "https://ja.wikipedia.org/wiki/井田野の戦い" } ],
     name: "Battle of Idano",
     year: 1536,
@@ -936,6 +1016,8 @@ The ten-year-old Matsudaira Hirotada, backed by his uncles Nobutaka and Yasutaka
   },
   {
     id: "momotsugi",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Wikipedia: Battle of Momotsugi", url: "https://en.wikipedia.org/wiki/Battle_of_Momotsugi" } ],
     name: "Battle of Momotsugi",
     year: 1539,
@@ -963,6 +1045,8 @@ The ten-year-old Matsudaira Hirotada, backed by his uncles Nobutaka and Yasutaka
   },
   {
     id: "ankokuji",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Portrait_of_Itagaki_Nobukata.jpg/960px-Portrait_of_Itagaki_Nobukata.jpg",
@@ -996,6 +1080,8 @@ The ten-year-old Matsudaira Hirotada, backed by his uncles Nobutaka and Yasutaka
   },
   {
     id: "kanoguchi",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "high" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Oda-zuka.jpg/960px-Oda-zuka.jpg",
@@ -1031,6 +1117,8 @@ Nobuhide had launched a massive invasion force to seize Mino Province, pushing t
   },
   {
     id: "oshikibata",
+    coordSource: { kind: "wikipedia-en", ref: "Battle of Oshikibata", how: "matched" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/1/1c/Sue_Harukata_by_Zoku_Eiyu_Hyakunin_Isshu.jpg",
@@ -1067,6 +1155,8 @@ When Sue Harukata usurped the Ōuchi clan, Motonari feigned loyalty before break
   },
   {
     id: "norada",
+    coordSource: { kind: "wikidata", ref: "Q4871913", how: "rounded" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [ { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Azai_Nagamasa3.jpg/960px-Azai_Nagamasa3.jpg", caption: "Period portrait of Azai Nagamasa, the teenage victor of Norada. Wikimedia Commons." } ],
     sources: [ { label: "Wikipedia: Battle of Norada", url: "https://en.wikipedia.org/wiki/Battle_of_Norada" } ],
     name: "Battle of Norada",
@@ -1098,6 +1188,8 @@ The Rokkaku had long dominated the Azai, even forcing Nagamasa to take a Rokkaku
   },
   {
     id: "kyokoji",
+    coordSource: { kind: "wikipedia-en", ref: "Battle of Kyōkōji", how: "matched" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [ { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/%E6%95%99%E8%88%88%E5%AF%BA%E5%B1%B1%E9%96%80.JPG/960px-%E6%95%99%E8%88%88%E5%AF%BA%E5%B1%B1%E9%96%80.JPG", caption: "The mountain gate of Kyōkōji in Yao, Osaka, the temple that gives the battle its name. Wikimedia Commons." } ],
     sources: [ { label: "Wikipedia: Battle of Kyōkōji", url: "https://en.wikipedia.org/wiki/Battle_of_Ky%C5%8Dk%C5%8Dji" } ],
     name: "Battle of Kyōkōji",
@@ -1130,6 +1222,8 @@ The Miyoshi clan, controlling the commercial wealth of Sakai and the vital sea r
   },
   {
     id: "kizaki",
+    coordSource: { kind: "wikipedia-en", ref: "Battle of Kizaki", how: "matched" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [ { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Earthen_wall_of_Honmaru_%28Iino_Castle%29.jpg/960px-Earthen_wall_of_Honmaru_%28Iino_Castle%29.jpg", caption: "Earthen ramparts of the honmaru at Iino Castle in Ebino, Shimazu Yoshihiro's seat beside the Kizaki plain. Wikimedia Commons." } ],
     sources: [ { label: "Wikipedia: Battle of Kizaki", url: "https://en.wikipedia.org/wiki/Battle_of_Kizaki" } ],
     name: "Battle of Kizaki",
@@ -1162,6 +1256,8 @@ The battle is celebrated as a classic execution of the Shimazu's signature "tsur
   },
   {
     id: "tonegawa",
+    coordSource: { kind: "wikipedia-en", ref: "Battle of Tonegawa", how: "matched" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Wikipedia: Battle of Tonegawa", url: "https://en.wikipedia.org/wiki/Battle_of_Tonegawa" } ],
     name: "Battle of Tonegawa",
     year: 1571,
@@ -1194,6 +1290,8 @@ The battle is celebrated as a classic execution of the Shimazu's signature "tsur
   },
   {
     id: "mimaomote",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "high" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/5/53/Tyousokabe_Mototika.jpg",
@@ -1227,6 +1325,9 @@ The battle is celebrated as a classic execution of the Shimazu's signature "tsur
   },
   {
     id: "tensho-iga-war",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "area", historicity: "attested", basis: "high", why: "A war over the whole province of Iga, which is shaded. The marker is an approximate point within it." },
+    extent: { kind: "provinces", label: "the province of Iga", provinces: ["伊賀"], source: { label: "CODH 旧国・旧郡境界データセット (CC BY-NC 4.0)", url: "https://geoshape.ex.nii.ac.jp/kg/" } },
     images: [ { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Kashihara_Castle_%28Iga%29%2C_honmaru.jpg/960px-Kashihara_Castle_%28Iga%29%2C_honmaru.jpg", caption: "The honmaru of Kashihara Castle in Iga, the last stronghold to hold out against Nobunaga in 1581. Wikimedia Commons." } ],
     sources: [ { label: "Wikipedia: Tenshō Iga War", url: "https://en.wikipedia.org/wiki/Tensh%C5%8D_Iga_War" } ],
     name: "Tenshō Iga War",
@@ -1259,6 +1360,8 @@ The Iga fighters' mastery of ambush, infiltration and espionage became the histo
   },
   {
     id: "nagasaki-attacks",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "series", historicity: "attested", basis: "heuristic", why: "Repeated attacks between 1574 and 1579 are combined in this entry." },
     sources: [ { label: "Wikipedia: Donation of Bartolomeu", url: "https://en.wikipedia.org/wiki/Donation_of_Bartolomeu" } ],
     name: "Attacks on Nagasaki (1574–1579)",
     images: [
@@ -1290,6 +1393,8 @@ The Iga fighters' mastery of ambush, infiltration and espionage became the histo
   },
   {
     id: "numajiri",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "high" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/2/2c/Hojo_Ujinao.jpg",
@@ -1324,6 +1429,8 @@ The Iga fighters' mastery of ambush, infiltration and espionage became the histo
   },
   {
     id: "kanagawa-1582",
+    coordSource: { kind: "wikipedia-en", ref: "Battle of Kannagawa", how: "matched" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [ { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/NDL-DC_1306238-Keisai_Eisen-%E5%8D%81%E5%A3%B1_%E6%94%AF%E8%98%87%E8%B7%AF%E3%83%8E%E9%A7%85%E6%9C%AC%E5%BA%84%E5%AE%BF%E7%A5%9E%E6%B5%81%E5%B7%9D%E6%B8%A1%E5%A0%B4.jpg/960px-NDL-DC_1306238-Keisai_Eisen-%E5%8D%81%E5%A3%B1_%E6%94%AF%E8%98%87%E8%B7%AF%E3%83%8E%E9%A7%85%E6%9C%AC%E5%BA%84%E5%AE%BF%E7%A5%9E%E6%B5%81%E5%B7%9D%E6%B8%A1%E5%A0%B4.jpg", caption: "Edo period woodblock print of the ferry crossing on the Kanna River at Honjō. Wikimedia Commons." } ],
     sources: [ { label: "Wikipedia: Battle of Kanagawa", url: "https://en.wikipedia.org/wiki/Battle_of_Kanagawa" } ],
     name: "Battle of Kanagawa",
@@ -1354,6 +1461,8 @@ The Iga fighters' mastery of ambush, infiltration and espionage became the histo
   },
   {
     id: "nakatomigawa",
+    coordSource: { kind: "wikidata", ref: "Q4871850", how: "matched" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Wikipedia: Battle of Nakatomigawa", url: "https://en.wikipedia.org/wiki/Battle_of_Nakatomigawa" } ],
     name: "Battle of Nakatomigawa",
     year: 1582,
@@ -1391,6 +1500,8 @@ The battle marked the culmination of Motochika's ruthless expansion. Sweeping do
   },
   {
     id: "sendaigawa",
+    coordSource: { kind: "wikipedia-en", ref: "Battle of Sendaigawa", how: "matched" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Niiro_Tadamoto.jpg/960px-Niiro_Tadamoto.jpg",
@@ -1426,6 +1537,8 @@ The battle marked the culmination of Motochika's ruthless expansion. Sweeping do
   },
   {
     id: "koriyama-campaign",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "area", historicity: "attested", basis: "heuristic" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Date_Masamune02.jpg/960px-Date_Masamune02.jpg",
@@ -1458,6 +1571,8 @@ The battle marked the culmination of Motochika's ruthless expansion. Sweeping do
   },
   {
     id: "asai-nawate",
+    coordSource: { kind: "wikipedia-ja", ref: "浅井畷の戦い", how: "matched" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Wikipedia: Battle of Asai", url: "https://en.wikipedia.org/wiki/Battle_of_Asai" } ],
     name: "Battle of Asai-nawate",
     year: 1600,
@@ -1493,6 +1608,8 @@ The battle marked the culmination of Motochika's ruthless expansion. Sweeping do
   },
   {
     id: "kuisegawa",
+    coordSource: { kind: "wikipedia-en", ref: "Battle of Kuisegawa", how: "matched" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Kabuto-zuka_in_%C5%8Cgaki.jpg/960px-Kabuto-zuka_in_%C5%8Cgaki.jpg",
@@ -1527,6 +1644,8 @@ The battle marked the culmination of Motochika's ruthless expansion. Sweeping do
   },
   {
     id: "sendanno",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "high" },
     sources: [ { label: "Wikipedia: Battle of Sendanno", url: "https://en.wikipedia.org/wiki/Battle_of_Sendanno" } ],
     name: "Battle of Sendanno",
     year: 1536,
@@ -1555,6 +1674,8 @@ The battle marked the culmination of Motochika's ruthless expansion. Sweeping do
   },
   {
     id: "shiojiritoge",
+    coordSource: { kind: "wikipedia-en", ref: "Battle of Shiojiritoge", how: "matched" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Kisokaido30_Shiojiri.jpg",
@@ -1590,6 +1711,8 @@ Following his severe defeat at Uedahara earlier that year, Shingen faced a massi
   },
   {
     id: "tatarahama-1336",
+    coordSource: { kind: "wikipedia-en", ref: "Battle of Tatarahama (1336)", how: "matched" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "high" },
     sources: [ { label: "Wikipedia: Battle of Tatarahama (1336)", url: "https://en.wikipedia.org/wiki/Battle_of_Tatarahama_(1336)" } ],
     name: "Battle of Tatarahama (1336)",
     year: 1336,
@@ -1623,6 +1746,8 @@ Following his severe defeat at Uedahara earlier that year, Shingen faced a massi
   },
   {
     id: "minatogawa",
+    coordSource: { kind: "wikipedia-en", ref: "Battle of Minatogawa", how: "matched" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "high" },
     sources: [ { label: "Wikipedia: Battle of Minatogawa", url: "https://en.wikipedia.org/wiki/Battle_of_Minatogawa" } ],
     name: "Battle of Minatogawa",
     year: 1336,
@@ -1660,6 +1785,9 @@ His self-sacrifice made him an enduring symbol of loyalty in Japanese culture, a
   },
   {
     id: "kanegasaki-1337",
+    coordSource: { kind: "castle", ref: "kanegasaki-castle", how: "set" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "high" },
+    castle: "kanegasaki-castle",
     sources: [ { label: "Wikipedia: Siege of Kanegasaki (1337)", url: "https://en.wikipedia.org/wiki/Siege_of_Kanegasaki_(1337)" } ],
     name: "Siege of Kanegasaki",
     year: 1337,
@@ -1693,6 +1821,8 @@ His self-sacrifice made him an enduring symbol of loyalty in Japanese culture, a
   },
   {
     id: "ishizu",
+    coordSource: { kind: "wikidata", ref: "Q11586775", how: "matched" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Japanese Wikipedia: 石津の戦い (Battle of Ishizu)", url: "https://ja.wikipedia.org/wiki/%E7%9F%B3%E6%B4%A5%E3%81%AE%E6%88%A6%E3%81%84" } ],
     name: "Battle of Ishizu",
     year: 1338,
@@ -1728,6 +1858,8 @@ His self-sacrifice made him an enduring symbol of loyalty in Japanese culture, a
   },
   {
     id: "shijo-nawate",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Wikipedia: Battle of Shijōnawate", url: "https://en.wikipedia.org/wiki/Battle_of_Shij%C5%8Dnawate" } ],
     name: "Battle of Shijō Nawate",
     year: 1348,
@@ -1763,6 +1895,8 @@ His self-sacrifice made him an enduring symbol of loyalty in Japanese culture, a
   },
   {
     id: "kanno-incident",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "area", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Wikipedia: Kannō disturbance", url: "https://en.wikipedia.org/wiki/Kann%C5%8D_disturbance" } ],
     name: "Kannō Incident",
     yearStart: 1350,
@@ -1796,6 +1930,8 @@ His self-sacrifice made him an enduring symbol of loyalty in Japanese culture, a
   },
   {
     id: "uchidehama",
+    coordSource: { kind: "wikidata", ref: "Q24897898", how: "matched" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/%E8%B6%B3%E5%88%A9%E7%9B%B4%E7%BE%A9.jpg/960px-%E8%B6%B3%E5%88%A9%E7%9B%B4%E7%BE%A9.jpg",
@@ -1830,6 +1966,8 @@ His self-sacrifice made him an enduring symbol of loyalty in Japanese culture, a
   },
   {
     id: "chikugogawa",
+    coordSource: { kind: "wikidata", ref: "Q11602809", how: "rounded" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Japanese Wikipedia: Battle of Chikugogawa (筑後川の戦い)", url: "https://ja.wikipedia.org/wiki/筑後川の戦い" } ],
     name: "Battle of Chikugogawa",
     year: 1359,
@@ -1865,6 +2003,8 @@ His self-sacrifice made him an enduring symbol of loyalty in Japanese culture, a
   },
   {
     id: "oei-rebellion",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Yoshimitsu_Ashikaga_cropped.jpg/960px-Yoshimitsu_Ashikaga_cropped.jpg",
@@ -1897,6 +2037,8 @@ His self-sacrifice made him an enduring symbol of loyalty in Japanese culture, a
   },
   {
     id: "uesugi-zenshu",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "area", historicity: "attested", basis: "high" },
     sources: [ { label: "Japanese Wikipedia: Uesugi Zenshū's Rebellion (上杉禅秀の乱)", url: "https://ja.wikipedia.org/wiki/上杉禅秀の乱" } ],
     name: "Rebellion of Uesugi Zenshū",
     yearStart: 1416,
@@ -1930,6 +2072,8 @@ His self-sacrifice made him an enduring symbol of loyalty in Japanese culture, a
   },
   {
     id: "eikyo-rebellion",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "area", historicity: "attested", basis: "high" },
     sources: [ { label: "Japanese Wikipedia: Eikyō Rebellion (永享の乱)", url: "https://ja.wikipedia.org/wiki/永享の乱" } ],
     name: "Eikyō Rebellion",
     yearStart: 1438,
@@ -1963,6 +2107,8 @@ His self-sacrifice made him an enduring symbol of loyalty in Japanese culture, a
   },
   {
     id: "yuki-war",
+    coordSource: { kind: "wikidata", ref: "Q11606564", how: "matched" },
+    certainty: { location: "A", referent: "area", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Wikipedia: Yūki War", url: "https://en.wikipedia.org/wiki/Y%C5%ABki_War" } ],
     name: "Yūki War (incl. Siege of Yūki)",
     yearStart: 1440,
@@ -1996,6 +2142,8 @@ His self-sacrifice made him an enduring symbol of loyalty in Japanese culture, a
   },
   {
     id: "kakitsu-incident",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "high" },
     sources: [ { label: "Wikipedia: Kakitsu incident", url: "https://en.wikipedia.org/wiki/Kakitsu_incident" } ],
     name: "Kakitsu Incident",
     year: 1441,
@@ -2028,6 +2176,8 @@ His self-sacrifice made him an enduring symbol of loyalty in Japanese culture, a
   },
   {
     id: "itsukushima",
+    coordSource: { kind: "wikipedia-en", ref: "Battle of Itsukushima", how: "matched" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "high" },
     sources: [ { label: "Wikipedia: Battle of Miyajima", url: "https://en.wikipedia.org/wiki/Battle_of_Miyajima" } ],
     name: "Battle of Itsukushima (Miyajima)",
     year: 1555,
@@ -2067,6 +2217,9 @@ The Sue forces were enveloped and destroyed. Sue Harukata committed seppuku. The
   },
   {
     id: "okehazama",
+    coordSource: { kind: "gsi", ref: "桶狭間古戦場伝説地 (GSI place-name search)", how: "set" },
+    certainty: { location: "C", referent: "point", historicity: "attested", basis: "verified", why: "Two localities claim the site. Toyoake holds the nationally designated historic site, and Nagoya's Midori Ward keeps a rival battlefield park about 1 km to the west. The marker sits on the designated site; both candidates are drawn while this entry is open. How the attack was made is disputed too (see the text)." },
+    alternatives: [{ label: "Okehazama battlefield, Toyoake: the nationally designated historic site (桶狭間古戦場伝説地)", lat: 35.0598174, lon: 136.9807802, source: { label: "Agency for Cultural Affairs register; position from the GSI place-name search", url: "https://kunishitei.bunka.go.jp/heritage/detail/401/1432" } }, { label: "Okehazama battlefield park, Nagoya (Midori Ward), the ground long called Dengakutsubo; position is the GSI representative point of Okehazama-kita 3-chōme", lat: 35.054768, lon: 136.971405, source: { label: "Midori Ward Office, Nagoya: Okehazama sights", url: "https://www.city.nagoya.jp/midori/miryoku/1024793/1024801/1024811.html" } }],
     sources: [
       { label: "Wikipedia: Battle of Okehazama", url: "https://en.wikipedia.org/wiki/Battle_of_Okehazama" },
       { label: "Japanese Wikipedia: 桶狭間の戦い (Battle of Okehazama)", url: "https://ja.wikipedia.org/wiki/桶狭間の戦い" }
@@ -2077,9 +2230,9 @@ The Sue forces were enveloped and destroyed. Sue Harukata committed seppuku. The
     dateLabel: "June 12, 1560 (Eiroku 3/5/19)",
     period: "Muromachi",
     location: {
-      name: "Dengaku-hazama, Owari Province (modern Toyoake, Aichi)",
-      lat: 35.05028,
-      lon: 136.99667
+      name: "Okehazama battlefield: the designated historic site in Toyoake, Owari Province (a rival site is kept in Nagoya's Midori Ward)",
+      lat: 35.0598174,
+      lon: 136.9807802
     },
     combatants: {
       side1: {
@@ -2111,6 +2264,8 @@ The Imagawa forces were routed. Imagawa Yoshimoto was killed in action by Oda re
   },
   {
     id: "anegawa",
+    coordSource: { kind: "wikipedia-en", ref: "Battle of Anegawa", how: "matched" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Wikipedia: Battle of Anegawa", url: "https://en.wikipedia.org/wiki/Battle_of_Anegawa" } ],
     name: "Battle of Anegawa",
     year: 1570,
@@ -2150,6 +2305,8 @@ The envelopment forced the Azai and Asakura armies into a general retreat toward
   },
   {
     id: "mikatagahara",
+    coordSource: { kind: "wikipedia-ja", ref: "三方ヶ原の戦い", how: "rounded" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Wikipedia: Battle of Mikatagahara", url: "https://en.wikipedia.org/wiki/Battle_of_Mikatagahara" } ],
     name: "Battle of Mikatagahara",
     year: 1573,
@@ -2189,6 +2346,8 @@ Tokugawa casualties were severe, mitigated only by rearguard actions from comman
   },
   {
     id: "nagashino",
+    coordSource: { kind: "wikipedia-en", ref: "Battle of Nagashino", how: "matched" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "high" },
     sources: [ { label: "Wikipedia: Battle of Nagashino", url: "https://en.wikipedia.org/wiki/Battle_of_Nagashino" } ],
     name: "Battle of Nagashino",
     year: 1575,
@@ -2228,6 +2387,8 @@ The Takeda clan sustained an estimated 10,000 casualties, including the loss of 
   },
   {
     id: "tedorigawa",
+    coordSource: { kind: "wikipedia-en", ref: "Battle of Tedorigawa", how: "rounded" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "verified", why: "The chronicle of Nobunaga's side records a withdrawal but no battle, while Uesugi Kenshin's own letter claims a pursuit and a victory. Historians accept that the armies met; the scale and character of the clash are disputed." },
     sources: [ { label: "Wikipedia: Battle of Tedorigawa", url: "https://en.wikipedia.org/wiki/Battle_of_Tedorigawa" } ],
     name: "Battle of Tedorigawa",
     year: 1577,
@@ -2267,6 +2428,9 @@ The combination of the sudden deluge and the Uesugi offensive resulted in critic
   },
   {
     id: "honnoji",
+    coordSource: { kind: "derived", ref: "centre of the excavated compound (see extent)", how: "set" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "verified", why: "The marker is the temple as it stood in 1582. Excavation has confirmed that the compound filled one block about 120 m square, bounded by Rokkaku, Nishinotōin, Shijō-bōmon (today Takoyakushi) and Aburanokōji streets; the block is drawn while this entry is open. The present Honnō-ji, rebuilt in 1591, stands 1.4 km away." },
+    extent: { kind: "polygon", label: "The Honnō-ji compound in 1582: one block bounded by Rokkaku (north), Nishinotōin (east), Shijō-bōmon, today Takoyakushi (south), and Aburanokōji (west)", coords: [[35.0073435,135.7536673], [35.0073435,135.7551739], [35.0061441,135.7551713], [35.0061465,135.7536567]], source: { label: "Extent: Kyoto City Archaeological Research Institute excavation report (2008); street lines © OpenStreetMap contributors" } },
     sources: [ { label: "Wikipedia: Honnō-ji Incident", url: "https://en.wikipedia.org/wiki/Honn%C5%8D-ji_Incident" } ],
     name: "Honnō-ji Incident",
     year: 1582,
@@ -2277,8 +2441,8 @@ The combination of the sudden deluge and the Uesugi offensive resulted in critic
       // 2026 coordinate audit: the coordinate is right (18 m from the marker of the 1582 site), but the
       // label named the present temple, which stands 1.4 km away on Teramachi since 1591.
       name: "Original site of Honnō-ji (the temple was rebuilt on Teramachi in 1591), Kyoto",
-      lat: 35.005833,
-      lon: 135.753889
+      lat: 35.006744,
+      lon: 135.754421
     },
     combatants: {
       side1: {
@@ -2309,6 +2473,8 @@ The Shinchō Kōki tells how Mitsuhide's men "in no time at all surrounded the H
   },
   {
     id: "yamazaki",
+    coordSource: { kind: "wikipedia-en", ref: "Battle of Yamazaki", how: "matched" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Wikipedia: Battle of Yamazaki", url: "https://en.wikipedia.org/wiki/Battle_of_Yamazaki" } ],
     name: "Battle of Yamazaki",
     year: 1582,
@@ -2349,6 +2515,8 @@ Utilizing the elevation, Hideyoshi's forces directed sustained matchlock fire ag
   },
   {
     id: "shizugatake",
+    coordSource: { kind: "wikipedia-en", ref: "Battle of Shizugatake", how: "matched" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "high" },
     sources: [ { label: "Wikipedia: Battle of Shizugatake", url: "https://en.wikipedia.org/wiki/Battle_of_Shizugatake" } ],
     name: "Battle of Shizugatake",
     year: 1583,
@@ -2389,6 +2557,8 @@ Following the unauthorized withdrawal of Maeda Toshiie from the Shibata coalitio
   },
   {
     id: "komaki-nagakute",
+    coordSource: { kind: "wikipedia-en", ref: "Battle of Komaki and Nagakute", how: "matched" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "high" },
     sources: [ { label: "Wikipedia: Battle of Komaki and Nagakute", url: "https://en.wikipedia.org/wiki/Battle_of_Komaki_and_Nagakute" } ],
     name: "Battle of Komaki and Nagakute",
     year: 1584,
@@ -2425,6 +2595,8 @@ Unable to break Ieyasu in the field, Hideyoshi turned to diplomacy; the war ende
   },
   {
     id: "okita-nawate",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ry%C5%ABz%C5%8Dji_Takanobu.jpg/960px-Ry%C5%ABz%C5%8Dji_Takanobu.jpg",
@@ -2462,6 +2634,9 @@ Trapped and unable to deploy their huge numbers, the Ryūzōji army broke when a
   },
   {
     id: "odawara-1590",
+    coordSource: { kind: "castle", ref: "odawara-castle", how: "set" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "heuristic" },
+    castle: "odawara-castle",
     sources: [ { label: "Wikipedia: Siege of Odawara (1590)", url: "https://en.wikipedia.org/wiki/Siege_of_Odawara_(1590)" } ],
     name: "Siege of Odawara (1590)",
     year: 1590,
@@ -2469,8 +2644,8 @@ Trapped and unable to deploy their huge numbers, the Ryūzōji army broke when a
     period: "Azuchi–Momoyama",
     location: {
       name: "Odawara Castle, Sagami Province (modern Odawara, Kanagawa)",
-      lat: 35.2508,
-      lon: 139.1536
+      lat: 35.2510472,
+      lon: 139.1534417
     },
     combatants: {
       side1: {
@@ -2500,6 +2675,9 @@ Concurrently, Toyotomi subordinate commanders captured Hōjō satellite castles 
   },
   {
     id: "osaka-siege",
+    coordSource: { kind: "castle", ref: "osaka-castle", how: "set" },
+    certainty: { location: "A", referent: "series", historicity: "attested", basis: "high", why: "The winter campaign of 1614 and the summer campaign of 1615 are combined in this entry." },
+    castle: "osaka-castle",
     sources: [ { label: "Wikipedia: Siege of Osaka", url: "https://en.wikipedia.org/wiki/Siege_of_Osaka" } ],
     name: "Siege of Osaka",
     yearStart: 1614,
@@ -2508,8 +2686,8 @@ Concurrently, Toyotomi subordinate commanders captured Hōjō satellite castles 
     period: "Edo",
     location: {
       name: "Osaka Castle, Settsu Province (modern Osaka)",
-      lat: 34.6873,
-      lon: 135.5259
+      lat: 34.687378,
+      lon: 135.525844
     },
     combatants: {
       side1: {
@@ -2537,6 +2715,8 @@ In the Summer Campaign of 1615 the now-defenceless castle was stormed; Sanada Yu
   },
   {
     id: "uji-1180",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "high" },
     sources: [ { label: "Wikipedia: Battle of Uji (1180)", url: "https://en.wikipedia.org/wiki/Battle_of_Uji_(1180)" } ],
     name: "First Battle of Uji",
     images: [
@@ -2567,6 +2747,8 @@ In the Summer Campaign of 1615 the now-defenceless castle was stormed; Sanada Yu
   },
   {
     id: "ishibashiyama",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "high" },
     sources: [ { label: "Wikipedia: Battle of Ishibashiyama", url: "https://en.wikipedia.org/wiki/Battle_of_Ishibashiyama" } ],
     name: "Battle of Ishibashiyama",
     images: [
@@ -2597,6 +2779,8 @@ In the Summer Campaign of 1615 the now-defenceless castle was stormed; Sanada Yu
   },
   {
     id: "fujigawa",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "high" },
     sources: [ { label: "Wikipedia: Battle of Fujigawa", url: "https://en.wikipedia.org/wiki/Battle_of_Fujigawa" } ],
     name: "Battle of Fujigawa",
     images: [
@@ -2627,6 +2811,8 @@ In the Summer Campaign of 1615 the now-defenceless castle was stormed; Sanada Yu
   },
   {
     id: "kurikara",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "high" },
     sources: [ { label: "Wikipedia: Battle of Kurikara Pass", url: "https://en.wikipedia.org/wiki/Battle_of_Kurikara_Pass" } ],
     name: "Battle of Kurikara",
     images: [
@@ -2659,6 +2845,8 @@ The shattering of the Taira field army let Yoshinaka march on the capital; the T
   },
   {
     id: "awazu",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "high" },
     sources: [ { label: "Japanese Wikipedia: 粟津の戦い", url: "https://ja.wikipedia.org/wiki/%E7%B2%9F%E6%B4%A5%E3%81%AE%E6%88%A6%E3%81%84" } ],
     name: "Battle of Awazu",
     images: [
@@ -2689,6 +2877,9 @@ The shattering of the Taira field army let Yoshinaka march on the capital; the T
   },
   {
     id: "ichi-no-tani",
+    coordSource: { kind: "wikipedia-en", ref: "Battle of Ichi-no-Tani", how: "set" },
+    certainty: { location: "C", referent: "point", historicity: "attested", basis: "high", why: "The famous descent down the cliffs (sakaotoshi) is placed by rival traditions above Ichi-no-Tani at Tekkaisan, or about 5 km east at Hiyodorigoe; some historians also question where Ichi-no-Tani itself lay. The marker is the conventional battlefield at Ichi-no-Tani; both descent sites are drawn while this entry is open." },
+    alternatives: [{ label: "Descent from Tekkaisan, above Ichi-no-Tani", lat: 34.647222, lon: 135.099444, source: { label: "Japanese Wikipedia: 鉄拐山", url: "https://ja.wikipedia.org/wiki/鉄拐山" } }, { label: "Descent at Hiyodorigoe", lat: 34.683333, lon: 135.133333, source: { label: "Japanese Wikipedia: 鵯越", url: "https://ja.wikipedia.org/wiki/鵯越" } }],
     sources: [ { label: "Wikipedia: Battle of Ichi-no-Tani", url: "https://en.wikipedia.org/wiki/Battle_of_Ichi-no-Tani" } ],
     name: "Battle of Ichi-no-Tani",
     images: [
@@ -2700,8 +2891,8 @@ The shattering of the Taira field army let Yoshinaka march on the capital; the T
     period: "Genpei",
     location: {
       name: "Ichi-no-Tani, Suma, Settsu Province (modern Suma-ku, Kobe)",
-      lat: 34.6431,
-      lon: 135.1313
+      lat: 34.640278,
+      lon: 135.105278
     },
     combatants: {
       side1: {
@@ -2720,6 +2911,8 @@ The shattering of the Taira field army let Yoshinaka march on the capital; the T
   },
   {
     id: "yashima",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "high" },
     sources: [ { label: "Wikipedia: Battle of Yashima", url: "https://en.wikipedia.org/wiki/Battle_of_Yashima" } ],
     name: "Battle of Yashima",
     images: [
@@ -2751,6 +2944,9 @@ The shattering of the Taira field army let Yoshinaka march on the capital; the T
   },
   {
     id: "dan-no-ura",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "area", historicity: "attested", basis: "high", why: "A naval battle fought in the Kanmon (Shimonoseki) strait, drawn as a line along the strait. The marker is the Dan-no-ura shore." },
+    extent: { kind: "line", label: "The Kanmon (Shimonoseki) strait", source: { label: "OpenStreetMap way 1118123260 (関門海峡, natural=strait), © OpenStreetMap contributors", url: "https://www.openstreetmap.org/way/1118123260" }, coords: [[33.981802,131.006641], [33.963437,130.960808], [33.948309,130.950702], [33.940725,130.940809], [33.912665,130.927591], [33.905328,130.916519], [33.904687,130.903387], [33.909745,130.89386], [33.950053,130.858497]] },
     sources: [ { label: "Wikipedia: Battle of Dan-no-ura", url: "https://en.wikipedia.org/wiki/Battle_of_Dan-no-ura" } ],
     name: "Battle of Dan-no-ura",
     images: [
@@ -2783,6 +2979,8 @@ The destruction of the Taira ended the five-year war and left Minamoto no Yorito
   },
   {
     id: "jokyu-war",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "area", historicity: "attested", basis: "high" },
     sources: [ { label: "Wikipedia: Jōkyū War", url: "https://en.wikipedia.org/wiki/J%C5%8Dky%C5%AB_War" } ],
     name: "Jōkyū War",
     images: [
@@ -2812,6 +3010,8 @@ The destruction of the Taira ended the five-year war and left Minamoto no Yorito
   },
   {
     id: "bunei-mongol-1274",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "area", historicity: "attested", basis: "high" },
     sources: [ { label: "Wikipedia: Battle of Bun'ei", url: "https://en.wikipedia.org/wiki/Battle_of_Bun%27ei" } ],
     name: "Mongol Invasion of 1274 (Bun'ei)",
     images: [
@@ -2841,6 +3041,8 @@ The destruction of the Taira ended the five-year war and left Minamoto no Yorito
   },
   {
     id: "koan-mongol-1281",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "area", historicity: "attested", basis: "high" },
     sources: [ { label: "Wikipedia: Battle of Kōan", url: "https://en.wikipedia.org/wiki/Battle_of_K%C5%8Dan" } ],
     name: "Mongol Invasion of 1281 (Kōan)",
     images: [
@@ -2872,6 +3074,9 @@ In August 1281 a typhoon struck the crowded fleet and destroyed it; great number
   },
   {
     id: "chihaya-1333",
+    coordSource: { kind: "castle", ref: "chihaya-castle", how: "set" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "verified", why: "A designated national historic site (1934). The marker is on the castle remains, not on the summit of Mt. Kongō." },
+    castle: "chihaya-castle",
     sources: [
       { label: "Wikipedia: Siege of Chihaya", url: "https://en.wikipedia.org/wiki/Siege_of_Chihaya" },
       { label: "Japanese Wikipedia: 千早城の戦い (Siege of Chihaya)", url: "https://ja.wikipedia.org/wiki/千早城の戦い" }
@@ -2911,6 +3116,8 @@ Kusunoki had learned from Akasaka, which fell when its water was cut off. At Chi
   },
   {
     id: "fall-of-kamakura-1333",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "high" },
     sources: [ { label: "Wikipedia: Siege of Kamakura (1333)", url: "https://en.wikipedia.org/wiki/Siege_of_Kamakura_(1333)" } ],
     name: "Fall of Kamakura",
     images: [
@@ -2943,6 +3150,8 @@ The city was stormed and burned; Hōjō Takatoki and the leading members of the 
   },
   {
     id: "kizugawaguchi",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "series", historicity: "attested", basis: "high", why: "Two naval battles at the same river mouth, in 1576 and 1578, are combined in this entry." },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/b/b5/%E9%9B%A3%E6%B3%A2%E8%88%B9%E8%BB%8D%E5%9B%B3.jpg",
@@ -2983,6 +3192,8 @@ In response, Oda Nobunaga commissioned the construction of six heavily armed, ir
   },
   {
     id: "shimabara",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "A", referent: "area", historicity: "attested", basis: "high" },
     sources: [ { label: "Wikipedia: Shimabara Rebellion", url: "https://en.wikipedia.org/wiki/Shimabara_Rebellion" } ],
     name: "Shimabara Rebellion",
     images: [
@@ -3011,6 +3222,8 @@ The rebellion hardened the shogunate's resolve: Christianity was suppressed ever
   },
   {
     id: "toba-fushimi",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Wikipedia: Battle of Toba–Fushimi", url: "https://en.wikipedia.org/wiki/Battle_of_Toba%E2%80%93Fushimi" } ],
     name: "Battle of Toba–Fushimi",
     images: [
@@ -3040,6 +3253,8 @@ The victory transformed a domain quarrel into a national war and sent the Imperi
   },
   {
     id: "ueno",
+    coordSource: { kind: "wikipedia-en", ref: "Battle of Ueno", how: "matched" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "high" },
     sources: [ { label: "Wikipedia: Battle of Ueno", url: "https://en.wikipedia.org/wiki/Battle_of_Ueno" } ],
     name: "Battle of Ueno",
     images: [
@@ -3069,6 +3284,8 @@ The victory secured Tokyo for the new government and broke organized resistance 
   },
   {
     id: "aizu",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "high" },
     sources: [ { label: "Wikipedia: Battle of Aizu", url: "https://en.wikipedia.org/wiki/Battle_of_Aizu" } ],
     name: "Battle of Aizu (Siege of Aizuwakamatsu)",
     images: [
@@ -3097,6 +3314,8 @@ The fall of Aizu broke the back of the Northern Alliance and remains a byword fo
   },
   {
     id: "hakodate",
+    coordSource: { kind: "wikidata", ref: "Q716562", how: "matched" },
+    certainty: { location: "A", referent: "area", historicity: "attested", basis: "high" },
     sources: [ { label: "Wikipedia: Battle of Hakodate", url: "https://en.wikipedia.org/wiki/Battle_of_Hakodate" } ],
     name: "Battle of Hakodate (Goryōkaku)",
     images: [
@@ -3125,6 +3344,9 @@ The capitulation ended the Boshin War and completed the Meiji government's conso
   },
   {
     id: "onin",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "area", historicity: "attested", basis: "high", why: "An eleven-year war fought across the city of Kyoto and beyond. The marker is in Nishijin, named after the Western Army's camp. The shaded area is the province of Yamashiro, the nearest unit for which the atlas has a sourced boundary; the atlas has no boundary for the medieval city itself." },
+    extent: { kind: "provinces", label: "the province of Yamashiro", provinces: ["山城"], source: { label: "CODH 旧国・旧郡境界データセット (CC BY-NC 4.0)", url: "https://geoshape.ex.nii.ac.jp/kg/" } },
     sources: [ { label: "Wikipedia: Ōnin War", url: "https://en.wikipedia.org/wiki/%C5%8Cnin_War" } ],
     name: "Ōnin War",
     images: [
@@ -3153,6 +3375,8 @@ The war settled nothing at the centre but destroyed it: with the shogunate power
   },
   {
     id: "anglo-satsuma-war",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "high" },
     sources: [ { label: "Wikipedia: Bombardment of Kagoshima", url: "https://en.wikipedia.org/wiki/Bombardment_of_Kagoshima" } ],
     name: "Bombardment of Kagoshima (Anglo-Satsuma War)",
     images: [
@@ -3175,6 +3399,8 @@ The deeper result was a reversal of policy. Having felt Western firepower first-
   },
   {
     id: "shimonoseki",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "series", historicity: "attested", basis: "high", why: "Several separate bombardments in 1863 and 1864 are combined in this entry." },
     sources: [ { label: "Wikipedia: Shimonoseki campaign", url: "https://en.wikipedia.org/wiki/Shimonoseki_campaign" } ],
     name: "Bombardment of Shimonoseki",
     images: [
@@ -3197,6 +3423,8 @@ The defeat was total, and, like Satsuma at Kagoshima, transformative. Chōshū d
   },
   {
     id: "kinmon",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "high" },
     sources: [ { label: "Wikipedia: Kinmon incident", url: "https://en.wikipedia.org/wiki/Kinmon_incident" } ],
     name: "Kinmon Incident (Hamaguri Gate)",
     images: [
@@ -3219,6 +3447,9 @@ Declared an enemy of the court, Chōshū now faced the First Chōshū Expedition
   },
   {
     id: "choshu-expedition-1866",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "area", historicity: "attested", basis: "high", why: "Fought on four fronts around the borders of Chōshū. The marker is one inland point; the shaded area is Chōshū's two provinces, Suō and Nagato. Two of the fronts lay just outside them, in Iwami and Buzen." },
+    extent: { kind: "provinces", label: "Suō and Nagato, the two provinces of Chōshū", provinces: ["周防", "長門"], source: { label: "CODH 旧国・旧郡境界データセット (CC BY-NC 4.0)", url: "https://geoshape.ex.nii.ac.jp/kg/" } },
     sources: [ { label: "Wikipedia: Second Chōshū expedition", url: "https://en.wikipedia.org/wiki/Second_Ch%C5%8Dsh%C5%AB_expedition" } ],
     name: "Second Chōshū Expedition",
     images: [
@@ -3240,6 +3471,8 @@ When Shōgun Tokugawa Iemochi died in Osaka that summer, the campaign was quietl
   },
   {
     id: "masakado",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "area", historicity: "attested", basis: "high" },
     sources: [ { label: "Wikipedia: Taira no Masakado", url: "https://en.wikipedia.org/wiki/Taira_no_Masakado" } ],
     name: "Taira no Masakado's Rebellion",
     images: [
@@ -3261,6 +3494,8 @@ The court kept no army of its own, so it set warriors against the warrior. In ea
   },
   {
     id: "sumitomo",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "area", historicity: "attested", basis: "high" },
     sources: [ { label: "Wikipedia: Fujiwara no Sumitomo", url: "https://en.wikipedia.org/wiki/Fujiwara_no_Sumitomo" } ],
     name: "Fujiwara no Sumitomo's Rebellion",
     images: [
@@ -3282,6 +3517,8 @@ His rebellion erupted in the same years as Masakado's in the east, and the simul
   },
   {
     id: "zenkunen",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "area", historicity: "attested", basis: "high" },
     sources: [ { label: "Wikipedia: Former Nine Years' War", url: "https://en.wikipedia.org/wiki/Former_Nine_Years%27_War" } ],
     name: "Former Nine Years' War",
     images: [
@@ -3303,6 +3540,8 @@ Only with the help of the powerful Kiyowara clan of Dewa did the Minamoto finall
   },
   {
     id: "gosannen",
+    coordSource: { kind: "wikipedia-ja", ref: "金澤八幡宮", how: "set" },
+    certainty: { location: "C", referent: "area", historicity: "attested", basis: "verified", why: "The Kanezawa stockade has never been identified by excavation. The city of Yokote treats the hill of the later Kanazawa castle, now Kanazawa Park, as its traditional site, and the marker is placed there." },
     sources: [ { label: "Wikipedia: Gosannen War", url: "https://en.wikipedia.org/wiki/Gosannen_War" } ],
     name: "Later Three Years' War",
     images: [
@@ -3327,6 +3566,8 @@ The court, however, ruled the conflict a private quarrel and granted Yoshiie not
   },
   {
     id: "hogen",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "high" },
     sources: [ { label: "Wikipedia: Hōgen rebellion", url: "https://en.wikipedia.org/wiki/H%C5%8Dgen_rebellion" } ],
     name: "Hōgen Rebellion",
     images: [
@@ -3349,6 +3590,8 @@ In a single night's fighting in Kyoto in 1156, the warriors of Go-Shirakawa's pa
   },
   {
     id: "heiji",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "high" },
     sources: [ { label: "Wikipedia: Heiji rebellion", url: "https://en.wikipedia.org/wiki/Heiji_rebellion" } ],
     name: "Heiji Rebellion",
     images: [
@@ -3371,6 +3614,8 @@ Kiyomori raced back, outmanoeuvred the rebels, and crushed them. Yoshitomo was k
   },
   {
     id: "jinshin",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "area", historicity: "attested", basis: "high" },
     sources: [ { label: "Wikipedia: Jinshin War", url: "https://en.wikipedia.org/wiki/Jinshin_War" } ],
     name: "Jinshin War",
     images: [
@@ -3392,6 +3637,8 @@ Kiyomori raced back, outmanoeuvred the rebels, and crushed them. Yoshitomo was k
   },
   {
     id: "hirotsugu",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "area", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Wikipedia: Fujiwara no Hirotsugu rebellion", url: "https://en.wikipedia.org/wiki/Fujiwara_no_Hirotsugu_rebellion" } ],
     name: "Fujiwara no Hirotsugu's Rebellion",
     images: [
@@ -3413,6 +3660,8 @@ Though quickly suppressed, the revolt rattled Emperor Shōmu so badly that he ab
   },
   {
     id: "emishi-war",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "area", historicity: "attested", basis: "high" },
     sources: [ { label: "Wikipedia: Emishi", url: "https://en.wikipedia.org/wiki/Emishi" } ],
     name: "Conquest of the Emishi (Aterui's Resistance)",
     images: [
@@ -3434,6 +3683,8 @@ Emperor Kanmu responded by appointing Sakanoue no Tamuramaro, who waged a relent
   },
   {
     id: "shigisan",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Wikipedia: Soga–Mononobe conflict", url: "https://en.wikipedia.org/wiki/Soga%E2%80%93Mononobe_conflict" } ],
     name: "Battle of Shigisan",
     year: 587,
@@ -3458,6 +3709,8 @@ Soga no Umako led a coalition, including the young Prince Shōtoku, against Mono
   },
   {
     id: "akasaka",
+    coordSource: { kind: "wikipedia-en", ref: "Siege of Akasaka", how: "set" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "verified", why: "A designated national historic site (1934), separately from the upper fort besieged in 1333." },
     sources: [ { label: "Wikipedia: Siege of Akasaka", url: "https://en.wikipedia.org/wiki/Siege_of_Akasaka" } ],
     name: "Siege of Akasaka (Shimo-Akasaka)",
     year: 1331,
@@ -3487,6 +3740,8 @@ There were two Akasaka fortresses. This siege was fought at the lower one, Shimo
   },
   {
     id: "kami-akasaka-1333",
+    coordSource: { kind: "wikipedia-ja", ref: "上赤坂城", how: "set" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "verified", why: "A designated national historic site (1934), under the name Kusunoki Castle (Kami-Akasaka)." },
     sources: [
       { label: "Japanese Wikipedia: 上赤坂城の戦い (Siege of Kami-Akasaka)", url: "https://ja.wikipedia.org/wiki/上赤坂城の戦い" },
       { label: "Japanese Wikipedia: 上赤坂城 (Kami-Akasaka Castle)", url: "https://ja.wikipedia.org/wiki/上赤坂城" },
@@ -3518,6 +3773,8 @@ The siege is unusually well documented. The Kusunoki kassen chūmon, a contempor
   },
   {
     id: "bubaigawara",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Wikipedia: Battle of Bubaigawara", url: "https://en.wikipedia.org/wiki/Battle_of_Bubaigawara" } ],
     name: "Battle of Bubaigawara",
     year: 1333,
@@ -3542,6 +3799,8 @@ The victory threw open the road to the shogunal capital. Within days Nitta storm
   },
   {
     id: "oshu-1189",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "high" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/%E5%A5%A5%E5%B7%9E%E9%AB%98%E9%A4%A8%E5%A4%A7%E5%90%88%E6%88%A6.jpg/960px-%E5%A5%A5%E5%B7%9E%E9%AB%98%E9%A4%A8%E5%A4%A7%E5%90%88%E6%88%A6.jpg",
@@ -3572,6 +3831,8 @@ The destruction of the Northern Fujiwara annexed the great provinces of Mutsu an
   },
   {
     id: "wada-rebellion-1213",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/NDL-DC_9369963-066_Utagawa_Kunisada_crd.jpg/960px-NDL-DC_9369963-066_Utagawa_Kunisada_crd.jpg",
@@ -3598,6 +3859,8 @@ The Wada were defeated and Yoshimori killed together with his sons; control of t
   },
   {
     id: "kasagi-1331",
+    coordSource: { kind: "wikipedia-en", ref: "Siege of Kasagi", how: "matched" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "high" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Emperor-Go-Daigo-by-Ogata-Gekko-1904.png/960px-Emperor-Go-Daigo-by-Ogata-Gekko-1904.png",
@@ -3625,6 +3888,8 @@ Kasagi fell and Go-Daigo was captured and exiled to the Oki Islands. But the ris
   },
   {
     id: "sunomatagawa-1181",
+    coordSource: { kind: "wikidata", ref: "Q2890114", how: "matched" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/f/f0/Sunomata.JPG",
@@ -3649,6 +3914,8 @@ The reverse blunted the eastern Minamoto thrust toward Kyoto early in the Genpei
   },
   {
     id: "hojujidono-1183",
+    coordSource: { kind: "wikipedia-ja", ref: "法住寺合戦", how: "rounded" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Houjyuuji_01.jpg/960px-Houjyuuji_01.jpg",
@@ -3674,6 +3941,8 @@ His seizure of power was short-lived: Yoritomo dispatched his brothers Yoshitsun
   },
   {
     id: "uji-1184",
+    coordSource: { kind: "wikidata", ref: "Q2888057", how: "rounded" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "high" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Kagesue%2C_Takatsuna_and_Shigetada_crossing_the_Uji_river.jpg/960px-Kagesue%2C_Takatsuna_and_Shigetada_crossing_the_Uji_river.jpg",
@@ -3699,6 +3968,8 @@ Yoshinaka fled and was killed at Awazu a few days later. With the Minamoto reuni
   },
   {
     id: "kojima-1184",
+    coordSource: { kind: "wikipedia-en", ref: "Battle of Kojima", how: "rounded" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "high" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Battle_of_Fujito.jpg/960px-Battle_of_Fujito.jpg",
@@ -3724,6 +3995,8 @@ The defeat helped push the Taira back on their base at Yashima in Shikoku, the n
   },
   {
     id: "toi-invasion-1019",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "area", historicity: "attested", basis: "high" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/a/ad/Fujiwara_no_Takaie.png",
@@ -3748,6 +4021,9 @@ The Toi invasion was one of the few foreign attacks on Japan in the Heian period
   },
   {
     id: "baekgang-663",
+    coordSource: { kind: "wikipedia-en", ref: "Battle of Baekgang", how: "matched" },
+    certainty: { location: "C", referent: "point", historicity: "attested", basis: "high", why: "Where the river Paekkang (Japanese Hakusukinoe) lay is unsettled. It is argued together with the site of the Paekche fortress of Churyu, and Korean scholars have argued both for the lower Geum (Kŭm) and for the Dongjin (Tongjin) near Buan (Puan), about 30 km apart. The marker copies the encyclopedia's point on the lower Geum, whose round latitude of exactly 36° marks it as a chosen figure." },
+    alternatives: [{ label: "Lower Geum (Kŭm) river: the encyclopedia's point, which the marker copies", lat: 36, lon: 126.667, source: { label: "Wikipedia: Battle of Baekgang", url: "https://en.wikipedia.org/wiki/Battle_of_Baekgang" } }, { label: "Dongjin (Tongjin) river near Buan (Puan); the point is the county seat, a stand-in for this reading", lat: 35.728056, lon: 126.731944, source: { label: "Wikipedia: Buan County", url: "https://en.wikipedia.org/wiki/Buan_County" } }],
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Map_of_the_Battle_of_Baekgang.png/960px-Map_of_the_Battle_of_Baekgang.png",
@@ -3772,6 +4048,8 @@ The defeat was total: Baekje was extinguished, Japan withdrew from the continent
   },
   {
     id: "hayato-720",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "area", historicity: "attested", basis: "high" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Himekijou_Kagoshima_Japan.jpg/960px-Himekijou_Kagoshima_Japan.jpg",
@@ -3796,6 +4074,8 @@ After more than a year of sieges in the mountainous south, the rebellion was cru
   },
   {
     id: "nakamaro-764",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "area", historicity: "attested", basis: "high" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Sakanoue_no_Karitamaro_Drawing_His_Bow_LACMA_M.84.31.256.jpg/960px-Sakanoue_no_Karitamaro_Drawing_His_Bow_LACMA_M.84.31.256.jpg",
@@ -3820,6 +4100,8 @@ Nakamaro fled toward Ōmi and was caught and killed on the shores of Lake Biwa. 
   },
   {
     id: "koshamain-1457",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "area", historicity: "attested", basis: "high" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Dounan12.svg/960px-Dounan12.svg.png",
@@ -3844,8 +4126,11 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "kawagoe-1546",
+    coordSource: { kind: "castle", ref: "kawagoe-castle", how: "set" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "heuristic" },
+    castle: "kawagoe-castle",
     images: [ { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Kawagoejou.jpg/960px-Kawagoejou.jpg", caption: "The surviving honmaru palace on the site of Kawagoe Castle in Saitama, an Edo period building of 1848; Wikimedia Commons." } ], name: "Night Battle of Kawagoe", year: 1546, dateLabel: "1546 (Tenbun 15)", period: "Muromachi",
-    location: { name: "Kawagoe Castle, Musashi (modern Saitama)", lat: 35.9244, lon: 139.4914 },
+    location: { name: "Kawagoe Castle, Musashi (modern Saitama)", lat: 35.9245139, lon: 139.4915028 },
     combatants: { side1: { name: "Later Hōjō", leader: "Hōjō Ujiyasu" }, side2: { name: "Uesugi coalition & Ashikaga", leader: "Uesugi Tomosada & Uesugi Norimasa" } },
     outcome: "Hōjō victory; a night attack routed a far larger besieging army and secured Hōjō dominance of the Kantō.",
     summary: "One of the most famous night attacks of the Sengoku: Hōjō Ujiyasu, badly outnumbered, relieved the besieged Kawagoe Castle with a surprise assault that shattered the great Uesugi coalition. The victory made the Later Hōjō the masters of the Kantō plain.",
@@ -3854,6 +4139,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "nagaragawa-1556",
+    coordSource: { kind: "wikidata", ref: "Q4871846", how: "matched" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [ { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Nagararivergifu.JPG/960px-Nagararivergifu.JPG", caption: "The Nagara River at Gifu, where Saito Dosan was defeated and killed by his son Yoshitatsu in 1556; Wikimedia Commons." } ], name: "Battle of Nagara-gawa", year: 1556, dateLabel: "1556 (Kōji 2)", period: "Muromachi",
     location: { name: "Nagara River, Mino (modern Gifu)", lat: 35.4451, lon: 136.7635 },
     combatants: { side1: { name: "Saitō Yoshitatsu's forces", leader: "Saitō Yoshitatsu" }, side2: { name: "Saitō Dōsan's forces", leader: "Saitō Dōsan" } },
@@ -3864,6 +4151,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "azukizaka-1564",
+    coordSource: { kind: "wikidata", ref: "Q2762407", how: "matched" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [ { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Azukizaka_1564.JPG/960px-Azukizaka_1564.JPG", caption: "A woodblock triptych by Tsukioka Yoshitoshi, published in 1873, of the 1564 fighting at Daiju-ji between Matsudaira men and the Mikawa Ikko-ikki; Wikimedia Commons." } ], name: "Battle of Azukizaka (1564)", year: 1564, dateLabel: "1564 (Eiroku 7)", period: "Muromachi",
     location: { name: "Okazaki, Mikawa (modern Aichi)", lat: 34.9303, lon: 137.1783 },
     combatants: { side1: { name: "Mikawa Ikkō-ikki", leader: "Ikkō-ikki leaders" }, side2: { name: "Matsudaira clan", leader: "Matsudaira Motoyasu (Tokugawa Ieyasu)" } },
@@ -3874,6 +4163,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "nagashima-1571",
+    coordSource: { kind: "wikipedia-en", ref: "Sieges of Nagashima", how: "matched" },
+    certainty: { location: "B", referent: "series", historicity: "attested", basis: "high", why: "Three campaigns against the Nagashima league, in 1571, 1573 and 1574, are combined in this entry." },
     images: [ { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Battle_of_Nagashima.jpg/960px-Battle_of_Nagashima.jpg", caption: "A nineteenth century triptych by Utagawa Yoshikazu showing the fighting at Nagashima between Oda samurai and the Ikko-ikki; Wikimedia Commons." } ], name: "Sieges of Nagashima (first)", year: 1571, dateLabel: "1571 (Genki 2)", period: "Muromachi",
     location: { name: "Nagashima fortress, Owari (modern Mie)", lat: 35.0886, lon: 136.6981 },
     combatants: { side1: { name: "Ikkō-ikki", leader: "Ikkō-ikki of Nagashima" }, side2: { name: "Oda", leader: "Oda Nobunaga (Shibata Katsuie)" } },
@@ -3884,6 +4175,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "ichijodani-1573",
+    coordSource: { kind: "wikipedia-en", ref: "Siege of Ichijōdani Castle", how: "matched" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "high" },
     images: [ { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Fukugen-madhinami_of_Ichijodani_Asakura_Family_Historic_Ruins07s3s4500.jpg/960px-Fukugen-madhinami_of_Ichijodani_Asakura_Family_Historic_Ruins07s3s4500.jpg", caption: "The reconstructed street of the Asakura castle town at Ichijodani in Fukui, rebuilt on the excavated foundations of the town Nobunaga burned in 1573; Wikimedia Commons." } ], name: "Siege of Ichijōdani Castle", year: 1573, dateLabel: "1573 (Tenshō 1)", period: "Azuchi–Momoyama",
     location: { name: "Ichijōdani, Echizen (modern Fukui)", lat: 35.9995, lon: 136.2956 },
     combatants: { side1: { name: "Oda", leader: "Oda Nobunaga" }, side2: { name: "Asakura", leader: "Asakura Yoshikage" } },
@@ -3894,6 +4187,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "otate-1578",
+    coordSource: { kind: "wikipedia-en", ref: "Siege of Otate", how: "matched" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [ { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Honmaru_of_Kasugayama_Castle.jpg/960px-Honmaru_of_Kasugayama_Castle.jpg", caption: "The honmaru enclosure on Kasugayama Castle in Joetsu, the Uesugi seat that Kagekatsu seized when the succession war opened; Wikimedia Commons." } ], name: "Siege of Otate (Otate no Ran)", year: 1578, dateLabel: "1578–1579 (Tenshō 6–7)", period: "Azuchi–Momoyama",
     location: { name: "Otate, Kasugayama, Echigo (modern Niigata)", lat: 37.1673, lon: 138.2356 },
     combatants: { side1: { name: "Uesugi Kagetora's faction", leader: "Uesugi Kagetora" }, side2: { name: "Uesugi Kagekatsu's faction", leader: "Uesugi Kagekatsu" } },
@@ -3904,13 +4199,16 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "tottori-1581", name: "Siege of Tottori", year: 1581, dateLabel: "1581 (Tenshō 9)", period: "Azuchi–Momoyama",
+    coordSource: { kind: "castle", ref: "tottori-castle", how: "set" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "heuristic" },
+    castle: "tottori-castle",
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Tottori_castle04_2816.jpg/960px-Tottori_castle04_2816.jpg",
         caption: "The stone ramparts of Tottori Castle in Tottori Prefecture, the fortress starved into surrender in 1581, Wikimedia Commons."
       }
     ],
-    location: { name: "Tottori Castle, Inaba (modern Tottori)", lat: 35.5074, lon: 134.24 },
+    location: { name: "Tottori Castle, Inaba (modern Tottori)", lat: 35.51, lon: 134.24111 },
     combatants: { side1: { name: "Oda", leader: "Hashiba (Toyotomi) Hideyoshi" }, side2: { name: "Mōri", leader: "Kikkawa Tsuneie" } },
     outcome: "Hideyoshi victory; the garrison was starved into surrender.",
     summary: "Hideyoshi took Tottori Castle not by storm but by starvation, buying up the region's rice beforehand and blockading the fortress until famine forced its surrender. The commander Kikkawa Tsuneie gave his life to save the garrison.",
@@ -3919,6 +4217,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "takamatsu-1582", name: "Siege of Takamatsu", year: 1582, dateLabel: "April–June 1582 (Tenshō 10)", period: "Azuchi–Momoyama",
+    coordSource: { kind: "wikipedia-en", ref: "Siege of Takamatsu", how: "matched" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Takamatsumizuseme2.jpg/960px-Takamatsumizuseme2.jpg",
@@ -3935,6 +4235,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "tenmokuzan-1582", name: "Battle of Tenmokuzan", year: 1582, dateLabel: "March 1582 (Tenshō 10)", period: "Azuchi–Momoyama",
+    coordSource: { kind: "wikipedia-en", ref: "Battle of Tenmokuzan", how: "matched" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Katsuyori_died_at_Mt.Tenmoku_01.jpg/960px-Katsuyori_died_at_Mt.Tenmoku_01.jpg",
@@ -3950,6 +4252,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "kunohe-1591", name: "Kunohe Rebellion", year: 1591, dateLabel: "1591 (Tenshō 19)", period: "Azuchi–Momoyama",
+    coordSource: { kind: "wikipedia-en", ref: "Kunohe rebellion", how: "matched" },
+    certainty: { location: "A", referent: "area", historicity: "attested", basis: "heuristic" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/8/8a/Kunohejou001.jpg",
@@ -3965,6 +4269,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "gassantoda-1543", name: "Sieges of Gassantoda Castle", year: 1543, dateLabel: "1542–1543 (Tenbun 11–12)", period: "Muromachi",
+    coordSource: { kind: "wikipedia-en", ref: "Sieges of Gassantoda Castle", how: "matched" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "high" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/%E6%9C%88%E5%B1%B1.jpg/960px-%E6%9C%88%E5%B1%B1.jpg",
@@ -3980,6 +4286,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "ino-1556", name: "Battle of Inō", year: 1556, dateLabel: "1556 (Kōji 2)", period: "Muromachi",
+    coordSource: { kind: "wikidata", ref: "Q4187960", how: "matched" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/In%C5%8Dgahara_Battlefield.jpg/960px-In%C5%8Dgahara_Battlefield.jpg",
@@ -3995,13 +4303,16 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "odawara-1561", name: "Siege of Odawara (1561)", year: 1561, dateLabel: "1561 (Eiroku 4)", period: "Muromachi",
+    coordSource: { kind: "castle", ref: "odawara-castle", how: "set" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "heuristic" },
+    castle: "odawara-castle",
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Odawara_2006-02-21_c.jpg/960px-Odawara_2006-02-21_c.jpg",
         caption: "The reconstructed keep of Odawara Castle in Kanagawa Prefecture, the Hojo stronghold that Uesugi Kenshin besieged in 1561; Wikimedia Commons."
       }
     ],
-    location: { name: "Odawara Castle, Sagami (modern Kanagawa)", lat: 35.2508, lon: 139.1536 },
+    location: { name: "Odawara Castle, Sagami (modern Kanagawa)", lat: 35.2510472, lon: 139.1534417 },
     combatants: { side1: { name: "Uesugi coalition", leader: "Uesugi Kenshin" }, side2: { name: "Later Hōjō", leader: "Hōjō Ujiyasu" } },
     outcome: "Hōjō held; Kenshin's great coalition could not take Odawara and withdrew.",
     summary: "Uesugi Kenshin led a vast Kantō coalition against the Hōjō capital of Odawara, but the fortress held and supply forced him to retreat. It showed both Kenshin's reach and the strength of Odawara's defences, which would defy Shingen too, and only fall to Hideyoshi in 1590.",
@@ -4010,13 +4321,16 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "minowa-1566", name: "Siege of Minowa", year: 1566, dateLabel: "1566 (Eiroku 9)", period: "Muromachi",
+    coordSource: { kind: "castle", ref: "minowa-castle", how: "set" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "heuristic" },
+    castle: "minowa-castle",
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Minowajyo.jpg/960px-Minowajyo.jpg",
         caption: "A stone marker at the ruins of Minowa Castle in Gunma Prefecture, the Nagano clan fortress taken by Takeda Shingen; Wikimedia Commons."
       }
     ],
-    location: { name: "Minowa Castle, Kōzuke (modern Gunma)", lat: 36.4044, lon: 138.9514 },
+    location: { name: "Minowa Castle, Kōzuke (modern Gunma)", lat: 36.404944, lon: 138.950972 },
     combatants: { side1: { name: "Nagano (Uesugi-allied)", leader: "Kamiizumi Hidetsuna" }, side2: { name: "Takeda", leader: "Takeda Shingen" } },
     outcome: "Takeda victory; Minowa fell, extending Takeda power into Kōzuke.",
     summary: "Takeda Shingen took the Nagano clan's castle of Minowa after a long contest for western Kōzuke. Among its defenders was the famed swordsman Kamiizumi Hidetsuna, founder of the Shinkage-ryū.",
@@ -4025,13 +4339,16 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "nanao-1577", name: "Siege of Nanao", year: 1577, dateLabel: "1576–1577 (Tenshō 4–5)", period: "Azuchi–Momoyama",
+    coordSource: { kind: "castle", ref: "nanao-castle", how: "set" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "heuristic" },
+    castle: "nanao-castle",
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Nanaojo-old-rute.JPG/960px-Nanaojo-old-rute.JPG",
         caption: "The old approach road on the mountain at Nanao Castle in Ishikawa Prefecture, the Hatakeyama seat besieged by Uesugi Kenshin; Wikimedia Commons."
       }
     ],
-    location: { name: "Nanao Castle, Noto (modern Ishikawa)", lat: 37.0092, lon: 136.9842 },
+    location: { name: "Nanao Castle, Noto (modern Ishikawa)", lat: 37.0089, lon: 136.9841 },
     combatants: { side1: { name: "Uesugi", leader: "Uesugi Kenshin" }, side2: { name: "Hatakeyama", leader: "Chō Tsugutsura" } },
     outcome: "Uesugi victory; Nanao fell to Kenshin, who then defeated an Oda relief army at Tedorigawa.",
     summary: "Uesugi Kenshin captured the great Noto fortress of Nanao after a long siege and an inside betrayal. With Nanao taken, he turned to meet Oda Nobunaga's relief army and crushed it at Tedorigawa.",
@@ -4041,6 +4358,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "itami-1579", name: "Siege of Itami (1579)", year: 1579, dateLabel: "1578–1579 (Tenshō 6–7)", period: "Azuchi–Momoyama",
+    coordSource: { kind: "wikipedia-en", ref: "Siege of Itami (1579)", how: "matched" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Itamij15.jpg/960px-Itamij15.jpg",
@@ -4056,13 +4375,16 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "miki-1580", name: "Siege of Miki", year: 1580, dateLabel: "1578–1580 (Tenshō 6–8)", period: "Azuchi–Momoyama",
+    coordSource: { kind: "castle", ref: "miki-castle", how: "set" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "heuristic" },
+    castle: "miki-castle",
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Mikij31.jpg/960px-Mikij31.jpg",
         caption: "Painted screen map of Hashiba Hideyoshi's encirclement of Miki Castle, held at Unryuji temple; Wikimedia Commons."
       }
     ],
-    location: { name: "Miki Castle, Harima (modern Hyōgo)", lat: 34.7999, lon: 134.9878 },
+    location: { name: "Miki Castle, Harima (modern Hyōgo)", lat: 34.7999, lon: 134.988 },
     combatants: { side1: { name: "Oda", leader: "Hashiba (Toyotomi) Hideyoshi" }, side2: { name: "Bessho", leader: "Bessho Nagaharu" } },
     outcome: "Hideyoshi victory; the garrison was starved out and Bessho Nagaharu took his own life to save his men.",
     summary: "Hideyoshi's two-year blockade of Miki Castle, the 'starvation of Miki', broke the Bessho clan's revolt in Harima. Like Tottori after it, it showed Hideyoshi's preference for siege and supply over costly assault.",
@@ -4071,6 +4393,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "arai-1516", name: "Siege of Arai", year: 1516, dateLabel: "1516 (Eishō 13)", period: "Muromachi",
+    coordSource: { kind: "wikipedia-en", ref: "Siege of Arai", how: "matched" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/1/18/Soun_Hojo_portrait.jpg",
@@ -4086,13 +4410,16 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "odawara-1569", name: "Siege of Odawara (1569)", year: 1569, dateLabel: "1569 (Eiroku 12)", period: "Muromachi",
+    coordSource: { kind: "castle", ref: "odawara-castle", how: "set" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "heuristic" },
+    castle: "odawara-castle",
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/OdawaraJo1.jpg/960px-OdawaraJo1.jpg",
         caption: "The reconstructed keep of Odawara Castle in Kanagawa, the Hojo stronghold Takeda Shingen failed to take in 1569; Wikimedia Commons."
       }
     ],
-    location: { name: "Odawara Castle, Sagami (modern Kanagawa)", lat: 35.251, lon: 139.1535 },
+    location: { name: "Odawara Castle, Sagami (modern Kanagawa)", lat: 35.2510472, lon: 139.1534417 },
     combatants: { side1: { name: "Takeda", leader: "Takeda Shingen" }, side2: { name: "Later Hōjō", leader: "Hōjō Ujiyasu" } },
     outcome: "Hōjō held; Takeda Shingen burned the town but could not take the castle and withdrew.",
     summary: "Takeda Shingen drove into the Kantō and reached the walls of Odawara, but, like Uesugi Kenshin before him, could not crack the Hōjō fortress. He burned the castle town and pulled back, fighting the Hōjō again at Mimasetōge on the retreat.",
@@ -4101,6 +4428,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "noda-1573", name: "Siege of Noda Castle", year: 1573, dateLabel: "1573 (Genki 4)", period: "Azuchi–Momoyama",
+    coordSource: { kind: "wikipedia-en", ref: "Siege of Noda Castle", how: "matched" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Takeda_Daizentay%C5%AB_Harunobu_Ny%C5%ABd%C5%8D_Shingen.jpg/960px-Takeda_Daizentay%C5%AB_Harunobu_Ny%C5%ABd%C5%8D_Shingen.jpg",
@@ -4116,13 +4445,16 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "takato-1582", name: "Siege of Takatō (1582)", year: 1582, dateLabel: "March 1582 (Tenshō 10)", period: "Azuchi–Momoyama",
+    coordSource: { kind: "castle", ref: "takato-castle", how: "set" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "heuristic" },
+    castle: "takato-castle",
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Burg_Takato_Plan_2.jpg/960px-Burg_Takato_Plan_2.jpg",
         caption: "Annotated plan of Takatō Castle in Ina, Nagano, the fortress besieged in 1582, from Wikimedia Commons."
       }
     ],
-    location: { name: "Takatō Castle, Shinano (modern Nagano)", lat: 35.8332, lon: 138.0625 },
+    location: { name: "Takatō Castle, Shinano (modern Nagano)", lat: 35.8330778, lon: 138.0628028 },
     combatants: { side1: { name: "Oda", leader: "Oda Nobutada" }, side2: { name: "Takeda", leader: "Nishina Morinobu" } },
     outcome: "Oda victory; the lone Takeda castle to resist was stormed, days before the clan's final destruction at Tenmokuzan.",
     summary: "As the Oda–Tokugawa invasion swept through Takeda lands in 1582, every castle surrendered except Takatō, held by Katsuyori's brother Nishina Morinobu. His defiant last stand and death came just before the Takeda were extinguished at Tenmokuzan.",
@@ -4132,6 +4464,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "oshi-1590", name: "Siege of Oshi", year: 1590, dateLabel: "1590 (Tenshō 18)", period: "Azuchi–Momoyama",
+    coordSource: { kind: "wikipedia-en", ref: "Siege of Oshi", how: "matched" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Oshi-jo_fukugen_001.jpg/960px-Oshi-jo_fukugen_001.jpg",
@@ -4147,6 +4481,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "iwaya-1585", name: "Siege of Iwaya Castle", year: 1585, dateLabel: "1585 (Tenshō 13)", period: "Azuchi–Momoyama",
+    coordSource: { kind: "wikipedia-en", ref: "Siege of Iwaya Castle", how: "matched" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/6/6c/Iwaya-jyou.jpg",
@@ -4162,6 +4498,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "hiketa-1583", name: "Siege of Hiketa", year: 1583, dateLabel: "1583 (Tenshō 11)", period: "Azuchi–Momoyama",
+    coordSource: { kind: "wikipedia-en", ref: "Siege of Hiketa", how: "matched" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Hiketa_jyou.jpg/960px-Hiketa_jyou.jpg",
@@ -4177,6 +4515,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "muraki-1554", name: "Battle of Muraki Castle", year: 1554, dateLabel: "1554 (Tenbun 23)", period: "Muromachi",
+    coordSource: { kind: "wikipedia-en", ref: "Battle of Muraki Castle", how: "matched" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Oda-Nobunaga-by-Utagawa-Kuniyoshi.png/960px-Oda-Nobunaga-by-Utagawa-Kuniyoshi.png",
@@ -4192,6 +4532,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "katsurayama-1557", name: "Siege of Katsurayama", year: 1557, dateLabel: "1557 (Kōji 3)", period: "Muromachi",
+    coordSource: { kind: "wikipedia-en", ref: "Siege of Katsurayama", how: "matched" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/9/9e/Katsurayamajyo.jpg",
@@ -4207,6 +4549,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "toishi-1550", name: "Sieges of Toishi", yearStart: 1550, yearEnd: 1551, dateLabel: "1550–1551 (Tenbun 19–20)", period: "Muromachi",
+    coordSource: { kind: "wikipedia-en", ref: "Sieges of Toishi", how: "matched" },
+    certainty: { location: "A", referent: "series", historicity: "attested", basis: "heuristic", why: "Two sieges, the Takeda defeat of 1550 and Sanada Yukitaka's capture of the castle in 1551, are combined in this entry." },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Toishijyo.JPG/960px-Toishijyo.JPG",
@@ -4222,6 +4566,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "yoshida-1575", name: "Siege of Yoshida Castle", year: 1575, dateLabel: "1575 (Tenshō 3)", period: "Azuchi–Momoyama",
+    coordSource: { kind: "wikipedia-en", ref: "Siege of Yoshida Castle", how: "matched" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Yoshida_Castle_%28Aichi%29_3.jpg/960px-Yoshida_Castle_%28Aichi%29_3.jpg",
@@ -4238,6 +4584,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "takabaru-1576", name: "Siege of Takabaru", year: 1576, dateLabel: "1576 (Tenshō 4)", period: "Azuchi–Momoyama",
+    coordSource: { kind: "wikipedia-en", ref: "Siege of Takabaru", how: "matched" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/0/0f/It%C5%8D_Yoshisuke.png",
@@ -4253,6 +4601,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "omosu-1580", name: "Battle of Omosu", year: 1580, dateLabel: "1580 (Tenshō 8)", period: "Azuchi–Momoyama",
+    coordSource: { kind: "wikipedia-en", ref: "Battle of Omosu", how: "matched" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "high" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Takeda_Katsuyori.jpg/960px-Takeda_Katsuyori.jpg",
@@ -4268,6 +4618,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "uozu-1582", name: "Siege of Uozu", yearStart: 1582, yearEnd: 1582, dateLabel: "May–June 1582 (Tenshō 10)", period: "Azuchi–Momoyama",
+    coordSource: { kind: "wikipedia-en", ref: "Siege of Uozu", how: "matched" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Uozu_Castle_Site.jpg/960px-Uozu_Castle_Site.jpg",
@@ -4286,13 +4638,16 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
     // 2.05 km from the castle and close to the site of the 1552 Kayazu fight. The label names
     // the castle, so the pin now matches the castle layer (= ja 清洲城).
     id: "kiyosu-1552", name: "Battle of Kiyosu Castle", yearStart: 1552, yearEnd: 1554, dateLabel: "1552–1554 (Tenbun 21–23)", period: "Muromachi",
+    coordSource: { kind: "castle", ref: "kiyosu-castle", how: "set" },
+    certainty: { location: "A", referent: "series", historicity: "attested", basis: "heuristic", why: "A struggle of several years inside the Oda house, ending with the capture of Kiyosu Castle." },
+    castle: "kiyosu-castle",
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/b/b9/Kiyosu_Castle.JPG",
         caption: "The modern reconstructed keep of Kiyosu Castle in Kiyosu, Aichi Prefecture, via Wikimedia Commons."
       }
     ],
-    location: { name: "Kiyosu Castle, Owari (modern Kiyosu, Aichi)", lat: 35.216575, lon: 136.843597 },
+    location: { name: "Kiyosu Castle, Owari (modern Kiyosu, Aichi)", lat: 35.216575, lon: 136.8435972 },
     combatants: { side1: { name: "Oda (Nagoya line)", leader: "Oda Nobunaga" }, side2: { name: "Oda (Kiyosu line)", leader: "Oda Nobutomo" } },
     outcome: "Nobunaga victory; the rival Kiyosu branch was destroyed and Kiyosu became his base.",
     summary: "A struggle within the Oda house itself. The young Nobunaga overcame the rival Kiyosu branch of his own clan, took their castle, and made it his headquarters, a decisive step toward unifying his home province of Owari.",
@@ -4301,6 +4656,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "fukuda-bay-1565", name: "Battle of Fukuda Bay", year: 1565, dateLabel: "1565 (Eiroku 8)", period: "Muromachi",
+    coordSource: { kind: "wikipedia-en", ref: "Battle of Fukuda Bay", how: "matched" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "high" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Matsura_Takanobu%2816th%29cr.jpg/960px-Matsura_Takanobu%2816th%29cr.jpg",
@@ -4316,6 +4673,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "inabayama-1567", name: "Siege of Inabayama Castle", year: 1567, dateLabel: "1567 (Eiroku 10)", period: "Muromachi",
+    coordSource: { kind: "wikipedia-ja", ref: "稲葉山城の戦い", how: "matched" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "high" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Gifu_Castle.jpg/960px-Gifu_Castle.jpg",
@@ -4331,6 +4690,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "takatenjin-1574", name: "Siege of Takatenjin (1574)", year: 1574, dateLabel: "1574 (Tenshō 2)", period: "Azuchi–Momoyama",
+    coordSource: { kind: "wikipedia-en", ref: "Siege of Takatenjin (1574)", how: "matched" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Takatenjin_Castle_Site.01.jpg/960px-Takatenjin_Castle_Site.01.jpg",
@@ -4347,6 +4708,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "takatenjin-1581", name: "Siege of Takatenjin (1581)", yearStart: 1580, yearEnd: 1581, dateLabel: "1580–1581 (Tenshō 8–9)", period: "Azuchi–Momoyama",
+    coordSource: { kind: "wikipedia-en", ref: "Siege of Takatenjin (1581)", how: "matched" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Takatenjin_Castle_Site.02.jpg/960px-Takatenjin_Castle_Site.02.jpg",
@@ -4363,6 +4726,9 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "kyushu-campaign-1586", name: "Kyūshū Campaign (Hideyoshi's invasion)", yearStart: 1586, yearEnd: 1587, dateLabel: "1586–1587 (Tenshō 14–15)", period: "Azuchi–Momoyama",
+    coordSource: { kind: "wikipedia-en", ref: "Kyūshū campaign", how: "matched" },
+    certainty: { location: "B", referent: "area", historicity: "attested", basis: "high", why: "A campaign across the whole island. The marker is simply the island's centre, where no fighting took place; the shaded area is the nine provinces of Kyūshū." },
+    extent: { kind: "provinces", label: "the nine provinces of Kyūshū", provinces: ["筑前", "筑後", "豊前", "豊後", "肥前", "肥後", "日向", "大隅", "薩摩"], source: { label: "CODH 旧国・旧郡境界データセット (CC BY-NC 4.0)", url: "https://geoshape.ex.nii.ac.jp/kg/" } },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Toyotomi_Hideyoshi_c1598_Kodai-ji_Temple.png/960px-Toyotomi_Hideyoshi_c1598_Kodai-ji_Temple.png",
@@ -4378,13 +4744,16 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "takato-1545", name: "Siege of Takatō (1545)", year: 1545, dateLabel: "1545 (Tenbun 14)", period: "Muromachi",
+    coordSource: { kind: "castle", ref: "takato-castle", how: "set" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "heuristic" },
+    castle: "takato-castle",
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/TakatoCastle%EF%BC%88%E9%AB%98%E9%81%A0%E5%9F%8E%EF%BC%89.JPG/960px-TakatoCastle%EF%BC%88%E9%AB%98%E9%81%A0%E5%9F%8E%EF%BC%89.JPG",
         caption: "The Takatō Castle site at Ina in Nagano, taken by the Takeda in 1545 and now a park famous for its cherry blossom; Wikimedia Commons."
       }
     ],
-    location: { name: "Takatō Castle, Ina valley, Shinano (modern Ina, Nagano)", lat: 35.8331, lon: 138.0628 },
+    location: { name: "Takatō Castle, Ina valley, Shinano (modern Ina, Nagano)", lat: 35.8330778, lon: 138.0628028 },
     combatants: { side1: { name: "Takeda", leader: "Takeda Shingen (with Itagaki Nobukata)" }, side2: { name: "Takatō", leader: "Takatō Yoritsugu" } },
     outcome: "Takeda victory; the castle fell after Yoritsugu's allies failed to relieve him.",
     summary: "In 1545 Takeda Shingen besieged and captured Takatō Castle in the Ina valley of Shinano, defeating Takatō Yoritsugu and pressing forward the Takeda conquest of the province.",
@@ -4393,6 +4762,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "kajiki-1549", name: "Siege of Kajiki", year: 1549, dateLabel: "1549 (Tenbun 18)", period: "Muromachi",
+    coordSource: { kind: "wikidata", ref: "Q7510134", how: "matched" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/a/a7/Shimazu_Takahisa.jpg",
@@ -4408,6 +4779,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "terabe-1558", name: "Siege of Terabe", year: 1558, dateLabel: "1558 (Eiroku 1)", period: "Muromachi",
+    coordSource: { kind: "wikipedia-en", ref: "Siege of Terabe", how: "matched" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Toyota_terabe_castle_01.jpg/960px-Toyota_terabe_castle_01.jpg",
@@ -4423,6 +4796,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "musashi-matsuyama-1563", name: "Siege of Musashi-Matsuyama (1563)", year: 1563, dateLabel: "1563 (Eiroku 6)", period: "Muromachi",
+    coordSource: { kind: "wikipedia-en", ref: "Siege of Musashi-Matsuyama (1563)", how: "matched" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/e/e5/Musashi_Matsuyama_Castle.jpg",
@@ -4438,6 +4813,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "chokoji-1570", name: "Siege of Chōkō-ji", year: 1570, dateLabel: "1570 (Genki 1)", period: "Muromachi",
+    coordSource: { kind: "wikipedia-en", ref: "Siege of Chōkō-ji", how: "matched" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/c/c2/Kamewari_Shibata.jpg",
@@ -4453,6 +4830,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "toyama-1585", name: "Siege of Toyama", year: 1585, dateLabel: "1585 (Tenshō 13)", period: "Azuchi–Momoyama",
+    coordSource: { kind: "wikipedia-en", ref: "Siege of Toyama", how: "matched" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Toyama_Municipal_Folk_Museum_%28mock_keep_tower_of_the_Toyama_Castle%29_20180503.jpg/960px-Toyama_Municipal_Folk_Museum_%28mock_keep_tower_of_the_Toyama_Castle%29_20180503.jpg",
@@ -4468,13 +4847,16 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "ueda-1600", name: "Siege of Ueda (1600)", year: 1600, dateLabel: "1600 (Keichō 5)", period: "Azuchi–Momoyama",
+    coordSource: { kind: "castle", ref: "ueda-castle", how: "set" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "heuristic" },
+    castle: "ueda-castle",
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Ueda_Castle_Amagafuchi.jpg/960px-Ueda_Castle_Amagafuchi.jpg",
         caption: "Ueda Castle in Nagano Prefecture, held by the Sanada against Tokugawa Hidetada in 1600; the castle was razed soon after, and the surviving turrets belong to a rebuilding begun in 1626. Wikimedia Commons."
       }
     ],
-    location: { name: "Ueda Castle, Shinano Province (modern Ueda, Nagano)", lat: 36.4042, lon: 138.2439 },
+    location: { name: "Ueda Castle, Shinano Province (modern Ueda, Nagano)", lat: 36.4039222, lon: 138.2447944 },
     combatants: { side1: { name: "Tokugawa", leader: "Tokugawa Hidetada" }, side2: { name: "Sanada", leader: "Sanada Masayuki (with Sanada Yukimura)" } },
     outcome: "Sanada victory; ~2,000 defenders held off Hidetada's ~38,000, and the delay made him miss Sekigahara.",
     summary: "In 1600 a Sanada garrison of roughly 2,000 under Sanada Masayuki held Ueda Castle in Shinano against Tokugawa Hidetada's army of some 38,000, and the delay this imposed kept Hidetada from reaching the decisive Battle of Sekigahara in time.",
@@ -4484,6 +4866,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "hasedo-1600", name: "Siege of Hasedō", year: 1600, dateLabel: "1600 (Keichō 5)", period: "Azuchi–Momoyama",
+    coordSource: { kind: "wikipedia-en", ref: "Siege of Hasedō", how: "matched" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Battle_of_Hased%C5%8D_02.jpg/960px-Battle_of_Hased%C5%8D_02.jpg",
@@ -4499,6 +4883,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "tanabe-1600", name: "Siege of Tanabe", year: 1600, dateLabel: "1600 (Keichō 5)", period: "Azuchi–Momoyama",
+    coordSource: { kind: "wikipedia-en", ref: "Siege of Tanabe", how: "matched" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Maizuru_city_Tanabe_Castle_ac_%281%29.jpg/960px-Maizuru_city_Tanabe_Castle_ac_%281%29.jpg",
@@ -4514,6 +4900,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "uto-1600", name: "Siege of Uto", year: 1600, dateLabel: "1600 (Keichō 5)", period: "Azuchi–Momoyama",
+    coordSource: { kind: "wikipedia-en", ref: "Siege of Uto", how: "matched" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Uto_Castle_%28Kinsei%29%2C_honmaru.jpg/960px-Uto_Castle_%28Kinsei%29%2C_honmaru.jpg",
@@ -4529,13 +4917,16 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "yanagawa-1600", name: "Siege of Yanagawa", year: 1600, dateLabel: "1600 (Keichō 5)", period: "Azuchi–Momoyama",
+    coordSource: { kind: "castle", ref: "yanagawa-castle", how: "set" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "heuristic" },
+    castle: "yanagawa-castle",
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Yanagawa_Castle01s5s3200.jpg/960px-Yanagawa_Castle01s5s3200.jpg",
         caption: "Stone monument and marker post at the Yanagawa Castle ruins, Yanagawa, Fukuoka Prefecture; Wikimedia Commons."
       }
     ],
-    location: { name: "Yanagawa Castle, Chikugo Province, Kyūshū (modern Fukuoka)", lat: 33.1608, lon: 130.4011 },
+    location: { name: "Yanagawa Castle, Chikugo Province, Kyūshū (modern Fukuoka)", lat: 33.16072, lon: 130.40083 },
     combatants: { side1: { name: "Eastern Army", leader: "Katō Kiyomasa, Kuroda Yoshitaka & Nabeshima Naoshige" }, side2: { name: "Western Army (Tachibana)", leader: "Tachibana Muneshige" } },
     outcome: "Eastern victory; Tachibana Muneshige surrendered and the clan lost its fief.",
     summary: "In the aftermath of Sekigahara, a Tokugawa-aligned army besieged Yanagawa Castle in Chikugo on Kyūshū and forced the surrender of its renowned defender Tachibana Muneshige, a sign that Ieyasu's victory was being enforced even on the far edges of the realm.",
@@ -4544,6 +4935,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "tennoji-1615", name: "Battle of Tennōji", year: 1615, dateLabel: "1615 (Keichō 20)", period: "Azuchi–Momoyama",
+    coordSource: { kind: "wikipedia-en", ref: "Battle of Tennōji", how: "matched" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/The_Siege_of_Osaka_Castle.jpg/960px-The_Siege_of_Osaka_Castle.jpg",
@@ -4559,6 +4952,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "domyoji-1615", name: "Battle of Dōmyōji", year: 1615, dateLabel: "1615 (Keichō 20)", period: "Azuchi–Momoyama",
+    coordSource: { kind: "wikipedia-en", ref: "Battle of Dōmyōji", how: "matched" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Osakagunki.jpg/960px-Osakagunki.jpg",
@@ -4574,13 +4969,16 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "utsunomiya-1868", name: "Battle of Utsunomiya Castle", year: 1868, dateLabel: "1868 (Keiō 4)", period: "Bakumatsu",
+    coordSource: { kind: "castle", ref: "utsunomiya-castle", how: "set" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "heuristic" },
+    castle: "utsunomiya-castle",
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/UtsunomiyaCastle.jpg/960px-UtsunomiyaCastle.jpg",
         caption: "An Edo-period painted plan (ezu) of Utsunomiya Castle showing its honmaru, ninomaru and moats, the fortress fought over in 1868; Wikimedia Commons."
       }
     ],
-    location: { name: "Utsunomiya Castle, Shimotsuke Province (modern Utsunomiya, Tochigi)", lat: 36.5547, lon: 139.8851 },
+    location: { name: "Utsunomiya Castle, Shimotsuke Province (modern Utsunomiya, Tochigi)", lat: 36.55444, lon: 139.88583 },
     combatants: { side1: { name: "Imperial (Meiji government)", leader: "Imperial army (Ōyama Iwao, Nozu Michitsura)" }, side2: { name: "Tokugawa shogunate remnants", leader: "Ōtori Keisuke & Hijikata Toshizō" } },
     outcome: "Imperial victory; the imperial army recaptured the castle, opening its advance into the northeast.",
     summary: "In spring 1868 the new Meiji government's imperial army recaptured Utsunomiya Castle from Tokugawa shogunate remnants under Ōtori Keisuke and Hijikata Toshizō, securing an early foothold for the imperial advance north during the Boshin War.",
@@ -4590,6 +4988,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "hoji-war-1247", name: "Hōji War (Miura Rebellion)", year: 1247, dateLabel: "1247 (Hōji 1)", period: "Kamakura",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Hokke-d%C5%8D_stele_-_Minamoto_no_Yoritomo_tomb_-_Kamakura%2C_Japan.JPG/960px-Hokke-d%C5%8D_stele_-_Minamoto_no_Yoritomo_tomb_-_Kamakura%2C_Japan.JPG",
@@ -4605,6 +5005,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   },
   {
     id: "nakasendai-1335", name: "Nakasendai Rebellion", year: 1335, dateLabel: "1335 (Kenmu 2)", period: "Muromachi",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "area", historicity: "attested", basis: "heuristic" },
     images: [
       {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/%E4%BA%95%E6%89%8B%E3%81%AE%E6%B2%A2%E5%8F%A4%E6%88%A6%E5%A0%B4%E7%A2%91.jpg/960px-%E4%BA%95%E6%89%8B%E3%81%AE%E6%B2%A2%E3%81%AE%E6%B2%A2%E5%8F%A4%E6%88%A6%E5%A0%B4%E7%A2%91.jpg",
@@ -4625,6 +5027,8 @@ Takeda Nobuhiro of the Kakizaki rallied the settlers and killed Koshamain, endin
   // the People layer though the battle he died in was not on the map. ----
   {
     id: "tadatsune-1028",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "area", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Japanese Wikipedia: 平忠常の乱 (Taira no Tadatsune Rebellion)", url: "https://ja.wikipedia.org/wiki/平忠常の乱" } ],
     images: [
       {
@@ -4648,6 +5052,8 @@ In late 1030 the court finally gave the command to Yorinobu, by then governor of
   },
   {
     id: "fujishima",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Japanese Wikipedia: 藤島の戦い (Battle of Fujishima)", url: "https://ja.wikipedia.org/wiki/%E8%97%A4%E5%B3%B6%E3%81%AE%E6%88%A6%E3%81%84" } ],
     images: [
       {
@@ -4667,6 +5073,8 @@ In late 1030 the court finally gave the command to Yorinobu, by then governor of
   },
   {
     id: "shakushains-revolt-1669",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "area", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Wikipedia, Shakushain's revolt", url: "https://en.wikipedia.org/wiki/Shakushain%27s_revolt" } ],
     images: [
       {
@@ -4692,6 +5100,8 @@ Cut off from the Ainu of the Oshima peninsula, Shakushain fell back on his fort 
   },
   {
     id: "oshio-heihachiro-rebellion-1837",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Japanese Wikipedia, 大塩平八郎の乱 (Ōshio Heihachirō's Rebellion)", url: "https://ja.wikipedia.org/wiki/%E5%A4%A7%E5%A1%A9%E5%B9%B3%E5%85%AB%E9%83%8E%E3%81%AE%E4%B9%B1" } ],
     images: [
       {
@@ -4719,6 +5129,8 @@ The shock was national. A serving bakufu official had taken up arms against the 
   },
   {
     id: "hokuetsu-nagaoka-1868",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "A", referent: "area", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Wikipedia: Battle of Hokuetsu", url: "https://en.wikipedia.org/wiki/Battle_of_Hokuetsu" } ],
     images: [
       {
@@ -4745,6 +5157,8 @@ Roughly a thousand men died on each side. With Echigo gone, Aizu stood alone. Th
   },
   {
     id: "miyako-bay-1869",
+    coordSource: { kind: "wikipedia-ja", ref: "宮古湾海戦", how: "matched" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "high" },
     sources: [ { label: "Wikipedia: Battle of Miyako Bay", url: "https://en.wikipedia.org/wiki/Battle_of_Miyako_Bay" } ],
     images: [
       {
@@ -4777,6 +5191,8 @@ This was the first attempt in Japan to capture an ironclad steamship by boarding
   // metres of the site, several on the article for the event itself. ----
   {
     id: "kyotoku-war",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "A", referent: "area", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Wikipedia: Kyōtoku incident", url: "https://en.wikipedia.org/wiki/Ky%C5%8Dtoku_incident" } ],
     images: [
       {
@@ -4800,6 +5216,9 @@ The war outlasted the Ōnin War in the capital and was decided less by any battl
   },
   {
     id: "yamashiro-kuni-ikki",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "area", historicity: "attested", basis: "heuristic", why: "The league governed the three southern districts of Yamashiro, Kuse, Tsuzuki and Sagara, which are shaded. The marker is one point within them." },
+    extent: { kind: "districts", label: "the districts of Kuse, Tsuzuki and Sagara in southern Yamashiro", districts: ["G01006", "G01007", "G01008"], source: { label: "CODH 旧国・旧郡境界データセット (CC BY-NC 4.0)", url: "https://geoshape.ex.nii.ac.jp/kg/" } },
     sources: [ { label: "Wikipedia: Yamashiro ikki", url: "https://en.wikipedia.org/wiki/Yamashiro_ikki" } ],
     images: [
       {
@@ -4825,6 +5244,8 @@ Self-rule lasted close to eight years. Taxing the villages to pay for itself spl
   },
   {
     id: "izu-invasion",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "A", referent: "area", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Japanese Wikipedia: 伊豆討ち入り (Invasion of Izu)", url: "https://ja.wikipedia.org/wiki/%E4%BC%8A%E8%B1%86%E8%A8%8E%E3%81%A1%E5%85%A5%E3%82%8A" } ],
     images: [
       {
@@ -4850,6 +5271,8 @@ Older accounts make this the opening act of gekokujō, the low overthrowing the 
   },
   {
     id: "nagamorihara",
+    coordSource: { kind: "wikidata", ref: "Q11653102", how: "matched" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Japanese Wikipedia: 長森原の戦い (Battle of Nagamorihara)", url: "https://ja.wikipedia.org/wiki/%E9%95%B7%E6%A3%AE%E5%8E%9F%E3%81%AE%E6%88%A6%E3%81%84" } ],
     images: [
       {
@@ -4875,6 +5298,9 @@ Tamekage now ruled Echigo in fact, with Sadazane as a figurehead. The Yamanouchi
   },
   {
     id: "yoshida-koriyama-1540",
+    coordSource: { kind: "castle", ref: "yoshida-koriyama-castle", how: "set" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "heuristic" },
+    castle: "yoshida-koriyama-castle",
     sources: [ { label: "Wikipedia: Siege of Yoshida-Kōriyama Castle", url: "https://en.wikipedia.org/wiki/Siege_of_Yoshida-K%C5%8Driyama_Castle" } ],
     images: [
       {
@@ -4900,6 +5326,8 @@ Three things followed. Amago expansion westward stopped for good. The emboldened
   },
   {
     id: "tenbun-no-ran",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "A", referent: "area", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Japanese Wikipedia: 天文の乱 (Tenbun no Ran)", url: "https://ja.wikipedia.org/wiki/天文の乱" } ],
     images: [
       {
@@ -4923,6 +5351,8 @@ The cost was enormous. Tanemune withdrew to Marumori, Harumune moved the seat to
   },
   {
     id: "eguchi",
+    coordSource: { kind: "wikidata", ref: "Q11550724", how: "rounded" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Japanese Wikipedia: Battle of Eguchi (江口の戦い)", url: "https://ja.wikipedia.org/wiki/%E6%B1%9F%E5%8F%A3%E3%81%AE%E6%88%A6%E3%81%84" } ],
     images: [
       {
@@ -4948,6 +5378,8 @@ Harumoto never gave battle. He withdrew the next day, then fled to Sakamoto on L
   },
   {
     id: "satta-pass",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Japanese Wikipedia: 薩埵峠の戦い (戦国時代) (Battle of Satta Pass, Sengoku period)", url: "https://ja.wikipedia.org/wiki/薩埵峠の戦い_(戦国時代)" } ],
     images: [
       {
@@ -4971,6 +5403,8 @@ Ujizane reached Kakegawa in Tōtōmi and gave it up in the fifth month of 1569. 
   },
   {
     id: "ishiyama-honganji",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "A", referent: "series", historicity: "attested", basis: "heuristic", why: "A ten-year war, 1570 to 1580, of many separate engagements around the fortified temple." },
     sources: [ { label: "Wikipedia: Ishiyama Hongan-ji War", url: "https://en.wikipedia.org/wiki/Ishiyama_Hongan-ji_War" } ],
     images: [
       {
@@ -4994,6 +5428,8 @@ Starving and isolated, Kennyo accepted a peace brokered by the court of Emperor 
   },
   {
     id: "imayama",
+    coordSource: { kind: "wikipedia-ja", ref: "今山の戦い", how: "matched" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Japanese Wikipedia: 今山の戦い (Battle of Imayama)", url: "https://ja.wikipedia.org/wiki/今山の戦い" } ],
     images: [
       {
@@ -5017,6 +5453,9 @@ The siege was not lifted at once; peace was negotiated only in the tenth month, 
   },
   {
     id: "kanegasaki-1570",
+    coordSource: { kind: "castle", ref: "kanegasaki-castle", how: "set" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "heuristic" },
+    castle: "kanegasaki-castle",
     sources: [ { label: "Japanese Wikipedia: Kanegasaki no nokiguchi (金ヶ崎の戦い)", url: "https://ja.wikipedia.org/wiki/%E9%87%91%E3%83%B6%E5%B4%8E%E3%81%AE%E6%88%A6%E3%81%84" } ],
     images: [
       {
@@ -5038,6 +5477,9 @@ The rearguard, the shingari, is why the episode is taught. Tradition has the you
   },
   {
     id: "mount-hiei-1571",
+    coordSource: { kind: "temple", ref: "enryaku-ji", how: "set" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "high", why: "The temple complex of Enryaku-ji, rebuilt after the burning, stands on its original ground." },
+    temple: "enryaku-ji",
     sources: [ { label: "Wikipedia: Siege of Mount Hiei", url: "https://en.wikipedia.org/wiki/Siege_of_Mount_Hiei" } ],
     images: [
       {
@@ -5049,7 +5491,7 @@ The rearguard, the shingari, is why the episode is taught. Tradition has the you
     year: 1571,
     dateLabel: "30 September 1571 (Genki 2/9/12)",
     period: "Muromachi",
-    location: { name: "Enryaku-ji on Mount Hiei, above Sakamoto, Ōmi Province (modern Ōtsu, Shiga)", lat: 35.070556, lon: 135.841111 },
+    location: { name: "Enryaku-ji on Mount Hiei, above Sakamoto, Ōmi Province (modern Ōtsu, Shiga)", lat: 35.0706, lon: 135.8411 },
     combatants: { side1: { name: "Oda clan", leader: "Oda Nobunaga, with Sakuma Nobumori, Akechi Mitsuhide, Niwa Nagahide and Ikeda Tsuneoki", forces: "reported at about 30,000" }, side2: { name: "Enryaku-ji, the Tendai head temple", leader: "the temple's own abbots and sōhei captains, not named in the records", forces: "around 4,000 warrior monks and armed residents" } },
     outcome: "Oda victory; Enryaku-ji, the Hiyoshi shrine and the town of Sakamoto were burned, the temple estates confiscated, and Tendai military power destroyed.",
     summary: "Nobunaga encircled Mount Hiei and burned Enryaku-ji, the head temple of the Tendai school, together with the town of Sakamoto below it. Six centuries of monastic military power ended in a day. The standard teaching case for his campaign against Japan's armed temples.",
@@ -5063,6 +5505,9 @@ Nobunaga forbade rebuilding and split the temple lands among his commanders. Ake
   },
   {
     id: "odani-1573",
+    coordSource: { kind: "castle", ref: "odani-castle", how: "set" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "heuristic" },
+    castle: "odani-castle",
     sources: [ { label: "Wikipedia: Siege of Odani Castle", url: "https://en.wikipedia.org/wiki/Siege_of_Odani_Castle" } ],
     images: [
       {
@@ -5074,7 +5519,7 @@ Nobunaga forbade rebuilding and split the temple lands among his commanders. Ake
     year: 1573,
     dateLabel: "1573 (Tenshō 1/8/8 to 9/1)",
     period: "Azuchi–Momoyama",
-    location: { name: "Odani Castle, Ōmi Province (modern Nagahama, Shiga)", lat: 35.459284, lon: 136.277 },
+    location: { name: "Odani Castle, Ōmi Province (modern Nagahama, Shiga)", lat: 35.45935917, lon: 136.2770722 },
     combatants: { side1: { name: "Oda", leader: "Oda Nobunaga", forces: "about 30,000" }, side2: { name: "Azai", leader: "Azai Nagamasa and Azai Hisamasa", forces: "about 5,000" } },
     outcome: "Oda victory; the Azai clan was destroyed, Nagamasa and his father Hisamasa took their own lives, and northern Ōmi passed to Hashiba Hideyoshi.",
     summary: "Nobunaga's final reckoning with the brother-in-law who had betrayed him. With the Asakura destroyed days earlier, the Azai stronghold on Mount Odani was split in two and stormed. The clan was wiped out, and Hideyoshi received northern Ōmi as the first domain he held in his own name.",
@@ -5082,6 +5527,9 @@ Nobunaga forbade rebuilding and split the temple lands among his commanders. Ake
   },
   {
     id: "echizen-ikko-ikki-1575",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "B", referent: "area", historicity: "attested", basis: "heuristic", why: "A campaign across the province of Echizen, which is shaded. The marker is Fuchū, the provincial capital." },
+    extent: { kind: "provinces", label: "the province of Echizen", provinces: ["越前"], source: { label: "CODH 旧国・旧郡境界データセット (CC BY-NC 4.0)", url: "https://geoshape.ex.nii.ac.jp/kg/" } },
     sources: [ { label: "Japanese Wikipedia: 越前一向一揆 (Echizen Ikkō-ikki)", url: "https://ja.wikipedia.org/wiki/%E8%B6%8A%E5%89%8D%E4%B8%80%E5%90%91%E4%B8%80%E6%8F%86" } ],
     images: [
       {
@@ -5105,6 +5553,9 @@ Nobunaga then gave eight districts of Echizen to Shibata Katsuie, who built Kita
   },
   {
     id: "oyama-gobo",
+    coordSource: { kind: "castle", ref: "kanazawa-castle", how: "set" },
+    certainty: { location: "A", referent: "point", historicity: "attested", basis: "heuristic" },
+    castle: "kanazawa-castle",
     sources: [ { label: "Wikipedia: Kanazawa Castle", url: "https://en.wikipedia.org/wiki/Kanazawa_Castle" } ],
     images: [
       {
@@ -5116,7 +5567,7 @@ Nobunaga then gave eight districts of Echizen to Shibata Katsuie, who built Kita
     year: 1580,
     dateLabel: "Spring 1580 (Tenshō 8, intercalary 3rd month)",
     period: "Azuchi–Momoyama",
-    location: { name: "Oyama Gobō, Kaga Province (site of Kanazawa Castle, Kanazawa, Ishikawa)", lat: 36.564317, lon: 136.659228 },
+    location: { name: "Oyama Gobō, Kaga Province (site of Kanazawa Castle, Kanazawa, Ishikawa)", lat: 36.56431667, lon: 136.65922778 },
     combatants: { side1: { name: "Oda clan", leader: "Shibata Katsuie and Sakuma Morimasa", forces: "reported at about 15,000" }, side2: { name: "Kaga Ikkō-ikki (Hongan-ji)", leader: "Matsunaga Tanba and the Hongan-ji deputies", forces: "not reliably recorded" } },
     outcome: "Oda victory; the temple fortress was stormed and its captains killed, ending 92 years of Ikkō-ikki rule in Kaga. Sakuma Morimasa held the site and turned it into a castle.",
     summary: "The fortified cathedral that served as the capital of Ikkō-ikki Kaga fell to Shibata Katsuie and Sakuma Morimasa. Ninety-two years of rule by a Buddhist league ended, and Morimasa raised a castle on the ridge; three years later it became the Maeda seat of Kanazawa.",
@@ -5128,6 +5579,9 @@ Morimasa took the site, began moats and a castle town, and was made lord of half
   },
   {
     id: "tensho-jingo-1582",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "A", referent: "area", historicity: "attested", basis: "heuristic", why: "Fought over Kai, Shinano and Kōzuke, which are shaded, after Oda rule there collapsed. The marker is Wakamiko, the Hōjō camp facing the Tokugawa." },
+    extent: { kind: "provinces", label: "Kai, Shinano and Kōzuke", provinces: ["甲斐", "信濃", "上野"], source: { label: "CODH 旧国・旧郡境界データセット (CC BY-NC 4.0)", url: "https://geoshape.ex.nii.ac.jp/kg/" } },
     sources: [ { label: "Wikipedia: Tenshō-Jingo war", url: "https://en.wikipedia.org/wiki/Tensh%C5%8D-Jingo_war" } ],
     images: [
       {
@@ -5151,6 +5605,9 @@ Oda Nobukatsu brokered the settlement. Ujinao married Ieyasu's daughter Tokuhime
   },
   {
     id: "shikoku-campaign-1585",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "A", referent: "area", historicity: "attested", basis: "heuristic", why: "Hideyoshi's armies invaded Shikoku through Awa, Sanuki and Iyo, which are shaded. The marker is Ichinomiya Castle in Awa, one of the sieges." },
+    extent: { kind: "provinces", label: "Awa, Sanuki and Iyo", provinces: ["阿波", "讃岐", "伊予"], source: { label: "CODH 旧国・旧郡境界データセット (CC BY-NC 4.0)", url: "https://geoshape.ex.nii.ac.jp/kg/" } },
     sources: [ { label: "Wikipedia: Invasion of Shikoku (1585)", url: "https://en.wikipedia.org/wiki/Invasion_of_Shikoku_(1585)" } ],
     images: [
       {
@@ -5176,6 +5633,9 @@ Hideyoshi was appointed kampaku while the fighting was still going on. Awa went 
   },
   {
     id: "higo-kokujin-ikki-1587",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "A", referent: "area", historicity: "attested", basis: "heuristic", why: "A rising of the local lords across the province of Higo, which is shaded. The marker is Jōmura Castle." },
+    extent: { kind: "provinces", label: "the province of Higo", provinces: ["肥後"], source: { label: "CODH 旧国・旧郡境界データセット (CC BY-NC 4.0)", url: "https://geoshape.ex.nii.ac.jp/kg/" } },
     sources: [ { label: "Japanese Wikipedia: 肥後国人一揆 (Higo kokujin ikki)", url: "https://ja.wikipedia.org/wiki/%E8%82%A5%E5%BE%8C%E5%9B%BD%E4%BA%BA%E4%B8%80%E6%8F%86" } ],
     images: [
       {
@@ -5201,6 +5661,8 @@ The reckoning was severe. Sassa was refused an audience, confined at Amagasaki a
   },
   {
     id: "jugorigahara-1588",
+    coordSource: { kind: "wikidata", ref: "Q10904453", how: "rounded" },
+    certainty: { location: "B", referent: "point", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Japanese Wikipedia: 十五里ヶ原の戦い (Battle of Jūgorigahara)", url: "https://ja.wikipedia.org/wiki/%E5%8D%81%E4%BA%94%E9%87%8C%E3%83%B6%E5%8E%9F%E3%81%AE%E6%88%A6%E3%81%84" } ],
     images: [
       {
@@ -5224,6 +5686,8 @@ Resistance at Asahiyama Castle collapsed soon after and the whole plain was Uesu
   },
   {
     id: "kasai-osaki-ikki-1590",
+    coordSource: { kind: "manual", how: "unknown" },
+    certainty: { location: "A", referent: "area", historicity: "attested", basis: "heuristic" },
     sources: [ { label: "Japanese Wikipedia: Kasai-Ōsaki ikki (葛西大崎一揆)", url: "https://ja.wikipedia.org/wiki/%E8%91%9B%E8%A5%BF%E5%A4%A7%E5%B4%8E%E4%B8%80%E6%8F%86" } ],
     images: [
       {

@@ -706,20 +706,41 @@ map.on('overlayremove', (e) => {
   if (e.layer === provincesLayer) map.attributionControl.removeAttribution(PROVINCE_ATTR);
 });
 
-// --- A reusable teardrop pin icon (pure CSS, no image files) ---
-const battleIcon = L.divIcon({
-  className: '',
-  html: '<div class="battle-pin"></div>',
-  iconSize: [30, 40],
-  iconAnchor: [15, 38],
-  tooltipAnchor: [0, -34],
-});
+// --- Teardrop pins (pure CSS). The pin's STYLE says how secure the place is ---
+// An audit of the battle layer found that every pin looked equally certain although the
+// evidence behind them is not comparable. certainty.location drives the style:
+//   A filled  = the site survives or is secured (castle, excavated, designated, landform)
+//   B hollow  = a place name without a known extent
+//   C dashed  = rival sites are proposed
+// and historicity "contested" overrides all three with a "?" (it may not have happened).
+const PIN_KIND = { A: 'pin-a', B: 'pin-b', C: 'pin-c' };
+const PIN_WORDS = { 'pin-a': 'site secured', 'pin-b': 'place name only', 'pin-c': 'site disputed', 'pin-q': 'may not have happened' };
+function pinKind(b) {
+  const c = b.certainty || {};
+  if (c.historicity === 'contested') return 'pin-q';
+  return PIN_KIND[c.location] || 'pin-a';
+}
+const _battleIcons = {};
+function battleIconFor(b) {
+  const k = pinKind(b);
+  return _battleIcons[k] || (_battleIcons[k] = L.divIcon({
+    className: '',
+    html: `<div class="battle-pin ${k}"></div>`,
+    iconSize: [30, 40],
+    iconAnchor: [15, 38],
+    tooltipAnchor: [0, -34],
+  }));
+}
+// "Only secured sites" filter (the marker key holds the checkbox)
+let securedOnly = false;
+function isSecured(b) { const c = b.certainty || {}; return c.location === 'A' && c.historicity !== 'contested'; }
 
 // --- Build a marker for each battle (shown/hidden by the year slider) ---
 const battleMarkers = BATTLES.map((battle) => {
   const marker = L.marker([battle.location.lat, battle.location.lon], {
-    icon: battleIcon,
-    title: battle.name,
+    icon: battleIconFor(battle),
+    // the title is what a screen reader announces, so it carries the certainty too
+    title: battle.name + ' (' + PIN_WORDS[pinKind(battle)] + ')',
   });
 
   // Name shows on hover only (above the pin), so dense years don't turn into
@@ -905,6 +926,69 @@ map.getContainer().addEventListener('keydown', (e) => {
 // Layer + colour for the march route highlighted while a battle's panel is open
 // (declared here, before the first showYear()/hideBattleInfo() call).
 const activeRouteLayer = L.layerGroup().addTo(map);
+
+// ---- Evidence drawn for the OPEN entry: rival sites, series members, areas ----
+// Nothing here is hand-drawn: areas are whole provinces or districts from the CODH
+// boundary dataset, the excavated Honnō-ji block, or the OSM line of the Kanmon strait.
+const evidenceLayer = L.layerGroup().addTo(map);
+const _geoCache = {};
+function loadGeo(url) {
+  return _geoCache[url] || (_geoCache[url] = fetch(url + '?v=' + Date.now()).then((r) => {
+    if (!r.ok) throw new Error('HTTP ' + r.status); return r.json();
+  }));
+}
+const EXTENT_STYLE = { color: '#9e2f1c', weight: 2, opacity: 0.85, dashArray: '6 5', fillColor: '#c23b22', fillOpacity: 0.08, interactive: false };
+function drawEvidence(b) {
+  evidenceLayer.clearLayers();
+  const token = (drawEvidence._t = (drawEvidence._t || 0) + 1); // ignore late fetches for an old entry
+  const x = b.extent;
+  if (x) {
+    if (x.kind === 'polygon') L.polygon(x.coords, EXTENT_STYLE).addTo(evidenceLayer);
+    else if (x.kind === 'line') L.polyline(x.coords, { color: '#9e2f1c', weight: 6, opacity: 0.55, dashArray: '1 9', lineCap: 'round', interactive: false }).addTo(evidenceLayer);
+    else if (x.kind === 'provinces' || x.kind === 'districts') {
+      const url = x.kind === 'provinces' ? 'data/provinces.geojson' : 'data/districts.geojson';
+      const want = new Set(x.kind === 'provinces' ? x.provinces : x.districts);
+      loadGeo(url).then((g) => {
+        if (token !== drawEvidence._t) return;
+        const feats = g.features.filter((f) => want.has(x.kind === 'provinces' ? f.properties.name : f.properties.id));
+        L.geoJSON({ type: 'FeatureCollection', features: feats }, { style: EXTENT_STYLE, interactive: false }).addTo(evidenceLayer);
+      }).catch((err) => console.error('extent', err));
+    }
+  }
+  // Rival sites / series members: numbered markers, each joined to the entry's own pin
+  const here = [b.location.lat, b.location.lon];
+  (b.alternatives || []).forEach((a, i) => {
+    if (a.lat == null) return;
+    L.polyline([here, [a.lat, a.lon]], { color: '#5a4a3a', weight: 2, opacity: 0.8, dashArray: '4 6', interactive: false }).addTo(evidenceLayer);
+    L.marker([a.lat, a.lon], {
+      icon: L.divIcon({ className: '', html: `<div class="alt-pin">${i + 1}</div>`, iconSize: [22, 22], iconAnchor: [11, 11], tooltipAnchor: [0, -12] }),
+      title: (i + 1) + '. ' + a.label, keyboard: false,
+    }).bindTooltip(`${i + 1}. ${escapeHtml(a.label)}`, { direction: 'top', className: 'route-label' }).addTo(evidenceLayer);
+  });
+}
+
+// ---- Marker key + "only secured sites" filter (always on; collapsible on phones) ----
+const certaintyLegend = L.control({ position: 'bottomleft' });
+certaintyLegend.onAdd = function () {
+  const div = L.DomUtil.create('div', 'castle-legend certainty-legend');
+  const open = window.matchMedia && window.matchMedia('(min-width: 700px)').matches ? ' open' : '';
+  div.innerHTML =
+    `<details${open}><summary class="cl-title">Battle markers: how sure is the place?</summary>` +
+    '<div><span class="battle-pin pin-a pin-legend"></span> Site secured</div>' +
+    '<div><span class="battle-pin pin-b pin-legend"></span> Place name only</div>' +
+    '<div><span class="battle-pin pin-c pin-legend"></span> Site disputed</div>' +
+    '<div><span class="battle-pin pin-q pin-legend"></span> May not have happened</div>' +
+    '<label class="secured-only"><input type="checkbox" id="securedOnly"> Show only secured sites</label>' +
+    '</details>';
+  L.DomEvent.disableClickPropagation(div);
+  L.DomEvent.disableScrollPropagation(div);
+  div.querySelector('#securedOnly').addEventListener('change', (e) => {
+    securedOnly = e.target.checked;
+    refreshMarkers({ frame: false });
+  });
+  return div;
+};
+certaintyLegend.addTo(map);
 const ACTIVE_ROUTE_COLOR = '#ffd96b';
 
 let currentYear = null;
@@ -1037,6 +1121,7 @@ map.on('overlayremove', (e) => {
 function visibleBattles() {
   return BATTLES.filter((b) => {
     if (!inSelectedPeriod(b)) return false;
+    if (securedOnly && !isSecured(b)) return false;
     if (selectedClan) return b._clans && b._clans.has(selectedClan); // clan view: all years
     return showAll || battleYears(b).includes(currentYear);
   });

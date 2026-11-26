@@ -177,6 +177,7 @@ function renderBattleHTML(battle) {
         .join('')}</ul>`
     : '';
 
+  const ev = evidenceParts(battle);
   const kicker = isEventId(battle.id) ? 'EVENT' : 'BATTLE';
   return `
     <div class="kicker">${kicker}</div>
@@ -185,15 +186,92 @@ function renderBattleHTML(battle) {
     battle.period ? ' &middot; <span class="era">' + escapeHtml(battle.period) + '</span>' : ''
   }</p>
     <p class="location">${escapeHtml(battle.location.name || '')}</p>
+    ${ev.chip}
     ${battle.summary ? `<p class="summary">${escapeHtml(battle.summary)}</p>` : ''}
     ${routeNoteHTML}
     ${sides.length ? `<h3>Combatants</h3><div class="combatants">${sides.join('')}</div>` : ''}
     ${battle.outcome ? `<h3>Outcome</h3><p>${escapeHtml(battle.outcome)}</p>` : ''}
     ${detailsHTML}
+    ${ev.section}
     ${nextHTML}
     ${galleryHTML}
     ${sourcesBlock(battle.name, battle.sources)}
   `;
+}
+
+// --- "How we know where it was" -----------------------------------------------------
+// Renders the evidential fields (coordSource, certainty, alternatives, extent) in words.
+// The point is that a reader of the MAP learns what a reader of the TEXT would: a 1542
+// battle that may never have happened must not look like Sekigahara.
+const LOC_TEXT = {
+  A: ['Site secured', 'The place survives or is secured: a castle or temple site, an excavated or designated historic site, or an unmistakable landform.'],
+  B: ['Place name only', 'The place name is known, but not the extent of the fighting; the marker stands on the name.'],
+  C: ['Site disputed', 'Rival sites are proposed for this event.'],
+};
+const REF_TEXT = {
+  point: 'One engagement at one place.',
+  area: 'A war or campaign fought over a wider area. The marker is only one place associated with it.',
+  series: 'Several separate engagements are combined in this entry.',
+};
+const BASIS_TEXT = {
+  verified: 'checked against a source outside Wikipedia (heritage register, excavation report or the national mapping agency)',
+  high: 'follows from what the entry and its sources state',
+  heuristic: 'assigned by a default rule and not yet checked one by one',
+};
+function wikiLink(lang, title) {
+  return `https://${lang}.wikipedia.org/wiki/${encodeURIComponent(String(title).replace(/ /g, '_'))}`;
+}
+function coordSourceHTML(cs) {
+  if (!cs) return '';
+  const how = cs.how === 'matched' ? ' The marker matches its coordinate.' : cs.how === 'rounded' ? ' The marker agrees with it to within 100 m (rounded).' : '';
+  const a = (href, text) => `<a href="${escapeHtml(href)}" target="_blank" rel="noopener">${escapeHtml(text)}</a>`;
+  switch (cs.kind) {
+    case 'wikipedia-en': return `Taken from the English Wikipedia article ${a(wikiLink('en', cs.ref), '“' + cs.ref + '”')}.${how}`;
+    case 'wikipedia-ja': return `Taken from the Japanese Wikipedia article ${a(wikiLink('ja', cs.ref), '「' + cs.ref + '」')}.${how}`;
+    case 'wikidata': return `Taken from Wikidata, item ${a('https://www.wikidata.org/wiki/' + cs.ref, cs.ref)}.${how}`;
+    case 'gsi': return `Taken from the place-name search of the Geospatial Information Authority of Japan: ${escapeHtml(cs.ref)}.`;
+    case 'register': return `Taken from the national register of cultural properties, record ${escapeHtml(cs.ref)}.`;
+    case 'codh': return `Taken from the CODH gazetteer of historical place names (日本歴史地名大系), item ${escapeHtml(cs.ref)}.`;
+    case 'castle': { const c = (Array.isArray(CASTLES) ? CASTLES : Object.values(CASTLES)).find((x) => x.id === cs.ref);
+      return `The same point as ${escapeHtml(c ? c.name : cs.ref)} in the castle layer, so the two cannot drift apart.`; }
+    case 'temple': { const t = (typeof TEMPLES !== 'undefined' ? TEMPLES : []).find((x) => x.id === cs.ref);
+      return `The same point as ${escapeHtml(t ? t.name : cs.ref)} in the temples layer.`; }
+    case 'derived': return `Derived: ${escapeHtml(cs.ref)}.`;
+    default: return 'Placed by hand on the named place. No published coordinate it was copied from has been identified.';
+  }
+}
+function evidenceParts(b) {
+  const c = b.certainty;
+  if (!c) return { chip: '', section: '' };
+  const loc = LOC_TEXT[c.location] || LOC_TEXT.B;
+  const bits = [loc[0]];
+  if (c.referent === 'area') bits.push('stands for a wider area');
+  if (c.referent === 'series') bits.push('several engagements');
+  if (c.historicity === 'contested') bits.unshift('May not have happened');
+  const chip = `<p class="certainty-chip ${c.historicity === 'contested' ? 'pin-q' : 'pin-' + c.location.toLowerCase()}"><span class="battle-pin ${c.historicity === 'contested' ? 'pin-q' : 'pin-' + c.location.toLowerCase()} pin-legend" aria-hidden="true"></span>${escapeHtml(bits.join(' · '))}</p>`;
+  const rows = [];
+  if (c.historicity === 'contested') rows.push(['Did it happen?', 'Whether this event happened at all is doubted.']);
+  rows.push(['The place', escapeHtml(loc[1])]);
+  rows.push(['The marker stands for', escapeHtml(REF_TEXT[c.referent] || '')]);
+  rows.push(['Coordinate', coordSourceHTML(b.coordSource)]);
+  const alts = (b.alternatives || []);
+  const altHTML = alts.length
+    ? `<ol class="alt-list">${alts.map((a) => `<li>${escapeHtml(a.label)}${a.source ? ` <span class="alt-src">(${a.source.url ? `<a href="${escapeHtml(a.source.url)}" target="_blank" rel="noopener">${escapeHtml(a.source.label)}</a>` : escapeHtml(a.source.label)})</span>` : ''}</li>`).join('')}</ol>`
+    : '';
+  const x = b.extent;
+  const extHTML = x
+    ? `<p class="ext-note">Shaded on the map while this entry is open: ${escapeHtml(x.label || (x.provinces ? x.provinces.join(', ') : x.kind === 'districts' ? 'three districts' : ''))}. Boundary from ${x.source.url ? `<a href="${escapeHtml(x.source.url)}" target="_blank" rel="noopener">${escapeHtml(x.source.label)}</a>` : escapeHtml(x.source.label)}${x.kind === 'provinces' ? '. Whole provinces are only an approximation of where the fighting took place' : ''}.</p>`
+    : '';
+  const section = `
+    <h3>How we know where it was</h3>
+    <div class="evidence">
+      ${c.why ? `<p class="ev-why">${escapeHtml(c.why)}</p>` : ''}
+      ${altHTML ? `<p class="ev-alt-h">${b.certainty.referent === 'series' ? 'The engagements, numbered on the map:' : 'Candidate sites, numbered on the map:'}</p>${altHTML}` : ''}
+      ${extHTML}
+      <dl class="ev-rows">${rows.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join('')}</dl>
+      <p class="ev-basis">This coding ${escapeHtml(BASIS_TEXT[c.basis] || '')}. <a href="sources.html#evidence">What these terms mean</a></p>
+    </div>`;
+  return { chip, section };
 }
 
 // --- Info panel ---
@@ -205,6 +283,7 @@ function showBattleInfo(battle) {
   panel.classList.remove('hidden');
   panel.setAttribute('aria-hidden', 'false');
   drawActiveRoute(battle);
+  if (typeof drawEvidence === 'function') drawEvidence(battle);
   setHash((isEventId(battle.id) ? 'e=' : 'b=') + battle.id);
 }
 
@@ -272,5 +351,6 @@ function hideBattleInfo() {
   panel.classList.add('hidden');
   panel.setAttribute('aria-hidden', 'true');
   if (typeof activeRouteLayer !== 'undefined') activeRouteLayer.clearLayers();
+  if (typeof evidenceLayer !== 'undefined') evidenceLayer.clearLayers();
   if (currentYear != null) setHash('y=' + currentYear);
 }

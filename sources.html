@@ -59,10 +59,26 @@
     </ul>
     <p class="note"><strong>Not every coordinate is the same kind of claim.</strong> Some markers sit on a castle or temple whose ground survives; many sit on a place name whose battlefield has no known extent; a few sit on one of several rival candidate sites, or stand in for a whole war or campaign. Where a location is uncertain the entry says so in its location line or its text.</p>
 
+    <h2 id="evidence">How sure is each place? Reading the battle markers</h2>
+    <p>A map draws every point with the same confidence, although the evidence behind them differs enormously. Each battle therefore records its evidence in separate fields, and the marker and the info panel ("How we know where it was") show them.</p>
+    <ul>
+      <li><strong>The place.</strong> <em>Site secured</em> (filled marker): the site survives or is secured, as a castle or temple site, an excavated or designated historic site, or an unmistakable landform. <em>Place name only</em> (hollow marker): the name is known but not the extent of the fighting. <em>Site disputed</em> (dashed marker): rival sites are proposed; they are numbered on the map when the entry is open, each with its own source.</li>
+      <li><strong>Did it happen?</strong> A marker with a question mark is an event whose occurrence itself is doubted. That is a different question from where it was, and is kept apart from it.</li>
+      <li><strong>What the marker stands for.</strong> One engagement, a war or campaign over a wider area, or several engagements combined in one entry. Where a sourced boundary exists, the area is shaded when the entry is open: whole provinces or districts from the CODH boundary dataset, or, for the Honnō-ji, the one block that excavation has confirmed. Whole provinces are only an approximation of where fighting took place.</li>
+      <li><strong>Coordinate.</strong> Where the number came from: the Wikipedia article the entry cites (English or Japanese), Wikidata, the place-name search of the Geospatial Information Authority of Japan, the CODH gazetteer of historical place names, the castle or temple layer of this atlas, or placed by hand where no published coordinate could be identified. Sources were matched in November 2026: a marker counts as copied when it lies within 15 metres of the source.</li>
+      <li><strong>Basis of the coding.</strong> <em>Verified</em>: checked against a source outside Wikipedia, such as the national register of cultural properties or an excavation report. <em>From the sources</em>: follows from what the entry and its cited sources say. <em>Default</em>: assigned by a rule and not yet checked one by one; most "place name only" markers are of this kind, so their number is an upper limit.</li>
+    </ul>
+    <p class="note">The scheme follows a written coding procedure developed for an audit of this atlas's battles, applied to all of them, with the battles added after the original audit coded by its mechanical rules until they are reviewed individually. Battles fought at a castle or temple in those layers share a single point with it, and the data check refuses to publish if the two ever differ.</p>
+
     <h2>Map data &amp; licensing</h2>
     <h3>Old-province boundaries (旧国)</h3>
     <p>The historical province outlines are from the <strong>Center for Open Data in the Humanities (CODH)</strong> 旧国・旧郡境界データセット (Historical Administrative Boundary Dataset), simplified for the web. Licensed <strong><a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></strong>.</p>
     <p class="note"><strong>Important:</strong> the CODH boundary data is <strong>non-commercial</strong> (CC BY-NC). This atlas may be freely shared and used for education and study with attribution, but it, and any work reusing the province data, must remain non-commercial.</p>
+
+    <h3>Old districts (旧郡) and other shapes</h3>
+    <p>District outlines used to shade an area (for example the three districts governed by the Yamashiro league of 1485 to 1493) come from the same CODH dataset: 『旧国・旧郡境界データセット』（CODH作成）「幕末明治地勢地図境界データ」（人間文化研究機構作成）を加工, doi:<a href="https://doi.org/10.20676/00000454">10.20676/00000454</a>, CC BY-NC 4.0. The line of the Kanmon strait and the street lines bounding the Honnō-ji block are derived from <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> data, © OpenStreetMap contributors (ODbL).</p>
+    <h3>Gazetteers used for coordinates</h3>
+    <p>Positions taken from the <strong>CODH gazetteers of historical place names</strong> are credited: 『日本歴史地名大系』地名項目データセット（CODH作成）doi:<a href="https://doi.org/10.20676/00000448">10.20676/00000448</a>, and 『日本歴史地名大系』施設・地点項目データセット（CODH作成）doi:<a href="https://doi.org/10.20676/00000456">10.20676/00000456</a>, both CC BY 4.0. Some positions come from the place-name search of the <strong>Geospatial Information Authority of Japan</strong> (国土地理院).</p>
 
     <h3>Historical (old) map overlays</h3>
     <p>The draped Genroku (1690), Sekisui (1779) and Ōedo (1860) maps are georeferenced scans from the <strong>Ritsumeikan University "Map Warper"</strong> project (mapwarper.h-gis.jp), which aligns historical maps to modern coordinates.</p>
